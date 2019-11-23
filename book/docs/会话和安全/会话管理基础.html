@@ -1,0 +1,3498 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>会话管理基础 · PHP</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kuriv Vesti">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="和会话安全相关的配置项.html" />
+    
+    
+    <link rel="prev" href="../会话和安全.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    PHP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../语言参考.html">
+            
+                <a href="../语言参考.html">
+            
+                    
+                    语言参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../语言参考/基本语法.html">
+            
+                <a href="../语言参考/基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1.1" data-path="../语言参考/基本语法/PHP 标记.html">
+            
+                <a href="../语言参考/基本语法/PHP 标记.html">
+            
+                    
+                    PHP 标记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.1.2" data-path="../语言参考/基本语法/从 HTML 中分离.html">
+            
+                <a href="../语言参考/基本语法/从 HTML 中分离.html">
+            
+                    
+                    从 HTML 中分离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.1.3" data-path="../语言参考/基本语法/指令分隔符.html">
+            
+                <a href="../语言参考/基本语法/指令分隔符.html">
+            
+                    
+                    指令分隔符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.1.4" data-path="../语言参考/基本语法/注释.html">
+            
+                <a href="../语言参考/基本语法/注释.html">
+            
+                    
+                    注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../语言参考/类型.html">
+            
+                <a href="../语言参考/类型.html">
+            
+                    
+                    类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.2.1" data-path="../语言参考/类型/Boolean 布尔类型.html">
+            
+                <a href="../语言参考/类型/Boolean 布尔类型.html">
+            
+                    
+                    Boolean 布尔类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.2" data-path="../语言参考/类型/Integer 整型.html">
+            
+                <a href="../语言参考/类型/Integer 整型.html">
+            
+                    
+                    Integer 整型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.3" data-path="../语言参考/类型/Float 浮点型.html">
+            
+                <a href="../语言参考/类型/Float 浮点型.html">
+            
+                    
+                    Float 浮点型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.4" data-path="../语言参考/类型/String 字符串.html">
+            
+                <a href="../语言参考/类型/String 字符串.html">
+            
+                    
+                    String 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.5" data-path="../语言参考/类型/Array 数组.html">
+            
+                <a href="../语言参考/类型/Array 数组.html">
+            
+                    
+                    Array 数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.6" data-path="../语言参考/类型/Object 对象.html">
+            
+                <a href="../语言参考/类型/Object 对象.html">
+            
+                    
+                    Object 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.7" data-path="../语言参考/类型/Resource 资源类型.html">
+            
+                <a href="../语言参考/类型/Resource 资源类型.html">
+            
+                    
+                    Resource 资源类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.8" data-path="../语言参考/类型/NULL.html">
+            
+                <a href="../语言参考/类型/NULL.html">
+            
+                    
+                    NULL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.9" data-path="../语言参考/类型/Callable 可调用类型.html">
+            
+                <a href="../语言参考/类型/Callable 可调用类型.html">
+            
+                    
+                    Callable 可调用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2.10" data-path="../语言参考/类型/类型转换的判别.html">
+            
+                <a href="../语言参考/类型/类型转换的判别.html">
+            
+                    
+                    类型转换的判别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../语言参考/变量.html">
+            
+                <a href="../语言参考/变量.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.3.1" data-path="../语言参考/变量/基本语法.html">
+            
+                <a href="../语言参考/变量/基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3.2" data-path="../语言参考/变量/变量范围.html">
+            
+                <a href="../语言参考/变量/变量范围.html">
+            
+                    
+                    变量范围
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3.3" data-path="../语言参考/变量/可变变量.html">
+            
+                <a href="../语言参考/变量/可变变量.html">
+            
+                    
+                    可变变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3.4" data-path="../语言参考/变量/来自 PHP 之外的变量.html">
+            
+                <a href="../语言参考/变量/来自 PHP 之外的变量.html">
+            
+                    
+                    来自 PHP 之外的变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../语言参考/常量.html">
+            
+                <a href="../语言参考/常量.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.4.1" data-path="../语言参考/常量/基本语法.html">
+            
+                <a href="../语言参考/常量/基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4.2" data-path="../语言参考/常量/魔术常量.html">
+            
+                <a href="../语言参考/常量/魔术常量.html">
+            
+                    
+                    魔术常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../语言参考/表达式.html">
+            
+                <a href="../语言参考/表达式.html">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6" data-path="../语言参考/运算符.html">
+            
+                <a href="../语言参考/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.6.1" data-path="../语言参考/运算符/运算符优先级.html">
+            
+                <a href="../语言参考/运算符/运算符优先级.html">
+            
+                    
+                    运算符优先级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.2" data-path="../语言参考/运算符/算数运算符.html">
+            
+                <a href="../语言参考/运算符/算数运算符.html">
+            
+                    
+                    算数运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.3" data-path="../语言参考/运算符/赋值运算符.html">
+            
+                <a href="../语言参考/运算符/赋值运算符.html">
+            
+                    
+                    赋值运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.4" data-path="../语言参考/运算符/位运算符.html">
+            
+                <a href="../语言参考/运算符/位运算符.html">
+            
+                    
+                    位运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.5" data-path="../语言参考/运算符/比较运算符.html">
+            
+                <a href="../语言参考/运算符/比较运算符.html">
+            
+                    
+                    比较运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.6" data-path="../语言参考/运算符/错误控制运算符.html">
+            
+                <a href="../语言参考/运算符/错误控制运算符.html">
+            
+                    
+                    错误控制运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.7" data-path="../语言参考/运算符/执行运算符.html">
+            
+                <a href="../语言参考/运算符/执行运算符.html">
+            
+                    
+                    执行运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.8" data-path="../语言参考/运算符/递增递减运算符.html">
+            
+                <a href="../语言参考/运算符/递增递减运算符.html">
+            
+                    
+                    递增递减运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.9" data-path="../语言参考/运算符/逻辑运算符.html">
+            
+                <a href="../语言参考/运算符/逻辑运算符.html">
+            
+                    
+                    逻辑运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.10" data-path="../语言参考/运算符/字符串运算符.html">
+            
+                <a href="../语言参考/运算符/字符串运算符.html">
+            
+                    
+                    字符串运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.11" data-path="../语言参考/运算符/数组运算符.html">
+            
+                <a href="../语言参考/运算符/数组运算符.html">
+            
+                    
+                    数组运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6.12" data-path="../语言参考/运算符/类型运算符.html">
+            
+                <a href="../语言参考/运算符/类型运算符.html">
+            
+                    
+                    类型运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7" data-path="../语言参考/流程控制.html">
+            
+                <a href="../语言参考/流程控制.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.7.1" data-path="../语言参考/流程控制/if.html">
+            
+                <a href="../语言参考/流程控制/if.html">
+            
+                    
+                    if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.2" data-path="../语言参考/流程控制/else.html">
+            
+                <a href="../语言参考/流程控制/else.html">
+            
+                    
+                    else
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.3" data-path="../语言参考/流程控制/elseif.html">
+            
+                <a href="../语言参考/流程控制/elseif.html">
+            
+                    
+                    elseif
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.4" data-path="../语言参考/流程控制/while.html">
+            
+                <a href="../语言参考/流程控制/while.html">
+            
+                    
+                    while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.5" data-path="../语言参考/流程控制/do-while.html">
+            
+                <a href="../语言参考/流程控制/do-while.html">
+            
+                    
+                    do-while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.6" data-path="../语言参考/流程控制/for.html">
+            
+                <a href="../语言参考/流程控制/for.html">
+            
+                    
+                    for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.7" data-path="../语言参考/流程控制/foreach.html">
+            
+                <a href="../语言参考/流程控制/foreach.html">
+            
+                    
+                    foreach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.8" data-path="../语言参考/流程控制/switch.html">
+            
+                <a href="../语言参考/流程控制/switch.html">
+            
+                    
+                    switch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.9" data-path="../语言参考/流程控制/break.html">
+            
+                <a href="../语言参考/流程控制/break.html">
+            
+                    
+                    break
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.10" data-path="../语言参考/流程控制/continue.html">
+            
+                <a href="../语言参考/流程控制/continue.html">
+            
+                    
+                    continue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.11" data-path="../语言参考/流程控制/流程控制的替代语法.html">
+            
+                <a href="../语言参考/流程控制/流程控制的替代语法.html">
+            
+                    
+                    流程控制的替代语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.12" data-path="../语言参考/流程控制/declare.html">
+            
+                <a href="../语言参考/流程控制/declare.html">
+            
+                    
+                    declare
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.13" data-path="../语言参考/流程控制/return.html">
+            
+                <a href="../语言参考/流程控制/return.html">
+            
+                    
+                    return
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.14" data-path="../语言参考/流程控制/require.html">
+            
+                <a href="../语言参考/流程控制/require.html">
+            
+                    
+                    require
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.15" data-path="../语言参考/流程控制/include.html">
+            
+                <a href="../语言参考/流程控制/include.html">
+            
+                    
+                    include
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.16" data-path="../语言参考/流程控制/require_once.html">
+            
+                <a href="../语言参考/流程控制/require_once.html">
+            
+                    
+                    require_once
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.17" data-path="../语言参考/流程控制/include_once.html">
+            
+                <a href="../语言参考/流程控制/include_once.html">
+            
+                    
+                    include_once
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7.18" data-path="../语言参考/流程控制/goto.html">
+            
+                <a href="../语言参考/流程控制/goto.html">
+            
+                    
+                    goto
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.8" data-path="../语言参考/函数.html">
+            
+                <a href="../语言参考/函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.8.1" data-path="../语言参考/函数/用户自定义函数.html">
+            
+                <a href="../语言参考/函数/用户自定义函数.html">
+            
+                    
+                    用户自定义函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.8.2" data-path="../语言参考/函数/函数的参数.html">
+            
+                <a href="../语言参考/函数/函数的参数.html">
+            
+                    
+                    函数的参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.8.3" data-path="../语言参考/函数/返回值.html">
+            
+                <a href="../语言参考/函数/返回值.html">
+            
+                    
+                    返回值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.8.4" data-path="../语言参考/函数/可变函数.html">
+            
+                <a href="../语言参考/函数/可变函数.html">
+            
+                    
+                    可变函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.8.5" data-path="../语言参考/函数/匿名函数.html">
+            
+                <a href="../语言参考/函数/匿名函数.html">
+            
+                    
+                    匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9" data-path="../语言参考/类与对象.html">
+            
+                <a href="../语言参考/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.9.1" data-path="../语言参考/类与对象/基本语法.html">
+            
+                <a href="../语言参考/类与对象/基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.2" data-path="../语言参考/类与对象/属性.html">
+            
+                <a href="../语言参考/类与对象/属性.html">
+            
+                    
+                    属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.3" data-path="../语言参考/类与对象/类常量.html">
+            
+                <a href="../语言参考/类与对象/类常量.html">
+            
+                    
+                    类常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.4" data-path="../语言参考/类与对象/类的自动加载.html">
+            
+                <a href="../语言参考/类与对象/类的自动加载.html">
+            
+                    
+                    类的自动加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.5" data-path="../语言参考/类与对象/构造函数和析构函数.html">
+            
+                <a href="../语言参考/类与对象/构造函数和析构函数.html">
+            
+                    
+                    构造函数和析构函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.6" data-path="../语言参考/类与对象/访问控制.html">
+            
+                <a href="../语言参考/类与对象/访问控制.html">
+            
+                    
+                    访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.7" data-path="../语言参考/类与对象/对象继承.html">
+            
+                <a href="../语言参考/类与对象/对象继承.html">
+            
+                    
+                    对象继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.8" data-path="../语言参考/类与对象/范围解析操作符.html">
+            
+                <a href="../语言参考/类与对象/范围解析操作符.html">
+            
+                    
+                    范围解析操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.9" data-path="../语言参考/类与对象/Static 关键字.html">
+            
+                <a href="../语言参考/类与对象/Static 关键字.html">
+            
+                    
+                    Static 关键字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.10" data-path="../语言参考/类与对象/抽象类.html">
+            
+                <a href="../语言参考/类与对象/抽象类.html">
+            
+                    
+                    抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.11" data-path="../语言参考/类与对象/对象接口.html">
+            
+                <a href="../语言参考/类与对象/对象接口.html">
+            
+                    
+                    对象接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.12" data-path="../语言参考/类与对象/Trait.html">
+            
+                <a href="../语言参考/类与对象/Trait.html">
+            
+                    
+                    Trait
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.13" data-path="../语言参考/类与对象/匿名类.html">
+            
+                <a href="../语言参考/类与对象/匿名类.html">
+            
+                    
+                    匿名类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.14" data-path="../语言参考/类与对象/重载.html">
+            
+                <a href="../语言参考/类与对象/重载.html">
+            
+                    
+                    重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.15" data-path="../语言参考/类与对象/遍历对象.html">
+            
+                <a href="../语言参考/类与对象/遍历对象.html">
+            
+                    
+                    遍历对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.16" data-path="../语言参考/类与对象/魔术方法.html">
+            
+                <a href="../语言参考/类与对象/魔术方法.html">
+            
+                    
+                    魔术方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.17" data-path="../语言参考/类与对象/Final 关键字.html">
+            
+                <a href="../语言参考/类与对象/Final 关键字.html">
+            
+                    
+                    Final 关键字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.18" data-path="../语言参考/类与对象/对象复制.html">
+            
+                <a href="../语言参考/类与对象/对象复制.html">
+            
+                    
+                    对象复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.19" data-path="../语言参考/类与对象/对象比较.html">
+            
+                <a href="../语言参考/类与对象/对象比较.html">
+            
+                    
+                    对象比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.20" data-path="../语言参考/类与对象/类型约束.html">
+            
+                <a href="../语言参考/类与对象/类型约束.html">
+            
+                    
+                    类型约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.21" data-path="../语言参考/类与对象/后期静态绑定.html">
+            
+                <a href="../语言参考/类与对象/后期静态绑定.html">
+            
+                    
+                    后期静态绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.22" data-path="../语言参考/类与对象/对象和引用.html">
+            
+                <a href="../语言参考/类与对象/对象和引用.html">
+            
+                    
+                    对象和引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9.23" data-path="../语言参考/类与对象/对象序列化.html">
+            
+                <a href="../语言参考/类与对象/对象序列化.html">
+            
+                    
+                    对象序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10" data-path="../语言参考/命名空间.html">
+            
+                <a href="../语言参考/命名空间.html">
+            
+                    
+                    命名空间
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.10.1" data-path="../语言参考/命名空间/基本语法.html">
+            
+                <a href="../语言参考/命名空间/基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.2" data-path="../语言参考/命名空间/定义子命名空间.html">
+            
+                <a href="../语言参考/命名空间/定义子命名空间.html">
+            
+                    
+                    定义子命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.3" data-path="../语言参考/命名空间/在同一个文件中定义多个命名空间.html">
+            
+                <a href="../语言参考/命名空间/在同一个文件中定义多个命名空间.html">
+            
+                    
+                    在同一个文件中定义多个命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.4" data-path="../语言参考/命名空间/使用命名空间 - 基础.html">
+            
+                <a href="../语言参考/命名空间/使用命名空间 - 基础.html">
+            
+                    
+                    使用命名空间 - 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.5" data-path="../语言参考/命名空间/命名空间和动态语言特征.html">
+            
+                <a href="../语言参考/命名空间/命名空间和动态语言特征.html">
+            
+                    
+                    命名空间和动态语言特征
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.6" data-path="../语言参考/命名空间/namespace 关键字和 __NAMESPACE__ 魔术常量.html">
+            
+                <a href="../语言参考/命名空间/namespace 关键字和 __NAMESPACE__ 魔术常量.html">
+            
+                    
+                    namespace 关键字和 NAMESPACE 魔术常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.7" data-path="../语言参考/命名空间/使用命名空间 - 别名和导入.html">
+            
+                <a href="../语言参考/命名空间/使用命名空间 - 别名和导入.html">
+            
+                    
+                    使用命名空间 - 别名和导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.8" data-path="../语言参考/命名空间/全局空间.html">
+            
+                <a href="../语言参考/命名空间/全局空间.html">
+            
+                    
+                    全局空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.9" data-path="../语言参考/命名空间/使用命名空间 - 后备全局函数和常量.html">
+            
+                <a href="../语言参考/命名空间/使用命名空间 - 后备全局函数和常量.html">
+            
+                    
+                    使用命名空间 - 后备全局函数和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.10.10" data-path="../语言参考/命名空间/名称解析规则.html">
+            
+                <a href="../语言参考/命名空间/名称解析规则.html">
+            
+                    
+                    名称解析规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.11" data-path="../语言参考/Errors.html">
+            
+                <a href="../语言参考/Errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.12" data-path="../语言参考/异常处理.html">
+            
+                <a href="../语言参考/异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.12.1" data-path="../语言参考/异常处理/基本语法.html">
+            
+                <a href="../语言参考/异常处理/基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.12.2" data-path="../语言参考/异常处理/扩展 PHP 内置的异常处理类.html">
+            
+                <a href="../语言参考/异常处理/扩展 PHP 内置的异常处理类.html">
+            
+                    
+                    扩展 PHP 内置的异常处理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.13" data-path="../语言参考/生成器.html">
+            
+                <a href="../语言参考/生成器.html">
+            
+                    
+                    生成器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.13.1" data-path="../语言参考/生成器/生成器总览.html">
+            
+                <a href="../语言参考/生成器/生成器总览.html">
+            
+                    
+                    生成器总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.13.2" data-path="../语言参考/生成器/生成器语法.html">
+            
+                <a href="../语言参考/生成器/生成器语法.html">
+            
+                    
+                    生成器语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.13.3" data-path="../语言参考/生成器/生成器与 Iterator 对象比较.html">
+            
+                <a href="../语言参考/生成器/生成器与 Iterator 对象比较.html">
+            
+                    
+                    生成器与 Iterator 对象比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.14" data-path="../语言参考/引用的解释.html">
+            
+                <a href="../语言参考/引用的解释.html">
+            
+                    
+                    引用的解释
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.14.1" data-path="../语言参考/引用的解释/引用是什么.html">
+            
+                <a href="../语言参考/引用的解释/引用是什么.html">
+            
+                    
+                    引用是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.14.2" data-path="../语言参考/引用的解释/引用不是什么.html">
+            
+                <a href="../语言参考/引用的解释/引用不是什么.html">
+            
+                    
+                    引用不是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.14.3" data-path="../语言参考/引用的解释/引用做什么.html">
+            
+                <a href="../语言参考/引用的解释/引用做什么.html">
+            
+                    
+                    引用做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.14.4" data-path="../语言参考/引用的解释/引用传递.html">
+            
+                <a href="../语言参考/引用的解释/引用传递.html">
+            
+                    
+                    引用传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.14.5" data-path="../语言参考/引用的解释/引用返回.html">
+            
+                <a href="../语言参考/引用的解释/引用返回.html">
+            
+                    
+                    引用返回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.14.6" data-path="../语言参考/引用的解释/取消引用.html">
+            
+                <a href="../语言参考/引用的解释/取消引用.html">
+            
+                    
+                    取消引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.14.7" data-path="../语言参考/引用的解释/引用定位.html">
+            
+                <a href="../语言参考/引用的解释/引用定位.html">
+            
+                    
+                    引用定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15" data-path="../语言参考/预定义变量.html">
+            
+                <a href="../语言参考/预定义变量.html">
+            
+                    
+                    预定义变量
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.15.1" data-path="../语言参考/预定义变量/超全局变量.html">
+            
+                <a href="../语言参考/预定义变量/超全局变量.html">
+            
+                    
+                    超全局变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.2" data-path="../语言参考/预定义变量/$GLOBALS.html">
+            
+                <a href="../语言参考/预定义变量/$GLOBALS.html">
+            
+                    
+                    $GLOBALS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.3" data-path="../语言参考/预定义变量/$_GET.html">
+            
+                <a href="../语言参考/预定义变量/$_GET.html">
+            
+                    
+                    $_GET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.4" data-path="../语言参考/预定义变量/$_POST.html">
+            
+                <a href="../语言参考/预定义变量/$_POST.html">
+            
+                    
+                    $_POST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.5" data-path="../语言参考/预定义变量/$_COOKIE.html">
+            
+                <a href="../语言参考/预定义变量/$_COOKIE.html">
+            
+                    
+                    $_COOKIE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.6" data-path="../语言参考/预定义变量/$_REQUEST.html">
+            
+                <a href="../语言参考/预定义变量/$_REQUEST.html">
+            
+                    
+                    $_REQUEST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.7" data-path="../语言参考/预定义变量/$_FILES.html">
+            
+                <a href="../语言参考/预定义变量/$_FILES.html">
+            
+                    
+                    $_FILES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.8" data-path="../语言参考/预定义变量/$_SESSION.html">
+            
+                <a href="../语言参考/预定义变量/$_SESSION.html">
+            
+                    
+                    $_SESSION
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.9" data-path="../语言参考/预定义变量/$_SERVER.html">
+            
+                <a href="../语言参考/预定义变量/$_SERVER.html">
+            
+                    
+                    $_SERVER
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.10" data-path="../语言参考/预定义变量/$_ENV.html">
+            
+                <a href="../语言参考/预定义变量/$_ENV.html">
+            
+                    
+                    $_ENV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.11" data-path="../语言参考/预定义变量/$http_response_header.html">
+            
+                <a href="../语言参考/预定义变量/$http_response_header.html">
+            
+                    
+                    $http_response_header
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.12" data-path="../语言参考/预定义变量/$argc.html">
+            
+                <a href="../语言参考/预定义变量/$argc.html">
+            
+                    
+                    $argc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.15.13" data-path="../语言参考/预定义变量/$argv.html">
+            
+                <a href="../语言参考/预定义变量/$argv.html">
+            
+                    
+                    $argv
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.16" data-path="../语言参考/预定义异常.html">
+            
+                <a href="../语言参考/预定义异常.html">
+            
+                    
+                    预定义异常
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.16.1" data-path="../语言参考/预定义异常/Exception.html">
+            
+                <a href="../语言参考/预定义异常/Exception.html">
+            
+                    
+                    Exception
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.16.2" data-path="../语言参考/预定义异常/ErrorException.html">
+            
+                <a href="../语言参考/预定义异常/ErrorException.html">
+            
+                    
+                    ErrorException
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.17" data-path="../语言参考/预定义接口.html">
+            
+                <a href="../语言参考/预定义接口.html">
+            
+                    
+                    预定义接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.17.1" data-path="../语言参考/预定义接口/Traversable.html">
+            
+                <a href="../语言参考/预定义接口/Traversable.html">
+            
+                    
+                    Traversable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.17.2" data-path="../语言参考/预定义接口/Iterator.html">
+            
+                <a href="../语言参考/预定义接口/Iterator.html">
+            
+                    
+                    Iterator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.17.3" data-path="../语言参考/预定义接口/IteratorAggregate.html">
+            
+                <a href="../语言参考/预定义接口/IteratorAggregate.html">
+            
+                    
+                    IteratorAggregate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.17.4" data-path="../语言参考/预定义接口/ArrayAccess.html">
+            
+                <a href="../语言参考/预定义接口/ArrayAccess.html">
+            
+                    
+                    ArrayAccess
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.17.5" data-path="../语言参考/预定义接口/Serializable.html">
+            
+                <a href="../语言参考/预定义接口/Serializable.html">
+            
+                    
+                    Serializable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.17.6" data-path="../语言参考/预定义接口/Closure.html">
+            
+                <a href="../语言参考/预定义接口/Closure.html">
+            
+                    
+                    Closure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.17.7" data-path="../语言参考/预定义接口/Generator.html">
+            
+                <a href="../语言参考/预定义接口/Generator.html">
+            
+                    
+                    Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.18" data-path="../语言参考/上下文选项和参数.html">
+            
+                <a href="../语言参考/上下文选项和参数.html">
+            
+                    
+                    上下文选项和参数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.18.1" data-path="../语言参考/上下文选项和参数/套接字上下文选项.html">
+            
+                <a href="../语言参考/上下文选项和参数/套接字上下文选项.html">
+            
+                    
+                    套接字上下文选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.18.2" data-path="../语言参考/上下文选项和参数/HTTP 上下文选项.html">
+            
+                <a href="../语言参考/上下文选项和参数/HTTP 上下文选项.html">
+            
+                    
+                    HTTP 上下文选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.18.3" data-path="../语言参考/上下文选项和参数/FTP 上下文选项.html">
+            
+                <a href="../语言参考/上下文选项和参数/FTP 上下文选项.html">
+            
+                    
+                    FTP 上下文选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.18.4" data-path="../语言参考/上下文选项和参数/SSL 上下文选项.html">
+            
+                <a href="../语言参考/上下文选项和参数/SSL 上下文选项.html">
+            
+                    
+                    SSL 上下文选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.18.5" data-path="../语言参考/上下文选项和参数/CURL 上下文选项.html">
+            
+                <a href="../语言参考/上下文选项和参数/CURL 上下文选项.html">
+            
+                    
+                    CURL 上下文选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.18.6" data-path="../语言参考/上下文选项和参数/Phar 上下文选项.html">
+            
+                <a href="../语言参考/上下文选项和参数/Phar 上下文选项.html">
+            
+                    
+                    Phar 上下文选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.18.7" data-path="../语言参考/上下文选项和参数/MongoDB 上下文选项.html">
+            
+                <a href="../语言参考/上下文选项和参数/MongoDB 上下文选项.html">
+            
+                    
+                    MongoDB 上下文选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.18.8" data-path="../语言参考/上下文选项和参数/Context 参数.html">
+            
+                <a href="../语言参考/上下文选项和参数/Context 参数.html">
+            
+                    
+                    Context 参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19" data-path="../语言参考/支持的协议和封装协议.html">
+            
+                <a href="../语言参考/支持的协议和封装协议.html">
+            
+                    
+                    支持的协议和封装协议
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.19.1" data-path="../语言参考/支持的协议和封装协议/file.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/file.html">
+            
+                    
+                    file://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.2" data-path="../语言参考/支持的协议和封装协议/http.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/http.html">
+            
+                    
+                    http://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.3" data-path="../语言参考/支持的协议和封装协议/ftp.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/ftp.html">
+            
+                    
+                    ftp://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.4" data-path="../语言参考/支持的协议和封装协议/php.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/php.html">
+            
+                    
+                    php://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.5" data-path="../语言参考/支持的协议和封装协议/zlib.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/zlib.html">
+            
+                    
+                    zlib://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.6" data-path="../语言参考/支持的协议和封装协议/data.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/data.html">
+            
+                    
+                    data://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.7" data-path="../语言参考/支持的协议和封装协议/global.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/global.html">
+            
+                    
+                    global://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.8" data-path="../语言参考/支持的协议和封装协议/phar.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/phar.html">
+            
+                    
+                    phar://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.9" data-path="../语言参考/支持的协议和封装协议/ssh2.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/ssh2.html">
+            
+                    
+                    ssh2://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.10" data-path="../语言参考/支持的协议和封装协议/rar.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/rar.html">
+            
+                    
+                    rar://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.11" data-path="../语言参考/支持的协议和封装协议/ogg.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/ogg.html">
+            
+                    
+                    ogg://
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.19.12" data-path="../语言参考/支持的协议和封装协议/except.html">
+            
+                <a href="../语言参考/支持的协议和封装协议/except.html">
+            
+                    
+                    except://
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../函数参考.html">
+            
+                <a href="../函数参考.html">
+            
+                    
+                    函数参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../函数参考/影响 PHP 行为的扩展.html">
+            
+                <a href="../函数参考/影响 PHP 行为的扩展.html">
+            
+                    
+                    影响 PHP 行为的扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1.1" data-path="../函数参考/影响 PHP 行为的扩展/错误处理和日志记录.html">
+            
+                <a href="../函数参考/影响 PHP 行为的扩展/错误处理和日志记录.html">
+            
+                    
+                    错误处理和日志记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.1.2" data-path="../函数参考/影响 PHP 行为的扩展/输出缓冲控制.html">
+            
+                <a href="../函数参考/影响 PHP 行为的扩展/输出缓冲控制.html">
+            
+                    
+                    输出缓冲控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.1.3" data-path="../函数参考/影响 PHP 行为的扩展/PHP 选项和信息.html">
+            
+                <a href="../函数参考/影响 PHP 行为的扩展/PHP 选项和信息.html">
+            
+                    
+                    PHP 选项和信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../函数参考/加密扩展.html">
+            
+                <a href="../函数参考/加密扩展.html">
+            
+                    
+                    加密扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.2.1" data-path="../函数参考/加密扩展/Hash.html">
+            
+                <a href="../函数参考/加密扩展/Hash.html">
+            
+                    
+                    Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2.2" data-path="../函数参考/加密扩展/Mcrypt.html">
+            
+                <a href="../函数参考/加密扩展/Mcrypt.html">
+            
+                    
+                    Mcrypt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2.3" data-path="../函数参考/加密扩展/OpenSSL.html">
+            
+                <a href="../函数参考/加密扩展/OpenSSL.html">
+            
+                    
+                    OpenSSL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2.4" data-path="../函数参考/加密扩展/密码散列算法.html">
+            
+                <a href="../函数参考/加密扩展/密码散列算法.html">
+            
+                    
+                    密码散列算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../函数参考/数据库扩展.html">
+            
+                <a href="../函数参考/数据库扩展.html">
+            
+                    
+                    数据库扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.3.1" data-path="../函数参考/数据库扩展/数据库抽象层.html">
+            
+                <a href="../函数参考/数据库扩展/数据库抽象层.html">
+            
+                    
+                    数据库抽象层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.3.1.1" data-path="../函数参考/数据库扩展/数据库抽象层/PDO.html">
+            
+                <a href="../函数参考/数据库扩展/数据库抽象层/PDO.html">
+            
+                    
+                    PDO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../函数参考/日期与时间相关扩展.html">
+            
+                <a href="../函数参考/日期与时间相关扩展.html">
+            
+                    
+                    日期与时间相关扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.4.1" data-path="../函数参考/日期与时间相关扩展/日期与时间.html">
+            
+                <a href="../函数参考/日期与时间相关扩展/日期与时间.html">
+            
+                    
+                    日期与时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../函数参考/文件系统相关扩展.html">
+            
+                <a href="../函数参考/文件系统相关扩展.html">
+            
+                    
+                    文件系统相关扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.5.1" data-path="../函数参考/文件系统相关扩展/目录.html">
+            
+                <a href="../函数参考/文件系统相关扩展/目录.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5.2" data-path="../函数参考/文件系统相关扩展/文件系统.html">
+            
+                <a href="../函数参考/文件系统相关扩展/文件系统.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../函数参考/国际化与字符编码支持.html">
+            
+                <a href="../函数参考/国际化与字符编码支持.html">
+            
+                    
+                    国际化与字符编码支持
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.6.1" data-path="../函数参考/国际化与字符编码支持/iconv.html">
+            
+                <a href="../函数参考/国际化与字符编码支持/iconv.html">
+            
+                    
+                    iconv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6.2" data-path="../函数参考/国际化与字符编码支持/多字节字符串.html">
+            
+                <a href="../函数参考/国际化与字符编码支持/多字节字符串.html">
+            
+                    
+                    多字节字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../函数参考/图像生成和处理.html">
+            
+                <a href="../函数参考/图像生成和处理.html">
+            
+                    
+                    图像生成和处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.7.1" data-path="../函数参考/图像生成和处理/GD.html">
+            
+                <a href="../函数参考/图像生成和处理/GD.html">
+            
+                    
+                    GD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../函数参考/邮件相关扩展.html">
+            
+                <a href="../函数参考/邮件相关扩展.html">
+            
+                    
+                    邮件相关扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.8.1" data-path="../函数参考/邮件相关扩展/邮件.html">
+            
+                <a href="../函数参考/邮件相关扩展/邮件.html">
+            
+                    
+                    邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../函数参考/数学扩展.html">
+            
+                <a href="../函数参考/数学扩展.html">
+            
+                    
+                    数学扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.9.1" data-path="../函数参考/数学扩展/任意精度数学.html">
+            
+                <a href="../函数参考/数学扩展/任意精度数学.html">
+            
+                    
+                    任意精度数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9.2" data-path="../函数参考/数学扩展/数学.html">
+            
+                <a href="../函数参考/数学扩展/数学.html">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../函数参考/进程控制扩展.html">
+            
+                <a href="../函数参考/进程控制扩展.html">
+            
+                    
+                    进程控制扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.10.1" data-path="../函数参考/进程控制扩展/程序执行.html">
+            
+                <a href="../函数参考/进程控制扩展/程序执行.html">
+            
+                    
+                    程序执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.11" data-path="../函数参考/其他基本扩展.html">
+            
+                <a href="../函数参考/其他基本扩展.html">
+            
+                    
+                    其他基本扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.11.1" data-path="../函数参考/其他基本扩展/JSON.html">
+            
+                <a href="../函数参考/其他基本扩展/JSON.html">
+            
+                    
+                    JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.11.2" data-path="../函数参考/其他基本扩展/杂项.html">
+            
+                <a href="../函数参考/其他基本扩展/杂项.html">
+            
+                    
+                    杂项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.11.3" data-path="../函数参考/其他基本扩展/PHP 标准库.html">
+            
+                <a href="../函数参考/其他基本扩展/PHP 标准库.html">
+            
+                    
+                    PHP 标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.11.4" data-path="../函数参考/其他基本扩展/Streams.html">
+            
+                <a href="../函数参考/其他基本扩展/Streams.html">
+            
+                    
+                    Streams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.11.5" data-path="../函数参考/其他基本扩展/Tokenizer.html">
+            
+                <a href="../函数参考/其他基本扩展/Tokenizer.html">
+            
+                    
+                    Tokenizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.11.6" data-path="../函数参考/其他基本扩展/URL.html">
+            
+                <a href="../函数参考/其他基本扩展/URL.html">
+            
+                    
+                    URL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.12" data-path="../函数参考/其他服务.html">
+            
+                <a href="../函数参考/其他服务.html">
+            
+                    
+                    其他服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.12.1" data-path="../函数参考/其他服务/CURL.html">
+            
+                <a href="../函数参考/其他服务/CURL.html">
+            
+                    
+                    CURL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.12.2" data-path="../函数参考/其他服务/网络.html">
+            
+                <a href="../函数参考/其他服务/网络.html">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.12.3" data-path="../函数参考/其他服务/Sockets.html">
+            
+                <a href="../函数参考/其他服务/Sockets.html">
+            
+                    
+                    Sockets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.13" data-path="../函数参考/Session 扩展.html">
+            
+                <a href="../函数参考/Session 扩展.html">
+            
+                    
+                    Session 扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.13.1" data-path="../函数参考/Session 扩展/Session.html">
+            
+                <a href="../函数参考/Session 扩展/Session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.14" data-path="../函数参考/文本处理.html">
+            
+                <a href="../函数参考/文本处理.html">
+            
+                    
+                    文本处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.14.1" data-path="../函数参考/文本处理/正则表达式.html">
+            
+                <a href="../函数参考/文本处理/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.14.2" data-path="../函数参考/文本处理/字符串.html">
+            
+                <a href="../函数参考/文本处理/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.15" data-path="../函数参考/变量与类型相关扩展.html">
+            
+                <a href="../函数参考/变量与类型相关扩展.html">
+            
+                    
+                    变量与类型相关扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.15.1" data-path="../函数参考/变量与类型相关扩展/数组.html">
+            
+                <a href="../函数参考/变量与类型相关扩展/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.15.2" data-path="../函数参考/变量与类型相关扩展/类与对象.html">
+            
+                <a href="../函数参考/变量与类型相关扩展/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.15.3" data-path="../函数参考/变量与类型相关扩展/字符类型检测.html">
+            
+                <a href="../函数参考/变量与类型相关扩展/字符类型检测.html">
+            
+                    
+                    字符类型检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.15.4" data-path="../函数参考/变量与类型相关扩展/过滤器.html">
+            
+                <a href="../函数参考/变量与类型相关扩展/过滤器.html">
+            
+                    
+                    过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.15.5" data-path="../函数参考/变量与类型相关扩展/函数处理.html">
+            
+                <a href="../函数参考/变量与类型相关扩展/函数处理.html">
+            
+                    
+                    函数处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.15.6" data-path="../函数参考/变量与类型相关扩展/反射.html">
+            
+                <a href="../函数参考/变量与类型相关扩展/反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.15.7" data-path="../函数参考/变量与类型相关扩展/变量.html">
+            
+                <a href="../函数参考/变量与类型相关扩展/变量.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.16" data-path="../函数参考/XML 操作.html">
+            
+                <a href="../函数参考/XML 操作.html">
+            
+                    
+                    XML 操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.16.1" data-path="../函数参考/XML 操作/SimpleXML.html">
+            
+                <a href="../函数参考/XML 操作/SimpleXML.html">
+            
+                    
+                    SimpleXML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.16.2" data-path="../函数参考/XML 操作/XML 解析器.html">
+            
+                <a href="../函数参考/XML 操作/XML 解析器.html">
+            
+                    
+                    XML 解析器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../会话和安全.html">
+            
+                <a href="../会话和安全.html">
+            
+                    
+                    会话和安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.3.1" data-path="会话管理基础.html">
+            
+                <a href="会话管理基础.html">
+            
+                    
+                    会话管理基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="和会话安全相关的配置项.html">
+            
+                <a href="和会话安全相关的配置项.html">
+            
+                    
+                    和会话安全相关的配置项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../PHP 的命令行模式.html">
+            
+                <a href="../PHP 的命令行模式.html">
+            
+                    
+                    PHP 的命令行模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../PHP 的命令行模式/内置的 Web 服务器.html">
+            
+                <a href="../PHP 的命令行模式/内置的 Web 服务器.html">
+            
+                    
+                    内置的 Web 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../PHP 的命令行模式/和命令行模式相关的配置项.html">
+            
+                <a href="../PHP 的命令行模式/和命令行模式相关的配置项.html">
+            
+                    
+                    和命令行模式相关的配置项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../PHP 类型比较表.html">
+            
+                <a href="../PHP 类型比较表.html">
+            
+                    
+                    PHP 类型比较表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../PSR.html">
+            
+                <a href="../PSR.html">
+            
+                    
+                    PSR
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.6.1" data-path="../PSR/PSR-1 基础编码规范.html">
+            
+                <a href="../PSR/PSR-1 基础编码规范.html">
+            
+                    
+                    PSR-1 基础编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.2" data-path="../PSR/PSR-2 编码风格规范.html">
+            
+                <a href="../PSR/PSR-2 编码风格规范.html">
+            
+                    
+                    PSR-2 编码风格规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.3" data-path="../PSR/PSR-4 自动加载规范.html">
+            
+                <a href="../PSR/PSR-4 自动加载规范.html">
+            
+                    
+                    PSR-4 自动加载规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >会话管理基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;&#x57FA;&#x7840;">&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;&#x57FA;&#x7840;</h1>
+<ul>
+<li><a href="#&#x4F1A;&#x8BDD;&#x5B89;&#x5168;">&#x4F1A;&#x8BDD;&#x5B89;&#x5168;</a></li>
+<li><a href="#&#x4E25;&#x683C;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;">&#x4E25;&#x683C;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;</a></li>
+<li><a href="#&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4F1A;&#x8BDD;-id">&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4F1A;&#x8BDD; ID</a></li>
+<li><a href="#&#x4F1A;&#x8BDD;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5220;&#x9664;">&#x4F1A;&#x8BDD;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5220;&#x9664;</a></li>
+<li><a href="#&#x4F1A;&#x8BDD;&#x548C;&#x9501;&#x5B9A;">&#x4F1A;&#x8BDD;&#x548C;&#x9501;&#x5B9A;</a></li>
+<li><a href="#&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;">&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;</a></li>
+<li><a href="#&#x4F1A;&#x8BDD;&#x548C;&#x81EA;&#x52A8;&#x767B;&#x5F55;">&#x4F1A;&#x8BDD;&#x548C;&#x81EA;&#x52A8;&#x767B;&#x5F55;</a></li>
+<li><a href="#csrf">CSRF</a></li>
+</ul>
+<h2 id="&#x4F1A;&#x8BDD;&#x5B89;&#x5168;">&#x4F1A;&#x8BDD;&#x5B89;&#x5168;</h2>
+<p>&#x4F1A;&#x8BDD;&#x6A21;&#x5757;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x5B58;&#x50A8;&#x5728;&#x4F1A;&#x8BDD;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x53EA;&#x80FD;&#x88AB;&#x521B;&#x5EFA;&#x4F1A;&#x8BDD;&#x7684;&#x7528;&#x6237;&#x672C;&#x4EBA;&#x53EF;&#x89C1;&#x3002;&#x9700;&#x8981;&#x91C7;&#x53D6;&#x989D;&#x5916;&#x7684;&#x624B;&#x6BB5;&#x6765;&#x786E;&#x4FDD;&#x4F1A;&#x8BDD;&#x4E2D;&#x7684;&#x673A;&#x5BC6;&#x4FE1;&#x606F;&#xFF0C;&#x81F3;&#x4E8E;&#x91C7;&#x53D6;&#x4F55;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x4FDD;&#x62A4;&#x673A;&#x5BC6;&#x4FE1;&#x606F;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x5728;&#x4F1A;&#x8BDD;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x3002;&#x8BC4;&#x4F30;&#x4F1A;&#x8BDD;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x7684;&#x91CD;&#x8981;&#x6027;&#xFF0C;&#x4EE5;&#x53CA;&#x4E3A;&#x6B64;&#x589E;&#x52A0;&#x989D;&#x5916;&#x7684;&#x4FDD;&#x62A4;&#x673A;&#x5236;&#xFF0C;&#x901A;&#x5E38;&#x9700;&#x8981;&#x4ED8;&#x51FA;&#x4E00;&#x5B9A;&#x7684;&#x4EE3;&#x4EF7;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x964D;&#x4F4E;&#x4FBF;&#x5229;&#x6027;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x4FDD;&#x62A4;&#x7528;&#x6237;&#x514D;&#x53D7;&#x793E;&#x4F1A;&#x5DE5;&#x7A0B;&#x5B66;&#x653B;&#x51FB;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x542F;&#x7528; <code>session.use_only_cookies</code> &#x9009;&#x9879;&#x3002;&#x8FD9;&#x5C31;&#x8981;&#x6C42;&#x7528;&#x6237;&#x5728;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5FC5;&#x987B;&#x628A;&#x6D4F;&#x89C8;&#x5668;&#x8BBE;&#x7F6E;&#x4E3A;&#x63A5;&#x53D7; Cookie &#xFF0C;&#x5426;&#x5219;&#x5C31;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x4F1A;&#x8BDD;&#x529F;&#x80FD;&#x4E86;&#x3002;</p>
+<p>&#x6709;&#x5F88;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x53EF;&#x4EE5;&#x5BFC;&#x81F4;&#x4F1A;&#x8BDD; ID &#x88AB;&#x6CC4;&#x9732;&#x7ED9;&#x7B2C;&#x4E09;&#x65B9;&#x3002;&#x4F8B;&#x5982;&#xFF0C; JavaScript &#x6CE8;&#x5165;&#xFF0C; URL &#x4E2D;&#x5305;&#x542B;&#x4F1A;&#x8BDD; ID &#xFF0C;&#x6570;&#x636E;&#x5305;&#x4FA6;&#x542C;&#xFF0C; &#x6216;&#x8005;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x4F60;&#x7684;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x7B49;&#x3002;&#x5982;&#x679C;&#x4F1A;&#x8BDD; ID &#x88AB;&#x6CC4;&#x6F0F;&#x7ED9;&#x7B2C;&#x4E09;&#x65B9;&#xFF0C;&#x90A3;&#x4E48;&#x7B2C;&#x4E09;&#x65B9;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x4F1A;&#x8BDD; ID &#x8BBF;&#x95EE;&#x5168;&#x90E8;&#x7684;&#x8D44;&#x6E90;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x5982;&#x679C;&#x5728; URL &#x4E2D;&#x5305;&#x542B;&#x4E86;&#x4F1A;&#x8BDD; ID &#xFF0C;&#x5E76;&#x4E14;&#x8BBF;&#x95EE;&#x4E86;&#x5916;&#x90E8;&#x7684;&#x7AD9;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x7684;&#x4F1A;&#x8BDD; ID &#x53EF;&#x80FD;&#x5728;&#x5916;&#x90E8;&#x7AD9;&#x70B9;&#x7684;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#x4E2D;&#x88AB;&#x8BB0;&#x5F55;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x4F60;&#x7684;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#xFF0C;&#x5982;&#x679C;&#x901A;&#x4FE1;&#x672A;&#x52A0;&#x5BC6;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x8BDD; ID &#x5C06;&#x4F1A;&#x5728;&#x7F51;&#x7EDC;&#x4E2D;&#x4EE5;&#x660E;&#x6587;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x4F20;&#x8F93;&#x3002;&#x9488;&#x5BF9;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C31;&#x662F;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E; SSL / TLS &#xFF0C;&#x53E6;&#x5916;&#xFF0C;&#x4F7F;&#x7528; HSTS &#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x66F4;&#x9AD8;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x5373;&#x4F7F;&#x4F7F;&#x7528; HTTPS &#x534F;&#x8BAE;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x6C38;&#x8FDC;&#x4FDD;&#x8BC1;&#x673A;&#x5BC6;&#x6570;&#x636E;&#x4E0D;&#x88AB;&#x6CC4;&#x6F0F;&#x3002;</p>
+<h2 id="&#x4E25;&#x683C;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;">&#x4E25;&#x683C;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;</h2>
+<p>PHP &#x662F;&#x4EE5;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7BA1;&#x7406;&#x4F1A;&#x8BDD;&#x7684;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x5F88;&#x7075;&#x6D3B;&#xFF0C;&#x4F46;&#x662F;&#x540C;&#x6837;&#x4E5F;&#x5E26;&#x6765;&#x4E86;&#x4E00;&#x5B9A;&#x7684;&#x98CE;&#x9669;&#x3002;&#x5F53;&#x542F;&#x7528; <code>session.use_strict_mode</code> &#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x5E76;&#x4E14;&#x6240;&#x7528;&#x7684;&#x4F1A;&#x8BDD;&#x5B58;&#x50A8;&#x5668;&#x652F;&#x6301;&#x7684;&#x8BDD;&#xFF0C;&#x672A;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x7684;&#x4F1A;&#x8BDD; ID &#x4F1A;&#x88AB;&#x62D2;&#x7EDD;&#xFF0C;&#x5E76;&#x4E3A;&#x5176;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x4F1A;&#x8BDD;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x653B;&#x51FB;&#x8005;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x7684;&#x4F1A;&#x8BDD; ID &#x6765;&#x8FDB;&#x884C;&#x653B;&#x51FB;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x90AE;&#x4EF6;&#x7ED9;&#x53D7;&#x5BB3;&#x8005;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4F1A;&#x8BDD; ID &#x7684;&#x94FE;&#x63A5;&#xFF1A; <a href="https://github.com/index.php?PHPSESSID=123456789" target="_blank">https://github.com/index.php?PHPSESSID=123456789</a> &#xFF0C;&#x5982;&#x679C;&#x542F;&#x7528;&#x4E86; <code>session.use_trans_sid</code> &#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x90A3;&#x4E48;&#x53D7;&#x5BB3;&#x8005;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x653B;&#x51FB;&#x8005;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x4F1A;&#x8BDD; ID &#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4F1A;&#x8BDD;&#x3002;</p>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E00;&#x4FA7;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x4F1A;&#x8BDD; ID &#x7684; Cookie &#x8BBE;&#x7F6E;&#x57DF;&#xFF0C;&#x8DEF;&#x5F84;&#xFF0C;&#x4EC5;&#x5141;&#x8BB8; HTTP &#x8BBF;&#x95EE;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528; HTTPS &#x8BBF;&#x95EE;&#x7B49;&#x5B89;&#x5168;&#x5C5E;&#x6027;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#x6765;&#x8BBE;&#x7F6E;&#x6C38;&#x4E45;&#x53EF;&#x7528;&#x7684;&#x4F1A;&#x8BDD; ID &#x3002;&#x4EC5;&#x4EC5;&#x8BBE;&#x7F6E; <code>session.use_only_cookies</code> &#x914D;&#x7F6E;&#x9879;&#x65E0;&#x6CD5;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x8BBE;&#x7F6E; <code>session.use_strict_mode = On</code> &#xFF0C;&#x6765;&#x62D2;&#x7EDD;&#x672A;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x7684;&#x4F1A;&#x8BDD; ID &#x3002;</p>
+<p>&#x867D;&#x7136;&#x4F7F;&#x7528; <code>session.use_strict_mode</code> &#x914D;&#x7F6E;&#x9879;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x7075;&#x6D3B;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#x6240;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x8FD8;&#x662F;&#x901A;&#x8FC7;&#x5229;&#x7528; JavaScript &#x6CE8;&#x5165;&#x7B49;&#x624B;&#x6BB5;&#xFF0C;&#x5F3A;&#x5236;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x7531;&#x653B;&#x51FB;&#x8005;&#x521B;&#x5EFA;&#x7684;&#x5E76;&#x4E14;&#x7ECF;&#x8FC7;&#x4E86;&#x6B63;&#x5E38;&#x7684;&#x521D;&#x59CB;&#x5316;&#x7684;&#x4F1A;&#x8BDD; ID &#x3002;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x542F;&#x7528;&#x4E86; <code>session.use_strict_mode</code> &#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;&#xFF0C;&#x5E76;&#x4E14;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>session_regenerate_id()</code> &#x51FD;&#x6570;&#x6765;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4F1A;&#x8BDD; ID &#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x751F;&#x6210;&#x7684;&#x4F1A;&#x8BDD; ID &#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x5220;&#x9664;&#x6389;&#x4E86;&#x3002;</p>
+<p>&#x5F53;&#x53D1;&#x751F;&#x5BF9;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x8BBF;&#x95EE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4FDD;&#x5B58;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x5907;&#x540E;&#x7EED;&#x5206;&#x6790;&#x4F7F;&#x7528;&#x3002;&#x7136;&#x540E;&#x8BA9;&#x7528;&#x6237;&#x9000;&#x51FA;&#x5F53;&#x524D;&#x7684;&#x4F1A;&#x8BDD;&#xFF0C;&#x5E76;&#x4E14;&#x91CD;&#x65B0;&#x767B;&#x5F55;&#x3002;&#x9632;&#x6B62;&#x653B;&#x51FB;&#x8005;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x201C;&#x5077;&#x201D;&#x6765;&#x7684;&#x4F1A;&#x8BDD;&#x3002;&#x5BF9;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x5E76;&#x4E0D;&#x603B;&#x662F;&#x610F;&#x5473;&#x7740;&#x6B63;&#x5728;&#x906D;&#x53D7;&#x653B;&#x51FB;&#x3002;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x7F51;&#x7EDC;&#x72B6;&#x51B5;&#xFF0C;&#x6216;&#x8005;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x4F1A;&#x8BDD;&#x5220;&#x9664;&#x884C;&#x4E3A;&#xFF0C;&#x90FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5408;&#x6CD5;&#x7684;&#x7528;&#x6237;&#x4EA7;&#x751F;&#x5BF9;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x884C;&#x4E3A;&#x3002;</p>
+<p>&#x4F7F;&#x7528; <code>session_create_id()</code> &#x51FD;&#x6570;&#x5141;&#x8BB8;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x4F1A;&#x8BDD; ID &#x4E2D;&#x589E;&#x52A0;&#x7528;&#x6237; ID &#x4F5C;&#x4E3A;&#x524D;&#x7F00;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5230;&#x6B63;&#x786E;&#x5BF9;&#x5E94;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x3002;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x542F;&#x7528;&#x4E86; <code>session.use_strict_mode</code> &#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x5426;&#x5219;&#x6076;&#x610F;&#x7528;&#x6237;&#x53EF;&#x80FD;&#x4F1A;&#x4F2A;&#x9020;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x7684;&#x4F1A;&#x8BDD; ID &#x3002;</p>
+<h2 id="&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4F1A;&#x8BDD;-id">&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4F1A;&#x8BDD; ID</h2>
+<p>&#x867D;&#x7136; <code>session.use_strict_mode</code> &#x914D;&#x7F6E;&#x9879;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x98CE;&#x9669;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x4E0D;&#x591F;&#x3002;&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x4F1A;&#x8BDD;&#x5B89;&#x5168;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x8FD8;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>session_regenerate_id()</code> &#x51FD;&#x6570;&#x3002;&#x4F1A;&#x8BDD; ID &#x91CD;&#x65B0;&#x751F;&#x6210;&#x673A;&#x5236;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7684;&#x964D;&#x4F4E;&#x4F1A;&#x8BDD;&#x88AB;&#x7A83;&#x53D6;&#x7684;&#x98CE;&#x9669;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5FC5;&#x987B;&#x5468;&#x671F;&#x6027;&#x7684;&#x8C03;&#x7528; <code>session_regenerate_id()</code> &#x51FD;&#x6570;&#x6765;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4F1A;&#x8BDD; ID &#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;&#x673A;&#x5BC6;&#x5185;&#x5BB9;&#xFF0C;&#x6BCF;&#x9694; 15 &#x5206;&#x949F;&#x5C31;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4F1A;&#x8BDD; ID &#x3002;&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x5373;&#x4F7F;&#x4F1A;&#x8BDD; ID &#x88AB;&#x7A83;&#x53D6;&#xFF0C;&#x90A3;&#x4E48;&#x653B;&#x51FB;&#x8005;&#x6240;&#x5F97;&#x5230;&#x7684;&#x4F1A;&#x8BDD; ID &#x4E5F;&#x4F1A;&#x5F88;&#x5FEB;&#x7684;&#x8FC7;&#x671F;&#xFF0C;&#x5982;&#x679C;&#x4ED6;&#x4EEC;&#x8FDB;&#x4E00;&#x6B65;&#x8BBF;&#x95EE;&#xFF0C;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x5BF9;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x7684;&#x9519;&#x8BEF;&#x3002;&#x5F53;&#x7528;&#x6237;&#x6210;&#x529F;&#x901A;&#x8FC7;&#x8BA4;&#x8BC1;&#x4E4B;&#x540E;&#xFF0C;&#x5FC5;&#x987B;&#x4E3A;&#x5176;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4F1A;&#x8BDD; ID &#x3002;&#x5E76;&#x4E14;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x5411; <code>$_SESSION</code> &#x4E2D;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#x4E4B;&#x524D;&#x8C03;&#x7528; <code>session_regenerate_id()</code> &#x51FD;&#x6570;&#x3002;&#x8BF7;&#x786E;&#x4FDD;&#x53EA;&#x6709;&#x65B0;&#x7684;&#x4F1A;&#x8BDD;&#x5305;&#x542B;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x8981;&#x4F9D;&#x8D56; <code>session.gc_maxlifetime</code> &#x914D;&#x7F6E;&#x9879;&#x3002;&#x56E0;&#x4E3A;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x5728;&#x53D7;&#x5BB3;&#x8005;&#x7684;&#x4F1A;&#x8BDD;&#x8FC7;&#x671F;&#x4E4B;&#x524D;&#x4EA7;&#x751F;&#x8BBF;&#x95EE;&#xFF0C;&#x5E76;&#x4E14;&#x7EF4;&#x6301;&#x8FD9;&#x4E2A;&#x4F1A;&#x8BDD;&#x7684;&#x6D3B;&#x52A8;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E2A;&#x4F1A;&#x8BDD;&#x4E0D;&#x4F1A;&#x8FC7;&#x671F;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x673A;&#x5236;&#x3002;&#x867D;&#x7136;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;&#x5668;&#x53EF;&#x4EE5;&#x900F;&#x660E;&#x7684;&#x7BA1;&#x7406;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x5C1A;&#x672A;&#x5B8C;&#x6574;&#x7684;&#x5B9E;&#x73B0;&#x3002;&#x5728; GC &#x53D1;&#x751F;&#x4E4B;&#x524D;&#xFF0C;&#x65E7;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x8FD8;&#x5F97;&#x4FDD;&#x5B58;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x8FD8;&#x5F97;&#x4FDD;&#x8BC1;&#x8FC7;&#x671F;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x88AB;&#x79FB;&#x9664;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53C8;&#x4E0D;&#x80FD;&#x7ACB;&#x5373;&#x79FB;&#x9664;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x4E0A;&#x8C03;&#x7528; <code>session_regenerate_id(true)</code> &#x548C; <code>session_destroy()</code> &#x51FD;&#x6570;&#x3002;&#x8FD9;&#x542C;&#x8D77;&#x6765;&#x6709;&#x70B9;&#x81EA;&#x76F8;&#x77DB;&#x76FE;&#xFF0C;&#x4F46;&#x662F;&#x4E8B;&#x5B9E;&#x4E0A;&#x5FC5;&#x987B;&#x5F97;&#x8FD9;&#x4E48;&#x505A;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; <code>session_regenerate_id()</code> &#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x5220;&#x9664;&#x65E7;&#x7684;&#x4F1A;&#x8BDD;&#xFF0C;&#x6240;&#x4EE5;&#x5373;&#x4F7F;&#x91CD;&#x751F;&#x4E86;&#x4F1A;&#x8BDD; ID &#xFF0C;&#x65E7;&#x7684;&#x4F1A;&#x8BDD;&#x53EF;&#x80FD;&#x8FD8;&#x662F;&#x53EF;&#x7528;&#x7684;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x65F6;&#x95F4;&#x6233;&#x7B49;&#x673A;&#x5236;&#xFF0C;&#x6765;&#x786E;&#x4FDD;&#x65E7;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x518D;&#x6B21;&#x88AB;&#x8BBF;&#x95EE;&#x3002;&#x7ACB;&#x5373;&#x5220;&#x9664;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x53EF;&#x80FD;&#x4F1A;&#x5E26;&#x6765;&#x975E;&#x9884;&#x671F;&#x7684;&#x4E00;&#x4E9B;&#x5F71;&#x54CD;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x4E0D;&#x7A33;&#x5B9A;&#xFF0C;&#x6216;&#x8005;&#x6709;&#x5E76;&#x53D1;&#x8BF7;&#x6C42;&#x5230;&#x8FBE; Web &#x670D;&#x52A1;&#x5668;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; &#x7ACB;&#x5373;&#x5220;&#x9664;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4E2A;&#x522B;&#x8BF7;&#x6C42;&#x4F1A;&#x8BDD;&#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;&#x3002;&#x7ACB;&#x5373;&#x5220;&#x9664;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x4E5F;&#x65E0;&#x6CD5;&#x68C0;&#x6D4B;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x7684;&#x6076;&#x610F;&#x8BBF;&#x95EE;&#x3002;&#x4F5C;&#x4E3A;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#xFF0C;&#x9700;&#x8981;&#x5728; <code>$_SESSION</code> &#x4E2D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5F88;&#x77ED;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x6233;&#x6765;&#x5224;&#x65AD;&#x540E;&#x7EED;&#x7684;&#x8BBF;&#x95EE;&#x662F;&#x88AB;&#x5141;&#x8BB8;&#x7684;&#x8FD8;&#x662F;&#x88AB;&#x7981;&#x6B62;&#x7684;&#x3002;&#x5728;&#x8C03;&#x7528; <code>session_regenerate_id()</code> &#x51FD;&#x6570;&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x80FD;&#x7ACB;&#x5373;&#x7981;&#x6B62;&#x5BF9;&#x65E7;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x5E94;&#x8BE5;&#x518D;&#x4E00;&#x5C0F;&#x6BB5;&#x4E4B;&#x95F4;&#x4E4B;&#x540E;&#x518D;&#x7981;&#x6B62;&#x8BBF;&#x95EE;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x7A33;&#x5B9A;&#x7684;&#x7F51;&#x7EDC;&#x6761;&#x4EF6;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x51E0;&#x79D2;&#x949F;&#xFF0C;&#x5728;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x7F51;&#x7EDC;&#x6761;&#x4EF6;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x51E0;&#x5206;&#x949F;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x4E86;&#x5DF2;&#x7ECF;&#x8FC7;&#x671F;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x7981;&#x6B62;&#x8BBF;&#x95EE;&#x3002;&#x5EFA;&#x8BAE;&#x4ECE;&#x4F1A;&#x8BDD;&#x4E2D;&#x79FB;&#x9664;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x662F;&#x5728;&#x906D;&#x53D7;&#x653B;&#x51FB;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x653B;&#x51FB;&#x8005;&#x8BBE;&#x7F6E;&#x4E86;&#x4E0D;&#x53EF;&#x5220;&#x9664;&#x7684; Cookie &#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528; <code>session.use_only_cookies</code> &#x548C; <code>session_regenerate_id()</code> &#x51FD;&#x6570;&#x4F1A;&#x5BFC;&#x81F4;&#x6B63;&#x5E38;&#x7528;&#x6237;&#x906D;&#x53D7;&#x62D2;&#x7EDD;&#x670D;&#x52A1;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5982;&#x679C;&#x53D1;&#x751F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x8BF7;&#x8BA9;&#x7528;&#x6237;&#x5220;&#x9664; Cookie &#x5E76;&#x4E14;&#x8B66;&#x544A;&#x7528;&#x6237;&#x4ED6;&#x53EF;&#x80FD;&#x9762;&#x4E34;&#x4E00;&#x4E9B;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x3002;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6076;&#x610F;&#x7684; Web &#x5E94;&#x7528;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x63D2;&#x4EF6;&#x4EE5;&#x53CA;&#x5BF9;&#x5B89;&#x5168;&#x6027;&#x8F83;&#x5DEE;&#x7684;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x653B;&#x51FB;&#x6765;&#x4F2A;&#x9020;&#x6076;&#x610F;&#x7684; Cookie &#x3002;</p>
+<h2 id="&#x4F1A;&#x8BDD;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5220;&#x9664;">&#x4F1A;&#x8BDD;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5220;&#x9664;</h2>
+<p>&#x8FC7;&#x671F;&#x7684;&#x4F1A;&#x8BDD;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5E94;&#x8BE5;&#x662F;&#x88AB;&#x5220;&#x9664;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x53EF;&#x8BBF;&#x95EE;&#x3002;&#x73B0;&#x5728;&#x7684;&#x4F1A;&#x8BDD;&#x6A21;&#x5757;&#x5C1A;&#x672A;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x7279;&#x6027;&#x3002;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x5FEB;&#x7684;&#x5220;&#x9664;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x4E00;&#x5B9A;&#x4E0D;&#x8981;&#x7ACB;&#x5373;&#x5220;&#x9664;&#x3002;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x8FD9;&#x4E24;&#x70B9;&#x8981;&#x6C42;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x6765;&#x5B9E;&#x73B0;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x673A;&#x5236;&#x3002;&#x5728; <code>$_SESSION</code> &#x4E2D;&#x8BBE;&#x7F6E;&#x4F1A;&#x8BDD;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x4EE5;&#x4FBF;&#x80FD;&#x591F;&#x963B;&#x6B62;&#x5BF9;&#x4E8E;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x7684;&#x8BBF;&#x95EE;&#x3002;&#x5F53;&#x53D1;&#x751F;&#x5BF9;&#x4E8E;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x7684;&#x8BBF;&#x95EE;&#x65F6;&#xFF0C;&#x5EFA;&#x8BAE;&#x4ECE;&#x76F8;&#x5173;&#x7528;&#x6237;&#x7684;&#x6240;&#x6709;&#x4F1A;&#x8BDD;&#x4E2D;&#x5220;&#x9664;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x8981;&#x6C42;&#x7528;&#x6237;&#x91CD;&#x65B0;&#x8BA4;&#x8BC1;&#x3002;&#x5BF9;&#x4E8E;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x79CD;&#x653B;&#x51FB;&#x884C;&#x4E3A;&#xFF0C;&#x4E3A;&#x4E86;&#x4FDD;&#x62A4;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x8FFD;&#x8E2A;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x3002;</p>
+<p>&#x5F53;&#x7528;&#x6237;&#x5904;&#x4E8E;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x7F51;&#x7EDC;&#xFF0C;&#x6216;&#x8005; Web &#x5E94;&#x7528;&#x5B58;&#x5728;&#x5E76;&#x53D1;&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x5BF9;&#x4E8E;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x3002;&#x670D;&#x52A1;&#x5668;&#x5C1D;&#x8BD5;&#x4E3A;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x65B0;&#x7684;&#x4F1A;&#x8BDD; ID &#xFF0C;&#x4F46;&#x662F;&#x5F88;&#x53EF;&#x80FD;&#x7531;&#x4E8E;&#x7F51;&#x7EDC;&#x539F;&#x56E0;&#xFF0C;&#x5BFC;&#x81F4; Set-Cookie &#x7684;&#x6570;&#x636E;&#x5305;&#x65E0;&#x6CD5;&#x5230;&#x8FBE;&#x7528;&#x6237;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x3002;&#x5F53;&#x901A;&#x8FC7; <code>session_regenerate_id()</code> &#x51FD;&#x6570;&#x4E3A;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x751F;&#x6210;&#x65B0;&#x7684;&#x4F1A;&#x8BDD; ID &#x4E4B;&#x540E;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x5E76;&#x53D1;&#x8FDE;&#x63A5;&#x53EF;&#x80FD;&#x5C1A;&#x672A;&#x5F97;&#x5230;&#x8FD9;&#x4E2A;&#x65B0;&#x7684;&#x4F1A;&#x8BDD; ID &#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E0D;&#x80FD;&#x7ACB;&#x5373;&#x963B;&#x6B62;&#x5BF9;&#x4E8E;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x800C;&#x662F;&#x8981;&#x5EF6;&#x8FDF;&#x4E00;&#x4E2A;&#x5F88;&#x5C0F;&#x7684;&#x65F6;&#x95F4;&#x6BB5;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;&#x3002;&#x7B80;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x8C03;&#x7528; <code>session_regenerate_id()</code> &#x6216;&#x8005; <code>session_destroy()</code> &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x7ACB;&#x5373;&#x5220;&#x9664;&#x65E7;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x662F;&#x8981;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x6233;&#x6765;&#x63A7;&#x5236;&#x540E;&#x7EED;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x65E7;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x3002;&#x4ECE;&#x4F1A;&#x8BDD;&#x5B58;&#x50A8;&#x4E2D;&#x5220;&#x9664;&#x6570;&#x636E;&#x7684;&#x5DE5;&#x4F5C;&#x4EA4;&#x7ED9; <code>session_gc()</code> &#x51FD;&#x6570;&#x6765;&#x5B8C;&#x6210;&#x3002;</p>
+<h2 id="&#x4F1A;&#x8BDD;&#x548C;&#x9501;&#x5B9A;">&#x4F1A;&#x8BDD;&#x548C;&#x9501;&#x5B9A;</h2>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x5728;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x5BF9;&#x4E8E;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x662F;&#x52A0;&#x9501;&#x8FDB;&#x884C;&#x7684;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x79CD;&#x9501;&#x5B9A;&#x673A;&#x5236;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x88AB;&#x653B;&#x51FB;&#x8005;&#x5229;&#x7528;&#xFF0C;&#x6765;&#x8FDB;&#x884C;&#x5BF9;&#x4E8E;&#x7528;&#x6237;&#x7684;&#x62D2;&#x7EDD;&#x670D;&#x52A1;&#x653B;&#x51FB;&#x3002;&#x4E3A;&#x4E86;&#x964D;&#x4F4E;&#x8FD9;&#x79CD;&#x98CE;&#x9669;&#xFF0C;&#x8BF7;&#x5728;&#x8BBF;&#x95EE;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x7F29;&#x77ED;&#x9501;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x5F53;&#x67D0;&#x4E2A;&#x8BF7;&#x6C42;&#x4E0D;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;&#x53EA;&#x8BFB;&#x6A21;&#x5F0F;&#x8BBF;&#x95EE;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5F00;&#x542F;&#x4F1A;&#x8BDD;&#x65F6;&#x4F7F;&#x7528;&#x8BE5;&#x9009;&#x9879;&#xFF1A; <code>session_start([&apos;read_and_close&apos; =&gt; true])</code> &#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x66F4;&#x65B0;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x9A6C;&#x4E0A;&#x8C03;&#x7528; <code>session_commit()</code> &#x51FD;&#x6570;&#x6765;&#x91CA;&#x653E;&#x5BF9;&#x4E8E;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x9501;&#x3002;&#x5F53;&#x4F1A;&#x8BDD;&#x4E0D;&#x6D3B;&#x8DC3;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53;&#x524D;&#x7684;&#x4F1A;&#x8BDD;&#x6A21;&#x5757;&#x4E0D;&#x4F1A;&#x68C0;&#x6D4B;&#x5BF9;&#x4E8E; <code>$_SESSION</code> &#x7684;&#x4FEE;&#x6539;&#x3002;&#x4F60;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x6765;&#x4FDD;&#x8BC1;&#x5728;&#x4F1A;&#x8BDD;&#x5904;&#x4E8E;&#x4E0D;&#x6D3B;&#x8DC3;&#x72B6;&#x6001;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x8981;&#x53BB;&#x4FEE;&#x6539;&#x5B83;&#x3002;</p>
+<h2 id="&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;">&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;</h2>
+<p>&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x6765;&#x8FFD;&#x8E2A;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#xFF0C;&#x8981;&#x77E5;&#x9053;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x5C11;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#xFF0C;&#x6BCF;&#x4E2A;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x6765;&#x81EA;&#x54EA;&#x4E2A; IP &#x5730;&#x5740;&#xFF0C;&#x6D3B;&#x8DC3;&#x4E86;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x7B49;&#x3002; PHP &#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x8FD9;&#x9879;&#x5DE5;&#x4F5C;&#xFF0C;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x5B8C;&#x6210;&#x3002;&#x6709;&#x5F88;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x8FFD;&#x8E2A;&#x7528;&#x6237;&#x7684;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5B58;&#x50A8;&#x4F1A;&#x8BDD;&#x4FE1;&#x606F;&#x6765;&#x8DDF;&#x8E2A;&#x7528;&#x6237;&#x4F1A;&#x8BDD;&#x3002;&#x7531;&#x4E8E;&#x4F1A;&#x8BDD;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;&#x6536;&#x96C6;&#x6389;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x4E5F;&#x9700;&#x8981;&#x5904;&#x7406;&#x88AB;&#x6536;&#x96C6;&#x6389;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x548C;&#x771F;&#x5B9E;&#x7684;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x3002;&#x4E00;&#x79CD;&#x5F88;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x7528;&#x6237; ID &#x4F5C;&#x4E3A;&#x4F1A;&#x8BDD; ID &#x524D;&#x7F00;&#xFF0C;&#x5E76;&#x4E14;&#x4FDD;&#x5B58;&#x5FC5;&#x8981;&#x7684;&#x4FE1;&#x606F;&#x5230; <code>$_SESSION</code> &#x4E2D;&#x3002;&#x5927;&#x90E8;&#x5206;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4EA7;&#x54C1;&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x524D;&#x7F00;&#x67E5;&#x8BE2;&#x90FD;&#x6709;&#x5F88;&#x597D;&#x7684;&#x6027;&#x80FD;&#x8868;&#x73B0;&#x3002;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>session_regenerate_id()</code> &#x548C; <code>session_create_id()</code> &#x51FD;&#x6570;&#x3002;&#x8981;&#x80FD;&#x591F;&#x68C0;&#x6D4B;&#x5BF9;&#x4E8E;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x673A;&#x5236;&#x662F;&#x5FC5;&#x4E0D;&#x53EF;&#x5C11;&#x7684;&#x3002;&#x5F53;&#x68C0;&#x6D4B;&#x5230;&#x5BF9;&#x4E8E;&#x8FC7;&#x671F;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x65F6;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4ECE;&#x76F8;&#x5173;&#x7528;&#x6237;&#x7684;&#x6D3B;&#x8DC3;&#x4F1A;&#x8BDD;&#x4E2D;&#x5220;&#x9664;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#xFF0C;&#x907F;&#x514D;&#x653B;&#x51FB;&#x8005;&#x6301;&#x7EED;&#x4F7F;&#x7528;&#x76D7;&#x53D6;&#x7684;&#x4F1A;&#x8BDD;&#x3002;</p>
+<h2 id="&#x4F1A;&#x8BDD;&#x548C;&#x81EA;&#x52A8;&#x767B;&#x5F55;">&#x4F1A;&#x8BDD;&#x548C;&#x81EA;&#x52A8;&#x767B;&#x5F55;</h2>
+<p>&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x5E94;&#x8BE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x957F;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x4F1A;&#x8BDD; ID &#x6765;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x767B;&#x5F55;&#x529F;&#x80FD;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x63D0;&#x9AD8;&#x4E86;&#x4F1A;&#x8BDD;&#x88AB;&#x7A83;&#x53D6;&#x7684;&#x98CE;&#x9669;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x5E94;&#x8BE5;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x767B;&#x5F55;&#x7684;&#x673A;&#x5236;&#x3002;&#x5728;&#x4F7F;&#x7528; <code>setcookie()</code> &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F20;&#x5165;&#x5B89;&#x5168;&#x7684;&#x4E00;&#x6B21;&#x6027;&#x6458;&#x8981;&#x7ED3;&#x679C;&#x4F5C;&#x4E3A;&#x81EA;&#x52A8;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x3002;&#x5728;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x7528;&#x6237;&#x5C1A;&#x672A;&#x8BA4;&#x8BC1;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53BB;&#x68C0;&#x67E5;&#x8BF7;&#x6C42;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B;&#x4E86;&#x6709;&#x6548;&#x7684;&#x4E00;&#x6B21;&#x6027;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x4E00;&#x6B21;&#x6027;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53BB;&#x8BA4;&#x8BC1;&#x7528;&#x6237;&#xFF0C;&#x5E76;&#x4E14;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x65B0;&#x7684;&#x4E00;&#x6B21;&#x6027;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x3002;&#x81EA;&#x52A8;&#x767B;&#x5F55;&#x7684;&#x5173;&#x952E;&#x4FE1;&#x606F;&#x4E00;&#x5B9A;&#x662F;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x4E00;&#x6B21;&#x6027;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x3002;&#x81EA;&#x52A8;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x662F;&#x957F;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#xFF0C;&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x8981;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x59A5;&#x5584;&#x4FDD;&#x62A4;&#x3002;&#x53EF;&#x4EE5;&#x5BF9;&#x4E8E;&#x81EA;&#x52A8;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x5BF9;&#x5E94;&#x7684; Cookie &#x8BBE;&#x7F6E;&#x8DEF;&#x5F84;&#x3001;&#x4EC5;&#x5141;&#x8BB8; HTTP &#x8BBF;&#x95EE;&#x3001;&#x4EC5;&#x5141;&#x8BB8;&#x5B89;&#x5168;&#x8BBF;&#x95EE;&#x7B49;&#x5C5E;&#x6027;&#x6765;&#x52A0;&#x4EE5;&#x4FDD;&#x62A4;&#xFF0C;&#x5E76;&#x4E14;&#x5C3D;&#x5728;&#x5FC5;&#x8981;&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F20;&#x9001;&#x8FD9;&#x4E2A; Cookie &#x3002;&#x5F00;&#x53D1;&#x8005;&#x4E5F;&#x8981;&#x63D0;&#x4F9B;&#x7981;&#x7528;&#x81EA;&#x52A8;&#x767B;&#x5F55;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x4EE5;&#x53CA;&#x5220;&#x9664;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x7684;&#x81EA;&#x52A8;&#x767B;&#x5F55;&#x6570;&#x636E;&#x7684;&#x80FD;&#x529B;&#x3002;</p>
+<h2 id="csrf">CSRF</h2>
+<p>&#x4F1A;&#x8BDD;&#x548C;&#x8BA4;&#x8BC1;&#x65E0;&#x6CD5;&#x907F;&#x514D;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;&#x653B;&#x51FB;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x6765;&#x5B9E;&#x73B0;&#x4FDD;&#x62A4;&#x5E94;&#x7528;&#x4E0D;&#x53D7; CSRF &#x653B;&#x51FB;&#x7684;&#x529F;&#x80FD;&#x3002;&#x5927;&#x90E8;&#x5206; Web &#x5E94;&#x7528;&#x6846;&#x67B6;&#x90FD;&#x63D0;&#x4F9B;&#x4E86; CSRF &#x4FDD;&#x62A4;&#x7684;&#x7279;&#x6027;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../会话和安全.html" class="navigation navigation-prev " aria-label="Previous page: 会话和安全">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="和会话安全相关的配置项.html" class="navigation navigation-next " aria-label="Next page: 和会话安全相关的配置项">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"会话管理基础","level":"1.1.3.1","depth":3,"next":{"title":"和会话安全相关的配置项","level":"1.1.3.2","depth":3,"path":"docs/会话和安全/和会话安全相关的配置项.md","ref":"docs/会话和安全/和会话安全相关的配置项.md","articles":[]},"previous":{"title":"会话和安全","level":"1.1.3","depth":2,"path":"docs/会话和安全.md","ref":"docs/会话和安全.md","articles":[{"title":"会话管理基础","level":"1.1.3.1","depth":3,"path":"docs/会话和安全/会话管理基础.md","ref":"docs/会话和安全/会话管理基础.md","articles":[]},{"title":"和会话安全相关的配置项","level":"1.1.3.2","depth":3,"path":"docs/会话和安全/和会话安全相关的配置项.md","ref":"docs/会话和安全/和会话安全相关的配置项.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/会话和安全/会话管理基础.md","mtime":"2019-06-30T12:37:11.463Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-23T12:52:35.725Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="可变函数.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3379,134 +3413,134 @@
                                 
                                 <h1 id="&#x533F;&#x540D;&#x51FD;&#x6570;">&#x533F;&#x540D;&#x51FD;&#x6570;</h1>
 <p>&#x533F;&#x540D;&#x51FD;&#x6570;&#xFF0C;&#x4E5F;&#x53EB;&#x95ED;&#x5305;&#x51FD;&#x6570;&#xFF0C;&#x5141;&#x8BB8;&#x4E34;&#x65F6;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x51FD;&#x6570;&#x3002;&#x6700;&#x7ECF;&#x5E38;&#x7528;&#x4F5C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x7684;&#x503C;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4E5F;&#x6709;&#x5176;&#x5B83;&#x5E94;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x533F;&#x540D;&#x51FD;&#x6570;&#x76EE;&#x524D;&#x662F;&#x901A;&#x8FC7; <code>Closure</code> &#x7C7B;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = preg_replace_callback(<span class="hljs-string">&apos;/^([a-z]*)$/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($matches)</span> </span>{
-    <span class="hljs-keyword">return</span> strtoupper($matches[<span class="hljs-number">1</span>]);
-}, <span class="hljs-string">&apos;foo&apos;</span>);
-var_dump($foo); <span class="hljs-comment">// string(3) &quot;FOO&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token function">preg_replace_callback</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/^([a-z]*)$/&apos;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$matches</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">strtoupper</span><span class="token punctuation">(</span><span class="token variable">$matches</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;FOO&quot;</span>
 </code></pre>
 <p>&#x95ED;&#x5305;&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x6765;&#x4F7F;&#x7528;&#x3002; PHP &#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x6B64;&#x79CD;&#x8868;&#x8FBE;&#x5F0F;&#x8F6C;&#x6362;&#x6210;&#x5185;&#x7F6E;&#x7C7B; <code>Closure</code> &#x7684;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;&#x628A;&#x4E00;&#x4E2A; <code>Closure</code> &#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#x4E0E;&#x666E;&#x901A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x7684;&#x8BED;&#x6CD5;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Return a string.
  *
- * <span class="hljs-doctag">@param</span>  string $string
- * <span class="hljs-doctag">@return</span> string
+ * @param  string $string
+ * @return string
  */</span>
-$foo = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(string $string)</span>: <span class="hljs-title">string</span> </span>{
-    <span class="hljs-keyword">return</span> $string;
-};
-var_dump($foo(<span class="hljs-string">&apos;foo&apos;</span>)); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>string <span class="token variable">$string</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x95ED;&#x5305;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4ECE;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x7EE7;&#x627F;&#x53D8;&#x91CF;&#xFF0C; &#x4EFB;&#x4F55;&#x6B64;&#x7C7B;&#x53D8;&#x91CF;&#x90FD;&#x5E94;&#x8BE5;&#x7528; <code>use</code> &#x8BED;&#x8A00;&#x7ED3;&#x6784;&#x4F20;&#x9012;&#x8FDB;&#x53BB;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$string = <span class="hljs-string">&apos;foo&apos;</span>;
+<span class="token variable">$string</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Inherit variables from the parent scope.
  *
- * <span class="hljs-doctag">@param</span>  void
- * <span class="hljs-doctag">@return</span> string
+ * @param  void
+ * @return string
  */</span>
-$foo = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> <span class="hljs-title">use</span> <span class="hljs-params">($string)</span>: <span class="hljs-title">string</span> </span>{
-    <span class="hljs-keyword">return</span> $string;
-};
-var_dump($foo()); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$string</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x4ECE;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x7EE7;&#x627F;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53D6;&#x51B3;&#x4E8E;&#x95ED;&#x5305;&#x51FD;&#x6570;&#x88AB;&#x5B9A;&#x4E49;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$string = <span class="hljs-string">&apos;foo&apos;</span>;
+<span class="token variable">$string</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Inherit variables from the parent scope.
  *
- * <span class="hljs-doctag">@param</span>  void
- * <span class="hljs-doctag">@return</span> string
+ * @param  void
+ * @return string
  */</span>
-$foo = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> <span class="hljs-title">use</span> <span class="hljs-params">($string)</span>: <span class="hljs-title">string</span> </span>{
-    <span class="hljs-keyword">return</span> $string;
-};
-$string = <span class="hljs-string">&apos;bar&apos;</span>;
-var_dump($foo()); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$string</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token variable">$string</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x95ED;&#x5305;&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x7EE7;&#x627F;&#x53D8;&#x91CF;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$string = <span class="hljs-string">&apos;foo&apos;</span>;
+<span class="token variable">$string</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Inherit references from the parent scope.
  *
- * <span class="hljs-doctag">@param</span>  void
- * <span class="hljs-doctag">@return</span> string
+ * @param  void
+ * @return string
  */</span>
-$foo = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> <span class="hljs-title">use</span> <span class="hljs-params">(&amp;$string)</span>: <span class="hljs-title">string</span> </span>{
-    <span class="hljs-keyword">return</span> $string;
-};
-$string = <span class="hljs-string">&apos;bar&apos;</span>;
-var_dump($foo($string)); <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token variable">$string</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token variable">$string</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">(</span><span class="token variable">$string</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;bar&quot;</span>
 </code></pre>
 <p>&#x5728;&#x7C7B;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x58F0;&#x660E;&#x65F6;&#xFF0C;&#x5F53;&#x524D;&#x7C7B;&#x81EA;&#x52A8;&#x7ED1;&#x5B9A;&#x5230;&#x5B83;&#xFF0C;&#x4F7F;&#x5F97;&#x5728;&#x51FD;&#x6570;&#x8303;&#x56F4;&#x5185;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>$this</code> &#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Return an anonymous function.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> Closure
+     * @param  void
+     * @return Closure
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">Closure</span>
-    </span>{
-        <span class="hljs-comment">/**
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Closure
+    <span class="token punctuation">{</span>
+        <span class="token comment">/**
          * Automatic binding of $this.
          *
-         * <span class="hljs-doctag">@param</span>  void
-         * <span class="hljs-doctag">@return</span> self
+         * @param  void
+         * @return self
          */</span>
-        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span>: <span class="hljs-title">self</span> </span>{
-            <span class="hljs-keyword">return</span> $this;
-        };
-    }
-}
+        <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> self <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-$method = $foo-&gt;method();
-var_dump($method()); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$method</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
 </code></pre>
 <p>&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x5F53;&#x524D;&#x7C7B;&#x7684;&#x81EA;&#x52A8;&#x7ED1;&#x5B9A;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x533F;&#x540D;&#x51FD;&#x6570;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Return an anonymous function.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> Closure
+     * @param  void
+     * @return Closure
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">Closure</span>
-    </span>{
-        <span class="hljs-comment">/**
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Closure
+    <span class="token punctuation">{</span>
+        <span class="token comment">/**
          * Try to automatic binding of $this.
          *
-         * <span class="hljs-doctag">@param</span>  void
-         * <span class="hljs-doctag">@return</span> self
+         * @param  void
+         * @return self
          */</span>
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span>: <span class="hljs-title">self</span> </span>{
-            <span class="hljs-keyword">return</span> $this;
-        };
-    }
-}
+        <span class="token keyword">return</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> self <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-$method = $foo-&gt;method();
-var_dump($method()); <span class="hljs-comment">// PHP Fatal error:  Uncaught Error: Using $this when not in object context.</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$method</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// PHP Fatal error:  Uncaught Error: Using $this when not in object context.</span>
 </code></pre>
 
                                 
@@ -3551,7 +3585,7 @@ var_dump($method()); <span class="hljs-comment">// PHP Fatal error:  Uncaught Er
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"匿名函数","level":"1.1.1.8.5","depth":4,"next":{"title":"类与对象","level":"1.1.1.9","depth":3,"path":"docs/语言参考/类与对象.md","ref":"docs/语言参考/类与对象.md","articles":[{"title":"基本语法","level":"1.1.1.9.1","depth":4,"path":"docs/语言参考/类与对象/基本语法.md","ref":"docs/语言参考/类与对象/基本语法.md","articles":[]},{"title":"属性","level":"1.1.1.9.2","depth":4,"path":"docs/语言参考/类与对象/属性.md","ref":"docs/语言参考/类与对象/属性.md","articles":[]},{"title":"类常量","level":"1.1.1.9.3","depth":4,"path":"docs/语言参考/类与对象/类常量.md","ref":"docs/语言参考/类与对象/类常量.md","articles":[]},{"title":"类的自动加载","level":"1.1.1.9.4","depth":4,"path":"docs/语言参考/类与对象/类的自动加载.md","ref":"docs/语言参考/类与对象/类的自动加载.md","articles":[]},{"title":"构造函数和析构函数","level":"1.1.1.9.5","depth":4,"path":"docs/语言参考/类与对象/构造函数和析构函数.md","ref":"docs/语言参考/类与对象/构造函数和析构函数.md","articles":[]},{"title":"访问控制","level":"1.1.1.9.6","depth":4,"path":"docs/语言参考/类与对象/访问控制.md","ref":"docs/语言参考/类与对象/访问控制.md","articles":[]},{"title":"对象继承","level":"1.1.1.9.7","depth":4,"path":"docs/语言参考/类与对象/对象继承.md","ref":"docs/语言参考/类与对象/对象继承.md","articles":[]},{"title":"范围解析操作符","level":"1.1.1.9.8","depth":4,"path":"docs/语言参考/类与对象/范围解析操作符.md","ref":"docs/语言参考/类与对象/范围解析操作符.md","articles":[]},{"title":"Static 关键字","level":"1.1.1.9.9","depth":4,"path":"docs/语言参考/类与对象/Static 关键字.md","ref":"docs/语言参考/类与对象/Static 关键字.md","articles":[]},{"title":"抽象类","level":"1.1.1.9.10","depth":4,"path":"docs/语言参考/类与对象/抽象类.md","ref":"docs/语言参考/类与对象/抽象类.md","articles":[]},{"title":"对象接口","level":"1.1.1.9.11","depth":4,"path":"docs/语言参考/类与对象/对象接口.md","ref":"docs/语言参考/类与对象/对象接口.md","articles":[]},{"title":"Trait","level":"1.1.1.9.12","depth":4,"path":"docs/语言参考/类与对象/Trait.md","ref":"docs/语言参考/类与对象/Trait.md","articles":[]},{"title":"匿名类","level":"1.1.1.9.13","depth":4,"path":"docs/语言参考/类与对象/匿名类.md","ref":"docs/语言参考/类与对象/匿名类.md","articles":[]},{"title":"重载","level":"1.1.1.9.14","depth":4,"path":"docs/语言参考/类与对象/重载.md","ref":"docs/语言参考/类与对象/重载.md","articles":[]},{"title":"遍历对象","level":"1.1.1.9.15","depth":4,"path":"docs/语言参考/类与对象/遍历对象.md","ref":"docs/语言参考/类与对象/遍历对象.md","articles":[]},{"title":"魔术方法","level":"1.1.1.9.16","depth":4,"path":"docs/语言参考/类与对象/魔术方法.md","ref":"docs/语言参考/类与对象/魔术方法.md","articles":[]},{"title":"Final 关键字","level":"1.1.1.9.17","depth":4,"path":"docs/语言参考/类与对象/Final 关键字.md","ref":"docs/语言参考/类与对象/Final 关键字.md","articles":[]},{"title":"对象复制","level":"1.1.1.9.18","depth":4,"path":"docs/语言参考/类与对象/对象复制.md","ref":"docs/语言参考/类与对象/对象复制.md","articles":[]},{"title":"对象比较","level":"1.1.1.9.19","depth":4,"path":"docs/语言参考/类与对象/对象比较.md","ref":"docs/语言参考/类与对象/对象比较.md","articles":[]},{"title":"类型约束","level":"1.1.1.9.20","depth":4,"path":"docs/语言参考/类与对象/类型约束.md","ref":"docs/语言参考/类与对象/类型约束.md","articles":[]},{"title":"后期静态绑定","level":"1.1.1.9.21","depth":4,"path":"docs/语言参考/类与对象/后期静态绑定.md","ref":"docs/语言参考/类与对象/后期静态绑定.md","articles":[]},{"title":"对象和引用","level":"1.1.1.9.22","depth":4,"path":"docs/语言参考/类与对象/对象和引用.md","ref":"docs/语言参考/类与对象/对象和引用.md","articles":[]},{"title":"对象序列化","level":"1.1.1.9.23","depth":4,"path":"docs/语言参考/类与对象/对象序列化.md","ref":"docs/语言参考/类与对象/对象序列化.md","articles":[]}]},"previous":{"title":"可变函数","level":"1.1.1.8.4","depth":4,"path":"docs/语言参考/函数/可变函数.md","ref":"docs/语言参考/函数/可变函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/函数/匿名函数.md","mtime":"2019-05-20T14:29:25.632Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"匿名函数","level":"1.1.1.8.5","depth":4,"next":{"title":"类与对象","level":"1.1.1.9","depth":3,"path":"docs/语言参考/类与对象.md","ref":"docs/语言参考/类与对象.md","articles":[{"title":"基本语法","level":"1.1.1.9.1","depth":4,"path":"docs/语言参考/类与对象/基本语法.md","ref":"docs/语言参考/类与对象/基本语法.md","articles":[]},{"title":"属性","level":"1.1.1.9.2","depth":4,"path":"docs/语言参考/类与对象/属性.md","ref":"docs/语言参考/类与对象/属性.md","articles":[]},{"title":"类常量","level":"1.1.1.9.3","depth":4,"path":"docs/语言参考/类与对象/类常量.md","ref":"docs/语言参考/类与对象/类常量.md","articles":[]},{"title":"类的自动加载","level":"1.1.1.9.4","depth":4,"path":"docs/语言参考/类与对象/类的自动加载.md","ref":"docs/语言参考/类与对象/类的自动加载.md","articles":[]},{"title":"构造函数和析构函数","level":"1.1.1.9.5","depth":4,"path":"docs/语言参考/类与对象/构造函数和析构函数.md","ref":"docs/语言参考/类与对象/构造函数和析构函数.md","articles":[]},{"title":"访问控制","level":"1.1.1.9.6","depth":4,"path":"docs/语言参考/类与对象/访问控制.md","ref":"docs/语言参考/类与对象/访问控制.md","articles":[]},{"title":"对象继承","level":"1.1.1.9.7","depth":4,"path":"docs/语言参考/类与对象/对象继承.md","ref":"docs/语言参考/类与对象/对象继承.md","articles":[]},{"title":"范围解析操作符","level":"1.1.1.9.8","depth":4,"path":"docs/语言参考/类与对象/范围解析操作符.md","ref":"docs/语言参考/类与对象/范围解析操作符.md","articles":[]},{"title":"Static 关键字","level":"1.1.1.9.9","depth":4,"path":"docs/语言参考/类与对象/Static 关键字.md","ref":"docs/语言参考/类与对象/Static 关键字.md","articles":[]},{"title":"抽象类","level":"1.1.1.9.10","depth":4,"path":"docs/语言参考/类与对象/抽象类.md","ref":"docs/语言参考/类与对象/抽象类.md","articles":[]},{"title":"对象接口","level":"1.1.1.9.11","depth":4,"path":"docs/语言参考/类与对象/对象接口.md","ref":"docs/语言参考/类与对象/对象接口.md","articles":[]},{"title":"Trait","level":"1.1.1.9.12","depth":4,"path":"docs/语言参考/类与对象/Trait.md","ref":"docs/语言参考/类与对象/Trait.md","articles":[]},{"title":"匿名类","level":"1.1.1.9.13","depth":4,"path":"docs/语言参考/类与对象/匿名类.md","ref":"docs/语言参考/类与对象/匿名类.md","articles":[]},{"title":"重载","level":"1.1.1.9.14","depth":4,"path":"docs/语言参考/类与对象/重载.md","ref":"docs/语言参考/类与对象/重载.md","articles":[]},{"title":"遍历对象","level":"1.1.1.9.15","depth":4,"path":"docs/语言参考/类与对象/遍历对象.md","ref":"docs/语言参考/类与对象/遍历对象.md","articles":[]},{"title":"魔术方法","level":"1.1.1.9.16","depth":4,"path":"docs/语言参考/类与对象/魔术方法.md","ref":"docs/语言参考/类与对象/魔术方法.md","articles":[]},{"title":"Final 关键字","level":"1.1.1.9.17","depth":4,"path":"docs/语言参考/类与对象/Final 关键字.md","ref":"docs/语言参考/类与对象/Final 关键字.md","articles":[]},{"title":"对象复制","level":"1.1.1.9.18","depth":4,"path":"docs/语言参考/类与对象/对象复制.md","ref":"docs/语言参考/类与对象/对象复制.md","articles":[]},{"title":"对象比较","level":"1.1.1.9.19","depth":4,"path":"docs/语言参考/类与对象/对象比较.md","ref":"docs/语言参考/类与对象/对象比较.md","articles":[]},{"title":"类型约束","level":"1.1.1.9.20","depth":4,"path":"docs/语言参考/类与对象/类型约束.md","ref":"docs/语言参考/类与对象/类型约束.md","articles":[]},{"title":"后期静态绑定","level":"1.1.1.9.21","depth":4,"path":"docs/语言参考/类与对象/后期静态绑定.md","ref":"docs/语言参考/类与对象/后期静态绑定.md","articles":[]},{"title":"对象和引用","level":"1.1.1.9.22","depth":4,"path":"docs/语言参考/类与对象/对象和引用.md","ref":"docs/语言参考/类与对象/对象和引用.md","articles":[]},{"title":"对象序列化","level":"1.1.1.9.23","depth":4,"path":"docs/语言参考/类与对象/对象序列化.md","ref":"docs/语言参考/类与对象/对象序列化.md","articles":[]}]},"previous":{"title":"可变函数","level":"1.1.1.8.4","depth":4,"path":"docs/语言参考/函数/可变函数.md","ref":"docs/语言参考/函数/可变函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/函数/匿名函数.md","mtime":"2019-05-20T14:29:25.632Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3561,23 +3595,35 @@ var_dump($method()); <span class="hljs-comment">// PHP Fatal error:  Uncaught Er
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

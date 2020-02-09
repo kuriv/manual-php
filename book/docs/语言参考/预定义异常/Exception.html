@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="../预定义异常.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3379,125 +3413,125 @@
                                 
                                 <h1 id="exception">Exception</h1>
 <p><code>Exception</code> &#x662F;&#x6240;&#x6709;&#x5F02;&#x5E38;&#x7684;&#x57FA;&#x7C7B;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-number">1</span>);
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    var_dump(<span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>(<span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-number">2</span>, $e));
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token variable">$e</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD4;&#x56DE;&#x5F02;&#x5E38;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>(<span class="hljs-string">&apos;foo&apos;</span>);
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    var_dump($e-&gt;getMessage()); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$e</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD4;&#x56DE;&#x5F02;&#x5E38;&#x94FE;&#x4E2D;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-number">1</span>);
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    var_dump((<span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>(<span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-number">2</span>, $e))-&gt;getPrevious());
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token variable">$e</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getPrevious</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD4;&#x56DE;&#x5F02;&#x5E38;&#x4EE3;&#x7801;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-number">1</span>);
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    var_dump($e-&gt;getCode()); <span class="hljs-comment">// int(1)</span>
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$e</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(1)</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x83B7;&#x53D6;&#x521B;&#x5EFA;&#x5F02;&#x5E38;&#x7684;&#x7A0B;&#x5E8F;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>;
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    var_dump($e-&gt;getFile());
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$e</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD4;&#x56DE;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x7684;&#x4EE3;&#x7801;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x884C;&#x53F7;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>;
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    var_dump($e-&gt;getLine()); <span class="hljs-comment">// int(6)</span>
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$e</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(6)</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x4EE5;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x8FD4;&#x56DE;&#x5F02;&#x5E38;&#x8FFD;&#x8E2A;&#x4FE1;&#x606F;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Throwing an exception.
  *
- * <span class="hljs-doctag">@param</span>  void
- * <span class="hljs-doctag">@return</span> void
+ * @param  void
+ * @return void
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span>
-</span>{
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>;
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-keyword">try</span> {
-    foo();
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    var_dump($e-&gt;getTrace());
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$e</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x8FD4;&#x56DE;&#x5F02;&#x5E38;&#x8FFD;&#x8E2A;&#x4FE1;&#x606F;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Throwing an exception.
  *
- * <span class="hljs-doctag">@param</span>  void
- * <span class="hljs-doctag">@return</span> void
+ * @param  void
+ * @return void
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span>
-</span>{
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>;
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-keyword">try</span> {
-    foo();
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    var_dump($e-&gt;getTraceAsString());
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$e</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getTraceAsString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD4;&#x56DE;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x5F02;&#x5E38;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Throwing an exception.
  *
- * <span class="hljs-doctag">@param</span>  void
- * <span class="hljs-doctag">@return</span> void
+ * @param  void
+ * @return void
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span>
-</span>{
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>;
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-keyword">try</span> {
-    foo();
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {
-    <span class="hljs-keyword">echo</span> $e;
-}
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>Exception <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token variable">$e</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x5C1D;&#x8BD5;&#x514B;&#x9686;&#x5F02;&#x5E38;&#xFF0C;&#x8FD9;&#x5C06;&#x5BFC;&#x81F4;&#x4E00;&#x4E2A;&#x81F4;&#x547D;&#x9519;&#x8BEF;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>;
-$bar = <span class="hljs-keyword">clone</span> $foo;
-<span class="hljs-comment">// PHP Fatal error:  Uncaught Error: Trying to clone an uncloneable object of class Exception.</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token keyword">clone</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token comment">// PHP Fatal error:  Uncaught Error: Trying to clone an uncloneable object of class Exception.</span>
 </code></pre>
 
                                 
@@ -3542,7 +3576,7 @@ $bar = <span class="hljs-keyword">clone</span> $foo;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exception","level":"1.1.1.16.1","depth":4,"next":{"title":"ErrorException","level":"1.1.1.16.2","depth":4,"path":"docs/语言参考/预定义异常/ErrorException.md","ref":"docs/语言参考/预定义异常/ErrorException.md","articles":[]},"previous":{"title":"预定义异常","level":"1.1.1.16","depth":3,"path":"docs/语言参考/预定义异常.md","ref":"docs/语言参考/预定义异常.md","articles":[{"title":"Exception","level":"1.1.1.16.1","depth":4,"path":"docs/语言参考/预定义异常/Exception.md","ref":"docs/语言参考/预定义异常/Exception.md","articles":[]},{"title":"ErrorException","level":"1.1.1.16.2","depth":4,"path":"docs/语言参考/预定义异常/ErrorException.md","ref":"docs/语言参考/预定义异常/ErrorException.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/预定义异常/Exception.md","mtime":"2019-05-06T15:02:15.893Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Exception","level":"1.1.1.16.1","depth":4,"next":{"title":"ErrorException","level":"1.1.1.16.2","depth":4,"path":"docs/语言参考/预定义异常/ErrorException.md","ref":"docs/语言参考/预定义异常/ErrorException.md","articles":[]},"previous":{"title":"预定义异常","level":"1.1.1.16","depth":3,"path":"docs/语言参考/预定义异常.md","ref":"docs/语言参考/预定义异常.md","articles":[{"title":"Exception","level":"1.1.1.16.1","depth":4,"path":"docs/语言参考/预定义异常/Exception.md","ref":"docs/语言参考/预定义异常/Exception.md","articles":[]},{"title":"ErrorException","level":"1.1.1.16.2","depth":4,"path":"docs/语言参考/预定义异常/ErrorException.md","ref":"docs/语言参考/预定义异常/ErrorException.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/预定义异常/Exception.md","mtime":"2019-05-06T15:02:15.893Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3552,23 +3586,35 @@ $bar = <span class="hljs-keyword">clone</span> $foo;
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

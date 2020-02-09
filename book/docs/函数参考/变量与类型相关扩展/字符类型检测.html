@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="类与对象.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3392,79 +3426,79 @@
 <li><a href="#ctypexdigit">ctype_xdigit - &#x68C0;&#x6D4B;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x53EA;&#x5305;&#x542B;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5B57;&#x7B26;</a></li>
 </ul>
 <h2 id="ctypealnum">ctype_alnum</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_alnum(<span class="hljs-string">&apos;AbCd1zyZ9&apos;</span>)); <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_alnum(<span class="hljs-string">&apos;foo!#$bar&apos;</span>)); <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_alnum</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;AbCd1zyZ9&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_alnum</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo!#$bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="ctypealpha">ctype_alpha</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_alpha(<span class="hljs-string">&apos;KjgWZC&apos;</span>)); <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_alpha(<span class="hljs-string">&apos;arf12&apos;</span>));  <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_alpha</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;KjgWZC&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_alpha</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;arf12&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="ctypecntrl">ctype_cntrl</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_cntrl(<span class="hljs-string">&quot;\n\r\t&quot;</span>)); <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_cntrl(<span class="hljs-string">&apos;\n\r\t&apos;</span>)); <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_cntrl(<span class="hljs-string">&apos;arf12&apos;</span>));  <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_cntrl</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;\n\r\t&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_cntrl</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;\n\r\t&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_cntrl</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;arf12&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="ctypedigit">ctype_digit</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_digit(<span class="hljs-string">&apos;1820.20&apos;</span>)); <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_digit(<span class="hljs-string">&apos;10002&apos;</span>));   <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_digit(<span class="hljs-string">&apos;wsl!12&apos;</span>));  <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_digit</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;1820.20&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_digit</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;10002&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_digit</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;wsl!12&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="ctypegraph">ctype_graph</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_graph(<span class="hljs-string">&quot;asdf\n\r\t&quot;</span>)); <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_graph(<span class="hljs-string">&apos;arf 12&apos;</span>));     <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_graph(<span class="hljs-string">&apos;LKA#@%.54&apos;</span>));  <span class="hljs-comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_graph</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;asdf\n\r\t&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_graph</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;arf 12&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_graph</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;LKA#@%.54&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="ctypelower">ctype_lower</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_lower(<span class="hljs-string">&apos;aac123&apos;</span>));  <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_lower(<span class="hljs-string">&apos;qiutoas&apos;</span>)); <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_lower(<span class="hljs-string">&apos;QASsdks&apos;</span>)); <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_lower</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;aac123&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_lower</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;qiutoas&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_lower</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;QASsdks&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="ctypeprint">ctype_print</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_print(<span class="hljs-string">&quot;asdf\n\r\t&quot;</span>)); <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_print(<span class="hljs-string">&apos;arf 12&apos;</span>));     <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_print(<span class="hljs-string">&apos;LKA#@%.54&apos;</span>));  <span class="hljs-comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_print</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;asdf\n\r\t&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_print</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;arf 12&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_print</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;LKA#@%.54&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="ctypepunct">ctype_punct</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_punct(<span class="hljs-string">&apos;ABasdk!@!$#&apos;</span>)); <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_punct(<span class="hljs-string">&apos;!@ # $&apos;</span>));      <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_punct(<span class="hljs-string">&apos;*&amp;$()&apos;</span>));       <span class="hljs-comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_punct</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;ABasdk!@!$#&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_punct</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;!@ # $&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_punct</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;*&amp;$()&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="ctypespace">ctype_space</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_space(<span class="hljs-string">&quot;\n\r\t &quot;</span>)); <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_space(<span class="hljs-string">&quot;\narf12&quot;</span>)); <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_space(<span class="hljs-string">&apos;\n\r\t&apos;</span>));  <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_space</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;\n\r\t &quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_space</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;\narf12&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_space</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;\n\r\t&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="ctypeupper">ctype_upper</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_upper(<span class="hljs-string">&apos;AKLWC139&apos;</span>)); <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_upper(<span class="hljs-string">&apos;LMNSDO&apos;</span>));   <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_upper(<span class="hljs-string">&apos;akwSKWsm&apos;</span>)); <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_upper</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;AKLWC139&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_upper</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;LMNSDO&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_upper</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;akwSKWsm&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="ctypexdigit">ctype_xdigit</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ctype_xdigit(<span class="hljs-string">&apos;AB10BC99&apos;</span>)); <span class="hljs-comment">// bool(true)</span>
-var_dump(ctype_xdigit(<span class="hljs-string">&apos;AR1012&apos;</span>));   <span class="hljs-comment">// bool(false)</span>
-var_dump(ctype_xdigit(<span class="hljs-string">&apos;ab12bc99&apos;</span>)); <span class="hljs-comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_xdigit</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;AB10BC99&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_xdigit</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;AR1012&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ctype_xdigit</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;ab12bc99&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 
                                 
@@ -3509,7 +3543,7 @@ var_dump(ctype_xdigit(<span class="hljs-string">&apos;ab12bc99&apos;</span>)); <
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字符类型检测","level":"1.1.2.15.3","depth":4,"next":{"title":"过滤器","level":"1.1.2.15.4","depth":4,"path":"docs/函数参考/变量与类型相关扩展/过滤器.md","ref":"docs/函数参考/变量与类型相关扩展/过滤器.md","articles":[]},"previous":{"title":"类与对象","level":"1.1.2.15.2","depth":4,"path":"docs/函数参考/变量与类型相关扩展/类与对象.md","ref":"docs/函数参考/变量与类型相关扩展/类与对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/变量与类型相关扩展/字符类型检测.md","mtime":"2019-05-21T12:26:11.397Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字符类型检测","level":"1.1.2.15.3","depth":4,"next":{"title":"过滤器","level":"1.1.2.15.4","depth":4,"path":"docs/函数参考/变量与类型相关扩展/过滤器.md","ref":"docs/函数参考/变量与类型相关扩展/过滤器.md","articles":[]},"previous":{"title":"类与对象","level":"1.1.2.15.2","depth":4,"path":"docs/函数参考/变量与类型相关扩展/类与对象.md","ref":"docs/函数参考/变量与类型相关扩展/类与对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/变量与类型相关扩展/字符类型检测.md","mtime":"2019-05-21T12:26:11.397Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3519,23 +3553,35 @@ var_dump(ctype_xdigit(<span class="hljs-string">&apos;ab12bc99&apos;</span>)); <
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

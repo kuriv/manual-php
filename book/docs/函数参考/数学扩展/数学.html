@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="任意精度数学.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3430,349 +3464,349 @@
 <li><a href="#tanh">tanh - &#x53CC;&#x66F2;&#x6B63;&#x5207;</a></li>
 </ul>
 <h2 id="abs">abs</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(abs(<span class="hljs-number">-4.2</span>)); <span class="hljs-comment">// float(4.2)</span>
-var_dump(abs(<span class="hljs-number">0</span>));    <span class="hljs-comment">// int(0)</span>
-var_dump(abs(<span class="hljs-number">5</span>));    <span class="hljs-comment">// int(5)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(4.2)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// int(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// int(5)</span>
 </code></pre>
 <h2 id="acos">acos</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(acos(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(3.1415926535898)</span>
-var_dump(acos(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(1.5707963267949)</span>
-var_dump(acos(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(3.1415926535898)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(1.5707963267949)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
 </code></pre>
 <h2 id="acosh">acosh</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(acosh(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(0)</span>
-var_dump(acosh(<span class="hljs-number">10</span>)); <span class="hljs-comment">// float(2.9932228461264)</span>
-var_dump(acosh(<span class="hljs-number">20</span>)); <span class="hljs-comment">// float(3.6882538673613)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">acosh</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">acosh</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(2.9932228461264)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">acosh</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(3.6882538673613)</span>
 </code></pre>
 <h2 id="asin">asin</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(asin(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(-1.5707963267949)</span>
-var_dump(asin(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(0)</span>
-var_dump(asin(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(1.5707963267949)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">asin</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-1.5707963267949)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">asin</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">asin</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(1.5707963267949)</span>
 </code></pre>
 <h2 id="asinh">asinh</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(asinh(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(-0.88137358701954)</span>
-var_dump(asinh(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(0)</span>
-var_dump(asinh(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(0.88137358701954)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">asinh</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-0.88137358701954)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">asinh</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">asinh</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0.88137358701954)</span>
 </code></pre>
 <h2 id="atan2">atan2</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(atan2(<span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(-2.3561944901923)</span>
-var_dump(atan2(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>));   <span class="hljs-comment">// float(0.78539816339745)</span>
-var_dump(atan2(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>)); <span class="hljs-comment">// float(0.46364760900081)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atan2</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-2.3561944901923)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atan2</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// float(0.78539816339745)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atan2</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(0.46364760900081)</span>
 </code></pre>
 <h2 id="atan">atan</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(atan(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(-0.78539816339745)</span>
-var_dump(atan(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(0)</span>
-var_dump(atan(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(0.78539816339745)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atan</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-0.78539816339745)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atan</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atan</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0.78539816339745)</span>
 </code></pre>
 <h2 id="atanh">atanh</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(atanh(<span class="hljs-number">-0.5</span>)); <span class="hljs-comment">// float(-0.54930614433405)</span>
-var_dump(atanh(<span class="hljs-number">0</span>));    <span class="hljs-comment">// float(0)</span>
-var_dump(atanh(<span class="hljs-number">0.5</span>));  <span class="hljs-comment">// float(0.54930614433405)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atanh</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-0.54930614433405)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atanh</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">atanh</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0.54930614433405)</span>
 </code></pre>
 <h2 id="baseconvert">base_convert</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(base_convert(<span class="hljs-string">&apos;11&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>));     <span class="hljs-comment">// string(1) &quot;3&quot;</span>
-var_dump(base_convert(<span class="hljs-string">&apos;0031&apos;</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>));   <span class="hljs-comment">// string(2) &quot;25&quot;</span>
-var_dump(base_convert(<span class="hljs-string">&apos;A37334&apos;</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// string(24) &quot;101000110111001100110100&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base_convert</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;11&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// string(1) &quot;3&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base_convert</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;0031&apos;</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// string(2) &quot;25&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base_convert</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;A37334&apos;</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(24) &quot;101000110111001100110100&quot;</span>
 </code></pre>
 <h2 id="bindec">bindec</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(bindec(<span class="hljs-string">&apos;11&apos;</span>));     <span class="hljs-comment">// int(3)</span>
-var_dump(bindec(<span class="hljs-string">&apos;110011&apos;</span>)); <span class="hljs-comment">// int(51)</span>
-var_dump(bindec(<span class="hljs-string">&apos;111111&apos;</span>)); <span class="hljs-comment">// int(63)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">bindec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;11&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// int(3)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">bindec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;110011&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(51)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">bindec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;111111&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(63)</span>
 </code></pre>
 <h2 id="ceil">ceil</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(ceil(<span class="hljs-number">-3.14</span>)); <span class="hljs-comment">// float(-3)</span>
-var_dump(ceil(<span class="hljs-number">4.3</span>));   <span class="hljs-comment">// float(5)</span>
-var_dump(ceil(<span class="hljs-number">9.999</span>)); <span class="hljs-comment">// float(10)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-3)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token number">4.3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// float(5)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token number">9.999</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(10)</span>
 </code></pre>
 <h2 id="cos">cos</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(cos(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(0.54030230586814)</span>
-var_dump(cos(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(1)</span>
-var_dump(cos(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(0.54030230586814)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">cos</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(0.54030230586814)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">cos</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">cos</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0.54030230586814)</span>
 </code></pre>
 <h2 id="cosh">cosh</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(cosh(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(1.5430806348152)</span>
-var_dump(cosh(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(1)</span>
-var_dump(cosh(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(1.5430806348152)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">cosh</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(1.5430806348152)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">cosh</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">cosh</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(1.5430806348152)</span>
 </code></pre>
 <h2 id="decbin">decbin</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(decbin(<span class="hljs-number">11</span>)); <span class="hljs-comment">// string(4) &quot;1011&quot;</span>
-var_dump(decbin(<span class="hljs-number">12</span>)); <span class="hljs-comment">// string(4) &quot;1100&quot;</span>
-var_dump(decbin(<span class="hljs-number">26</span>)); <span class="hljs-comment">// string(5) &quot;11010&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">decbin</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(4) &quot;1011&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">decbin</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(4) &quot;1100&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">decbin</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(5) &quot;11010&quot;</span>
 </code></pre>
 <h2 id="dechex">dechex</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(dechex(<span class="hljs-number">10</span>));  <span class="hljs-comment">// string(1) &quot;a&quot;</span>
-var_dump(dechex(<span class="hljs-number">47</span>));  <span class="hljs-comment">// string(2) &quot;2f&quot;</span>
-var_dump(dechex(<span class="hljs-number">100</span>)); <span class="hljs-comment">// string(2) &quot;64&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dechex</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(1) &quot;a&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dechex</span><span class="token punctuation">(</span><span class="token number">47</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(2) &quot;2f&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dechex</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(2) &quot;64&quot;</span>
 </code></pre>
 <h2 id="decoct">decoct</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(decoct(<span class="hljs-number">15</span>));  <span class="hljs-comment">// string(2) &quot;17&quot;</span>
-var_dump(decoct(<span class="hljs-number">100</span>)); <span class="hljs-comment">// string(3) &quot;144&quot;</span>
-var_dump(decoct(<span class="hljs-number">264</span>)); <span class="hljs-comment">// string(3) &quot;410&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">decoct</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(2) &quot;17&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">decoct</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;144&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">decoct</span><span class="token punctuation">(</span><span class="token number">264</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;410&quot;</span>
 </code></pre>
 <h2 id="deg2rad">deg2rad</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(deg2rad(<span class="hljs-number">30</span>));  <span class="hljs-comment">// float(0.5235987755983)</span>
-var_dump(deg2rad(<span class="hljs-number">90</span>));  <span class="hljs-comment">// float(1.5707963267949)</span>
-var_dump(deg2rad(<span class="hljs-number">180</span>)); <span class="hljs-comment">// float(3.1415926535898)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">deg2rad</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0.5235987755983)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">deg2rad</span><span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(1.5707963267949)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">deg2rad</span><span class="token punctuation">(</span><span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(3.1415926535898)</span>
 </code></pre>
 <h2 id="exp">exp</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(exp(<span class="hljs-number">0</span>));   <span class="hljs-comment">// float(1)</span>
-var_dump(exp(<span class="hljs-number">5.7</span>)); <span class="hljs-comment">// float(298.86740096706)</span>
-var_dump(exp(<span class="hljs-number">12</span>));  <span class="hljs-comment">// float(162754.791419)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">exp</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// float(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">exp</span><span class="token punctuation">(</span><span class="token number">5.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(298.86740096706)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">exp</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(162754.791419)</span>
 </code></pre>
 <h2 id="expm1">expm1</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(expm1(<span class="hljs-number">0</span>));   <span class="hljs-comment">// float(0)</span>
-var_dump(expm1(<span class="hljs-number">5.7</span>)); <span class="hljs-comment">// float(297.86740096706)</span>
-var_dump(expm1(<span class="hljs-number">12</span>));  <span class="hljs-comment">// float(162753.791419)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">expm1</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">expm1</span><span class="token punctuation">(</span><span class="token number">5.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(297.86740096706)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">expm1</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(162753.791419)</span>
 </code></pre>
 <h2 id="floor">floor</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(floor(<span class="hljs-number">-3.14</span>)); <span class="hljs-comment">// float(-4)</span>
-var_dump(floor(<span class="hljs-number">4.3</span>));   <span class="hljs-comment">// float(4)</span>
-var_dump(floor(<span class="hljs-number">9.999</span>)); <span class="hljs-comment">// float(9)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-4)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">4.3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// float(4)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">9.999</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(9)</span>
 </code></pre>
 <h2 id="fmod">fmod</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(fmod(<span class="hljs-number">-10</span>, <span class="hljs-number">3</span>));   <span class="hljs-comment">// float(-1)</span>
-var_dump(fmod(<span class="hljs-number">5</span>, <span class="hljs-number">2</span>));     <span class="hljs-comment">// float(1)</span>
-var_dump(fmod(<span class="hljs-number">5.7</span>, <span class="hljs-number">1.3</span>)); <span class="hljs-comment">// float(0.5)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fmod</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// float(-1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fmod</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// float(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fmod</span><span class="token punctuation">(</span><span class="token number">5.7</span><span class="token punctuation">,</span> <span class="token number">1.3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(0.5)</span>
 </code></pre>
 <h2 id="getrandmax">getrandmax</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(getrandmax());
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getrandmax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="hexdec">hexdec</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(hexdec(<span class="hljs-string">&apos;a&apos;</span>));  <span class="hljs-comment">// int(10)</span>
-var_dump(hexdec(<span class="hljs-string">&apos;a0&apos;</span>)); <span class="hljs-comment">// int(160)</span>
-var_dump(hexdec(<span class="hljs-string">&apos;ee&apos;</span>)); <span class="hljs-comment">// int(238)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">hexdec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;a&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(10)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">hexdec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;a0&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(160)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">hexdec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;ee&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(238)</span>
 </code></pre>
 <h2 id="hypot">hypot</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(hypot(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// float(2.2360679774998)</span>
-var_dump(hypot(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// float(3.605551275464)</span>
-var_dump(hypot(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)); <span class="hljs-comment">// float(5)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">hypot</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(2.2360679774998)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">hypot</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(3.605551275464)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">hypot</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(5)</span>
 </code></pre>
 <h2 id="intdiv">intdiv</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(intdiv(<span class="hljs-number">-3</span>, <span class="hljs-number">-2</span>)); <span class="hljs-comment">// int(1)</span>
-var_dump(intdiv(<span class="hljs-number">-3</span>, <span class="hljs-number">2</span>));  <span class="hljs-comment">// int(-1)</span>
-var_dump(intdiv(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>));   <span class="hljs-comment">// int(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">intdiv</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">intdiv</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(-1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">intdiv</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// int(1)</span>
 </code></pre>
 <h2 id="isfinite">is_finite</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(is_finite(log(<span class="hljs-number">0</span>))); <span class="hljs-comment">// bool(false)</span>
-var_dump(is_finite(<span class="hljs-number">2</span>));      <span class="hljs-comment">// bool(true)</span>
-var_dump(is_finite(<span class="hljs-number">100</span>));    <span class="hljs-comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_finite</span><span class="token punctuation">(</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_finite</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_finite</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="isinfinite">is_infinite</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(is_infinite(log(<span class="hljs-number">0</span>))); <span class="hljs-comment">// bool(true)</span>
-var_dump(is_infinite(<span class="hljs-number">2</span>));      <span class="hljs-comment">// bool(false)</span>
-var_dump(is_infinite(<span class="hljs-number">100</span>));    <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_infinite</span><span class="token punctuation">(</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_infinite</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_infinite</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="isnan">is_nan</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(is_nan(acos(<span class="hljs-number">8</span>))); <span class="hljs-comment">// bool(true)</span>
-var_dump(is_nan(<span class="hljs-number">0</span>));       <span class="hljs-comment">// bool(false)</span>
-var_dump(is_nan(<span class="hljs-number">1</span>));       <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_nan</span><span class="token punctuation">(</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_nan</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_nan</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="lcgvalue">lcg_value</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(lcg_value());
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">lcg_value</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="log10">log10</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(log10(<span class="hljs-number">1</span>));      <span class="hljs-comment">// float(0)</span>
-var_dump(log10(<span class="hljs-number">2</span>));      <span class="hljs-comment">// float(0.30102999566398)</span>
-var_dump(log10(<span class="hljs-number">2.7183</span>)); <span class="hljs-comment">// float(0.43429738512451)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log10</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log10</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// float(0.30102999566398)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log10</span><span class="token punctuation">(</span><span class="token number">2.7183</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(0.43429738512451)</span>
 </code></pre>
 <h2 id="log1p">log1p</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(log1p(<span class="hljs-number">0</span>)); <span class="hljs-comment">// float(0)</span>
-var_dump(log1p(<span class="hljs-number">1</span>)); <span class="hljs-comment">// float(0.69314718055995)</span>
-var_dump(log1p(<span class="hljs-number">2</span>)); <span class="hljs-comment">// float(1.0986122886681)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log1p</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log1p</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(0.69314718055995)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log1p</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(1.0986122886681)</span>
 </code></pre>
 <h2 id="log">log</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(log(<span class="hljs-number">1</span>));    <span class="hljs-comment">// float(0)</span>
-var_dump(log(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// float(0)</span>
-var_dump(log(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// float(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(1)</span>
 </code></pre>
 <h2 id="max">max</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(max(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>));           <span class="hljs-comment">// int(7)</span>
-var_dump(max([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]));               <span class="hljs-comment">// int(5)</span>
-var_dump(max(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-number">0</span>));              <span class="hljs-comment">// string(5) &quot;hello&quot;</span>
-var_dump(max(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;hello&apos;</span>));              <span class="hljs-comment">// int(0)</span>
-var_dump(max(<span class="hljs-string">&apos;42&apos;</span>, <span class="hljs-number">3</span>));                 <span class="hljs-comment">// string(2) &quot;42&quot;</span>
-var_dump(max([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>]));    <span class="hljs-comment">// array(3) { [0]=&gt; int(2) [1]=&gt; int(5) [2]=&gt; int(7) }</span>
-var_dump(max([<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>])); <span class="hljs-comment">// array(4) { [0]=&gt; int(1) [1]=&gt; int(1) [2]=&gt; int(1) [3]=&gt; int(1) }</span>
-var_dump(max(<span class="hljs-string">&apos;hello&apos;</span>, [<span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>], <span class="hljs-number">42</span>));  <span class="hljs-comment">// array(3) { [0]=&gt; int(2) [1]=&gt; int(5) [2]=&gt; int(7) }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// int(7)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>               <span class="token comment">// int(5)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;hello&apos;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment">// string(5) &quot;hello&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;hello&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment">// int(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;42&apos;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 <span class="token comment">// string(2) &quot;42&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// array(3) { [0]=&gt; int(2) [1]=&gt; int(5) [2]=&gt; int(7) }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(4) { [0]=&gt; int(1) [1]=&gt; int(1) [2]=&gt; int(1) [3]=&gt; int(1) }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;hello&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// array(3) { [0]=&gt; int(2) [1]=&gt; int(5) [2]=&gt; int(7) }</span>
 </code></pre>
 <h2 id="min">min</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(min(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>));           <span class="hljs-comment">// int(1)</span>
-var_dump(min([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]));               <span class="hljs-comment">// int(2)</span>
-var_dump(min(<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-number">0</span>));              <span class="hljs-comment">// string(5) &quot;hello&quot;</span>
-var_dump(min(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;hello&apos;</span>));              <span class="hljs-comment">// int(0)</span>
-var_dump(min(<span class="hljs-string">&apos;42&apos;</span>, <span class="hljs-number">-1</span>));                <span class="hljs-comment">// int(-1)</span>
-var_dump(min([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>]));    <span class="hljs-comment">// array(3) { [0]=&gt; int(2) [1]=&gt; int(4) [2]=&gt; int(8) }</span>
-var_dump(min([<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>])); <span class="hljs-comment">// array(3) { [0]=&gt; int(2) [1]=&gt; int(2) [2]=&gt; int(2) }</span>
-var_dump(min(<span class="hljs-string">&apos;hello&apos;</span>, [<span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>], <span class="hljs-number">42</span>));  <span class="hljs-comment">// string(5) &quot;hello&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// int(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>               <span class="token comment">// int(2)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;hello&apos;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment">// string(5) &quot;hello&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;hello&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment">// int(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;42&apos;</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token comment">// int(-1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// array(3) { [0]=&gt; int(2) [1]=&gt; int(4) [2]=&gt; int(8) }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(3) { [0]=&gt; int(2) [1]=&gt; int(2) [2]=&gt; int(2) }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;hello&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(5) &quot;hello&quot;</span>
 </code></pre>
 <h2 id="mtgetrandmax">mt_getrandmax</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(mt_getrandmax());
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">mt_getrandmax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="mtrand">mt_rand</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(mt_rand());
-var_dump(mt_rand(<span class="hljs-number">5</span>, <span class="hljs-number">15</span>));
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">mt_rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">mt_rand</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="mtsrand">mt_srand</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-mt_srand((int) (microtime(<span class="hljs-keyword">true</span>) * <span class="hljs-number">10000</span>));
+<span class="token function">mt_srand</span><span class="token punctuation">(</span><span class="token punctuation">(</span>int<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token function">microtime</span><span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="octdec">octdec</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(octdec(<span class="hljs-string">&apos;77&apos;</span>));  <span class="hljs-comment">// int(63)</span>
-var_dump(octdec(<span class="hljs-string">&apos;100&apos;</span>)); <span class="hljs-comment">// int(64)</span>
-var_dump(octdec(<span class="hljs-string">&apos;777&apos;</span>)); <span class="hljs-comment">// int(511)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">octdec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;77&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(63)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">octdec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;100&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(64)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">octdec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;777&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(511)</span>
 </code></pre>
 <h2 id="pi">pi</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(pi()); <span class="hljs-comment">// float(3.1415926535898)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">pi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(3.1415926535898)</span>
 </code></pre>
 <h2 id="pow">pow</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(pow(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));   <span class="hljs-comment">// int(1)</span>
-var_dump(pow(<span class="hljs-number">-1</span>, <span class="hljs-number">20</span>)); <span class="hljs-comment">// int(1)</span>
-var_dump(pow(<span class="hljs-number">2</span>, <span class="hljs-number">8</span>));   <span class="hljs-comment">// int(256)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// int(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// int(256)</span>
 </code></pre>
 <h2 id="rad2deg">rad2deg</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(rad2deg(<span class="hljs-number">0.5235987755983</span>)); <span class="hljs-comment">// float(30)</span>
-var_dump(rad2deg(<span class="hljs-number">1.5707963267949</span>)); <span class="hljs-comment">// float(90)</span>
-var_dump(rad2deg(<span class="hljs-number">3.1415926535898</span>)); <span class="hljs-comment">// float(180)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rad2deg</span><span class="token punctuation">(</span><span class="token number">0.5235987755983</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(30)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rad2deg</span><span class="token punctuation">(</span><span class="token number">1.5707963267949</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(90)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rad2deg</span><span class="token punctuation">(</span><span class="token number">3.1415926535898</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(180)</span>
 </code></pre>
 <h2 id="rand">rand</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(rand());
-var_dump(rand(<span class="hljs-number">5</span>, <span class="hljs-number">15</span>));
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="round">round</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(round(<span class="hljs-number">3.4</span>));                         <span class="hljs-comment">// float(3)</span>
-var_dump(round(<span class="hljs-number">3.5</span>));                         <span class="hljs-comment">// float(4)</span>
-var_dump(round(<span class="hljs-number">3.6</span>, <span class="hljs-number">0</span>));                      <span class="hljs-comment">// float(4)</span>
-var_dump(round(<span class="hljs-number">1.95583</span>, <span class="hljs-number">2</span>));                  <span class="hljs-comment">// float(1.96)</span>
-var_dump(round(<span class="hljs-number">1241757</span>, <span class="hljs-number">-3</span>));                 <span class="hljs-comment">// float(1242000)</span>
-var_dump(round(<span class="hljs-number">9.5</span>, <span class="hljs-number">0</span>, PHP_ROUND_HALF_UP));   <span class="hljs-comment">// float(10)</span>
-var_dump(round(<span class="hljs-number">9.5</span>, <span class="hljs-number">0</span>, PHP_ROUND_HALF_DOWN)); <span class="hljs-comment">// float(9)</span>
-var_dump(round(<span class="hljs-number">9.5</span>, <span class="hljs-number">0</span>, PHP_ROUND_HALF_EVEN)); <span class="hljs-comment">// float(10)</span>
-var_dump(round(<span class="hljs-number">9.5</span>, <span class="hljs-number">0</span>, PHP_ROUND_HALF_ODD));  <span class="hljs-comment">// float(9)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">3.4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                         <span class="token comment">// float(3)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                         <span class="token comment">// float(4)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">3.6</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// float(4)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.95583</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                  <span class="token comment">// float(1.96)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1241757</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 <span class="token comment">// float(1242000)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">9.5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">PHP_ROUND_HALF_UP</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// float(10)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">9.5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">PHP_ROUND_HALF_DOWN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(9)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">9.5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">PHP_ROUND_HALF_EVEN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(10)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">9.5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">PHP_ROUND_HALF_ODD</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(9)</span>
 </code></pre>
 <h2 id="sin">sin</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(sin(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(-0.8414709848079)</span>
-var_dump(sin(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(0)</span>
-var_dump(sin(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(0.8414709848079)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sin</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-0.8414709848079)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sin</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sin</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0.8414709848079)</span>
 </code></pre>
 <h2 id="sinh">sinh</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(sinh(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(-1.1752011936438)</span>
-var_dump(sinh(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(0)</span>
-var_dump(sinh(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(1.1752011936438)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sinh</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-1.1752011936438)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sinh</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sinh</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(1.1752011936438)</span>
 </code></pre>
 <h2 id="sqrt">sqrt</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(sqrt(<span class="hljs-number">8</span>));  <span class="hljs-comment">// float(2.8284271247462)</span>
-var_dump(sqrt(<span class="hljs-number">9</span>));  <span class="hljs-comment">// float(3)</span>
-var_dump(sqrt(<span class="hljs-number">10</span>)); <span class="hljs-comment">// float(3.1622776601684)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(2.8284271247462)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(3)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(3.1622776601684)</span>
 </code></pre>
 <h2 id="srand">srand</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-srand((int) (microtime(<span class="hljs-keyword">true</span>) * <span class="hljs-number">10000</span>));
+<span class="token function">srand</span><span class="token punctuation">(</span><span class="token punctuation">(</span>int<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token function">microtime</span><span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="tan">tan</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(tan(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(-1.5574077246549)</span>
-var_dump(tan(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(0)</span>
-var_dump(tan(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(1.5574077246549)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">tan</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-1.5574077246549)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">tan</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">tan</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(1.5574077246549)</span>
 </code></pre>
 <h2 id="tanh">tanh</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(tanh(<span class="hljs-number">-1</span>)); <span class="hljs-comment">// float(-0.76159415595576)</span>
-var_dump(tanh(<span class="hljs-number">0</span>));  <span class="hljs-comment">// float(0)</span>
-var_dump(tanh(<span class="hljs-number">1</span>));  <span class="hljs-comment">// float(0.76159415595576)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">tanh</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// float(-0.76159415595576)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">tanh</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">tanh</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// float(0.76159415595576)</span>
 </code></pre>
 
                                 
@@ -3817,7 +3851,7 @@ var_dump(tanh(<span class="hljs-number">1</span>));  <span class="hljs-comment">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数学","level":"1.1.2.9.2","depth":4,"next":{"title":"进程控制扩展","level":"1.1.2.10","depth":3,"path":"docs/函数参考/进程控制扩展.md","ref":"docs/函数参考/进程控制扩展.md","articles":[{"title":"程序执行","level":"1.1.2.10.1","depth":4,"path":"docs/函数参考/进程控制扩展/程序执行.md","ref":"docs/函数参考/进程控制扩展/程序执行.md","articles":[]}]},"previous":{"title":"任意精度数学","level":"1.1.2.9.1","depth":4,"path":"docs/函数参考/数学扩展/任意精度数学.md","ref":"docs/函数参考/数学扩展/任意精度数学.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/数学扩展/数学.md","mtime":"2019-05-20T16:10:45.508Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数学","level":"1.1.2.9.2","depth":4,"next":{"title":"进程控制扩展","level":"1.1.2.10","depth":3,"path":"docs/函数参考/进程控制扩展.md","ref":"docs/函数参考/进程控制扩展.md","articles":[{"title":"程序执行","level":"1.1.2.10.1","depth":4,"path":"docs/函数参考/进程控制扩展/程序执行.md","ref":"docs/函数参考/进程控制扩展/程序执行.md","articles":[]}]},"previous":{"title":"任意精度数学","level":"1.1.2.9.1","depth":4,"path":"docs/函数参考/数学扩展/任意精度数学.md","ref":"docs/函数参考/数学扩展/任意精度数学.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/数学扩展/数学.md","mtime":"2019-05-20T16:10:45.508Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3827,23 +3861,35 @@ var_dump(tanh(<span class="hljs-number">1</span>));  <span class="hljs-comment">
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

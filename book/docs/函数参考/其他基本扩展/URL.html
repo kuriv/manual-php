@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="Tokenizer.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3391,93 +3425,93 @@
 <li><a href="#urlencode">urlencode - &#x7F16;&#x7801; URL &#x5B57;&#x7B26;&#x4E32;</a></li>
 </ul>
 <h2 id="base64decode">base64_decode</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(base64_decode(<span class="hljs-string">&apos;Zm9v&apos;</span>));    <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
-var_dump(base64_decode(<span class="hljs-string">&apos;_&apos;</span>));       <span class="hljs-comment">// string(0) &quot;&quot;</span>
-var_dump(base64_decode(<span class="hljs-string">&apos;_&apos;</span>, <span class="hljs-keyword">true</span>)); <span class="hljs-comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base64_decode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Zm9v&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base64_decode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;_&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// string(0) &quot;&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base64_decode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;_&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
 </code></pre>
 <h2 id="base64encode">base64_encode</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(base64_encode(<span class="hljs-string">&apos;foo&apos;</span>)); <span class="hljs-comment">// string(4) &quot;Zm9v&quot;</span>
-var_dump(base64_encode(<span class="hljs-string">&apos;_&apos;</span>));   <span class="hljs-comment">// string(4) &quot;Xw==&quot;</span>
-var_dump(base64_encode(<span class="hljs-string">&apos; &apos;</span>));   <span class="hljs-comment">// string(4) &quot;IA==&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base64_encode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(4) &quot;Zm9v&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base64_encode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;_&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// string(4) &quot;Xw==&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">base64_encode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos; &apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// string(4) &quot;IA==&quot;</span>
 </code></pre>
 <h2 id="getheaders">get_headers</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(get_headers(<span class="hljs-string">&apos;https://github.com/&apos;</span>));
-var_dump(get_headers(<span class="hljs-string">&apos;https://github.com/&apos;</span>, <span class="hljs-number">1</span>));
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">get_headers</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;https://github.com/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">get_headers</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;https://github.com/&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="getmetatags">get_meta_tags</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(get_meta_tags(<span class="hljs-string">&apos;https://github.com/&apos;</span>));
-var_dump(get_meta_tags(<span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">&apos;/example.html&apos;</span>, <span class="hljs-keyword">true</span>));
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">get_meta_tags</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;https://github.com/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">get_meta_tags</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.html&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>example.html</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;zh-cmn-Hans&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>/&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;foo&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;foo&quot;</span>/&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;bar&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;bar&quot;</span>/&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+<pre class="language-"><code class="lang-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>zh-cmn-Hans<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <h2 id="httpbuildquery">http_build_query</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(http_build_query([<span class="hljs-string">&apos;foo&apos;</span> =&gt; <span class="hljs-string">&apos;cat&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span> =&gt; <span class="hljs-string">&apos;dog&apos;</span>]));                            <span class="hljs-comment">// string(15) &quot;foo=cat&amp;bar=dog&quot;</span>
-var_dump(http_build_query([<span class="hljs-string">&apos;foo&apos;</span> =&gt; <span class="hljs-string">&apos;cat&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span> =&gt; [<span class="hljs-string">&apos;dog&apos;</span>]]));                          <span class="hljs-comment">// string(22) &quot;foo=cat&amp;bar%5B0%5D=dog&quot;</span>
-var_dump(http_build_query([<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>], <span class="hljs-string">&apos;prefix_&apos;</span>));                                   <span class="hljs-comment">// string(25) &quot;prefix_0=foo&amp;prefix_1=bar&quot;</span>
-var_dump(http_build_query([<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>], <span class="hljs-string">&apos;prefix_&apos;</span>, <span class="hljs-string">&apos;&amp;amp;&apos;</span>));                          <span class="hljs-comment">// string(29) &quot;prefix_0=foo&amp;amp;prefix_1=bar&quot;</span>
-var_dump(http_build_query([<span class="hljs-string">&apos;foo&apos;</span> =&gt; <span class="hljs-string">&apos;cat dog&apos;</span>], <span class="hljs-string">&apos;prefix_&apos;</span>, <span class="hljs-string">&apos;&amp;amp;&apos;</span>, PHP_QUERY_RFC1738)); <span class="hljs-comment">// string(11) &quot;foo=cat+dog&quot;</span>
-var_dump(http_build_query([<span class="hljs-string">&apos;foo&apos;</span> =&gt; <span class="hljs-string">&apos;cat dog&apos;</span>], <span class="hljs-string">&apos;prefix_&apos;</span>, <span class="hljs-string">&apos;&amp;amp;&apos;</span>, PHP_QUERY_RFC3986)); <span class="hljs-comment">// string(13) &quot;foo=cat%20dog&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_build_query</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;dog&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                            <span class="token comment">// string(15) &quot;foo=cat&amp;bar=dog&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_build_query</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;dog&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                          <span class="token comment">// string(22) &quot;foo=cat&amp;bar%5B0%5D=dog&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_build_query</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;prefix_&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                   <span class="token comment">// string(25) &quot;prefix_0=foo&amp;prefix_1=bar&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_build_query</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;prefix_&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;&amp;amp;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                          <span class="token comment">// string(29) &quot;prefix_0=foo&amp;amp;prefix_1=bar&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_build_query</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;cat dog&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;prefix_&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;&amp;amp;&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_QUERY_RFC1738</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(11) &quot;foo=cat+dog&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_build_query</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;cat dog&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;prefix_&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;&amp;amp;&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_QUERY_RFC3986</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(13) &quot;foo=cat%20dog&quot;</span>
 </code></pre>
 <h2 id="parseurl">parse_url</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>));                   <span class="hljs-comment">// array(8) { [&quot;scheme&quot;]=&gt; string(4) &quot;http&quot; [&quot;host&quot;]=&gt; string(8) &quot;hostname&quot; [&quot;port&quot;]=&gt; int(80) [&quot;user&quot;]=&gt; string(8) &quot;username&quot; [&quot;pass&quot;]=&gt; string(8) &quot;password&quot; [&quot;path&quot;]=&gt; string(5) &quot;/path&quot; [&quot;query&quot;]=&gt; string(9) &quot;arg=value&quot; [&quot;fragment&quot;]=&gt; string(6) &quot;anchor&quot; }</span>
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>, PHP_URL_SCHEME));   <span class="hljs-comment">// string(4) &quot;http&quot;</span>
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>, PHP_URL_HOST));     <span class="hljs-comment">// string(8) &quot;hostname&quot;</span>
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>, PHP_URL_PORT));     <span class="hljs-comment">// int(80)</span>
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>, PHP_URL_USER));     <span class="hljs-comment">// string(8) &quot;username&quot;</span>
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>, PHP_URL_PASS));     <span class="hljs-comment">// string(8) &quot;password&quot;</span>
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>, PHP_URL_PATH));     <span class="hljs-comment">// string(5) &quot;/path&quot;</span>
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>, PHP_URL_QUERY));    <span class="hljs-comment">// string(9) &quot;arg=value&quot;</span>
-var_dump(parse_url(<span class="hljs-string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span>, PHP_URL_FRAGMENT)); <span class="hljs-comment">// string(6) &quot;anchor&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   <span class="token comment">// array(8) { [&quot;scheme&quot;]=&gt; string(4) &quot;http&quot; [&quot;host&quot;]=&gt; string(8) &quot;hostname&quot; [&quot;port&quot;]=&gt; int(80) [&quot;user&quot;]=&gt; string(8) &quot;username&quot; [&quot;pass&quot;]=&gt; string(8) &quot;password&quot; [&quot;path&quot;]=&gt; string(5) &quot;/path&quot; [&quot;query&quot;]=&gt; string(9) &quot;arg=value&quot; [&quot;fragment&quot;]=&gt; string(6) &quot;anchor&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_URL_SCHEME</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// string(4) &quot;http&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_URL_HOST</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// string(8) &quot;hostname&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_URL_PORT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// int(80)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_URL_USER</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// string(8) &quot;username&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_URL_PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// string(8) &quot;password&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_URL_PATH</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// string(5) &quot;/path&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_URL_QUERY</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// string(9) &quot;arg=value&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://username:password@hostname:80/path?arg=value#anchor&apos;</span><span class="token punctuation">,</span> <span class="token constant">PHP_URL_FRAGMENT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(6) &quot;anchor&quot;</span>
 </code></pre>
 <h2 id="rawurldecode">rawurldecode</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(rawurldecode(<span class="hljs-string">&apos;foo%3Dcat%26bar%3Ddog&apos;</span>));       <span class="hljs-comment">// string(15) &quot;foo=cat&amp;bar=dog&quot;</span>
-var_dump(rawurldecode(<span class="hljs-string">&apos;foo%3Dcat%26bar%3D%20dog%20&apos;</span>)); <span class="hljs-comment">// string(17) &quot;foo=cat&amp;bar= dog &quot;</span>
-var_dump(rawurldecode(<span class="hljs-string">&apos;foo%3Dcat%26bar%3Ddog+bird&apos;</span>));  <span class="hljs-comment">// string(20) &quot;foo=cat&amp;bar=dog+bird&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rawurldecode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo%3Dcat%26bar%3Ddog&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// string(15) &quot;foo=cat&amp;bar=dog&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rawurldecode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo%3Dcat%26bar%3D%20dog%20&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(17) &quot;foo=cat&amp;bar= dog &quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rawurldecode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo%3Dcat%26bar%3Ddog+bird&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(20) &quot;foo=cat&amp;bar=dog+bird&quot;</span>
 </code></pre>
 <h2 id="rawurlencode">rawurlencode</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(rawurlencode(<span class="hljs-string">&apos;foo=cat&amp;bar=dog&apos;</span>));      <span class="hljs-comment">// string(21) &quot;foo%3Dcat%26bar%3Ddog&quot;</span>
-var_dump(rawurlencode(<span class="hljs-string">&apos;foo=cat&amp;bar= dog &apos;</span>));    <span class="hljs-comment">// string(27) &quot;foo%3Dcat%26bar%3D%20dog%20&quot;</span>
-var_dump(rawurlencode(<span class="hljs-string">&apos;foo=cat&amp;bar=dog bird&apos;</span>)); <span class="hljs-comment">// string(28) &quot;foo%3Dcat%26bar%3Ddog%20bird&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rawurlencode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo=cat&amp;bar=dog&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// string(21) &quot;foo%3Dcat%26bar%3Ddog&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rawurlencode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo=cat&amp;bar= dog &apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// string(27) &quot;foo%3Dcat%26bar%3D%20dog%20&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">rawurlencode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo=cat&amp;bar=dog bird&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(28) &quot;foo%3Dcat%26bar%3Ddog%20bird&quot;</span>
 </code></pre>
 <h2 id="urldecode">urldecode</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(urldecode(<span class="hljs-string">&apos;foo%3Dcat%26bar%3Ddog&apos;</span>));       <span class="hljs-comment">// string(15) &quot;foo=cat&amp;bar=dog&quot;</span>
-var_dump(urldecode(<span class="hljs-string">&apos;foo%3Dcat%26bar%3D%20dog%20&apos;</span>)); <span class="hljs-comment">// string(17) &quot;foo=cat&amp;bar= dog &quot;</span>
-var_dump(urldecode(<span class="hljs-string">&apos;foo%3Dcat%26bar%3Ddog+bird&apos;</span>));  <span class="hljs-comment">// string(20) &quot;foo=cat&amp;bar=dog bird&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">urldecode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo%3Dcat%26bar%3Ddog&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// string(15) &quot;foo=cat&amp;bar=dog&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">urldecode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo%3Dcat%26bar%3D%20dog%20&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(17) &quot;foo=cat&amp;bar= dog &quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">urldecode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo%3Dcat%26bar%3Ddog+bird&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(20) &quot;foo=cat&amp;bar=dog bird&quot;</span>
 </code></pre>
 <h2 id="urlencode">urlencode</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(urlencode(<span class="hljs-string">&apos;foo=cat&amp;bar=dog&apos;</span>));      <span class="hljs-comment">// string(21) &quot;foo%3Dcat%26bar%3Ddog&quot;</span>
-var_dump(urlencode(<span class="hljs-string">&apos;foo=cat&amp;bar= dog &apos;</span>));    <span class="hljs-comment">// string(23) &quot;foo%3Dcat%26bar%3D+dog+&quot;</span>
-var_dump(urlencode(<span class="hljs-string">&apos;foo=cat&amp;bar=dog bird&apos;</span>)); <span class="hljs-comment">// string(26) &quot;foo%3Dcat%26bar%3Ddog+bird&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">urlencode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo=cat&amp;bar=dog&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// string(21) &quot;foo%3Dcat%26bar%3Ddog&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">urlencode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo=cat&amp;bar= dog &apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// string(23) &quot;foo%3Dcat%26bar%3D+dog+&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">urlencode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo=cat&amp;bar=dog bird&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(26) &quot;foo%3Dcat%26bar%3Ddog+bird&quot;</span>
 </code></pre>
 
                                 
@@ -3522,7 +3556,7 @@ var_dump(urlencode(<span class="hljs-string">&apos;foo=cat&amp;bar=dog bird&apos
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"URL","level":"1.1.2.11.6","depth":4,"next":{"title":"其他服务","level":"1.1.2.12","depth":3,"path":"docs/函数参考/其他服务.md","ref":"docs/函数参考/其他服务.md","articles":[{"title":"CURL","level":"1.1.2.12.1","depth":4,"path":"docs/函数参考/其他服务/CURL.md","ref":"docs/函数参考/其他服务/CURL.md","articles":[]},{"title":"网络","level":"1.1.2.12.2","depth":4,"path":"docs/函数参考/其他服务/网络.md","ref":"docs/函数参考/其他服务/网络.md","articles":[]},{"title":"Sockets","level":"1.1.2.12.3","depth":4,"path":"docs/函数参考/其他服务/Sockets.md","ref":"docs/函数参考/其他服务/Sockets.md","articles":[]}]},"previous":{"title":"Tokenizer","level":"1.1.2.11.5","depth":4,"path":"docs/函数参考/其他基本扩展/Tokenizer.md","ref":"docs/函数参考/其他基本扩展/Tokenizer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他基本扩展/URL.md","mtime":"2019-05-21T09:48:02.625Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"URL","level":"1.1.2.11.6","depth":4,"next":{"title":"其他服务","level":"1.1.2.12","depth":3,"path":"docs/函数参考/其他服务.md","ref":"docs/函数参考/其他服务.md","articles":[{"title":"CURL","level":"1.1.2.12.1","depth":4,"path":"docs/函数参考/其他服务/CURL.md","ref":"docs/函数参考/其他服务/CURL.md","articles":[]},{"title":"网络","level":"1.1.2.12.2","depth":4,"path":"docs/函数参考/其他服务/网络.md","ref":"docs/函数参考/其他服务/网络.md","articles":[]},{"title":"Sockets","level":"1.1.2.12.3","depth":4,"path":"docs/函数参考/其他服务/Sockets.md","ref":"docs/函数参考/其他服务/Sockets.md","articles":[]}]},"previous":{"title":"Tokenizer","level":"1.1.2.11.5","depth":4,"path":"docs/函数参考/其他基本扩展/Tokenizer.md","ref":"docs/函数参考/其他基本扩展/Tokenizer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他基本扩展/URL.md","mtime":"2019-05-21T09:48:02.625Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3532,23 +3566,35 @@ var_dump(urlencode(<span class="hljs-string">&apos;foo=cat&amp;bar=dog bird&apos
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

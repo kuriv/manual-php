@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="函数的参数.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3422,164 +3456,164 @@
 </tbody>
 </table>
 <p>&#x503C;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x53EF;&#x9009;&#x7684;&#x8FD4;&#x56DE;&#x8BED;&#x53E5;&#x8FD4;&#x56DE;&#x3002;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5305;&#x62EC;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;&#x7684;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x3002;&#x8FD4;&#x56DE;&#x8BED;&#x53E5;&#x4F1A;&#x7ACB;&#x5373;&#x4E2D;&#x6B62;&#x51FD;&#x6570;&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x63A7;&#x5236;&#x6743;&#x4EA4;&#x56DE;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x4EE3;&#x7801;&#x884C;&#x3002;&#x5982;&#x679C;&#x7701;&#x7565;&#x4E86; <code>return</code> &#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x4E3A; <code>NULL</code> &#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Calculate the cube of an integer.
  *
- * <span class="hljs-doctag">@param</span>  int    $number
- * <span class="hljs-doctag">@return</span> int
+ * @param  int    $number
+ * @return int
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(int $number)</span>: <span class="hljs-title">int</span>
-</span>{
-    <span class="hljs-keyword">return</span> $number ** <span class="hljs-number">3</span>;
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>int <span class="token variable">$number</span><span class="token punctuation">)</span><span class="token punctuation">:</span> int
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$number</span> <span class="token operator">*</span><span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-foo(<span class="hljs-number">2</span>);
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4EE5;&#x5F97;&#x5230;&#x591A;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Return an array.
  *
- * <span class="hljs-doctag">@param</span>  void
- * <span class="hljs-doctag">@return</span> array
+ * @param  void
+ * @return array
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span>: <span class="hljs-title">array</span>
-</span>{
-    <span class="hljs-keyword">return</span> [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">array</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-keyword">list</span>($foo, $bar, $baz) = foo();
+<span class="token keyword">list</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">,</span> <span class="token variable">$bar</span><span class="token punctuation">,</span> <span class="token variable">$baz</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x4ECE;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Just a test property.
      *
-     * <span class="hljs-doctag">@var</span> int
+     * @var int
      */</span>
-    <span class="hljs-keyword">public</span> $property = <span class="hljs-number">5</span>;
+    <span class="token keyword">public</span> <span class="token variable">$property</span> <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">/**
+    <span class="token comment">/**
      * Return a reference.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> int
+     * @param  void
+     * @return int
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> &amp;<span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">int</span>
-    </span>{
-        <span class="hljs-keyword">return</span> $this-&gt;property;
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token operator">&amp;</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> int
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-$property = &amp;$foo-&gt;method();
-var_dump($property); <span class="hljs-comment">// int(5)</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$property</span> <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$property</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(5)</span>
 
-$foo-&gt;property = <span class="hljs-number">6</span>;
-var_dump($property); <span class="hljs-comment">// int(6)</span>
+<span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span> <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$property</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(6)</span>
 </code></pre>
 <p>&#x57FA;&#x672C;&#x7C7B;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x58F0;&#x660E;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Basic class return type declaration.
  *
- * <span class="hljs-doctag">@param</span>  string $class
- * <span class="hljs-doctag">@return</span> Foo
+ * @param  string $class
+ * @return Foo
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(string $class)</span>: <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> $class;
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>string <span class="token variable">$class</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Foo
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token variable">$class</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Foo</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Baz</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Baz</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-var_dump(foo(<span class="hljs-string">&apos;Foo&apos;</span>)); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
-var_dump(foo(<span class="hljs-string">&apos;Bar&apos;</span>)); <span class="hljs-comment">// object(Bar)#1 (0) { }</span>
-var_dump(foo(<span class="hljs-string">&apos;Baz&apos;</span>)); <span class="hljs-comment">// PHP Fatal error:  Uncaught TypeError: Return value of foo() must be an instance of Foo, instance of Baz returned.</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Bar)#1 (0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Baz&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// PHP Fatal error:  Uncaught TypeError: Return value of foo() must be an instance of Foo, instance of Baz returned.</span>
 </code></pre>
 <p>&#x57FA;&#x672C;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x58F0;&#x660E;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Basic interface return type declaration.
  *
- * <span class="hljs-doctag">@param</span>  string $class
- * <span class="hljs-doctag">@return</span> Foo
+ * @param  string $class
+ * @return Foo
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(string $class)</span>: <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> $class;
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>string <span class="token variable">$class</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Foo
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token variable">$class</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Foo</span>
-</span>{
-}
+<span class="token keyword">interface</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Foo</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">implements</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Baz</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Baz</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-var_dump(foo(<span class="hljs-string">&apos;Bar&apos;</span>)); <span class="hljs-comment">// object(Bar)#1 (0) { }</span>
-var_dump(foo(<span class="hljs-string">&apos;Baz&apos;</span>)); <span class="hljs-comment">// PHP Fatal error:  Uncaught TypeError: Return value of foo() must implement interface Foo, instance of Baz returned.</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Bar)#1 (0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Baz&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// PHP Fatal error:  Uncaught TypeError: Return value of foo() must implement interface Foo, instance of Baz returned.</span>
 </code></pre>
 <p>&#x4E25;&#x683C;&#x7C7B;&#x578B;&#x4E5F;&#x4F1A;&#x5BF9;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x58F0;&#x660E;&#x4EA7;&#x751F;&#x5F71;&#x54CD;&#x3002;&#x5728;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x5F15;&#x53D1; <code>TypeError</code> &#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">declare</span>(strict_types = <span class="hljs-number">1</span>);
+<span class="token keyword">declare</span><span class="token punctuation">(</span>strict_types <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Calculate the quotient of two integers.
  *
- * <span class="hljs-doctag">@param</span>  int    $a
- * <span class="hljs-doctag">@param</span>  int    $b
- * <span class="hljs-doctag">@return</span> int
+ * @param  int    $a
+ * @param  int    $b
+ * @return int
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(int $a, int $b)</span>: <span class="hljs-title">int</span>
-</span>{
-    <span class="hljs-keyword">return</span> $a / $b;
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>int <span class="token variable">$a</span><span class="token punctuation">,</span> int <span class="token variable">$b</span><span class="token punctuation">)</span><span class="token punctuation">:</span> int
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$a</span> <span class="token operator">/</span> <span class="token variable">$b</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-var_dump(foo(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>)); <span class="hljs-comment">// int(2)</span>
-var_dump(foo(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>)); <span class="hljs-comment">// PHP Fatal error:  Uncaught TypeError: Return value of foo() must be of the type int, float returned.</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(2)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// PHP Fatal error:  Uncaught TypeError: Return value of foo() must be of the type int, float returned.</span>
 </code></pre>
 <p>&#x5728;&#x9ED8;&#x8BA4;&#x7684;&#x5F31;&#x7C7B;&#x578B;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x4E0D;&#x662F;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5219;&#x5B83;&#x5C06;&#x88AB;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x4E3A;&#x6B63;&#x786E;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-comment">/**
+<span class="token comment">/**
  * Calculate the quotient of two integers.
  *
- * <span class="hljs-doctag">@param</span>  int    $a
- * <span class="hljs-doctag">@param</span>  int    $b
- * <span class="hljs-doctag">@return</span> int
+ * @param  int    $a
+ * @param  int    $b
+ * @return int
  */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(int $a, int $b)</span>: <span class="hljs-title">int</span>
-</span>{
-    <span class="hljs-keyword">return</span> $a / $b;
-}
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>int <span class="token variable">$a</span><span class="token punctuation">,</span> int <span class="token variable">$b</span><span class="token punctuation">)</span><span class="token punctuation">:</span> int
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$a</span> <span class="token operator">/</span> <span class="token variable">$b</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-var_dump(foo(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>)); <span class="hljs-comment">// int(2)</span>
-var_dump(foo(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>)); <span class="hljs-comment">// int(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(2)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
 </code></pre>
 
                                 
@@ -3624,7 +3658,7 @@ var_dump(foo(<span class="hljs-number">2</span>, <span class="hljs-number">4</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"返回值","level":"1.1.1.8.3","depth":4,"next":{"title":"可变函数","level":"1.1.1.8.4","depth":4,"path":"docs/语言参考/函数/可变函数.md","ref":"docs/语言参考/函数/可变函数.md","articles":[]},"previous":{"title":"函数的参数","level":"1.1.1.8.2","depth":4,"path":"docs/语言参考/函数/函数的参数.md","ref":"docs/语言参考/函数/函数的参数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/函数/返回值.md","mtime":"2019-04-29T15:01:54.406Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"返回值","level":"1.1.1.8.3","depth":4,"next":{"title":"可变函数","level":"1.1.1.8.4","depth":4,"path":"docs/语言参考/函数/可变函数.md","ref":"docs/语言参考/函数/可变函数.md","articles":[]},"previous":{"title":"函数的参数","level":"1.1.1.8.2","depth":4,"path":"docs/语言参考/函数/函数的参数.md","ref":"docs/语言参考/函数/函数的参数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/函数/返回值.md","mtime":"2019-04-29T15:01:54.406Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3634,23 +3668,35 @@ var_dump(foo(<span class="hljs-number">2</span>, <span class="hljs-number">4</sp
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="switch.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3380,60 +3414,60 @@
                                 <h1 id="break">break</h1>
 <p><code>break</code> &#x5728;&#x5FAA;&#x73AF;&#x7ED3;&#x6784;&#x4E2D;&#x7528;&#x6765;&#x7ED3;&#x675F;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#x7ED3;&#x6784;&#x7684;&#x6267;&#x884C;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x6570;&#x5B57;&#x53C2;&#x6570;&#x6765;&#x51B3;&#x5B9A;&#x8DF3;&#x51FA;&#x51E0;&#x91CD;&#x5FAA;&#x73AF;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F; 1 &#xFF0C;&#x5373;&#x7ED3;&#x675F;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#x7ED3;&#x6784;&#x7684;&#x6267;&#x884C;&#x3002;</p>
 <p><code>break</code> &#x7ED3;&#x675F;&#x5F53;&#x524D; <code>for</code> &#x7ED3;&#x6784;&#x7684;&#x6267;&#x884C;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">for</span> ($i = <span class="hljs-number">1</span>; $i &lt; <span class="hljs-number">10</span>; $i++) {
-    <span class="hljs-keyword">if</span> ($i == <span class="hljs-number">5</span>) {
-        <span class="hljs-keyword">break</span>;
-    }
-}
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token variable">$i</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$i</span> <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><code>break</code> &#x7ED3;&#x675F;&#x5F53;&#x524D; <code>foreach</code> &#x7ED3;&#x6784;&#x7684;&#x6267;&#x884C;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
-<span class="hljs-keyword">foreach</span> ($foo <span class="hljs-keyword">as</span> $value) {
-    <span class="hljs-keyword">if</span> ($value == <span class="hljs-number">2</span>) {
-        <span class="hljs-keyword">break</span>;
-    }
-}
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$foo</span> <span class="token keyword">as</span> <span class="token variable">$value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$value</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><code>break</code> &#x7ED3;&#x675F;&#x5F53;&#x524D; <code>while</code> &#x7ED3;&#x6784;&#x7684;&#x6267;&#x884C;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-number">1</span>;
-<span class="hljs-keyword">while</span> ($foo &lt; <span class="hljs-number">10</span>) {
-    <span class="hljs-keyword">if</span> ($foo == <span class="hljs-number">5</span>) {
-        <span class="hljs-keyword">break</span>;
-    }
-    $foo++;
-}
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token variable">$foo</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$foo</span> <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token variable">$foo</span><span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><code>break</code> &#x7ED3;&#x675F;&#x5F53;&#x524D; <code>do-while</code> &#x7ED3;&#x6784;&#x7684;&#x6267;&#x884C;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-number">1</span>;
-<span class="hljs-keyword">do</span> {
-    <span class="hljs-keyword">if</span> ($foo == <span class="hljs-number">5</span>) {
-        <span class="hljs-keyword">break</span>;
-    }
-    $foo++;
-} <span class="hljs-keyword">while</span> ($foo &lt; <span class="hljs-number">10</span>);
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$foo</span> <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token variable">$foo</span><span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token variable">$foo</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><code>break</code> &#x7ED3;&#x675F;&#x5F53;&#x524D; <code>switch</code> &#x7ED3;&#x6784;&#x7684;&#x6267;&#x884C;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-number">1</span>;
-<span class="hljs-keyword">while</span> ($foo++) {
-    <span class="hljs-keyword">switch</span> ($foo) {
-        <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
-            <span class="hljs-keyword">break</span> <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
-            <span class="hljs-keyword">break</span> <span class="hljs-number">2</span>;
-        <span class="hljs-keyword">default</span>:
-            <span class="hljs-keyword">break</span>;
-    }
-}
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token number">5</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">10</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 
                                 
@@ -3478,7 +3512,7 @@ $foo = <span class="hljs-number">1</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"break","level":"1.1.1.7.9","depth":4,"next":{"title":"continue","level":"1.1.1.7.10","depth":4,"path":"docs/语言参考/流程控制/continue.md","ref":"docs/语言参考/流程控制/continue.md","articles":[]},"previous":{"title":"switch","level":"1.1.1.7.8","depth":4,"path":"docs/语言参考/流程控制/switch.md","ref":"docs/语言参考/流程控制/switch.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/流程控制/break.md","mtime":"2019-05-03T15:41:12.907Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"break","level":"1.1.1.7.9","depth":4,"next":{"title":"continue","level":"1.1.1.7.10","depth":4,"path":"docs/语言参考/流程控制/continue.md","ref":"docs/语言参考/流程控制/continue.md","articles":[]},"previous":{"title":"switch","level":"1.1.1.7.8","depth":4,"path":"docs/语言参考/流程控制/switch.md","ref":"docs/语言参考/流程控制/switch.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/流程控制/break.md","mtime":"2019-05-03T15:41:12.907Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3488,23 +3522,35 @@ $foo = <span class="hljs-number">1</span>;
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="../变量.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3379,36 +3413,36 @@
                                 
                                 <h1 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;">&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h1>
 <p>PHP &#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x7528;&#x4E00;&#x4E2A;&#x7F8E;&#x5143;&#x7B26;&#x53F7; <code>$</code> &#x540E;&#x9762;&#x8DDF;&#x53D8;&#x91CF;&#x540D;&#x6765;&#x8868;&#x793A;&#x3002;&#x53D8;&#x91CF;&#x540D;&#x662F;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x7684;&#x3002;&#x53D8;&#x91CF;&#x540D;&#x4E0E; PHP &#x4E2D;&#x5176;&#x5B83;&#x7684;&#x6807;&#x7B7E;&#x4E00;&#x6837;&#x9075;&#x5FAA;&#x76F8;&#x540C;&#x7684;&#x89C4;&#x5219;&#x3002;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x7531;&#x5B57;&#x6BCD;&#x6216;&#x8005;&#x4E0B;&#x5212;&#x7EBF;&#x5F00;&#x5934;&#xFF0C;&#x540E;&#x9762;&#x8DDF;&#x4E0A;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x6570;&#x5B57;&#xFF0C;&#x6216;&#x8005;&#x4E0B;&#x5212;&#x7EBF;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-string">&apos;foo&apos;</span>;
-$Foo = <span class="hljs-string">&apos;Foo&apos;</span>;
-var_dump($foo); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
-var_dump($Foo); <span class="hljs-comment">// string(3) &quot;Foo&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$Foo</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$Foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;Foo&quot;</span>
 </code></pre>
 <p>&#x4EE5;&#x4E0B;&#x5212;&#x7EBF;&#x5F00;&#x5934;&#xFF0C;&#x5408;&#x6CD5;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$_foo = <span class="hljs-string">&apos;foo&apos;</span>;
-var_dump($_foo); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token variable">$_foo</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x53D8;&#x91CF;&#x9ED8;&#x8BA4;&#x603B;&#x662F;&#x4F20;&#x503C;&#x8D4B;&#x503C;&#x3002;&#x90A3;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5F53;&#x5C06;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x6574;&#x4E2A;&#x539F;&#x59CB;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x88AB;&#x8D4B;&#x503C;&#x5230;&#x76EE;&#x6807;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x8D4B;&#x4E88;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x6539;&#x53D8;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x5C06;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-string">&apos;foo&apos;</span>;
-$bar = $foo;
-$bar = <span class="hljs-string">&apos;bar&apos;</span>;
-var_dump($foo); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
-var_dump($bar); <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$bar</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;bar&quot;</span>
 </code></pre>
 <p>PHP &#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x7ED9;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#xFF1A;&#x5F15;&#x7528;&#x8D4B;&#x503C;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x65B0;&#x7684;&#x53D8;&#x91CF;&#x7B80;&#x5355;&#x7684;&#x5F15;&#x7528;&#x4E86;&#x539F;&#x59CB;&#x53D8;&#x91CF;&#x3002;&#x6539;&#x52A8;&#x65B0;&#x7684;&#x53D8;&#x91CF;&#x5C06;&#x5F71;&#x54CD;&#x5230;&#x539F;&#x59CB;&#x53D8;&#x91CF;&#xFF0C;&#x53CD;&#x4E4B;&#x4EA6;&#x7136;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-string">&apos;foo&apos;</span>;
-$bar = &amp;$foo;
-$bar = <span class="hljs-string">&apos;bar&apos;</span>;
-var_dump($foo); <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
-var_dump($bar); <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;bar&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$bar</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;bar&quot;</span>
 </code></pre>
 
                                 
@@ -3453,7 +3487,7 @@ var_dump($bar); <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基本语法","level":"1.1.1.3.1","depth":4,"next":{"title":"变量范围","level":"1.1.1.3.2","depth":4,"path":"docs/语言参考/变量/变量范围.md","ref":"docs/语言参考/变量/变量范围.md","articles":[]},"previous":{"title":"变量","level":"1.1.1.3","depth":3,"path":"docs/语言参考/变量.md","ref":"docs/语言参考/变量.md","articles":[{"title":"基本语法","level":"1.1.1.3.1","depth":4,"path":"docs/语言参考/变量/基本语法.md","ref":"docs/语言参考/变量/基本语法.md","articles":[]},{"title":"变量范围","level":"1.1.1.3.2","depth":4,"path":"docs/语言参考/变量/变量范围.md","ref":"docs/语言参考/变量/变量范围.md","articles":[]},{"title":"可变变量","level":"1.1.1.3.3","depth":4,"path":"docs/语言参考/变量/可变变量.md","ref":"docs/语言参考/变量/可变变量.md","articles":[]},{"title":"来自 PHP 之外的变量","level":"1.1.1.3.4","depth":4,"path":"docs/语言参考/变量/来自 PHP 之外的变量.md","ref":"docs/语言参考/变量/来自 PHP 之外的变量.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/变量/基本语法.md","mtime":"2019-04-29T12:41:47.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基本语法","level":"1.1.1.3.1","depth":4,"next":{"title":"变量范围","level":"1.1.1.3.2","depth":4,"path":"docs/语言参考/变量/变量范围.md","ref":"docs/语言参考/变量/变量范围.md","articles":[]},"previous":{"title":"变量","level":"1.1.1.3","depth":3,"path":"docs/语言参考/变量.md","ref":"docs/语言参考/变量.md","articles":[{"title":"基本语法","level":"1.1.1.3.1","depth":4,"path":"docs/语言参考/变量/基本语法.md","ref":"docs/语言参考/变量/基本语法.md","articles":[]},{"title":"变量范围","level":"1.1.1.3.2","depth":4,"path":"docs/语言参考/变量/变量范围.md","ref":"docs/语言参考/变量/变量范围.md","articles":[]},{"title":"可变变量","level":"1.1.1.3.3","depth":4,"path":"docs/语言参考/变量/可变变量.md","ref":"docs/语言参考/变量/可变变量.md","articles":[]},{"title":"来自 PHP 之外的变量","level":"1.1.1.3.4","depth":4,"path":"docs/语言参考/变量/来自 PHP 之外的变量.md","ref":"docs/语言参考/变量/来自 PHP 之外的变量.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/变量/基本语法.md","mtime":"2019-04-29T12:41:47.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3463,23 +3497,35 @@ var_dump($bar); <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

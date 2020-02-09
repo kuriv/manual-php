@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="../类型.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3379,41 +3413,41 @@
                                 
                                 <h1 id="boolean-&#x5E03;&#x5C14;&#x7C7B;&#x578B;">Boolean &#x5E03;&#x5C14;&#x7C7B;&#x578B;</h1>
 <p>&#x8981;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x503C;&#xFF0C;&#x4F7F;&#x7528;&#x5E38;&#x91CF; <code>true</code> &#x6216; <code>false</code> &#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-keyword">true</span>;
-$bar = <span class="hljs-keyword">false</span>;
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token boolean constant">true</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token boolean constant">false</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x901A;&#x5E38;&#x8FD0;&#x7B97;&#x7B26;&#x6240;&#x8FD4;&#x56DE;&#x7684;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x503C;&#x7ED3;&#x679C;&#x4F1A;&#x88AB;&#x4F20;&#x9012;&#x7ED9;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$foo = <span class="hljs-string">&apos;foo&apos;</span>;
-<span class="hljs-keyword">if</span> ($foo == <span class="hljs-string">&apos;foo&apos;</span>) {
-}
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$foo</span> <span class="token operator">==</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-$bar = <span class="hljs-keyword">true</span>;
-<span class="hljs-keyword">if</span> ($bar) {
-}
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token boolean constant">true</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$bar</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8F6C;&#x6362;&#x4E3A;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#xFF1A;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump((bool) <span class="hljs-number">-10</span>);          <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) <span class="hljs-number">0</span>);            <span class="hljs-comment">// bool(false)</span>
-var_dump((bool) <span class="hljs-number">0.0</span>);          <span class="hljs-comment">// bool(false)</span>
-var_dump((bool) <span class="hljs-number">0.0001</span>);       <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) <span class="hljs-number">1</span>);            <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) <span class="hljs-string">&apos;&apos;</span>);           <span class="hljs-comment">// bool(false)</span>
-var_dump((bool) <span class="hljs-string">&apos;0&apos;</span>);          <span class="hljs-comment">// bool(false)</span>
-var_dump((bool) <span class="hljs-string">&apos;0.00&apos;</span>);       <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) <span class="hljs-string">&apos;1&apos;</span>);          <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) <span class="hljs-string">&apos;foo&apos;</span>);        <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) <span class="hljs-string">&apos;false&apos;</span>);      <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) <span class="hljs-keyword">false</span>);        <span class="hljs-comment">// bool(false)</span>
-var_dump((bool) <span class="hljs-number">2.3e5</span>);        <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) []);           <span class="hljs-comment">// bool(false)</span>
-var_dump((bool) [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]);    <span class="hljs-comment">// bool(true)</span>
-var_dump((bool) <span class="hljs-keyword">new</span> stdClass); <span class="hljs-comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token number">0.0001</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token single-quoted-string string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token single-quoted-string string">&apos;0&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token single-quoted-string string">&apos;0.00&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token single-quoted-string string">&apos;1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token single-quoted-string string">&apos;false&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token number">2.3e5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token keyword">new</span> <span class="token class-name">stdClass</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 
                                 
@@ -3458,7 +3492,7 @@ var_dump((bool) <span class="hljs-keyword">new</span> stdClass); <span class="hl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Boolean 布尔类型","level":"1.1.1.2.1","depth":4,"next":{"title":"Integer 整型","level":"1.1.1.2.2","depth":4,"path":"docs/语言参考/类型/Integer 整型.md","ref":"docs/语言参考/类型/Integer 整型.md","articles":[]},"previous":{"title":"类型","level":"1.1.1.2","depth":3,"path":"docs/语言参考/类型.md","ref":"docs/语言参考/类型.md","articles":[{"title":"Boolean 布尔类型","level":"1.1.1.2.1","depth":4,"path":"docs/语言参考/类型/Boolean 布尔类型.md","ref":"docs/语言参考/类型/Boolean 布尔类型.md","articles":[]},{"title":"Integer 整型","level":"1.1.1.2.2","depth":4,"path":"docs/语言参考/类型/Integer 整型.md","ref":"docs/语言参考/类型/Integer 整型.md","articles":[]},{"title":"Float 浮点型","level":"1.1.1.2.3","depth":4,"path":"docs/语言参考/类型/Float 浮点型.md","ref":"docs/语言参考/类型/Float 浮点型.md","articles":[]},{"title":"String 字符串","level":"1.1.1.2.4","depth":4,"path":"docs/语言参考/类型/String 字符串.md","ref":"docs/语言参考/类型/String 字符串.md","articles":[]},{"title":"Array 数组","level":"1.1.1.2.5","depth":4,"path":"docs/语言参考/类型/Array 数组.md","ref":"docs/语言参考/类型/Array 数组.md","articles":[]},{"title":"Object 对象","level":"1.1.1.2.6","depth":4,"path":"docs/语言参考/类型/Object 对象.md","ref":"docs/语言参考/类型/Object 对象.md","articles":[]},{"title":"Resource 资源类型","level":"1.1.1.2.7","depth":4,"path":"docs/语言参考/类型/Resource 资源类型.md","ref":"docs/语言参考/类型/Resource 资源类型.md","articles":[]},{"title":"NULL","level":"1.1.1.2.8","depth":4,"path":"docs/语言参考/类型/NULL.md","ref":"docs/语言参考/类型/NULL.md","articles":[]},{"title":"Callable 可调用类型","level":"1.1.1.2.9","depth":4,"path":"docs/语言参考/类型/Callable 可调用类型.md","ref":"docs/语言参考/类型/Callable 可调用类型.md","articles":[]},{"title":"类型转换的判别","level":"1.1.1.2.10","depth":4,"path":"docs/语言参考/类型/类型转换的判别.md","ref":"docs/语言参考/类型/类型转换的判别.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/类型/Boolean 布尔类型.md","mtime":"2019-04-26T11:12:12.904Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Boolean 布尔类型","level":"1.1.1.2.1","depth":4,"next":{"title":"Integer 整型","level":"1.1.1.2.2","depth":4,"path":"docs/语言参考/类型/Integer 整型.md","ref":"docs/语言参考/类型/Integer 整型.md","articles":[]},"previous":{"title":"类型","level":"1.1.1.2","depth":3,"path":"docs/语言参考/类型.md","ref":"docs/语言参考/类型.md","articles":[{"title":"Boolean 布尔类型","level":"1.1.1.2.1","depth":4,"path":"docs/语言参考/类型/Boolean 布尔类型.md","ref":"docs/语言参考/类型/Boolean 布尔类型.md","articles":[]},{"title":"Integer 整型","level":"1.1.1.2.2","depth":4,"path":"docs/语言参考/类型/Integer 整型.md","ref":"docs/语言参考/类型/Integer 整型.md","articles":[]},{"title":"Float 浮点型","level":"1.1.1.2.3","depth":4,"path":"docs/语言参考/类型/Float 浮点型.md","ref":"docs/语言参考/类型/Float 浮点型.md","articles":[]},{"title":"String 字符串","level":"1.1.1.2.4","depth":4,"path":"docs/语言参考/类型/String 字符串.md","ref":"docs/语言参考/类型/String 字符串.md","articles":[]},{"title":"Array 数组","level":"1.1.1.2.5","depth":4,"path":"docs/语言参考/类型/Array 数组.md","ref":"docs/语言参考/类型/Array 数组.md","articles":[]},{"title":"Object 对象","level":"1.1.1.2.6","depth":4,"path":"docs/语言参考/类型/Object 对象.md","ref":"docs/语言参考/类型/Object 对象.md","articles":[]},{"title":"Resource 资源类型","level":"1.1.1.2.7","depth":4,"path":"docs/语言参考/类型/Resource 资源类型.md","ref":"docs/语言参考/类型/Resource 资源类型.md","articles":[]},{"title":"NULL","level":"1.1.1.2.8","depth":4,"path":"docs/语言参考/类型/NULL.md","ref":"docs/语言参考/类型/NULL.md","articles":[]},{"title":"Callable 可调用类型","level":"1.1.1.2.9","depth":4,"path":"docs/语言参考/类型/Callable 可调用类型.md","ref":"docs/语言参考/类型/Callable 可调用类型.md","articles":[]},{"title":"类型转换的判别","level":"1.1.1.2.10","depth":4,"path":"docs/语言参考/类型/类型转换的判别.md","ref":"docs/语言参考/类型/类型转换的判别.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/类型/Boolean 布尔类型.md","mtime":"2019-04-26T11:12:12.904Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3468,23 +3502,35 @@ var_dump((bool) <span class="hljs-keyword">new</span> stdClass); <span class="hl
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

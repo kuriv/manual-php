@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="../Session 扩展.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3404,173 +3438,173 @@
 <li><a href="#sessionwriteclose">session_write_close &#x2014; &#x5199;&#x5165;&#x4F1A;&#x8BDD;&#x6570;&#x636E;&#x5E76;&#x7ED3;&#x675F;&#x4F1A;&#x8BDD;</a></li>
 </ul>
 <h2 id="sessionabort">session_abort</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;foo&apos;</span>;
-session_write_close();
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token function">session_write_close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;bar&apos;</span>;
-session_abort();
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">session_abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-session_start();
-var_dump($_SESSION[<span class="hljs-string">&apos;foo&apos;</span>]); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <h2 id="sessioncacheexpire">session_cache_expire</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_cache_expire(<span class="hljs-number">60</span>));  <span class="hljs-comment">// int(180)</span>
-var_dump(session_cache_expire());    <span class="hljs-comment">// int(60)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_cache_expire</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(180)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_cache_expire</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// int(60)</span>
 </code></pre>
 <h2 id="sessioncachelimiter">session_cache_limiter</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_cache_limiter(<span class="hljs-string">&apos;private&apos;</span>)); <span class="hljs-comment">// string(7) &quot;nocache&quot;</span>
-var_dump(session_cache_limiter());          <span class="hljs-comment">// string(7) &quot;private&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_cache_limiter</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;private&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(7) &quot;nocache&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_cache_limiter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// string(7) &quot;private&quot;</span>
 </code></pre>
 <h2 id="sessioncommit">session_commit</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;foo&apos;</span>;
-$_SESSION[<span class="hljs-string">&apos;bar&apos;</span>] = <span class="hljs-string">&apos;bar&apos;</span>;
-var_dump(session_commit()); <span class="hljs-comment">// bool(true)</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_commit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="sessioncreateid">session_create_id</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_create_id());
-var_dump(session_create_id(<span class="hljs-string">&apos;prefix-&apos;</span>));
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_create_id</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_create_id</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;prefix-&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="sessiondecode">session_decode</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-var_dump(session_decode(<span class="hljs-string">&apos;foo|s:3:&quot;foo&quot;;bar|s:3:&quot;bar&quot;;&apos;</span>)); <span class="hljs-comment">// bool(true)</span>
-var_dump($_SESSION[<span class="hljs-string">&apos;foo&apos;</span>]);                               <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
-var_dump($_SESSION[<span class="hljs-string">&apos;bar&apos;</span>]);                               <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_decode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo|s:3:&quot;foo&quot;;bar|s:3:&quot;bar&quot;;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                               <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                               <span class="token comment">// string(3) &quot;bar&quot;</span>
 </code></pre>
 <h2 id="sessiondestory">session_destory</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;foo&apos;</span>;
-$_SESSION[<span class="hljs-string">&apos;bar&apos;</span>] = <span class="hljs-string">&apos;bar&apos;</span>;
-session_write_close();
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">session_write_close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-session_start();
-var_dump($_SESSION[<span class="hljs-string">&apos;foo&apos;</span>]);  <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
-var_dump($_SESSION[<span class="hljs-string">&apos;bar&apos;</span>]);  <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
-var_dump(session_destroy()); <span class="hljs-comment">// bool(true)</span>
-var_dump($_SESSION[<span class="hljs-string">&apos;foo&apos;</span>]);  <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
-var_dump($_SESSION[<span class="hljs-string">&apos;bar&apos;</span>]);  <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(3) &quot;bar&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(3) &quot;bar&quot;</span>
 </code></pre>
 <h2 id="sessionencode">session_encode</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;foo&apos;</span>;
-$_SESSION[<span class="hljs-string">&apos;bar&apos;</span>] = <span class="hljs-string">&apos;bar&apos;</span>;
-var_dump(session_encode()); <span class="hljs-comment">// string(28) &quot;foo|s:3:&quot;foo&quot;;bar|s:3:&quot;bar&quot;;&quot;</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_encode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(28) &quot;foo|s:3:&quot;foo&quot;;bar|s:3:&quot;bar&quot;;&quot;</span>
 </code></pre>
 <h2 id="sessiongc">session_gc</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-var_dump(session_gc());
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_gc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="sessiongetcookieparams">session_get_cookie_params</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_get_cookie_params());
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_get_cookie_params</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="sessionid">session_id</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_id(session_create_id()));
-var_dump(session_id());
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_id</span><span class="token punctuation">(</span><span class="token function">session_create_id</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_id</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="sessionmodulename">session_module_name</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_module_name(<span class="hljs-string">&apos;files&apos;</span>)); <span class="hljs-comment">// string(5) &quot;files&quot;</span>
-var_dump(session_module_name());        <span class="hljs-comment">// string(5) &quot;files&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_module_name</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;files&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(5) &quot;files&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_module_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// string(5) &quot;files&quot;</span>
 </code></pre>
 <h2 id="sessionname">session_name</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_name(<span class="hljs-string">&apos;PHPSESSID&apos;</span>)); <span class="hljs-comment">// string(9) &quot;PHPSESSID&quot;</span>
-var_dump(session_name());            <span class="hljs-comment">// string(9) &quot;PHPSESSID&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_name</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;PHPSESSID&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(9) &quot;PHPSESSID&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// string(9) &quot;PHPSESSID&quot;</span>
 </code></pre>
 <h2 id="sessionregenerateid">session_regenerate_id</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-var_dump(session_regenerate_id());     <span class="hljs-comment">// bool(true)</span>
-var_dump(session_regenerate_id(<span class="hljs-keyword">true</span>)); <span class="hljs-comment">// bool(true)</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_regenerate_id</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_regenerate_id</span><span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="sessionregistershutdown">session_register_shutdown</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_register_shutdown());
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_register_shutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="sessionreset">session_reset</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;foo&apos;</span>;
-session_write_close();
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token function">session_write_close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;bar&apos;</span>;
-session_reset();
-var_dump($_SESSION[<span class="hljs-string">&apos;foo&apos;</span>]); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">session_reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <h2 id="sessionsavepath">session_save_path</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_save_path(<span class="hljs-keyword">__DIR__</span>));
-var_dump(session_save_path());
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_save_path</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_save_path</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="sessionsetcookieparams">session_set_cookie_params</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_set_cookie_params(<span class="hljs-number">3600</span>, <span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-string">&apos;.github.com&apos;</span>, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">true</span>)); <span class="hljs-comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_set_cookie_params</span><span class="token punctuation">(</span><span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;.github.com&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="sessionsetsavehandler">session_set_save_handler</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-$handle = <span class="hljs-keyword">new</span> SessionHandler;
-var_dump(session_set_save_handler($handle, <span class="hljs-keyword">true</span>)); <span class="hljs-comment">// bool(true)</span>
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SessionHandler</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_set_save_handler</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="sessionstart">session_start</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_start()); <span class="hljs-comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="sessionstatus">session_status</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-var_dump(session_status());
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_status</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="sessionunset">session_unset</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;foo&apos;</span>;
-$_SESSION[<span class="hljs-string">&apos;bar&apos;</span>] = <span class="hljs-string">&apos;bar&apos;</span>;
-session_unset();
-var_dump($_SESSION[<span class="hljs-string">&apos;foo&apos;</span>]); <span class="hljs-comment">// NULL</span>
-var_dump($_SESSION[<span class="hljs-string">&apos;bar&apos;</span>]); <span class="hljs-comment">// NULL</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">session_unset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NULL</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NULL</span>
 </code></pre>
 <h2 id="sessionwriteclose">session_write_close</h2>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-session_start();
-$_SESSION[<span class="hljs-string">&apos;foo&apos;</span>] = <span class="hljs-string">&apos;foo&apos;</span>;
-$_SESSION[<span class="hljs-string">&apos;bar&apos;</span>] = <span class="hljs-string">&apos;bar&apos;</span>;
-var_dump(session_write_close()); <span class="hljs-comment">// bool(true)</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">session_write_close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 
                                 
@@ -3615,7 +3649,7 @@ var_dump(session_write_close()); <span class="hljs-comment">// bool(true)</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Session","level":"1.1.2.13.1","depth":4,"next":{"title":"文本处理","level":"1.1.2.14","depth":3,"path":"docs/函数参考/文本处理.md","ref":"docs/函数参考/文本处理.md","articles":[{"title":"正则表达式","level":"1.1.2.14.1","depth":4,"path":"docs/函数参考/文本处理/正则表达式.md","ref":"docs/函数参考/文本处理/正则表达式.md","articles":[]},{"title":"字符串","level":"1.1.2.14.2","depth":4,"path":"docs/函数参考/文本处理/字符串.md","ref":"docs/函数参考/文本处理/字符串.md","articles":[]}]},"previous":{"title":"Session 扩展","level":"1.1.2.13","depth":3,"path":"docs/函数参考/Session 扩展.md","ref":"docs/函数参考/Session 扩展.md","articles":[{"title":"Session","level":"1.1.2.13.1","depth":4,"path":"docs/函数参考/Session 扩展/Session.md","ref":"docs/函数参考/Session 扩展/Session.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/Session 扩展/Session.md","mtime":"2019-05-26T07:38:45.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Session","level":"1.1.2.13.1","depth":4,"next":{"title":"文本处理","level":"1.1.2.14","depth":3,"path":"docs/函数参考/文本处理.md","ref":"docs/函数参考/文本处理.md","articles":[{"title":"正则表达式","level":"1.1.2.14.1","depth":4,"path":"docs/函数参考/文本处理/正则表达式.md","ref":"docs/函数参考/文本处理/正则表达式.md","articles":[]},{"title":"字符串","level":"1.1.2.14.2","depth":4,"path":"docs/函数参考/文本处理/字符串.md","ref":"docs/函数参考/文本处理/字符串.md","articles":[]}]},"previous":{"title":"Session 扩展","level":"1.1.2.13","depth":3,"path":"docs/函数参考/Session 扩展.md","ref":"docs/函数参考/Session 扩展.md","articles":[{"title":"Session","level":"1.1.2.13.1","depth":4,"path":"docs/函数参考/Session 扩展/Session.md","ref":"docs/函数参考/Session 扩展/Session.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/Session 扩展/Session.md","mtime":"2019-05-26T07:38:45.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3625,23 +3659,35 @@ var_dump(session_write_close()); <span class="hljs-comment">// bool(true)</span>
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

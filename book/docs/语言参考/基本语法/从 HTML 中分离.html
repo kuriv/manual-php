@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="PHP 标记.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3379,25 +3413,25 @@
                                 
                                 <h1 id="&#x4ECE;-html-&#x4E2D;&#x5206;&#x79BB;">&#x4ECE; HTML &#x4E2D;&#x5206;&#x79BB;</h1>
 <p>&#x51E1;&#x662F;&#x5728;&#x4E00;&#x5BF9;&#x8D77;&#x59CB;&#x6807;&#x8BB0;&#x548C;&#x7ED3;&#x675F;&#x6807;&#x8BB0;&#x4E4B;&#x5916;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x4F1A;&#x88AB; PHP &#x89E3;&#x6790;&#x5668;&#x5FFD;&#x7565;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97; PHP &#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5177;&#x5907;&#x6DF7;&#x5408;&#x5185;&#x5BB9;&#x3002;&#x53EF;&#x4EE5;&#x4F7F; PHP &#x5D4C;&#x5165;&#x5230; HTML &#x6587;&#x6863;&#x4E2D;&#x53BB;&#x3002;</p>
-<pre><code class="lang-php">&lt;!DOCTYPE html&gt;
-&lt;html lang=<span class="hljs-string">&quot;zh-cmn-Hans&quot;</span>&gt;
-    &lt;head&gt;
-        &lt;meta charset=<span class="hljs-string">&quot;utf-8&quot;</span>/&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;p&gt;Hello, World!&lt;/p&gt;
-        <span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Hello, World!&apos;</span>; <span class="hljs-meta">?&gt;</span>
-        &lt;p&gt;Hello, World!&lt;/p&gt;
-        <span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Hello, World!&apos;</span>; <span class="hljs-meta">?&gt;</span>
-    &lt;/body&gt;
-&lt;/html&gt;
+<pre class="language-"><code class="lang-php"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token double-quoted-string string">&quot;zh-cmn-Hans&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token double-quoted-string string">&quot;utf-8&quot;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Hello<span class="token punctuation">,</span> World<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword">echo</span> <span class="token single-quoted-string string">&apos;Hello, World!&apos;</span><span class="token punctuation">;</span> <span class="token operator">?</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Hello<span class="token punctuation">,</span> World<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword">echo</span> <span class="token single-quoted-string string">&apos;Hello, World!&apos;</span><span class="token punctuation">;</span> <span class="token operator">?</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
 </code></pre>
 <p>&#x5F53;&#x5904;&#x4E8E;&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x4E2D;&#x95F4;&#x65F6;&#xFF0C;&#x6B64;&#x65F6; PHP &#x89E3;&#x91CA;&#x5668;&#x4F1A;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x6765;&#x51B3;&#x5B9A;&#x54EA;&#x4E9B;&#x8F93;&#x51FA;&#x54EA;&#x4E9B;&#x8DF3;&#x8FC7;&#x3002; PHP &#x5C06;&#x8DF3;&#x8FC7;&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x672A;&#x8FBE;&#x6210;&#x7684;&#x6BB5;&#x843D;&#xFF0C;&#x5373;&#x4F7F;&#x8BE5;&#x6BB5;&#x843D;&#x4F4D;&#x4E8E; PHP &#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x6807;&#x8BB0;&#x4E4B;&#x5916;&#x3002;&#x7531;&#x4E8E; PHP &#x89E3;&#x91CA;&#x5668;&#x4F1A;&#x5728;&#x6761;&#x4EF6;&#x672A;&#x8FBE;&#x6210;&#x65F6;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;&#x8BE5;&#x6BB5;&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x5757;&#xFF0C;&#x56E0;&#x6B64; PHP &#x4F1A;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x6765;&#x5FFD;&#x7565;&#x4E4B;&#x3002;&#x8981;&#x8F93;&#x51FA;&#x5927;&#x6BB5;&#x6587;&#x672C;&#x65F6;&#xFF0C;&#x8DF3;&#x51FA; PHP &#x89E3;&#x6790;&#x6A21;&#x5F0F;&#x901A;&#x5E38;&#x6BD4;&#x5C06;&#x6587;&#x672C;&#x901A;&#x8FC7; <code>echo</code> &#x6216; <code>print</code> &#x8F93;&#x51FA;&#x66F4;&#x6709;&#x6548;&#x7387;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">true</span>) : <span class="hljs-meta">?&gt;</span>
-    &lt;p&gt;Hello, World!&lt;/p&gt;
-<span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">else</span> : <span class="hljs-meta">?&gt;</span>
-    &lt;p&gt;PHP&lt;/p&gt;
-<span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">endif</span>; <span class="hljs-meta">?&gt;</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token operator">?</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Hello<span class="token punctuation">,</span> World<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword">else</span> <span class="token punctuation">:</span> <span class="token operator">?</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token constant">PHP</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword">endif</span><span class="token punctuation">;</span> <span class="token operator">?</span><span class="token operator">&gt;</span>
 </code></pre>
 
                                 
@@ -3442,7 +3476,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"从 HTML 中分离","level":"1.1.1.1.2","depth":4,"next":{"title":"指令分隔符","level":"1.1.1.1.3","depth":4,"path":"docs/语言参考/基本语法/指令分隔符.md","ref":"docs/语言参考/基本语法/指令分隔符.md","articles":[]},"previous":{"title":"PHP 标记","level":"1.1.1.1.1","depth":4,"path":"docs/语言参考/基本语法/PHP 标记.md","ref":"docs/语言参考/基本语法/PHP 标记.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/基本语法/从 HTML 中分离.md","mtime":"2019-05-20T12:12:16.624Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"从 HTML 中分离","level":"1.1.1.1.2","depth":4,"next":{"title":"指令分隔符","level":"1.1.1.1.3","depth":4,"path":"docs/语言参考/基本语法/指令分隔符.md","ref":"docs/语言参考/基本语法/指令分隔符.md","articles":[]},"previous":{"title":"PHP 标记","level":"1.1.1.1.1","depth":4,"path":"docs/语言参考/基本语法/PHP 标记.md","ref":"docs/语言参考/基本语法/PHP 标记.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/基本语法/从 HTML 中分离.md","mtime":"2019-05-20T12:12:16.624Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3452,23 +3486,35 @@
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

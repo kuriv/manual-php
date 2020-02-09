@@ -17,11 +17,27 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,6 +78,23 @@
     
     
     <link rel="prev" href="../类与对象.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon-180x180.png">
+        
     
 
     </head>
@@ -3379,281 +3413,281 @@
                                 
                                 <h1 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;">&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h1>
 <p>&#x6BCF;&#x4E2A;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x90FD;&#x4EE5;&#x5173;&#x952E;&#x5B57; <code>class</code> &#x5F00;&#x5934;&#xFF0C;&#x540E;&#x9762;&#x8DDF;&#x7740;&#x7C7B;&#x540D;&#xFF0C;&#x540E;&#x9762;&#x8DDF;&#x7740;&#x4E00;&#x5BF9;&#x82B1;&#x62EC;&#x53F7;&#xFF0C;&#x91CC;&#x9762;&#x5305;&#x542B;&#x6709;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x4E0E;&#x65B9;&#x6CD5;&#x7684;&#x5B9A;&#x4E49;&#x3002;&#x7C7B;&#x540D;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x975E; PHP &#x4FDD;&#x7559;&#x5B57;&#x7684;&#x5408;&#x6CD5;&#x6807;&#x7B7E;&#x3002;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7C7B;&#x540D;&#x4EE5;&#x5B57;&#x6BCD;&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#x5F00;&#x5934;&#xFF0C;&#x540E;&#x9762;&#x8DDF;&#x7740;&#x82E5;&#x5E72;&#x5B57;&#x6BCD;&#xFF0C;&#x6570;&#x5B57;&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#x3002;&#x4E00;&#x4E2A;&#x7C7B;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x6709;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#x5E38;&#x91CF;&#xFF0C;&#x53D8;&#x91CF;&#xFF08;&#x5C5E;&#x6027;&#xFF09;&#x4EE5;&#x53CA;&#x51FD;&#x6570;&#xFF08;&#x65B9;&#x6CD5;&#xFF09;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Just a test property.
      *
-     * <span class="hljs-doctag">@var</span> string
+     * @var string
      */</span>
-    <span class="hljs-keyword">public</span> $property = <span class="hljs-string">&apos;foo&apos;</span>;
+    <span class="token keyword">public</span> <span class="token variable">$property</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">/**
+    <span class="token comment">/**
      * Just a test method.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> void
+     * @param  void
+     * @return void
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>
-    </span>{
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x5F53;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;&#x7C7B;&#x5B9A;&#x4E49;&#x5185;&#x90E8;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;&#x4F2A;&#x53D8;&#x91CF; <code>$this</code> &#x3002; <code>$this</code> &#x662F;&#x4E00;&#x4E2A;&#x5230;&#x4E3B;&#x53EB;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x8BE5;&#x65B9;&#x6CD5;&#x6240;&#x4ECE;&#x5C5E;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x5982;&#x679C;&#x662F;&#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x5BF9;&#x8C61;&#x9759;&#x6001;&#x8C03;&#x7528;&#x65F6;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF09;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Just a test property.
      *
-     * <span class="hljs-doctag">@var</span> string
+     * @var string
      */</span>
-    <span class="hljs-keyword">public</span> $property = <span class="hljs-string">&apos;foo&apos;</span>;
+    <span class="token keyword">public</span> <span class="token variable">$property</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">/**
+    <span class="token comment">/**
      * Return the specified property.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> string
+     * @param  void
+     * @return string
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span>
-    </span>{
-        <span class="hljs-keyword">return</span> $this-&gt;property;
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-var_dump($foo-&gt;method()); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>new</code> &#x5173;&#x952E;&#x5B57;&#x3002;&#x5F53;&#x521B;&#x5EFA;&#x65B0;&#x5BF9;&#x8C61;&#x65F6;&#x8BE5;&#x5BF9;&#x8C61;&#x603B;&#x662F;&#x88AB;&#x8D4B;&#x503C;&#xFF0C;&#x9664;&#x975E;&#x8BE5;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x4E86;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5E76;&#x4E14;&#x5728;&#x51FA;&#x9519;&#x65F6;&#x629B;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x3002;&#x7C7B;&#x5E94;&#x5728;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E4B;&#x524D;&#x5B9A;&#x4E49;&#xFF08;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x5219;&#x5FC5;&#x987B;&#x8FD9;&#x6837;&#xFF09;&#x3002;&#x5982;&#x679C;&#x5728; <code>new</code> &#x4E4B;&#x540E;&#x8DDF;&#x7740;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6709;&#x7C7B;&#x540D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x8BE5;&#x7C7B;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x88AB;&#x521B;&#x5EFA;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x7C7B;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x5176;&#x5B8C;&#x6574;&#x540D;&#x79F0;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-var_dump($foo); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
 
-$foo = <span class="hljs-string">&apos;Foo&apos;</span>;
-$foo = <span class="hljs-keyword">new</span> $foo;
-var_dump($foo); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-$foo = <span class="hljs-keyword">new</span> $foo;
-var_dump($foo); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
 </code></pre>
 <p>&#x5728;&#x7C7B;&#x5B9A;&#x4E49;&#x5185;&#x90E8;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>new self</code> &#x521B;&#x5EFA;&#x65B0;&#x5BF9;&#x8C61;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Return an instance of the current class.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> self
+     * @param  void
+     * @return self
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">self</span>
-    </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">self</span>;
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> self
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">self</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-var_dump(Foo::method()); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span>Foo<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
 </code></pre>
 <p>&#x5728;&#x7C7B;&#x5B9A;&#x4E49;&#x5185;&#x90E8;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>new parent</code> &#x521B;&#x5EFA;&#x65B0;&#x5BF9;&#x8C61;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Return an instance of the parent class.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> Foo
+     * @param  void
+     * @return Foo
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">Foo</span>
-    </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">parent</span>;
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Foo
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">parent</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-var_dump(Bar::method()); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span>Bar<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
 </code></pre>
 <p>&#x5728;&#x7C7B;&#x5B9A;&#x4E49;&#x5185;&#x90E8;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>new static</code> &#x521B;&#x5EFA;&#x65B0;&#x5BF9;&#x8C61;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Return an instance of the late static binding class.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> Foo
+     * @param  void
+     * @return Foo
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">Foo</span>
-    </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">static</span>;
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Foo
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">static</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Foo</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-$foo = Foo::method();
-var_dump($foo); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> Foo<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
 
-$bar = Bar::method();
-var_dump($bar); <span class="hljs-comment">// object(Bar)#2 (0) { }</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> Bar<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$bar</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Bar)#2 (0) { }</span>
 </code></pre>
 <p>&#x5F53;&#x628A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F8B;&#x8D4B;&#x7ED9;&#x4E00;&#x4E2A;&#x65B0;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x65B0;&#x53D8;&#x91CF;&#x4F1A;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5C31;&#x548C;&#x7528;&#x8BE5;&#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#x4E00;&#x6837;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-$bar = $foo;
-$baz = &amp;$foo;
-$foo = <span class="hljs-keyword">null</span>;
-var_dump($foo); <span class="hljs-comment">// NULL</span>
-var_dump($bar); <span class="hljs-comment">// object(Foo)#1 (0) { }</span>
-var_dump($baz); <span class="hljs-comment">// NULL</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token variable">$baz</span> <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NULL</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$bar</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$baz</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NULL</span>
 </code></pre>
 <p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x8BBF;&#x95EE;&#x65B0;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x6210;&#x5458;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Just a test property.
      *
-     * <span class="hljs-doctag">@var</span> string
+     * @var string
      */</span>
-    <span class="hljs-keyword">public</span> $property = <span class="hljs-string">&apos;foo&apos;</span>;
-}
+    <span class="token keyword">public</span> <span class="token variable">$property</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-var_dump((<span class="hljs-keyword">new</span> Foo)-&gt;property); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x7C7B;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x5B58;&#x5728;&#x4E8E;&#x5355;&#x72EC;&#x7684;&#x201C;&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x201D;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5177;&#x6709;&#x76F8;&#x540C;&#x540D;&#x79F0;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Just a test property.
      *
-     * <span class="hljs-doctag">@var</span> string
+     * @var string
      */</span>
-    <span class="hljs-keyword">public</span> $test = <span class="hljs-string">&apos;property&apos;</span>;
+    <span class="token keyword">public</span> <span class="token variable">$test</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;property&apos;</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">/**
+    <span class="token comment">/**
      * Return a string.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> string
+     * @param  void
+     * @return string
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span>
-    </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;method&apos;</span>;
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token single-quoted-string string">&apos;method&apos;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-var_dump($foo-&gt;test);   <span class="hljs-comment">// string(8) &quot;property&quot;</span>
-var_dump($foo-&gt;test()); <span class="hljs-comment">// string(6) &quot;method&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">test</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// string(8) &quot;property&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(6) &quot;method&quot;</span>
 </code></pre>
 <p>&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x5728;&#x5C5E;&#x6027;&#x4E2D;&#x7684;&#x533F;&#x540D;&#x51FD;&#x6570;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Store an anonymous function.
      *
-     * <span class="hljs-doctag">@var</span> callable
+     * @var callable
      */</span>
-    <span class="hljs-keyword">public</span> $property;
+    <span class="token keyword">public</span> <span class="token variable">$property</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">/**
+    <span class="token comment">/**
      * Store an anonymous function to the property.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> void
+     * @param  void
+     * @return void
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span><span class="hljs-params">()</span>
-    </span>{
-        <span class="hljs-comment">/**
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">/**
          * Return a string.
          *
-         * <span class="hljs-doctag">@param</span>  void
-         * <span class="hljs-doctag">@return</span> string
+         * @param  void
+         * @return string
          */</span>
-        $this-&gt;property = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span>: <span class="hljs-title">string</span> </span>{
-            <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;foo&apos;</span>;
-        };
-    }
-}
+        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-$foo = <span class="hljs-keyword">new</span> Foo;
-$method = $foo-&gt;property;
-var_dump($method());          <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
-var_dump(($foo-&gt;property)()); <span class="hljs-comment">// string(3) &quot;foo&quot;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$method</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x4E00;&#x4E2A;&#x7C7B;&#x53EF;&#x4EE5;&#x5728;&#x58F0;&#x660E;&#x4E2D;&#x7528; <code>extends</code> &#x5173;&#x952E;&#x5B57;&#x7EE7;&#x627F;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x3002; PHP &#x4E0D;&#x652F;&#x6301;&#x591A;&#x91CD;&#x7EE7;&#x627F;&#xFF0C;&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x80FD;&#x7EE7;&#x627F;&#x4E00;&#x4E2A;&#x57FA;&#x7C7B;&#x3002;&#x88AB;&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7528;&#x540C;&#x6837;&#x7684;&#x540D;&#x5B57;&#x91CD;&#x65B0;&#x58F0;&#x660E;&#x6765;&#x8986;&#x76D6;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x7236;&#x7C7B;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x65F6;&#x4F7F;&#x7528;&#x4E86; <code>final</code> &#xFF0C;&#x5219;&#x8BE5;&#x65B9;&#x6CD5;&#x4E0D;&#x53EF;&#x88AB;&#x8986;&#x76D6;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>parent::</code> &#x6765;&#x8BBF;&#x95EE;&#x88AB;&#x8986;&#x76D6;&#x7684;&#x65B9;&#x6CD5;&#x6216;&#x5C5E;&#x6027;&#x3002;&#x5F53;&#x8986;&#x76D6;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x5426;&#x5219; PHP &#x5C06;&#x53D1;&#x51FA; <code>E_STRICT</code> &#x7EA7;&#x522B;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;&#x4F46;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4F8B;&#x5916;&#xFF0C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x53EF;&#x5728;&#x88AB;&#x8986;&#x76D6;&#x65F6;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Return a string.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> void
+     * @param  void
+     * @return void
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span>
-    </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;foo&apos;</span>;
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Foo</span>
-</span>{
-    <span class="hljs-comment">/**
+<span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
      * Override the parent method.
      *
-     * <span class="hljs-doctag">@param</span>  void
-     * <span class="hljs-doctag">@return</span> string
+     * @param  void
+     * @return string
      */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">method</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span>
-    </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;bar&apos;</span>;
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> string
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-$bar = <span class="hljs-keyword">new</span> Bar;
-var_dump($bar-&gt;method()); <span class="hljs-comment">// string(3) &quot;bar&quot;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$bar</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;bar&quot;</span>
 </code></pre>
 <p>&#x5173;&#x952E;&#x5B57; <code>class</code> &#x4E5F;&#x53EF;&#x7528;&#x4E8E;&#x7C7B;&#x540D;&#x7684;&#x89E3;&#x6790;&#x3002;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57; <code>class</code> &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x7C7B;&#x7684;&#x5B8C;&#x5168;&#x9650;&#x5B9A;&#x540D;&#x79F0;&#x3002;&#x8FD9;&#x5BF9;&#x4F7F;&#x7528;&#x4E86;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x7C7B;&#x5C24;&#x5176;&#x6709;&#x7528;&#x3002;</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">Foo</span>;
+<span class="token keyword">namespace</span> <span class="token package">Foo</span><span class="token punctuation">;</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>
-</span>{
-}
+<span class="token keyword">class</span> <span class="token class-name">Bar</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-var_dump(Bar::class); <span class="hljs-comment">// string(7) &quot;Foo\Bar&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span>Bar<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(7) &quot;Foo\Bar&quot;</span>
 </code></pre>
 
                                 
@@ -3698,7 +3732,7 @@ var_dump(Bar::class); <span class="hljs-comment">// string(7) &quot;Foo\Bar&quot
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基本语法","level":"1.1.1.9.1","depth":4,"next":{"title":"属性","level":"1.1.1.9.2","depth":4,"path":"docs/语言参考/类与对象/属性.md","ref":"docs/语言参考/类与对象/属性.md","articles":[]},"previous":{"title":"类与对象","level":"1.1.1.9","depth":3,"path":"docs/语言参考/类与对象.md","ref":"docs/语言参考/类与对象.md","articles":[{"title":"基本语法","level":"1.1.1.9.1","depth":4,"path":"docs/语言参考/类与对象/基本语法.md","ref":"docs/语言参考/类与对象/基本语法.md","articles":[]},{"title":"属性","level":"1.1.1.9.2","depth":4,"path":"docs/语言参考/类与对象/属性.md","ref":"docs/语言参考/类与对象/属性.md","articles":[]},{"title":"类常量","level":"1.1.1.9.3","depth":4,"path":"docs/语言参考/类与对象/类常量.md","ref":"docs/语言参考/类与对象/类常量.md","articles":[]},{"title":"类的自动加载","level":"1.1.1.9.4","depth":4,"path":"docs/语言参考/类与对象/类的自动加载.md","ref":"docs/语言参考/类与对象/类的自动加载.md","articles":[]},{"title":"构造函数和析构函数","level":"1.1.1.9.5","depth":4,"path":"docs/语言参考/类与对象/构造函数和析构函数.md","ref":"docs/语言参考/类与对象/构造函数和析构函数.md","articles":[]},{"title":"访问控制","level":"1.1.1.9.6","depth":4,"path":"docs/语言参考/类与对象/访问控制.md","ref":"docs/语言参考/类与对象/访问控制.md","articles":[]},{"title":"对象继承","level":"1.1.1.9.7","depth":4,"path":"docs/语言参考/类与对象/对象继承.md","ref":"docs/语言参考/类与对象/对象继承.md","articles":[]},{"title":"范围解析操作符","level":"1.1.1.9.8","depth":4,"path":"docs/语言参考/类与对象/范围解析操作符.md","ref":"docs/语言参考/类与对象/范围解析操作符.md","articles":[]},{"title":"Static 关键字","level":"1.1.1.9.9","depth":4,"path":"docs/语言参考/类与对象/Static 关键字.md","ref":"docs/语言参考/类与对象/Static 关键字.md","articles":[]},{"title":"抽象类","level":"1.1.1.9.10","depth":4,"path":"docs/语言参考/类与对象/抽象类.md","ref":"docs/语言参考/类与对象/抽象类.md","articles":[]},{"title":"对象接口","level":"1.1.1.9.11","depth":4,"path":"docs/语言参考/类与对象/对象接口.md","ref":"docs/语言参考/类与对象/对象接口.md","articles":[]},{"title":"Trait","level":"1.1.1.9.12","depth":4,"path":"docs/语言参考/类与对象/Trait.md","ref":"docs/语言参考/类与对象/Trait.md","articles":[]},{"title":"匿名类","level":"1.1.1.9.13","depth":4,"path":"docs/语言参考/类与对象/匿名类.md","ref":"docs/语言参考/类与对象/匿名类.md","articles":[]},{"title":"重载","level":"1.1.1.9.14","depth":4,"path":"docs/语言参考/类与对象/重载.md","ref":"docs/语言参考/类与对象/重载.md","articles":[]},{"title":"遍历对象","level":"1.1.1.9.15","depth":4,"path":"docs/语言参考/类与对象/遍历对象.md","ref":"docs/语言参考/类与对象/遍历对象.md","articles":[]},{"title":"魔术方法","level":"1.1.1.9.16","depth":4,"path":"docs/语言参考/类与对象/魔术方法.md","ref":"docs/语言参考/类与对象/魔术方法.md","articles":[]},{"title":"Final 关键字","level":"1.1.1.9.17","depth":4,"path":"docs/语言参考/类与对象/Final 关键字.md","ref":"docs/语言参考/类与对象/Final 关键字.md","articles":[]},{"title":"对象复制","level":"1.1.1.9.18","depth":4,"path":"docs/语言参考/类与对象/对象复制.md","ref":"docs/语言参考/类与对象/对象复制.md","articles":[]},{"title":"对象比较","level":"1.1.1.9.19","depth":4,"path":"docs/语言参考/类与对象/对象比较.md","ref":"docs/语言参考/类与对象/对象比较.md","articles":[]},{"title":"类型约束","level":"1.1.1.9.20","depth":4,"path":"docs/语言参考/类与对象/类型约束.md","ref":"docs/语言参考/类与对象/类型约束.md","articles":[]},{"title":"后期静态绑定","level":"1.1.1.9.21","depth":4,"path":"docs/语言参考/类与对象/后期静态绑定.md","ref":"docs/语言参考/类与对象/后期静态绑定.md","articles":[]},{"title":"对象和引用","level":"1.1.1.9.22","depth":4,"path":"docs/语言参考/类与对象/对象和引用.md","ref":"docs/语言参考/类与对象/对象和引用.md","articles":[]},{"title":"对象序列化","level":"1.1.1.9.23","depth":4,"path":"docs/语言参考/类与对象/对象序列化.md","ref":"docs/语言参考/类与对象/对象序列化.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/类与对象/基本语法.md","mtime":"2019-05-02T15:18:15.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T11:23:19.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基本语法","level":"1.1.1.9.1","depth":4,"next":{"title":"属性","level":"1.1.1.9.2","depth":4,"path":"docs/语言参考/类与对象/属性.md","ref":"docs/语言参考/类与对象/属性.md","articles":[]},"previous":{"title":"类与对象","level":"1.1.1.9","depth":3,"path":"docs/语言参考/类与对象.md","ref":"docs/语言参考/类与对象.md","articles":[{"title":"基本语法","level":"1.1.1.9.1","depth":4,"path":"docs/语言参考/类与对象/基本语法.md","ref":"docs/语言参考/类与对象/基本语法.md","articles":[]},{"title":"属性","level":"1.1.1.9.2","depth":4,"path":"docs/语言参考/类与对象/属性.md","ref":"docs/语言参考/类与对象/属性.md","articles":[]},{"title":"类常量","level":"1.1.1.9.3","depth":4,"path":"docs/语言参考/类与对象/类常量.md","ref":"docs/语言参考/类与对象/类常量.md","articles":[]},{"title":"类的自动加载","level":"1.1.1.9.4","depth":4,"path":"docs/语言参考/类与对象/类的自动加载.md","ref":"docs/语言参考/类与对象/类的自动加载.md","articles":[]},{"title":"构造函数和析构函数","level":"1.1.1.9.5","depth":4,"path":"docs/语言参考/类与对象/构造函数和析构函数.md","ref":"docs/语言参考/类与对象/构造函数和析构函数.md","articles":[]},{"title":"访问控制","level":"1.1.1.9.6","depth":4,"path":"docs/语言参考/类与对象/访问控制.md","ref":"docs/语言参考/类与对象/访问控制.md","articles":[]},{"title":"对象继承","level":"1.1.1.9.7","depth":4,"path":"docs/语言参考/类与对象/对象继承.md","ref":"docs/语言参考/类与对象/对象继承.md","articles":[]},{"title":"范围解析操作符","level":"1.1.1.9.8","depth":4,"path":"docs/语言参考/类与对象/范围解析操作符.md","ref":"docs/语言参考/类与对象/范围解析操作符.md","articles":[]},{"title":"Static 关键字","level":"1.1.1.9.9","depth":4,"path":"docs/语言参考/类与对象/Static 关键字.md","ref":"docs/语言参考/类与对象/Static 关键字.md","articles":[]},{"title":"抽象类","level":"1.1.1.9.10","depth":4,"path":"docs/语言参考/类与对象/抽象类.md","ref":"docs/语言参考/类与对象/抽象类.md","articles":[]},{"title":"对象接口","level":"1.1.1.9.11","depth":4,"path":"docs/语言参考/类与对象/对象接口.md","ref":"docs/语言参考/类与对象/对象接口.md","articles":[]},{"title":"Trait","level":"1.1.1.9.12","depth":4,"path":"docs/语言参考/类与对象/Trait.md","ref":"docs/语言参考/类与对象/Trait.md","articles":[]},{"title":"匿名类","level":"1.1.1.9.13","depth":4,"path":"docs/语言参考/类与对象/匿名类.md","ref":"docs/语言参考/类与对象/匿名类.md","articles":[]},{"title":"重载","level":"1.1.1.9.14","depth":4,"path":"docs/语言参考/类与对象/重载.md","ref":"docs/语言参考/类与对象/重载.md","articles":[]},{"title":"遍历对象","level":"1.1.1.9.15","depth":4,"path":"docs/语言参考/类与对象/遍历对象.md","ref":"docs/语言参考/类与对象/遍历对象.md","articles":[]},{"title":"魔术方法","level":"1.1.1.9.16","depth":4,"path":"docs/语言参考/类与对象/魔术方法.md","ref":"docs/语言参考/类与对象/魔术方法.md","articles":[]},{"title":"Final 关键字","level":"1.1.1.9.17","depth":4,"path":"docs/语言参考/类与对象/Final 关键字.md","ref":"docs/语言参考/类与对象/Final 关键字.md","articles":[]},{"title":"对象复制","level":"1.1.1.9.18","depth":4,"path":"docs/语言参考/类与对象/对象复制.md","ref":"docs/语言参考/类与对象/对象复制.md","articles":[]},{"title":"对象比较","level":"1.1.1.9.19","depth":4,"path":"docs/语言参考/类与对象/对象比较.md","ref":"docs/语言参考/类与对象/对象比较.md","articles":[]},{"title":"类型约束","level":"1.1.1.9.20","depth":4,"path":"docs/语言参考/类与对象/类型约束.md","ref":"docs/语言参考/类与对象/类型约束.md","articles":[]},{"title":"后期静态绑定","level":"1.1.1.9.21","depth":4,"path":"docs/语言参考/类与对象/后期静态绑定.md","ref":"docs/语言参考/类与对象/后期静态绑定.md","articles":[]},{"title":"对象和引用","level":"1.1.1.9.22","depth":4,"path":"docs/语言参考/类与对象/对象和引用.md","ref":"docs/语言参考/类与对象/对象和引用.md","articles":[]},{"title":"对象序列化","level":"1.1.1.9.23","depth":4,"path":"docs/语言参考/类与对象/对象序列化.md","ref":"docs/语言参考/类与对象/对象序列化.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/类与对象/基本语法.md","mtime":"2019-05-02T15:18:15.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T13:38:45.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -3708,23 +3742,35 @@ var_dump(Bar::class); <span class="hljs-comment">// string(7) &quot;Foo\Bar&quot
     <script src="../../../gitbook/theme.js"></script>
     
         
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
         <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         

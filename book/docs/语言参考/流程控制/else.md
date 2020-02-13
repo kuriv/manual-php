@@ -6,7 +6,9 @@
 <?php
 
 if (isset($foo)) {
+    //
 } else {
+    //
 }
 
 ```

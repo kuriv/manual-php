@@ -17,10 +17,12 @@ $bar = false;
 
 $foo = 'foo';
 if ($foo == 'foo') {
+    //
 }
 
 $bar = true;
 if ($bar) {
+    //
 }
 
 ```

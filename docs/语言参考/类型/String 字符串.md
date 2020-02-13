@@ -94,7 +94,7 @@ class Foo
      *
      * @var string
      */
-    public $property = 'foo';
+    public string $property = 'foo';
 }
 
 $foo = new Foo;
@@ -142,7 +142,7 @@ class Foo
      *
      * @var string
      */
-    public $property = 'foo';
+    public string $property = 'foo';
 }
 
 $foo = new Foo;

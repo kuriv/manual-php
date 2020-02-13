@@ -7,8 +7,11 @@
 
 $baz = 'baz';
 if (isset($foo)) {
+    //
 } elseif (isset($bar)) {
+    //
 } elseif (isset($baz)) {
+    //
 }
 
 ```

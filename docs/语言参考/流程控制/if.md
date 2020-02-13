@@ -7,6 +7,7 @@
 
 $foo = 'foo';
 if (isset($foo)) {
+    //
 }
 
 ```
@@ -19,6 +20,7 @@ if (isset($foo)) {
 $foo = 'foo';
 if (isset($foo)) {
     if ($foo == 'foo') {
+        //
     }
 }
 

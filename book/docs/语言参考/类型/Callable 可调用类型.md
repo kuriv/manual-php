@@ -13,6 +13,7 @@
  */
 function foo()
 {
+    //
 }
 
 call_user_func('foo');
@@ -31,6 +32,7 @@ call_user_func('foo');
  * @return void
  */
 $foo = function () {
+    //
 };
 
 call_user_func($foo);
@@ -52,6 +54,7 @@ class Foo
      */
     public function method()
     {
+        //
     }
 }
 
@@ -74,6 +77,7 @@ class Foo
      */
     public static function method()
     {
+        //
     }
 }
 
@@ -97,6 +101,7 @@ class Foo
      */
     public static function method()
     {
+        //
     }
 }
 
@@ -110,6 +115,7 @@ class Bar extends Foo
      */
     public static function method()
     {
+        //
     }
 }
 
@@ -132,6 +138,7 @@ class Foo
      */
     public function __invoke()
     {
+        //
     }
 }
 

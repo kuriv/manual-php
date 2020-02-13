@@ -166,6 +166,7 @@ var_dump($foo); // array(3) { [0]=> int(3) [1]=> int(5) [2]=> int(6) }
 
 class Foo
 {
+    //
 }
 
 class Bar
@@ -175,14 +176,14 @@ class Bar
      *
      * @var string
      */
-    public $public = 'public';
+    public string $public = 'public';
 
     /**
      * Protected property.
      *
      * @var string
      */
-    protected $protected = 'protected';
+    protected string $protected = 'protected';
 
     /**
      * Private property.

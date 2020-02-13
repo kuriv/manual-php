@@ -7,6 +7,7 @@
 
 class Foo
 {
+    //
 }
 
 $foo = new Foo;

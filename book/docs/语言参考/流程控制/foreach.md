@@ -7,6 +7,7 @@
 
 $foo = [2, 4, 5];
 foreach ($foo as $value) {
+    //
 }
 
 ```
@@ -18,6 +19,7 @@ foreach ($foo as $value) {
 
 $foo = [2, 4, 5];
 foreach ($foo as $key => $value) {
+    //
 }
 
 ```
@@ -44,6 +46,7 @@ var_dump($foo); // array(3) { [0]=> int(3) [1]=> int(5) [2]=> int(6) }
 $foo = [[2], [4], [5]];
 foreach ($foo as $value) {
     foreach ($value as $v) {
+        //
     }
 }
 
@@ -56,6 +59,7 @@ PHP 可以遍历一个数组的并且把多维数组解包到循环变量中，�
 
 $foo = [['foo', 'bar'], ['baz', 'qux']];
 foreach ($foo as list($a, $b)) {
+    //
 }
 
 ```

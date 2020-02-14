@@ -7,10 +7,12 @@
 
 final class Foo
 {
+    //
 }
 
 class Bar extends Foo
 {
+    //
 }
 
 // PHP Fatal error:  Class Bar may not inherit from final class (Foo).
@@ -32,6 +34,7 @@ class Foo
      */
     final public function method()
     {
+        //
     }
 }
 
@@ -45,6 +48,7 @@ class Bar extends Foo
      */
     public function method()
     {
+        //
     }
 }
 

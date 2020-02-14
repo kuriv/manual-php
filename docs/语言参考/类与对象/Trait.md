@@ -403,14 +403,14 @@ trait Foo
      *
      * @var string
      */
-    public $foo = 'foo';
+    public string $foo = 'foo';
 
     /**
      * Just a test property.
      *
      * @var bool
      */
-    public $bar = true;
+    public bool $bar = true;
 }
 
 class Bar
@@ -422,14 +422,14 @@ class Bar
      *
      * @var string
      */
-    public $foo = 'foo';
+    public string $foo = 'foo';
 
     /**
      * Try to override the parent property.
      *
      * @var bool
      */
-    public $bar = false;
+    public bool $bar = false;
 }
 
 // PHP Fatal error:  Bar and Foo define the same property ($bar) in the composition of Bar. However, the definition differs and is considered incompatible.

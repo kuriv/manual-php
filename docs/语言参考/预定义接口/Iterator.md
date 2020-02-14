@@ -12,7 +12,7 @@ class Foo implements Iterator
      *
      * @var array
      */
-    private $property;
+    private array $property;
 
     /**
      * Store an array to the property.
@@ -29,33 +29,33 @@ class Foo implements Iterator
      * Return the current element of the specified property.
      *
      * @param  void
-     * @return mixed
+     * @return int
      */
-    public function current()
+    public function current(): int
     {
         var_dump(__METHOD__);
         return current($this->property);
     }
 
     /**
-     * Return the next element of the specified property and advance the internal pointer.
+     * Advance the internal pointer of the specified property.
      *
      * @param  void
-     * @return mixed
+     * @return void
      */
     public function next()
     {
         var_dump(__METHOD__);
-        return next($this->property);
+        next($this->property);
     }
 
     /**
      * Return the current key of the specified property.
      *
      * @param  void
-     * @return mixed
+     * @return int
      */
-    public function key()
+    public function key(): int
     {
         var_dump(__METHOD__);
         return key($this->property);

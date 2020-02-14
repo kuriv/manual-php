@@ -12,7 +12,7 @@ class Foo
      *
      * @var string
      */
-    public static $property = 'foo';
+    public static string $property = 'foo';
 }
 
 var_dump(Foo::$property);  // string(3) "foo"

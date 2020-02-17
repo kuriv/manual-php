@@ -29,6 +29,7 @@ namespace Foo;
 
 class Bar
 {
+    //
 }
 
 /**
@@ -56,6 +57,7 @@ namespace Foo;
 
 class Bar
 {
+    //
 }
 
 /**
@@ -84,6 +86,7 @@ var_dump(namespace\BAR);     // string(3) "Foo"
 
 class Bar
 {
+    //
 }
 
 /**

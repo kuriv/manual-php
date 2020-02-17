@@ -31,7 +31,7 @@ class Foo implements Iterator
     /**
      * Store the current line content.
      *
-     * @var string
+     * @var string|bool
      */
     private $line;
 
@@ -40,7 +40,7 @@ class Foo implements Iterator
      *
      * @var int
      */
-    private $number;
+    private int $number;
 
     /**
      * Store a handle to the property.
@@ -57,11 +57,11 @@ class Foo implements Iterator
      * Return the current line content of the specified property.
      *
      * @param  void
-     * @return mixed
+     * @return string
      */
-    public function current()
+    public function current(): string
     {
-        return $this->line;
+        return trim($this->line);
     }
 
     /**
@@ -82,9 +82,9 @@ class Foo implements Iterator
      * Return the current line number of the specified property.
      *
      * @param  void
-     * @return mixed
+     * @return int
      */
-    public function key()
+    public function key(): int
     {
         return $this->number;
     }
@@ -130,7 +130,7 @@ foreach ($foo as $value) {
 
 $foo = new Foo;
 foreach ($foo as $value) {
-    var_dump(trim($value));
+    var_dump($value);
 }
 // string(3) "foo"
 // string(3) "bar"
@@ -138,7 +138,7 @@ foreach ($foo as $value) {
 // string(3) "qux"
 
 foreach ($foo as $value) {
-    var_dump(trim($value));
+    var_dump($value);
 }
 // string(3) "foo"
 // string(3) "bar"

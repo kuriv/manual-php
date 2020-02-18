@@ -14,7 +14,7 @@ class NewException extends Exception
      * @param int            $code
      * @param Exception|null $previous
      */
-    public function __construct(string $message, int $code, Exception $previous = null)
+    public function __construct(string $message, int $code, ?Exception $previous = null)
     {
         parent::__construct($message, $code, $previous);
     }

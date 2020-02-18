@@ -12,28 +12,28 @@ class Foo implements IteratorAggregate
      *
      * @var string
      */
-    public $foo = 'foo';
+    public string $foo = 'foo';
 
     /**
      * Just a test property.
      *
      * @var string
      */
-    public $bar = 'bar';
+    public string $bar = 'bar';
 
     /**
      * Just a test property.
      *
      * @var string
      */
-    public $baz = 'baz';
+    public string $baz = 'baz';
 
     /**
      * Just a test property.
      *
      * @var string
      */
-    public $qux = 'qux';
+    public string $qux = 'qux';
 
     /**
      * Return an external iterator.

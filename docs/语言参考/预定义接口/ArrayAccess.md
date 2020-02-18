@@ -12,7 +12,7 @@ class Foo implements ArrayAccess
      *
      * @var array
      */
-    private $property;
+    private array $property;
 
     /**
      * Store an array to the property.
@@ -28,7 +28,7 @@ class Foo implements ArrayAccess
     /**
      * Return whether the specified offset of the specified property exists.
      *
-     * @param  mixed $offset
+     * @param  int  $offset
      * @return bool
      */
     public function offsetExists($offset): bool
@@ -39,8 +39,8 @@ class Foo implements ArrayAccess
     /**
      * Return the value of the specified offset of the specified property.
      *
-     * @param  mixed $offset
-     * @return mixed
+     * @param  int             $offset
+     * @return int|string|null
      */
     public function offsetGet($offset)
     {
@@ -50,8 +50,8 @@ class Foo implements ArrayAccess
     /**
      * Set the value of the specified offset of the specified property.
      *
-     * @param  mixed $offset
-     * @param  mixed $value
+     * @param  int         $offset
+     * @param  int|string  $value
      * @return void
      */
     public function offsetSet($offset, $value)
@@ -66,7 +66,7 @@ class Foo implements ArrayAccess
     /**
      * Unset the specified offset of the specified property.
      *
-     * @param  mixed $offset
+     * @param  int  $offset
      * @return void
      */
     public function offsetUnset($offset)

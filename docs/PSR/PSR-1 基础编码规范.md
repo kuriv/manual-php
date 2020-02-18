@@ -46,6 +46,7 @@ echo '<html>';
  */
 function foo()
 {
+    //
 }
 
 ```
@@ -63,6 +64,7 @@ function foo()
  */
 function foo()
 {
+    //
 }
 
 if (!function_exists('bar')) {
@@ -74,6 +76,7 @@ if (!function_exists('bar')) {
      */
     function bar()
     {
+        //
     }
 }
 
@@ -94,6 +97,7 @@ namespace Vendor\Package;
 
 class StudlyCaps
 {
+    //
 }
 
 ```

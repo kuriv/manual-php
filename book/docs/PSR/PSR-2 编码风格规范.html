@@ -3502,6 +3502,7 @@
 
 <span class="token keyword">class</span> <span class="token class-name">ClassName</span> <span class="token keyword">extends</span> <span class="token class-name">ParentClassName</span> <span class="token keyword">implements</span> <span class="token class-name"><span class="token punctuation">\</span>ArrayAccess</span><span class="token punctuation">,</span> \<span class="token package">Countable</span>
 <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <blockquote>
@@ -3520,6 +3521,7 @@
     \<span class="token package">Countable</span><span class="token punctuation">,</span>
     \<span class="token package">Serializable</span>
 <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
@@ -3538,9 +3540,9 @@
     <span class="token comment">/**
      * Just a test property.
      *
-     * @var null
+     * @var string|null
      */</span>
-    <span class="token keyword">public</span> <span class="token variable">$propertyName</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token operator">?</span>string <span class="token variable">$propertyName</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h3>
@@ -3563,6 +3565,7 @@
      */</span>
     <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">methodName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -3580,13 +3583,14 @@
     <span class="token comment">/**
      * Just a test method.
      *
-     * @param  mixed  $arg1
-     * @param  mixed  $arg2
+     * @param  int    $arg1
+     * @param  string $arg2
      * @param  array  $arg3
      * @return void
      */</span>
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">methodName</span><span class="token punctuation">(</span><span class="token variable">$arg1</span><span class="token punctuation">,</span> <span class="token variable">$arg2</span><span class="token punctuation">,</span> <span class="token variable">$arg3</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">methodName</span><span class="token punctuation">(</span>int <span class="token variable">$arg1</span><span class="token punctuation">,</span> string <span class="token variable">$arg2</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$arg3</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -3603,16 +3607,17 @@
     <span class="token comment">/**
      * Just a test method.
      *
-     * @param  mixed  $arg1
-     * @param  mixed  $arg2
+     * @param  int    $arg1
+     * @param  string $arg2
      * @param  array  $arg3
      * @return void
      */</span>
     <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">methodName</span><span class="token punctuation">(</span>
-        <span class="token variable">$arg1</span><span class="token punctuation">,</span>
-        <span class="token variable">$arg2</span><span class="token punctuation">,</span>
-        <span class="token variable">$arg3</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        int <span class="token variable">$arg1</span><span class="token punctuation">,</span>
+        string <span class="token variable">$arg2</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span> <span class="token variable">$arg3</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -3629,9 +3634,9 @@
     <span class="token comment">/**
      * Just a test property.
      *
-     * @var null
+     * @var string|null
      */</span>
-    <span class="token keyword">protected</span> <span class="token keyword">static</span> <span class="token variable">$propertyName</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token keyword">static</span> <span class="token operator">?</span>string <span class="token variable">$propertyName</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Just an abstract method.
@@ -3649,6 +3654,7 @@
      */</span>
     <span class="token keyword">final</span> <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">anotherMethodName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -3678,8 +3684,11 @@ Foo<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$expr1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span> <span class="token keyword">elseif</span> <span class="token punctuation">(</span><span class="token variable">$expr2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="switch-&#x548C;-case">switch &#x548C; case</h3>
@@ -3710,31 +3719,38 @@ Foo<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token variable">$expr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token variable">$expr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="for">for</h3>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token variable">$i</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="foreach">foreach</h3>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$iterable</span> <span class="token keyword">as</span> <span class="token variable">$key</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token variable">$value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="try-&#x548C;-catch">try &#x548C; catch</h3>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>FirstExceptionType <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>OtherExceptionType <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h2 id="&#x95ED;&#x5305;">&#x95ED;&#x5305;</h2>
@@ -3750,21 +3766,21 @@ Foo<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <span class="token comment">/**
  * Just a test function.
  *
- * @param  mixed $arg1
- * @param  mixed $arg2
+ * @param  int    $arg1
+ * @param  string $arg2
  * @return void
  */</span>
-<span class="token variable">$closureWithArgs</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$arg1</span><span class="token punctuation">,</span> <span class="token variable">$arg2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token variable">$closureWithArgs</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>int <span class="token variable">$arg1</span><span class="token punctuation">,</span> string <span class="token variable">$arg2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token comment">/**
  * Just a test function.
  *
- * @param  mixed $arg1
- * @param  mixed $arg2
+ * @param  int    $arg1
+ * @param  string $arg2
  * @return void
  */</span>
-<span class="token variable">$closureWithArgsAndVars</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$arg1</span><span class="token punctuation">,</span> <span class="token variable">$arg2</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$var1</span><span class="token punctuation">,</span> <span class="token variable">$var2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token variable">$closureWithArgsAndVars</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>int <span class="token variable">$arg1</span><span class="token punctuation">,</span> string <span class="token variable">$arg2</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$var1</span><span class="token punctuation">,</span> <span class="token variable">$var2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <blockquote>
@@ -3775,15 +3791,15 @@ Foo<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <span class="token comment">/**
  * Just a test function.
  *
- * @param  mixed $longArgument
- * @param  mixed $longerArgument
- * @param  mixed $muchLongerArgument
+ * @param  int    $longArgument
+ * @param  string $longerArgument
+ * @param  array  $muchLongerArgument
  * @return void
  */</span>
 <span class="token variable">$longArgs_noVars</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>
-    <span class="token variable">$longArgument</span><span class="token punctuation">,</span>
-    <span class="token variable">$longerArgument</span><span class="token punctuation">,</span>
-    <span class="token variable">$muchLongerArgument</span>
+    int <span class="token variable">$longArgument</span><span class="token punctuation">,</span>
+    string <span class="token variable">$longerArgument</span><span class="token punctuation">,</span>
+    <span class="token keyword">array</span> <span class="token variable">$muchLongerArgument</span>
 <span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
@@ -3803,15 +3819,15 @@ Foo<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <span class="token comment">/**
  * Just a test function.
  *
- * @param  mixed $longArgument
- * @param  mixed $longerArgument
- * @param  mixed $muchLongerArgument
+ * @param  int    $longArgument
+ * @param  string $longerArgument
+ * @param  array  $muchLongerArgument
  * @return void
  */</span>
 <span class="token variable">$longArgs_longVars</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>
-    <span class="token variable">$longArgument</span><span class="token punctuation">,</span>
-    <span class="token variable">$longerArgument</span><span class="token punctuation">,</span>
-    <span class="token variable">$muchLongerArgument</span>
+    int <span class="token variable">$longArgument</span><span class="token punctuation">,</span>
+    string <span class="token variable">$longerArgument</span><span class="token punctuation">,</span>
+    <span class="token keyword">array</span> <span class="token variable">$muchLongerArgument</span>
 <span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span>
     <span class="token variable">$longVar1</span><span class="token punctuation">,</span>
     <span class="token variable">$longerVar2</span><span class="token punctuation">,</span>
@@ -3822,25 +3838,25 @@ Foo<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <span class="token comment">/**
  * Just a test function.
  *
- * @param  mixed $longArgument
- * @param  mixed $longerArgument
- * @param  mixed $muchLongerArgument
+ * @param  int    $longArgument
+ * @param  string $longerArgument
+ * @param  array  $muchLongerArgument
  * @return void
  */</span>
 <span class="token variable">$longArgs_shortVars</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>
-    <span class="token variable">$longArgument</span><span class="token punctuation">,</span>
-    <span class="token variable">$longerArgument</span><span class="token punctuation">,</span>
-    <span class="token variable">$muchLongerArgument</span>
+    int <span class="token variable">$longArgument</span><span class="token punctuation">,</span>
+    string <span class="token variable">$longerArgument</span><span class="token punctuation">,</span>
+    <span class="token keyword">array</span> <span class="token variable">$muchLongerArgument</span>
 <span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$var</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token comment">/**
  * Just a test function.
  *
- * @param  mixed $arg
+ * @param  int  $arg
  * @return void
  */</span>
-<span class="token variable">$shortArgs_longVars</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$arg</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span>
+<span class="token variable">$shortArgs_longVars</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>int <span class="token variable">$arg</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span>
     <span class="token variable">$longVar1</span><span class="token punctuation">,</span>
     <span class="token variable">$longerVar2</span><span class="token punctuation">,</span>
     <span class="token variable">$muchLongerVar3</span>
@@ -3855,6 +3871,7 @@ Foo<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">bar</span><span class="token punctuation">(</span>
     <span class="token variable">$arg1</span><span class="token punctuation">,</span>
     <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$arg2</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$var</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token variable">$arg3</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -3902,7 +3919,7 @@ Foo<span class="token punctuation">:</span><span class="token punctuation">:</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PSR-2 编码风格规范","level":"1.1.6.2","depth":3,"next":{"title":"PSR-4 自动加载规范","level":"1.1.6.3","depth":3,"path":"docs/PSR/PSR-4 自动加载规范.md","ref":"docs/PSR/PSR-4 自动加载规范.md","articles":[]},"previous":{"title":"PSR-1 基础编码规范","level":"1.1.6.1","depth":3,"path":"docs/PSR/PSR-1 基础编码规范.md","ref":"docs/PSR/PSR-1 基础编码规范.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/PSR/PSR-2 编码风格规范.md","mtime":"2019-05-26T08:34:39.369Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-17T13:44:46.412Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PSR-2 编码风格规范","level":"1.1.6.2","depth":3,"next":{"title":"PSR-4 自动加载规范","level":"1.1.6.3","depth":3,"path":"docs/PSR/PSR-4 自动加载规范.md","ref":"docs/PSR/PSR-4 自动加载规范.md","articles":[]},"previous":{"title":"PSR-1 基础编码规范","level":"1.1.6.1","depth":3,"path":"docs/PSR/PSR-1 基础编码规范.md","ref":"docs/PSR/PSR-1 基础编码规范.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/PSR/PSR-2 编码风格规范.md","mtime":"2020-02-18T07:10:49.892Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-18T07:38:14.072Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

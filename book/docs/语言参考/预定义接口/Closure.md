@@ -12,35 +12,35 @@ class Foo
      *
      * @var string
      */
-    public static $foo = 'foo';
+    public static string $foo = 'foo';
 
     /**
      * Just a test property.
      *
      * @var string
      */
-    public $bar = 'bar';
+    public string $bar = 'bar';
 
     /**
      * Just a test property.
      *
      * @var string
      */
-    private static $baz = 'baz';
+    private static string $baz = 'baz';
 
     /**
      * Just a test property.
      *
      * @var string
      */
-    private $qux = 'qux';
+    private string $qux = 'qux';
 
     /**
      * Just a test property.
      *
      * @var int
      */
-    private $quux = 1;
+    private int $quux = 1;
 
     /**
      * Return a string.
@@ -48,7 +48,7 @@ class Foo
      * @param  void
      * @return string
      */
-    public function method()
+    public function method(): string
     {
         return 'method';
     }
@@ -119,8 +119,7 @@ var_dump($method());            // string(3) "qux"
 $quux = function (): int {
     return $this->quux += 5;
 };
-$quux = $quux->call(new Foo);
-var_dump($quux);                // int(6)
+var_dump($quux->call(new Foo)); // int(6)
 
 $quuz = Closure::fromCallable([new Foo, 'method']);
 var_dump($quuz());              // string(6) "method"

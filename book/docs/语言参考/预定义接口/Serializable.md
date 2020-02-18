@@ -12,7 +12,7 @@ class Foo implements Serializable
      *
      * @var string
      */
-    private $property;
+    private string $property;
 
     /**
      * Initialize the value of the property.

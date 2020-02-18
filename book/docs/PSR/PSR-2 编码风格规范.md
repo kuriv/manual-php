@@ -101,6 +101,7 @@ use OtherVendor\OtherPackage\BazClass;
 
 class ClassName extends ParentClassName implements \ArrayAccess, \Countable
 {
+    //
 }
 
 ```
@@ -121,6 +122,7 @@ class ClassName extends ParentClassName implements
     \Countable,
     \Serializable
 {
+    //
 }
 
 ```
@@ -145,9 +147,9 @@ class ClassName
     /**
      * Just a test property.
      *
-     * @var null
+     * @var string|null
      */
-    public $propertyName = null;
+    public ?string $propertyName = null;
 }
 
 ```
@@ -175,6 +177,7 @@ class ClassName
      */
     public function methodName()
     {
+        //
     }
 }
 
@@ -196,13 +199,14 @@ class ClassName
     /**
      * Just a test method.
      *
-     * @param  mixed  $arg1
-     * @param  mixed  $arg2
+     * @param  int    $arg1
+     * @param  string $arg2
      * @param  array  $arg3
      * @return void
      */
-    public function methodName($arg1, $arg2, $arg3 = [])
+    public function methodName(int $arg1, string $arg2, array $arg3 = [])
     {
+        //
     }
 }
 
@@ -222,16 +226,17 @@ class ClassName
     /**
      * Just a test method.
      *
-     * @param  mixed  $arg1
-     * @param  mixed  $arg2
+     * @param  int    $arg1
+     * @param  string $arg2
      * @param  array  $arg3
      * @return void
      */
     public function methodName(
-        $arg1,
-        $arg2,
-        $arg3 = []
+        int $arg1,
+        string $arg2,
+        array $arg3 = []
     ) {
+        //
     }
 }
 
@@ -251,9 +256,9 @@ abstract class ClassName
     /**
      * Just a test property.
      *
-     * @var null
+     * @var string|null
      */
-    protected static $propertyName = null;
+    protected static ?string $propertyName = null;
 
     /**
      * Just an abstract method.
@@ -271,6 +276,7 @@ abstract class ClassName
      */
     final public static function anotherMethodName()
     {
+        //
     }
 }
 
@@ -310,8 +316,11 @@ $foo->bar(
 <?php
 
 if ($expr1) {
+    //
 } elseif ($expr2) {
+    //
 } else {
+    //
 }
 
 ```
@@ -350,6 +359,7 @@ switch ($expr) {
 <?php
 
 while ($expr) {
+    //
 }
 
 ```
@@ -358,6 +368,7 @@ while ($expr) {
 <?php
 
 do {
+    //
 } while ($expr);
 
 ```
@@ -368,6 +379,7 @@ do {
 <?php
 
 for ($i = 0; $i < 10; $i++) {
+    //
 }
 
 ```
@@ -378,6 +390,7 @@ for ($i = 0; $i < 10; $i++) {
 <?php
 
 foreach ($iterable as $key => $value) {
+    //
 }
 
 ```
@@ -388,8 +401,11 @@ foreach ($iterable as $key => $value) {
 <?php
 
 try {
+    //
 } catch (FirstExceptionType $e) {
+    //
 } catch (OtherExceptionType $e) {
+    //
 }
 
 ```
@@ -412,21 +428,21 @@ try {
 /**
  * Just a test function.
  *
- * @param  mixed $arg1
- * @param  mixed $arg2
+ * @param  int    $arg1
+ * @param  string $arg2
  * @return void
  */
-$closureWithArgs = function ($arg1, $arg2) {
+$closureWithArgs = function (int $arg1, string $arg2) {
 };
 
 /**
  * Just a test function.
  *
- * @param  mixed $arg1
- * @param  mixed $arg2
+ * @param  int    $arg1
+ * @param  string $arg2
  * @return void
  */
-$closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
+$closureWithArgsAndVars = function (int $arg1, string $arg2) use ($var1, $var2) {
 };
 
 ```
@@ -439,15 +455,15 @@ $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
 /**
  * Just a test function.
  *
- * @param  mixed $longArgument
- * @param  mixed $longerArgument
- * @param  mixed $muchLongerArgument
+ * @param  int    $longArgument
+ * @param  string $longerArgument
+ * @param  array  $muchLongerArgument
  * @return void
  */
 $longArgs_noVars = function (
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
+    int $longArgument,
+    string $longerArgument,
+    array $muchLongerArgument
 ) {
 };
 
@@ -467,15 +483,15 @@ $noArgs_longVars = function () use (
 /**
  * Just a test function.
  *
- * @param  mixed $longArgument
- * @param  mixed $longerArgument
- * @param  mixed $muchLongerArgument
+ * @param  int    $longArgument
+ * @param  string $longerArgument
+ * @param  array  $muchLongerArgument
  * @return void
  */
 $longArgs_longVars = function (
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
+    int $longArgument,
+    string $longerArgument,
+    array $muchLongerArgument
 ) use (
     $longVar1,
     $longerVar2,
@@ -486,25 +502,25 @@ $longArgs_longVars = function (
 /**
  * Just a test function.
  *
- * @param  mixed $longArgument
- * @param  mixed $longerArgument
- * @param  mixed $muchLongerArgument
+ * @param  int    $longArgument
+ * @param  string $longerArgument
+ * @param  array  $muchLongerArgument
  * @return void
  */
 $longArgs_shortVars = function (
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
+    int $longArgument,
+    string $longerArgument,
+    array $muchLongerArgument
 ) use ($var) {
 };
 
 /**
  * Just a test function.
  *
- * @param  mixed $arg
+ * @param  int  $arg
  * @return void
  */
-$shortArgs_longVars = function ($arg) use (
+$shortArgs_longVars = function (int $arg) use (
     $longVar1,
     $longerVar2,
     $muchLongerVar3
@@ -521,6 +537,7 @@ $shortArgs_longVars = function ($arg) use (
 $foo->bar(
     $arg1,
     function ($arg2) use ($var) {
+        //
     },
     $arg3
 );

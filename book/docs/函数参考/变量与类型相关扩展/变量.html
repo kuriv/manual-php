@@ -3435,7 +3435,6 @@
 <li><a href="#isnull">is_null - &#x68C0;&#x6D4B;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x4E3A; NULL</a></li>
 <li><a href="#isnumeric">is_numeric - &#x68C0;&#x6D4B;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x5B57;&#x6216;&#x6570;&#x5B57;&#x5B57;&#x7B26;&#x4E32;</a></li>
 <li><a href="#isobject">is_object - &#x68C0;&#x6D4B;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</a></li>
-<li><a href="#isreal">is_real - &#x68C0;&#x6D4B;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x662F;&#x6D6E;&#x70B9;&#x578B;</a></li>
 <li><a href="#isresource">is_resource - &#x68C0;&#x6D4B;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x4E3A;&#x8D44;&#x6E90;&#x7C7B;&#x578B;</a></li>
 <li><a href="#isscalar">is_scalar - &#x68C0;&#x6D4B;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x91CF;</a></li>
 <li><a href="#isstring">is_string - &#x68C0;&#x6D4B;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x662F;&#x5B57;&#x7B26;&#x4E32;</a></li>
@@ -3577,6 +3576,7 @@
  */</span>
 <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">/**
@@ -3586,6 +3586,7 @@
  * @return void
  */</span>
 <span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">Foo</span>
@@ -3598,6 +3599,7 @@
      */</span>
     <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
@@ -3611,6 +3613,7 @@
      */</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
@@ -3624,6 +3627,7 @@
      */</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
@@ -3637,6 +3641,7 @@
      */</span>
     <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__invoke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
+        <span class="token comment">//</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
@@ -3646,6 +3651,8 @@
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_callable</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;method&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_callable</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;Bar&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;method&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_callable</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Bar::method&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_callable</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;Baz&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;method&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_callable</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Baz::method&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_callable</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;Baz&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;parent::method&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_callable</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Qux</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                       <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_callable</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">false</span><span class="token punctuation">,</span> <span class="token variable">$callable_name</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
@@ -3723,13 +3730,6 @@
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_object</span><span class="token punctuation">(</span><span class="token constant">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// bool(false)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_object</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// bool(false)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_object</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">stdClass</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
-</code></pre>
-<h2 id="isreal">is_real</h2>
-<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
-
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_real</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// bool(false)</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_real</span><span class="token punctuation">(</span><span class="token number">27.25</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">is_real</span><span class="token punctuation">(</span><span class="token number">1e7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="isresource">is_resource</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3921,7 +3921,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"变量","level":"1.1.2.15.7","depth":4,"next":{"title":"XML 操作","level":"1.1.2.16","depth":3,"path":"docs/函数参考/XML 操作.md","ref":"docs/函数参考/XML 操作.md","articles":[{"title":"SimpleXML","level":"1.1.2.16.1","depth":4,"path":"docs/函数参考/XML 操作/SimpleXML.md","ref":"docs/函数参考/XML 操作/SimpleXML.md","articles":[]},{"title":"XML 解析器","level":"1.1.2.16.2","depth":4,"path":"docs/函数参考/XML 操作/XML 解析器.md","ref":"docs/函数参考/XML 操作/XML 解析器.md","articles":[]}]},"previous":{"title":"反射","level":"1.1.2.15.6","depth":4,"path":"docs/函数参考/变量与类型相关扩展/反射.md","ref":"docs/函数参考/变量与类型相关扩展/反射.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/变量与类型相关扩展/变量.md","mtime":"2019-05-21T10:28:24.238Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-18T07:38:14.072Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"变量","level":"1.1.2.15.7","depth":4,"next":{"title":"XML 操作","level":"1.1.2.16","depth":3,"path":"docs/函数参考/XML 操作.md","ref":"docs/函数参考/XML 操作.md","articles":[{"title":"SimpleXML","level":"1.1.2.16.1","depth":4,"path":"docs/函数参考/XML 操作/SimpleXML.md","ref":"docs/函数参考/XML 操作/SimpleXML.md","articles":[]},{"title":"XML 解析器","level":"1.1.2.16.2","depth":4,"path":"docs/函数参考/XML 操作/XML 解析器.md","ref":"docs/函数参考/XML 操作/XML 解析器.md","articles":[]}]},"previous":{"title":"反射","level":"1.1.2.15.6","depth":4,"path":"docs/函数参考/变量与类型相关扩展/反射.md","ref":"docs/函数参考/变量与类型相关扩展/反射.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/变量与类型相关扩展/变量.md","mtime":"2020-02-21T12:20:29.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-21T12:20:44.144Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

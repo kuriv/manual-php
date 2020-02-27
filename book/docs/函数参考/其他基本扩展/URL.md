@@ -59,11 +59,12 @@ var_dump(get_meta_tags(__DIR__ . '/example.html', true));
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
     <head>
-        <meta charset="utf-8"/>
-        <meta name="foo" content="foo"/>
-        <meta name="bar" content="bar"/>
+        <meta charset="utf-8">
+        <meta name="foo" content="foo">
+        <meta name="bar" content="bar">
     </head>
     <body>
+        <p></p>
     </body>
 </html>
 ```
@@ -142,3 +143,4 @@ var_dump(urlencode('foo=cat&bar= dog '));    // string(23) "foo%3Dcat%26bar%3D+d
 var_dump(urlencode('foo=cat&bar=dog bird')); // string(26) "foo%3Dcat%26bar%3Ddog+bird"
 
 ```
+

@@ -17,7 +17,7 @@ var_dump(token_get_all('<?php phpinfo(); ?>'));
 ```php
 <?php
 
-var_dump(token_name(260));        // string(6) "T_EVAL"
+var_dump(token_name(260));        // string(14) "T_INCLUDE_ONCE"
 var_dump(token_name(T_FUNCTION)); // string(10) "T_FUNCTION"
 
 ```

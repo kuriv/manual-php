@@ -3444,6 +3444,68 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="data">data://</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5C5E;&#x6027;</th>
+<th style="text-align:center">&#x652F;&#x6301;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x53D7; <code>allow_url_fopen</code> &#x9650;&#x5236;</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x53D7; <code>allow_url_include</code> &#x9650;&#x5236;</td>
+<td style="text-align:center">Yes</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x5141;&#x8BB8;&#x8BFB;&#x53D6;</td>
+<td style="text-align:center">Yes</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x5141;&#x8BB8;&#x5199;&#x5165;</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x5141;&#x8BB8;&#x6DFB;&#x52A0;</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x5141;&#x8BB8;&#x540C;&#x65F6;&#x8BFB;&#x548C;&#x5199;</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x652F;&#x6301; <code>stat()</code></td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x652F;&#x6301; <code>unlink()</code></td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x652F;&#x6301; <code>rename()</code></td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x652F;&#x6301; <code>mkdir()</code></td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x652F;&#x6301; <code>rmdir()</code></td>
+<td style="text-align:center">No</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;data://text/plain;base64,UEhQ&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;PHP&quot;</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;data://text/plain;base64,&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$meta</span> <span class="token operator">=</span> <span class="token function">stream_get_meta_data</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$meta</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;mediatype&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                 <span class="token comment">// string(10) &quot;text/plain&quot;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3487,7 +3549,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"data://","level":"1.1.1.19.6","depth":4,"next":{"title":"global://","level":"1.1.1.19.7","depth":4,"path":"docs/语言参考/支持的协议和封装协议/global.md","ref":"docs/语言参考/支持的协议和封装协议/global.md","articles":[]},"previous":{"title":"zlib://","level":"1.1.1.19.5","depth":4,"path":"docs/语言参考/支持的协议和封装协议/zlib.md","ref":"docs/语言参考/支持的协议和封装协议/zlib.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/支持的协议和封装协议/data.md","mtime":"2019-05-06T15:18:52.380Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-04T14:04:15.714Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"data://","level":"1.1.1.19.6","depth":4,"next":{"title":"global://","level":"1.1.1.19.7","depth":4,"path":"docs/语言参考/支持的协议和封装协议/global.md","ref":"docs/语言参考/支持的协议和封装协议/global.md","articles":[]},"previous":{"title":"zlib://","level":"1.1.1.19.5","depth":4,"path":"docs/语言参考/支持的协议和封装协议/zlib.md","ref":"docs/语言参考/支持的协议和封装协议/zlib.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/支持的协议和封装协议/data.md","mtime":"2020-03-05T09:39:21.963Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-05T12:34:12.482Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

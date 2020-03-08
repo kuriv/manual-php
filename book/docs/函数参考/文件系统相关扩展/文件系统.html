@@ -3536,6 +3536,222 @@
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">basename</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                        <span class="token comment">// string(0) &quot;&quot;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">basename</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                        <span class="token comment">// string(1) &quot;.&quot;</span>
 </code></pre>
+<h2 id="chgrp">chgrp</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">chgrp</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="chmod">chmod</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">chmod</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">,</span> <span class="token number">0000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">chmod</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">,</span> <span class="token number">0421</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">chmod</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">,</span> <span class="token number">0655</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">chmod</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">,</span> <span class="token number">0777</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="chown">chown</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">chown</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="clearstatcache">clearstatcache</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">clearstatcache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">clearstatcache</span><span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">clearstatcache</span><span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">,</span> <span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="copy">copy</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">copy</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/foo.txt&apos;</span><span class="token punctuation">,</span> <span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/bar.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="dirname">dirname</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dirname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo/bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dirname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/foo/bar/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// string(4) &quot;/foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dirname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/foo/bar.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// string(4) &quot;/foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dirname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/foo/bar/baz.txt&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(4) &quot;/foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dirname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/foo/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>               <span class="token comment">// string(1) &quot;\&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dirname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   <span class="token comment">// string(1) &quot;\&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dirname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   <span class="token comment">// string(1) &quot;.&quot;</span>
+</code></pre>
+<h2 id="diskfreespace">disk_free_space</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">disk_free_space</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">disk_free_space</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;C:&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="disktotalspace">disk_total_space</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">disk_total_space</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">disk_total_space</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;C:&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="diskfreespace">diskfreespace</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">diskfreespace</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">diskfreespace</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;C:&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="fclose">fclose</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fclose</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="feof">feof</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">feof</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">fgets</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">feof</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="fflush">fflush</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;w&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fflush</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="fgetc">fgetc</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$character</span> <span class="token operator">=</span> <span class="token function">fgetc</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$character</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// string(1) &quot;0&quot;</span>
+<span class="token comment">// string(1) &quot;0&quot;</span>
+<span class="token comment">// string(1) &quot;0&quot;</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>example.txt</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>000
+</code></pre><h2 id="fgetcsv">fgetcsv</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.csv&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$data</span> <span class="token operator">=</span> <span class="token function">fgetcsv</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// array(2) { [0]=&gt; string(3) &quot;foo&quot; [1]=&gt; string(3) &quot;bar&quot; }</span>
+<span class="token comment">// array(2) { [0]=&gt; string(3) &quot;baz&quot; [1]=&gt; string(3) &quot;qux&quot; }</span>
+
+<span class="token function">rewind</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$data</span> <span class="token operator">=</span> <span class="token function">fgetcsv</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;,&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// array(2) { [0]=&gt; string(3) &quot;foo&quot; [1]=&gt; string(3) &quot;bar&quot; }</span>
+<span class="token comment">// array(2) { [0]=&gt; string(3) &quot;baz&quot; [1]=&gt; string(3) &quot;qux&quot; }</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>example.csv</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>foo,bar
+baz,qux
+</code></pre><h2 id="fgets">fgets</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$data</span> <span class="token operator">=</span> <span class="token function">fgets</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token comment">// string(3) &quot;bar&quot;</span>
+
+<span class="token function">rewind</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$data</span> <span class="token operator">=</span> <span class="token function">fgets</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token comment">// string(3) &quot;bar&quot;</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>example.txt</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>foo
+bar
+</code></pre><h2 id="fileexists">file_exists</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_exists</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_exists</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="filegetcontents">file_get_contents</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;https://github.com/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">,</span> <span class="token constant">null</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="fileputcontents">file_put_contents</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_put_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Hello World!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_put_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Hello World!&apos;</span><span class="token punctuation">,</span> <span class="token constant">FILE_USE_INCLUDE_PATH</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_put_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Hello World!&apos;</span><span class="token punctuation">,</span> <span class="token constant">FILE_APPEND</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file_put_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Hello World!&apos;</span><span class="token punctuation">,</span> <span class="token constant">LOCK_EX</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="file">file</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                        <span class="token comment">// array(4) { [0]=&gt; string(5) &quot;foo &quot; [1]=&gt; string(5) &quot;bar &quot; [2]=&gt; string(5) &quot;baz &quot; [3]=&gt; string(3) &quot;qux&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token constant">FILE_USE_INCLUDE_PATH</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(4) { [0]=&gt; string(5) &quot;foo &quot; [1]=&gt; string(5) &quot;bar &quot; [2]=&gt; string(5) &quot;baz &quot; [3]=&gt; string(3) &quot;qux&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token constant">FILE_IGNORE_NEW_LINES</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(4) { [0]=&gt; string(3) &quot;foo&quot; [1]=&gt; string(3) &quot;bar&quot; [2]=&gt; string(3) &quot;baz&quot; [3]=&gt; string(3) &quot;qux&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">file</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token constant">FILE_SKIP_EMPTY_LINES</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(4) { [0]=&gt; string(5) &quot;foo &quot; [1]=&gt; string(5) &quot;bar &quot; [2]=&gt; string(5) &quot;baz &quot; [3]=&gt; string(3) &quot;qux&quot; }</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>example.txt</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>foo
+bar
+baz
+qux
+</code></pre><h2 id="fileatime">fileatime</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fileatime</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="filectime">filectime</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">filectime</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="filegroup">filegroup</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">filegroup</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="fileinode">fileinode</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fileinode</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="filemtime">filemtime</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">filemtime</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="fileowner">fileowner</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fileowner</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="fileperms">fileperms</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fileperms</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="filesize">filesize</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">filesize</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="filetype">filetype</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">filetype</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                  <span class="token comment">// string(3) &quot;dir&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">filetype</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(4) &quot;file&quot;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3579,7 +3795,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"文件系统","level":"1.1.2.5.2","depth":4,"next":{"title":"国际化与字符编码支持","level":"1.1.2.6","depth":3,"path":"docs/函数参考/国际化与字符编码支持.md","ref":"docs/函数参考/国际化与字符编码支持.md","articles":[{"title":"iconv","level":"1.1.2.6.1","depth":4,"path":"docs/函数参考/国际化与字符编码支持/iconv.md","ref":"docs/函数参考/国际化与字符编码支持/iconv.md","articles":[]},{"title":"多字节字符串","level":"1.1.2.6.2","depth":4,"path":"docs/函数参考/国际化与字符编码支持/多字节字符串.md","ref":"docs/函数参考/国际化与字符编码支持/多字节字符串.md","articles":[]}]},"previous":{"title":"目录","level":"1.1.2.5.1","depth":4,"path":"docs/函数参考/文件系统相关扩展/目录.md","ref":"docs/函数参考/文件系统相关扩展/目录.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/文件系统相关扩展/文件系统.md","mtime":"2020-03-07T14:33:40.896Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-07T14:34:02.228Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文件系统","level":"1.1.2.5.2","depth":4,"next":{"title":"国际化与字符编码支持","level":"1.1.2.6","depth":3,"path":"docs/函数参考/国际化与字符编码支持.md","ref":"docs/函数参考/国际化与字符编码支持.md","articles":[{"title":"iconv","level":"1.1.2.6.1","depth":4,"path":"docs/函数参考/国际化与字符编码支持/iconv.md","ref":"docs/函数参考/国际化与字符编码支持/iconv.md","articles":[]},{"title":"多字节字符串","level":"1.1.2.6.2","depth":4,"path":"docs/函数参考/国际化与字符编码支持/多字节字符串.md","ref":"docs/函数参考/国际化与字符编码支持/多字节字符串.md","articles":[]}]},"previous":{"title":"目录","level":"1.1.2.5.1","depth":4,"path":"docs/函数参考/文件系统相关扩展/目录.md","ref":"docs/函数参考/文件系统相关扩展/目录.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/文件系统相关扩展/文件系统.md","mtime":"2020-03-08T14:42:39.735Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-08T14:43:37.867Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

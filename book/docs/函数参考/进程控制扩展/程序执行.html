@@ -3444,6 +3444,77 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7A0B;&#x5E8F;&#x6267;&#x884C;">&#x7A0B;&#x5E8F;&#x6267;&#x884C;</h1>
+<ul>
+<li><a href="#escapeshellarg">escapeshellarg - &#x628A;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x7801;&#x4E3A;&#x53EF;&#x4EE5;&#x5728; Shell &#x547D;&#x4EE4;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x53C2;&#x6570;</a></li>
+<li><a href="#escapeshellcmd">escapeshellcmd - Shell &#x5143;&#x5B57;&#x7B26;&#x8F6C;&#x4E49;</a></li>
+<li><a href="#exec">exec - &#x6267;&#x884C;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x7A0B;&#x5E8F;</a></li>
+<li><a href="#passthru">passthru - &#x6267;&#x884C;&#x5916;&#x90E8;&#x7A0B;&#x5E8F;&#x5E76;&#x4E14;&#x663E;&#x793A;&#x539F;&#x59CB;&#x8F93;&#x51FA;</a></li>
+<li><a href="#procclose">proc_close - &#x5173;&#x95ED;&#x7531; proc_open &#x6253;&#x5F00;&#x7684;&#x8FDB;&#x7A0B;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x7801;</a></li>
+<li><a href="#procgetstatus">proc_get_status - &#x83B7;&#x53D6;&#x7531; proc_open &#x51FD;&#x6570;&#x6253;&#x5F00;&#x7684;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x606F;</a></li>
+<li><a href="#procnice">proc_nice - &#x4FEE;&#x6539;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x4F18;&#x5148;&#x7EA7;</a></li>
+<li><a href="#procopen">proc_open - &#x6267;&#x884C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x4E14;&#x6253;&#x5F00;&#x7528;&#x6765;&#x8F93;&#x5165; / &#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x6307;&#x9488;</a></li>
+<li><a href="#procterminate">proc_terminate - &#x7EC8;&#x6B62;&#x7531; proc_open &#x6253;&#x5F00;&#x7684;&#x8FDB;&#x7A0B;</a></li>
+<li><a href="#shellexec">shell_exec - &#x901A;&#x8FC7; Shell &#x73AF;&#x5883;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x5B8C;&#x6574;&#x7684;&#x8F93;&#x51FA;&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;</a></li>
+<li><a href="#system">system - &#x6267;&#x884C;&#x5916;&#x90E8;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x663E;&#x793A;&#x8F93;&#x51FA;</a></li>
+</ul>
+<h2 id="escapeshellarg">escapeshellarg</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">escapeshellarg</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(5) &quot;&quot;foo&quot;&quot;</span>
+</code></pre>
+<h2 id="escapeshellcmd">escapeshellcmd</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">escapeshellarg</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;&amp;#;`|*?~&lt;&gt;^()[]{}$\%!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(23) &quot;&quot;&amp;#;`|*?~&lt;&gt;^()[]{}$\  &quot;&quot;</span>
+</code></pre>
+<h2 id="exec">exec</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;dir&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;dir&apos;</span><span class="token punctuation">,</span> <span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;dir&apos;</span><span class="token punctuation">,</span> <span class="token variable">$foo</span><span class="token punctuation">,</span> <span class="token variable">$bar</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">,</span> <span class="token variable">$bar</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="passthru">passthru</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">passthru</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;dir&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">passthru</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;dir&apos;</span><span class="token punctuation">,</span> <span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="procclose">proc_close</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="procgetstatus">proc_get_status</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="procnice">proc_nice</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="procopen">proc_open</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="procterminate">proc_terminate</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="shellexec">shell_exec</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">shell_exec</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;dir&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="system">system</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">system</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;dir&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">system</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;dir&apos;</span><span class="token punctuation">,</span> <span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3487,7 +3558,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"程序执行","level":"1.1.2.10.1","depth":4,"next":{"title":"其他基本扩展","level":"1.1.2.11","depth":3,"path":"docs/函数参考/其他基本扩展.md","ref":"docs/函数参考/其他基本扩展.md","articles":[{"title":"JSON","level":"1.1.2.11.1","depth":4,"path":"docs/函数参考/其他基本扩展/JSON.md","ref":"docs/函数参考/其他基本扩展/JSON.md","articles":[]},{"title":"杂项","level":"1.1.2.11.2","depth":4,"path":"docs/函数参考/其他基本扩展/杂项.md","ref":"docs/函数参考/其他基本扩展/杂项.md","articles":[]},{"title":"PHP 标准库","level":"1.1.2.11.3","depth":4,"path":"docs/函数参考/其他基本扩展/PHP 标准库.md","ref":"docs/函数参考/其他基本扩展/PHP 标准库.md","articles":[]},{"title":"Streams","level":"1.1.2.11.4","depth":4,"path":"docs/函数参考/其他基本扩展/Streams.md","ref":"docs/函数参考/其他基本扩展/Streams.md","articles":[]},{"title":"Tokenizer","level":"1.1.2.11.5","depth":4,"path":"docs/函数参考/其他基本扩展/Tokenizer.md","ref":"docs/函数参考/其他基本扩展/Tokenizer.md","articles":[]},{"title":"URL","level":"1.1.2.11.6","depth":4,"path":"docs/函数参考/其他基本扩展/URL.md","ref":"docs/函数参考/其他基本扩展/URL.md","articles":[]}]},"previous":{"title":"进程控制扩展","level":"1.1.2.10","depth":3,"path":"docs/函数参考/进程控制扩展.md","ref":"docs/函数参考/进程控制扩展.md","articles":[{"title":"程序执行","level":"1.1.2.10.1","depth":4,"path":"docs/函数参考/进程控制扩展/程序执行.md","ref":"docs/函数参考/进程控制扩展/程序执行.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/进程控制扩展/程序执行.md","mtime":"2019-05-20T15:32:34.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-10T07:59:21.408Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"程序执行","level":"1.1.2.10.1","depth":4,"next":{"title":"其他基本扩展","level":"1.1.2.11","depth":3,"path":"docs/函数参考/其他基本扩展.md","ref":"docs/函数参考/其他基本扩展.md","articles":[{"title":"JSON","level":"1.1.2.11.1","depth":4,"path":"docs/函数参考/其他基本扩展/JSON.md","ref":"docs/函数参考/其他基本扩展/JSON.md","articles":[]},{"title":"杂项","level":"1.1.2.11.2","depth":4,"path":"docs/函数参考/其他基本扩展/杂项.md","ref":"docs/函数参考/其他基本扩展/杂项.md","articles":[]},{"title":"PHP 标准库","level":"1.1.2.11.3","depth":4,"path":"docs/函数参考/其他基本扩展/PHP 标准库.md","ref":"docs/函数参考/其他基本扩展/PHP 标准库.md","articles":[]},{"title":"Streams","level":"1.1.2.11.4","depth":4,"path":"docs/函数参考/其他基本扩展/Streams.md","ref":"docs/函数参考/其他基本扩展/Streams.md","articles":[]},{"title":"Tokenizer","level":"1.1.2.11.5","depth":4,"path":"docs/函数参考/其他基本扩展/Tokenizer.md","ref":"docs/函数参考/其他基本扩展/Tokenizer.md","articles":[]},{"title":"URL","level":"1.1.2.11.6","depth":4,"path":"docs/函数参考/其他基本扩展/URL.md","ref":"docs/函数参考/其他基本扩展/URL.md","articles":[]}]},"previous":{"title":"进程控制扩展","level":"1.1.2.10","depth":3,"path":"docs/函数参考/进程控制扩展.md","ref":"docs/函数参考/进程控制扩展.md","articles":[{"title":"程序执行","level":"1.1.2.10.1","depth":4,"path":"docs/函数参考/进程控制扩展/程序执行.md","ref":"docs/函数参考/进程控制扩展/程序执行.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/进程控制扩展/程序执行.md","mtime":"2020-03-10T13:35:32.259Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-10T13:35:37.593Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

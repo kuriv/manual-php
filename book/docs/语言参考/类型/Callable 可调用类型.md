@@ -86,6 +86,43 @@ call_user_func('Foo::method');
 
 ```
 
+父类中的普通方法。
+
+```php
+<?php
+
+class Foo
+{
+    /**
+     * Just a test method.
+     *
+     * @param  void
+     * @return void
+     */
+    public function method()
+    {
+        //
+    }
+}
+
+class Bar extends Foo
+{
+    /**
+     * Override the parent method.
+     *
+     * @param  void
+     * @return void
+     */
+    public function method()
+    {
+        //
+    }
+}
+
+call_user_func([new Bar, 'parent::method']);
+
+```
+
 父类中的静态方法。
 
 ```php

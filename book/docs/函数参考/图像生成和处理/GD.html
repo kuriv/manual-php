@@ -3444,6 +3444,61 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="gd">GD</h1>
+<ul>
+<li>[gd_info - &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5B89;&#x88C5;&#x7684; GD &#x5E93;&#x7684;&#x4FE1;&#x606F;]</li>
+<li>[getimagesize - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x5927;&#x5C0F;]</li>
+<li>[getimagesizefromstring - &#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x83B7;&#x53D6;&#x56FE;&#x50CF;&#x7684;&#x5927;&#x5C0F;&#x4FE1;&#x606F;]</li>
+<li>[image_type_to_extension - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x540E;&#x7F00;]</li>
+<li>[image_type_to_mime_type - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x7C7B;&#x578B;&#x7684; MIME &#x7C7B;&#x578B;]</li>
+</ul>
+<h2 id="gdinfo">gd_info</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gd_info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(14) { [&quot;GD Version&quot;]=&gt; string(26) &quot;bundled (2.1.0 compatible)&quot; [&quot;FreeType Support&quot;]=&gt; bool(true) [&quot;FreeType Linkage&quot;]=&gt; string(13) &quot;with freetype&quot; [&quot;GIF Read Support&quot;]=&gt; bool(true) [&quot;GIF Create Support&quot;]=&gt; bool(true) [&quot;JPEG Support&quot;]=&gt; bool(true) [&quot;PNG Support&quot;]=&gt; bool(true) [&quot;WBMP Support&quot;]=&gt; bool(true) [&quot;XPM Support&quot;]=&gt; bool(true) [&quot;XBM Support&quot;]=&gt; bool(true) [&quot;WebP Support&quot;]=&gt; bool(true) [&quot;BMP Support&quot;]=&gt; bool(true) [&quot;TGA Read Support&quot;]=&gt; bool(true) [&quot;JIS-mapped Japanese Font Support&quot;]=&gt; bool(false) }</span>
+</code></pre>
+<h2 id="getimagesize">getimagesize</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getimagesize</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getimagesize</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;https://github.com/fluidicon.png&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="getimagesizefromstring">getimagesizefromstring</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getimagesizefromstring</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getimagesizefromstring</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;https://github.com/fluidicon.png&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="imagetypetoextension">image_type_to_extension</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">image_type_to_extension</span><span class="token punctuation">(</span><span class="token constant">IMAGETYPE_GIF</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// string(4) &quot;.gif&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">image_type_to_extension</span><span class="token punctuation">(</span><span class="token constant">IMAGETYPE_JPEG</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// string(5) &quot;.jpeg&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">image_type_to_extension</span><span class="token punctuation">(</span><span class="token constant">IMAGETYPE_PNG</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// string(4) &quot;.png&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">image_type_to_extension</span><span class="token punctuation">(</span><span class="token constant">IMAGETYPE_PNG</span><span class="token punctuation">,</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;png&quot;</span>
+</code></pre>
+<h2 id="imagetypetomimetype">image_type_to_mime_type</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">image_type_to_mime_type</span><span class="token punctuation">(</span><span class="token constant">IMAGETYPE_GIF</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(9) &quot;image/gif&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">image_type_to_mime_type</span><span class="token punctuation">(</span><span class="token constant">IMAGETYPE_JPEG</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(10) &quot;image/jpeg&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">image_type_to_mime_type</span><span class="token punctuation">(</span><span class="token constant">IMAGETYPE_PNG</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(9) &quot;image/png&quot;</span>
+</code></pre>
+<h2 id="imageaffine">imageaffine</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="imageaffinematrixconcat">imageaffinematrixconcat</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="imageaffinematrixget">imageaffinematrixget</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="imagealphablending">imagealphablending</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
 
                                 
                                 </section>
@@ -3487,7 +3542,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GD","level":"1.1.2.7.1","depth":4,"next":{"title":"邮件相关扩展","level":"1.1.2.8","depth":3,"path":"docs/函数参考/邮件相关扩展.md","ref":"docs/函数参考/邮件相关扩展.md","articles":[{"title":"邮件","level":"1.1.2.8.1","depth":4,"path":"docs/函数参考/邮件相关扩展/邮件.md","ref":"docs/函数参考/邮件相关扩展/邮件.md","articles":[]}]},"previous":{"title":"图像生成和处理","level":"1.1.2.7","depth":3,"path":"docs/函数参考/图像生成和处理.md","ref":"docs/函数参考/图像生成和处理.md","articles":[{"title":"GD","level":"1.1.2.7.1","depth":4,"path":"docs/函数参考/图像生成和处理/GD.md","ref":"docs/函数参考/图像生成和处理/GD.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/图像生成和处理/GD.md","mtime":"2019-05-20T15:31:44.879Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T12:44:44.740Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GD","level":"1.1.2.7.1","depth":4,"next":{"title":"邮件相关扩展","level":"1.1.2.8","depth":3,"path":"docs/函数参考/邮件相关扩展.md","ref":"docs/函数参考/邮件相关扩展.md","articles":[{"title":"邮件","level":"1.1.2.8.1","depth":4,"path":"docs/函数参考/邮件相关扩展/邮件.md","ref":"docs/函数参考/邮件相关扩展/邮件.md","articles":[]}]},"previous":{"title":"图像生成和处理","level":"1.1.2.7","depth":3,"path":"docs/函数参考/图像生成和处理.md","ref":"docs/函数参考/图像生成和处理.md","articles":[{"title":"GD","level":"1.1.2.7.1","depth":4,"path":"docs/函数参考/图像生成和处理/GD.md","ref":"docs/函数参考/图像生成和处理/GD.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/图像生成和处理/GD.md","mtime":"2020-04-14T06:20:38.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-14T07:30:57.084Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

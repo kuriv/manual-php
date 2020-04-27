@@ -3444,6 +3444,274 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="simplexml">SimpleXML</h1>
+<ul>
+<li><a href="#simplexmlelement">SimpleXMLElement</a><ul>
+<li><a href="#simplexmlelementconstruct">SimpleXMLElement::__construct - &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; SimpleXMLElement &#x5BF9;&#x8C61;</a></li>
+<li><a href="#simplexmlelementaddattribute">SimpleXMLElement::addAttribute - &#x7ED9; SimpleXMLElement &#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;</a></li>
+<li><a href="#simplexmlelementaddchild">SimpleXMLElement::addChild - &#x5C06;&#x5B50;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230; XML &#x8282;&#x70B9;</a></li>
+<li><a href="#simplexmlelementasxml">SimpleXMLElement::asXML - &#x8FD4;&#x56DE;&#x57FA;&#x4E8E; SimpleXMLElement &#x5BF9;&#x8C61;&#x7684;&#x683C;&#x5F0F;&#x6B63;&#x786E;&#x7684; XML &#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#simplexmlelementattributes">SimpleXMLElement::attributes - &#x6807;&#x8BC6;&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;</a></li>
+<li><a href="#simplexmlelementchildren">SimpleXMLElement::children - &#x67E5;&#x627E;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x5B50;&#x4EE3;</a></li>
+<li><a href="#simplexmlelementcount">SimpleXMLElement::count - &#x7EDF;&#x8BA1;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x4EE3;&#x6570;&#x91CF;</a></li>
+<li><a href="#simplexmlelementgetdocnamespaces">SimpleXMLElement::getDocNamespaces - &#x8FD4;&#x56DE;&#x6587;&#x6863;&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x540D;&#x79F0;&#x7A7A;&#x95F4;</a></li>
+<li><a href="#simplexmlelementgetname">SimpleXMLElement::getName - &#x83B7;&#x53D6; XML &#x5143;&#x7D20;&#x7684;&#x540D;&#x79F0;</a></li>
+<li><a href="#simplexmlelementgetnamespaces">SimpleXMLElement::getNamespaces - &#x8FD4;&#x56DE;&#x6587;&#x6863;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x540D;&#x79F0;&#x7A7A;&#x95F4;</a></li>
+<li><a href="#simplexmlelementregisterxpathnamespace">SimpleXMLElement::registerXPathNamespace - &#x4E3A;&#x4E0B;&#x4E00;&#x4E2A; XPath &#x67E5;&#x8BE2;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x524D;&#x7F00; / &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0B;&#x6587;</a></li>
+<li><a href="#simplexmlelementsavexml">SimpleXMLElement::saveXML - &#x8FD4;&#x56DE;&#x57FA;&#x4E8E; SimpleXMLElement &#x5BF9;&#x8C61;&#x7684;&#x683C;&#x5F0F;&#x6B63;&#x786E;&#x7684; XML &#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#simplexmlelementtostring">SimpleXMLElement::__toString - &#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x5185;&#x5BB9;</a></li>
+<li><a href="#simplexmlelementxpath">SimpleXMLElement::xpath - &#x5BF9; XML &#x6570;&#x636E;&#x8FDB;&#x884C; XPath &#x67E5;&#x8BE2;</a></li>
+</ul>
+</li>
+<li><a href="#simplexmliterator">SimpleXMLIterator</a><ul>
+<li>s</li>
+</ul>
+</li>
+<li><a href="#simplexml">SimpleXML</a><ul>
+<li><a href="#simplexmlimportdom">simplexml_import_dom - &#x4ECE; DOM &#x8282;&#x70B9;&#x83B7;&#x53D6; SimpleXMLElement &#x5BF9;&#x8C61;</a></li>
+<li><a href="#simplexmlloadfile">simplexml_load_file - &#x5C06; XML &#x6587;&#x4EF6;&#x89E3;&#x6790;&#x4E3A;&#x5BF9;&#x8C61;</a></li>
+<li><a href="#simplexmlloadstring">simplexml_load_string - &#x5C06; XML &#x5B57;&#x7B26;&#x4E32;&#x89E3;&#x6790;&#x4E3A;&#x5BF9;&#x8C61;</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="simplexmlelement">SimpleXMLElement</h2>
+<h3 id="simplexmlelementconstruct">SimpleXMLElement::__construct</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(SimpleXMLElement)#1 (2) { [&quot;title&quot;]=&gt; string(3) &quot;XML&quot; [&quot;body&quot;]=&gt; string(18) &quot;Here is some text.&quot; }</span>
+</code></pre>
+<h3 id="simplexmlelementaddattribute">SimpleXMLElement::addAttribute</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">addAttribute</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(SimpleXMLElement)#1 (3) { [&quot;@attributes&quot;]=&gt; array(1) { [&quot;foo&quot;]=&gt; string(3) &quot;bar&quot; } [&quot;title&quot;]=&gt; string(3) &quot;XML&quot; [&quot;body&quot;]=&gt; string(18) &quot;Here is some text.&quot; }</span>
+</code></pre>
+<h3 id="simplexmlelementaddchild">SimpleXMLElement::addChild</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">addChild</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;body&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Here is some text.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(SimpleXMLElement)#2 (1) { [0]=&gt; string(18) &quot;Here is some text.&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                         <span class="token comment">// object(SimpleXMLElement)#1 (2) { [&quot;title&quot;]=&gt; string(3) &quot;XML&quot; [&quot;body&quot;]=&gt; string(18) &quot;Here is some text.&quot; }</span>
+</code></pre>
+<h3 id="simplexmlelementasxml">SimpleXMLElement::asXML</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">asXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="simplexmlelementattributes">SimpleXMLElement::attributes</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document foo<span class="token operator">=</span><span class="token double-quoted-string string">&quot;bar&quot;</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">attributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(SimpleXMLElement)#2 (1) { [&quot;@attributes&quot;]=&gt; array(1) { [&quot;foo&quot;]=&gt; string(3) &quot;bar&quot; } }</span>
+</code></pre>
+<h3 id="simplexmlelementchildren">SimpleXMLElement::children</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   <span class="token comment">// object(SimpleXMLElement)#2 (2) { [&quot;title&quot;]=&gt; string(3) &quot;XML&quot; [&quot;body&quot;]=&gt; object(SimpleXMLElement)#4 (1) { [&quot;p&quot;]=&gt; string(18) &quot;Here is some text.&quot; } }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">body</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(SimpleXMLElement)#4 (1) { [&quot;p&quot;]=&gt; string(18) &quot;Here is some text.&quot; }</span>
+</code></pre>
+<h3 id="simplexmlelementcount">SimpleXMLElement::count</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(2)</span>
+</code></pre>
+<h3 id="simplexmlelementgetdocnamespaces">SimpleXMLElement::getDocNamespaces</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document xmlns<span class="token punctuation">:</span>title<span class="token operator">=</span><span class="token double-quoted-string string">&quot;http://www.example.com/title&quot;</span> xmlns<span class="token punctuation">:</span>body<span class="token operator">=</span><span class="token double-quoted-string string">&quot;http://www.example.com/body&quot;</span> xmlns<span class="token punctuation">:</span>p<span class="token operator">=</span><span class="token double-quoted-string string">&quot;http://www.example.com/p&quot;</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getDocNamespaces</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(3) { [&quot;title&quot;]=&gt; string(28) &quot;http://www.example.com/title&quot; [&quot;body&quot;]=&gt; string(27) &quot;http://www.example.com/body&quot; [&quot;p&quot;]=&gt; string(24) &quot;http://www.example.com/p&quot; }</span>
+</code></pre>
+<h3 id="simplexmlelementgetname">SimpleXMLElement::getName</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token variable">$children</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$children</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// string(5) &quot;title&quot;</span>
+<span class="token comment">// string(4) &quot;body&quot;</span>
+</code></pre>
+<h3 id="simplexmlelementgetnamespaces">SimpleXMLElement::getNamespaces</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document xmlns<span class="token punctuation">:</span>title<span class="token operator">=</span><span class="token double-quoted-string string">&quot;http://www.example.com/title&quot;</span> xmlns<span class="token punctuation">:</span>body<span class="token operator">=</span><span class="token double-quoted-string string">&quot;http://www.example.com/body&quot;</span> xmlns<span class="token punctuation">:</span>p<span class="token operator">=</span><span class="token double-quoted-string string">&quot;http://www.example.com/p&quot;</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token punctuation">:</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token punctuation">:</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token punctuation">:</span>body<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token punctuation">:</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getNamespaces</span><span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(2) { [&quot;title&quot;]=&gt; string(28) &quot;http://www.example.com/title&quot; [&quot;body&quot;]=&gt; string(27) &quot;http://www.example.com/body&quot; }</span>
+</code></pre>
+<h3 id="simplexmlelementregisterxpathnamespace">SimpleXMLElement::registerXPathNamespace</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document xmlns<span class="token punctuation">:</span>title<span class="token operator">=</span><span class="token double-quoted-string string">&quot;http://www.example.com/title&quot;</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token punctuation">:</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token punctuation">:</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">registerXPathNamespace</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;title&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com/title&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">xpath</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;//title:title&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(1) { [0]=&gt; object(SimpleXMLElement)#2 (1) { [0]=&gt; string(3) &quot;XML&quot; } }</span>
+</code></pre>
+<h3 id="simplexmlelementsavexml">SimpleXMLElement::saveXML</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">saveXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="simplexmlelementtostring">SimpleXMLElement::__toString</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$xml</span><span class="token punctuation">;</span>
+<span class="token keyword">print</span> <span class="token variable">$xml</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="simplexmlelementxpath">SimpleXMLElement::xpath</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">xpath</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;/document/body&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(1) { [0]=&gt; object(SimpleXMLElement)#2 (1) { [&quot;p&quot;]=&gt; string(18) &quot;Here is some text.&quot; } }</span>
+</code></pre>
+<h2 id="simplexmliterator">SimpleXMLIterator</h2>
+<h2 id="simplexml">SimpleXML</h2>
+<h3 id="simplexmlimportdom">simplexml_import_dom</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$dom</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DomDocument</span><span class="token punctuation">;</span>
+<span class="token variable">$dom</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">loadXML</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;&lt;document&gt;&lt;title&gt;XML&lt;/title&gt;&lt;body&gt;Here is some text.&lt;/body&gt;&lt;/document&gt;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">simplexml_import_dom</span><span class="token punctuation">(</span><span class="token variable">$dom</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(SimpleXMLElement)#2 (2) { [&quot;title&quot;]=&gt; string(3) &quot;XML&quot; [&quot;body&quot;]=&gt; string(18) &quot;Here is some text.&quot; }</span>
+</code></pre>
+<h3 id="simplexmlloadfile">simplexml_load_file</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">simplexml_load_file</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.xml&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(SimpleXMLElement)#1 (2) { [&quot;title&quot;]=&gt; string(3) &quot;XML&quot; [&quot;body&quot;]=&gt; string(18) &quot;Here is some text.&quot; }</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>example.xml</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-xml"><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>document</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>XML<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>Here is some text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>document</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="simplexmlloadstring">simplexml_load_string</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">XML</span>
+          <span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token double-quoted-string string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>document<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token constant">XML</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>Here is some text<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>document<span class="token operator">&gt;</span>
+          <span class="token constant">XML</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">simplexml_load_string</span><span class="token punctuation">(</span><span class="token variable">$xml</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(SimpleXMLElement)#1 (2) { [&quot;title&quot;]=&gt; string(3) &quot;XML&quot; [&quot;body&quot;]=&gt; string(18) &quot;Here is some text.&quot; }</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3487,7 +3755,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SimpleXML","level":"1.1.2.16.1","depth":4,"next":{"title":"XML 解析器","level":"1.1.2.16.2","depth":4,"path":"docs/函数参考/XML 操作/XML 解析器.md","ref":"docs/函数参考/XML 操作/XML 解析器.md","articles":[]},"previous":{"title":"XML 操作","level":"1.1.2.16","depth":3,"path":"docs/函数参考/XML 操作.md","ref":"docs/函数参考/XML 操作.md","articles":[{"title":"SimpleXML","level":"1.1.2.16.1","depth":4,"path":"docs/函数参考/XML 操作/SimpleXML.md","ref":"docs/函数参考/XML 操作/SimpleXML.md","articles":[]},{"title":"XML 解析器","level":"1.1.2.16.2","depth":4,"path":"docs/函数参考/XML 操作/XML 解析器.md","ref":"docs/函数参考/XML 操作/XML 解析器.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/XML 操作/SimpleXML.md","mtime":"2019-05-20T15:34:27.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-26T10:51:19.733Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SimpleXML","level":"1.1.2.16.1","depth":4,"next":{"title":"XML 解析器","level":"1.1.2.16.2","depth":4,"path":"docs/函数参考/XML 操作/XML 解析器.md","ref":"docs/函数参考/XML 操作/XML 解析器.md","articles":[]},"previous":{"title":"XML 操作","level":"1.1.2.16","depth":3,"path":"docs/函数参考/XML 操作.md","ref":"docs/函数参考/XML 操作.md","articles":[{"title":"SimpleXML","level":"1.1.2.16.1","depth":4,"path":"docs/函数参考/XML 操作/SimpleXML.md","ref":"docs/函数参考/XML 操作/SimpleXML.md","articles":[]},{"title":"XML 解析器","level":"1.1.2.16.2","depth":4,"path":"docs/函数参考/XML 操作/XML 解析器.md","ref":"docs/函数参考/XML 操作/XML 解析器.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/XML 操作/SimpleXML.md","mtime":"2020-04-27T11:29:40.028Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-27T11:29:45.005Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

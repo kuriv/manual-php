@@ -11,12 +11,18 @@
   * [SimpleXMLElement::getDocNamespaces - 返回文档中声明的名称空间](#simplexmlelementgetdocnamespaces)
   * [SimpleXMLElement::getName - 获取 XML 元素的名称](#simplexmlelementgetname)
   * [SimpleXMLElement::getNamespaces - 返回文档中使用的名称空间](#simplexmlelementgetnamespaces)
-  * [SimpleXMLElement::registerXPathNamespace - 为下一个 XPath 查询创建一个前缀 / 命名空间下文](#simplexmlelementregisterxpathnamespace)
+  * [SimpleXMLElement::registerXPathNamespace - 为下一个 XPath 查询创建一个命名空间下文](#simplexmlelementregisterxpathnamespace)
   * [SimpleXMLElement::saveXML - 返回基于 SimpleXMLElement 对象的格式正确的 XML 字符串](#simplexmlelementsavexml)
   * [SimpleXMLElement::__toString - 返回字符串内容](#simplexmlelementtostring)
   * [SimpleXMLElement::xpath - 对 XML 数据进行 XPath 查询](#simplexmlelementxpath)
 * [SimpleXMLIterator](#simplexmliterator)
-  * s
+  * [SimpleXMLIterator::current - 返回当前元素](#simplexmliteratorcurrent)
+  * [SimpleXMLIterator::getChildren - 返回当前元素的子元素](#simplexmliteratorgetchildren)
+  * [SimpleXMLIterator::hasChildren - 检查当前元素是否具有子元素](#simplexmliteratorhaschildren)
+  * [SimpleXMLIterator::key - 返回当前的元素名](#simplexmliteratorkey)
+  * [SimpleXMLIterator::next - 移动至下一个元素](#simplexmliteratornext)
+  * [SimpleXMLIterator::rewind - 倒回到第一个元素](#simplexmliteratorrewind)
+  * [SimpleXMLIterator::valid - 检查当前元素是否有效](#simplexmliteratorvalid)
 * [SimpleXML](#simplexml)
   * [simplexml_import_dom - 从 DOM 节点获取 SimpleXMLElement 对象](#simplexmlimportdom)
   * [simplexml_load_file - 将 XML 文件解析为对象](#simplexmlloadfile)
@@ -287,9 +293,168 @@ var_dump($xml->xpath('/document/body')); // array(1) { [0]=> object(SimpleXMLEle
 
 ## SimpleXMLIterator
 
+### SimpleXMLIterator::current
 
+```php
+<?php
 
+$xml = <<<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <document>
+              <title>XML</title>
+              <body>
+                  <p>Here is some text.</p>
+              </body>
+          </document>
+          XML;
+$xmlIterator = new SimpleXMLIterator($xml);
+var_dump($xmlIterator->current()); // NULL
 
+$xmlIterator->rewind();
+var_dump($xmlIterator->current()); // object(SimpleXMLIterator)#2 (1) { [0]=> string(3) "XML" }
+
+```
+
+### SimpleXMLIterator::getChildren
+
+```php
+<?php
+
+$xml = <<<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <document>
+              <title>XML</title>
+              <body>
+                  <p>Here is some text.</p>
+              </body>
+          </document>
+          XML;
+$xmlIterator = new SimpleXMLIterator($xml);
+$xmlIterator->rewind();
+var_dump($xmlIterator->getChildren()); // object(SimpleXMLIterator)#2 (1) { [0]=> string(3) "XML" }
+
+$xmlIterator->next();
+var_dump($xmlIterator->getChildren()); // object(SimpleXMLIterator)#2 (1) { ["p"]=> string(18) "Here is some text." }
+
+$xmlIterator->next();
+var_dump($xmlIterator->getChildren()); // NULL
+
+```
+
+### SimpleXMLIterator::hasChildren
+
+```php
+<?php
+
+$xml = <<<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <document>
+              <title>XML</title>
+              <body>
+                  <p>Here is some text.</p>
+              </body>
+          </document>
+          XML;
+$xmlIterator = new SimpleXMLIterator($xml);
+$xmlIterator->rewind();
+var_dump($xmlIterator->hasChildren()); // bool(false)
+
+$xmlIterator->next();
+var_dump($xmlIterator->hasChildren()); // bool(true)
+
+```
+
+### SimpleXMLIterator::key
+
+```php
+<?php
+
+$xml = <<<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <document>
+              <title>XML</title>
+              <body>
+                  <p>Here is some text.</p>
+              </body>
+          </document>
+          XML;
+$xmlIterator = new SimpleXMLIterator($xml);
+var_dump($xmlIterator->key()); // bool(false)
+
+$xmlIterator->rewind();
+var_dump($xmlIterator->key()); // string(5) "title"
+
+$xmlIterator->next();
+var_dump($xmlIterator->key()); // string(4) "body"
+
+```
+
+### SimpleXMLIterator::next
+
+```php
+<?php
+
+$xml = <<<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <document>
+              <title>XML</title>
+              <body>
+                  <p>Here is some text.</p>
+              </body>
+          </document>
+          XML;
+$xmlIterator = new SimpleXMLIterator($xml);
+$xmlIterator->rewind();
+$xmlIterator->next();
+var_dump($xmlIterator->current()); // object(SimpleXMLIterator)#2 (1) { ["p"]=> string(18) "Here is some text." }
+
+```
+
+### SimpleXMLIterator::rewind
+
+```php
+<?php
+
+$xml = <<<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <document>
+              <title>XML</title>
+              <body>
+                  <p>Here is some text.</p>
+              </body>
+          </document>
+          XML;
+$xmlIterator = new SimpleXMLIterator($xml);
+$xmlIterator->rewind();
+var_dump($xmlIterator->current()); // object(SimpleXMLIterator)#2 (1) { [0]=> string(3) "XML" }
+
+```
+
+### SimpleXMLIterator::valid
+
+```php
+<?php
+
+$xml = <<<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <document>
+              <title>XML</title>
+              <body>
+                  <p>Here is some text.</p>
+              </body>
+          </document>
+          XML;
+$xmlIterator = new SimpleXMLIterator($xml);
+$xmlIterator->rewind();
+var_dump($xmlIterator->valid()); // bool(true)
+
+$xmlIterator->next();
+var_dump($xmlIterator->valid()); // bool(true)
+
+$xmlIterator->next();
+var_dump($xmlIterator->valid()); // bool(false)
+
+```
 
 ## SimpleXML
 

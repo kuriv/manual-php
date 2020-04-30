@@ -3362,12 +3362,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.7.2" data-path="../../PSR/PSR-2 编码风格规范.html">
+        <li class="chapter " data-level="1.1.7.2" data-path="../../PSR/PSR-4 自动加载规范.html">
             
-                <a href="../../PSR/PSR-2 编码风格规范.html">
+                <a href="../../PSR/PSR-4 自动加载规范.html">
             
                     
-                    PSR-2 编码风格规范
+                    PSR-4 自动加载规范
             
                 </a>
             
@@ -3375,12 +3375,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.7.3" data-path="../../PSR/PSR-4 自动加载规范.html">
+        <li class="chapter " data-level="1.1.7.3" data-path="../../PSR/PSR-12 编码规范扩充.html">
             
-                <a href="../../PSR/PSR-4 自动加载规范.html">
+                <a href="../../PSR/PSR-12 编码规范扩充.html">
             
                     
-                    PSR-4 自动加载规范
+                    PSR-12 编码规范扩充
             
                 </a>
             
@@ -3452,13 +3452,30 @@
 <li><a href="#chr">chr - &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;</a></li>
 <li><a href="#chunk_split">chunk_split - &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;&#x6210;&#x5C0F;&#x5757;</a></li>
 <li>[convert_cyr_string - &#x5C06;&#x5B57;&#x7B26;&#x7531;&#x4E00;&#x79CD; Cyrillic &#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x6210;&#x53E6;&#x4E00;&#x79CD;&#x5B57;&#x7B26;]</li>
-<li>[convert_uudecode - &#x89E3;&#x7801;&#x4E00;&#x4E2A; uuencode &#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;]</li>
-<li>[convert_uuencode - &#x4F7F;&#x7528; uuencode &#x7F16;&#x7801;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;]</li>
-<li>[count_chars - &#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x6240;&#x7528;&#x5B57;&#x7B26;&#x7684;&#x4FE1;&#x606F;]</li>
-<li>[crc32 - &#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684; crc32 &#x591A;&#x9879;&#x5F0F;]</li>
+<li><a href="#convertuudecode">convert_uudecode - &#x89E3;&#x7801;&#x4E00;&#x4E2A; uuencode &#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#convertuuencode">convert_uuencode - &#x4F7F;&#x7528; uuencode &#x7F16;&#x7801;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#countchars">count_chars - &#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x6240;&#x7528;&#x5B57;&#x7B26;&#x7684;&#x4FE1;&#x606F;</a></li>
+<li><a href="#crc32">crc32 - &#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684; crc32 &#x591A;&#x9879;&#x5F0F;</a></li>
 <li>[crypt - &#x5355;&#x5411;&#x5B57;&#x7B26;&#x4E32;&#x6563;&#x5217;]</li>
-<li>[echo - &#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;]</li>
-<li>[explode - &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;]</li>
+<li><a href="#echo">echo - &#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#explode">explode - &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li>[fprintf - &#x5C06;&#x683C;&#x5F0F;&#x5316;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5199;&#x5165;&#x5230;&#x6D41;]</li>
+<li>[get_html_translation_table - &#x8FD4;&#x56DE;&#x4F7F;&#x7528; htmlspecialchars &#x548C; htmlentities &#x540E;&#x7684;&#x8F6C;&#x6362;&#x8868;]</li>
+<li>[hebrev - &#x5C06;&#x903B;&#x8F91;&#x987A;&#x5E8F;&#x5E0C;&#x4F2F;&#x6765;&#x6587;&#x8F6C;&#x6362;&#x4E3A;&#x89C6;&#x89C9;&#x987A;&#x5E8F;&#x5E0C;&#x4F2F;&#x6765;&#x6587;]</li>
+<li>[hebrevc - &#x5C06;&#x903B;&#x8F91;&#x987A;&#x5E8F;&#x5E0C;&#x4F2F;&#x6765;&#x6587;&#x8F6C;&#x6362;&#x4E3A;&#x89C6;&#x89C9;&#x987A;&#x5E8F;&#x5E0C;&#x4F2F;&#x6765;&#x6587;&#xFF0C;&#x5E76;&#x4E14;&#x8F6C;&#x6362;&#x6362;&#x884C;&#x7B26;]</li>
+<li>[hex2bin - &#x8F6C;&#x6362;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;]</li>
+<li>[html_entity_decode - &#x5C06; HTML &#x5B9E;&#x4F53;&#x8F6C;&#x6362;&#x4E3A;&#x76F8;&#x5E94;&#x7684;&#x5B57;&#x7B26;]</li>
+<li>[htmlentities - &#x5C06;&#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x4E3A;&#x76F8;&#x5E94;&#x7684; HTML &#x5B9E;&#x4F53;]</li>
+<li>[htmlspecialchars_decode - &#x5C06;&#x7279;&#x6B8A;&#x7684; HTML &#x5B9E;&#x4F53;&#x8F6C;&#x6362;&#x56DE;&#x76F8;&#x5E94;&#x7684;&#x7279;&#x6B8A;&#x5B57;&#x7B26;]</li>
+<li>[htmlspecialchars - &#x5C06;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x4E3A;&#x76F8;&#x5E94;&#x7684; HTML &#x5B9E;&#x4F53;]</li>
+<li>[implode - &#x5C06;&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x503C;&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;]</li>
+<li>[join - &#x5C06;&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x503C;&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;]</li>
+<li>[lcfirst - &#x4F7F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5C0F;&#x5199;]</li>
+<li>[levenshtein - &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E4B;&#x95F4;&#x7684;&#x7F16;&#x8F91;&#x8DDD;&#x79BB;]</li>
+<li>[localeconv - &#x83B7;&#x53D6;&#x6570;&#x5B57;&#x683C;&#x5F0F;&#x4FE1;&#x606F;]</li>
+<li>[ltrim - &#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x5F00;&#x5934;&#x7684;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#xFF09;]</li>
+<li>[md5_file - &#x8BA1;&#x7B97;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7684; MD5 &#x6563;&#x5217;&#x503C;]</li>
+<li>[md5 - &#x8BA1;&#x7B97;&#x5B57;&#x7B26;&#x4E32;&#x7684; MD5 &#x6563;&#x5217;&#x503C;]</li>
 </ul>
 <h2 id="addcslashes">addcslashes</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3574,6 +3591,100 @@
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">explode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos; &apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;f o o&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// array(2) { [0]=&gt; string(1) &quot;f&quot; [1]=&gt; string(3) &quot;o o&quot; }</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">explode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos; &apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;f o o&apos;</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(2) { [0]=&gt; string(1) &quot;f&quot; [1]=&gt; string(1) &quot;o&quot; }</span>
 </code></pre>
+<h2 id="fprintf">fprintf</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;w&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;%s&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                       <span class="token comment">// int(3)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;w&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;%04d-%02d-%02d&apos;</span><span class="token punctuation">,</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Y&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;m&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;d&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(10)</span>
+</code></pre>
+<h2 id="gethtmltranslationtable">get_html_translation_table</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">get_html_translation_table</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">get_html_translation_table</span><span class="token punctuation">(</span><span class="token constant">HTML_ENTITIES</span><span class="token punctuation">,</span> <span class="token constant">ENT_QUOTES</span> <span class="token operator">|</span> <span class="token constant">ENT_HTML5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="hebrev">hebrev</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="hebrevc">hebrevc</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="hex2bin">hex2bin</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">hex2bin</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;666f6f&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">hex2bin</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;626172&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;bar&quot;</span>
+</code></pre>
+<h2 id="htmlentitydecode">html_entity_decode</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="htmlentities">htmlentities</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="htmlspecialcharsdecode">htmlspecialchars_decode</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="htmlspecialchars">htmlspecialchars</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="implode">implode</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">implode</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;baz&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// string(9) &quot;foobarbaz&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">implode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;baz&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// string(9) &quot;foobarbaz&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">implode</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;, &apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;baz&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(13) &quot;foo, bar, baz&quot;</span>
+</code></pre>
+<h2 id="join">join</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;baz&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// string(9) &quot;foobarbaz&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;baz&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// string(9) &quot;foobarbaz&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;, &apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;baz&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(13) &quot;foo, bar, baz&quot;</span>
+</code></pre>
+<h2 id="lcfirst">lcfirst</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">lcfirst</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">lcfirst</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;FOO&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;fOO&quot;</span>
+</code></pre>
+<h2 id="levenshtein">levenshtein</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="localeconv">localeconv</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">localeconv</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="ltrim">ltrim</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ltrim</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ltrim</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo &apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// string(4) &quot;foo &quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ltrim</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos; foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ltrim</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot; \r\n\tfoo&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// string(3) &quot;foo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ltrim</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;f&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// string(2) &quot;oo&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ltrim</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;AaBbCc&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A..Z&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(5) &quot;aBbCc&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ltrim</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;AaBbCc&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A..z&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(0) &quot;&quot;</span>
+</code></pre>
+<h2 id="md5file">md5_file</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">md5_file</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">md5_file</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="md5">md5</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">md5</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">md5</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3617,7 +3728,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字符串","level":"1.1.2.14.2","depth":4,"next":{"title":"变量与类型相关扩展","level":"1.1.2.15","depth":3,"path":"docs/函数参考/变量与类型相关扩展.md","ref":"docs/函数参考/变量与类型相关扩展.md","articles":[{"title":"数组","level":"1.1.2.15.1","depth":4,"path":"docs/函数参考/变量与类型相关扩展/数组.md","ref":"docs/函数参考/变量与类型相关扩展/数组.md","articles":[]},{"title":"类与对象","level":"1.1.2.15.2","depth":4,"path":"docs/函数参考/变量与类型相关扩展/类与对象.md","ref":"docs/函数参考/变量与类型相关扩展/类与对象.md","articles":[]},{"title":"字符类型检测","level":"1.1.2.15.3","depth":4,"path":"docs/函数参考/变量与类型相关扩展/字符类型检测.md","ref":"docs/函数参考/变量与类型相关扩展/字符类型检测.md","articles":[]},{"title":"过滤器","level":"1.1.2.15.4","depth":4,"path":"docs/函数参考/变量与类型相关扩展/过滤器.md","ref":"docs/函数参考/变量与类型相关扩展/过滤器.md","articles":[]},{"title":"函数处理","level":"1.1.2.15.5","depth":4,"path":"docs/函数参考/变量与类型相关扩展/函数处理.md","ref":"docs/函数参考/变量与类型相关扩展/函数处理.md","articles":[]},{"title":"反射","level":"1.1.2.15.6","depth":4,"path":"docs/函数参考/变量与类型相关扩展/反射.md","ref":"docs/函数参考/变量与类型相关扩展/反射.md","articles":[]},{"title":"变量","level":"1.1.2.15.7","depth":4,"path":"docs/函数参考/变量与类型相关扩展/变量.md","ref":"docs/函数参考/变量与类型相关扩展/变量.md","articles":[]}]},"previous":{"title":"正则表达式","level":"1.1.2.14.1","depth":4,"path":"docs/函数参考/文本处理/正则表达式.md","ref":"docs/函数参考/文本处理/正则表达式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/文本处理/字符串.md","mtime":"2020-04-14T07:29:41.348Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:01:17.381Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字符串","level":"1.1.2.14.2","depth":4,"next":{"title":"变量与类型相关扩展","level":"1.1.2.15","depth":3,"path":"docs/函数参考/变量与类型相关扩展.md","ref":"docs/函数参考/变量与类型相关扩展.md","articles":[{"title":"数组","level":"1.1.2.15.1","depth":4,"path":"docs/函数参考/变量与类型相关扩展/数组.md","ref":"docs/函数参考/变量与类型相关扩展/数组.md","articles":[]},{"title":"类与对象","level":"1.1.2.15.2","depth":4,"path":"docs/函数参考/变量与类型相关扩展/类与对象.md","ref":"docs/函数参考/变量与类型相关扩展/类与对象.md","articles":[]},{"title":"字符类型检测","level":"1.1.2.15.3","depth":4,"path":"docs/函数参考/变量与类型相关扩展/字符类型检测.md","ref":"docs/函数参考/变量与类型相关扩展/字符类型检测.md","articles":[]},{"title":"过滤器","level":"1.1.2.15.4","depth":4,"path":"docs/函数参考/变量与类型相关扩展/过滤器.md","ref":"docs/函数参考/变量与类型相关扩展/过滤器.md","articles":[]},{"title":"函数处理","level":"1.1.2.15.5","depth":4,"path":"docs/函数参考/变量与类型相关扩展/函数处理.md","ref":"docs/函数参考/变量与类型相关扩展/函数处理.md","articles":[]},{"title":"反射","level":"1.1.2.15.6","depth":4,"path":"docs/函数参考/变量与类型相关扩展/反射.md","ref":"docs/函数参考/变量与类型相关扩展/反射.md","articles":[]},{"title":"变量","level":"1.1.2.15.7","depth":4,"path":"docs/函数参考/变量与类型相关扩展/变量.md","ref":"docs/函数参考/变量与类型相关扩展/变量.md","articles":[]}]},"previous":{"title":"正则表达式","level":"1.1.2.14.1","depth":4,"path":"docs/函数参考/文本处理/正则表达式.md","ref":"docs/函数参考/文本处理/正则表达式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/文本处理/字符串.md","mtime":"2020-04-29T13:38:44.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-30T08:25:57.888Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

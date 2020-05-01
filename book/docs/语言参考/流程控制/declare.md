@@ -5,7 +5,7 @@ Tick （时钟周期）是一个在 `declare` 代码段中解释器每执行 N �
 ```php
 <?php
 
-declare(ticks = 1);
+declare(ticks=1);
 
 /**
  * Just a test function.
@@ -34,7 +34,7 @@ if ($foo > 0) {
 ```php
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 $foo = print_r('foo', 1);
 // PHP Fatal error:  Uncaught TypeError: print_r() expects parameter 2 to be bool, int given.

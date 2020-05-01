@@ -10,7 +10,7 @@ class Foo
     //
 }
 
-$foo = new Foo;
+$foo = new Foo();
 
 ```
 

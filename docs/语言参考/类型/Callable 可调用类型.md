@@ -58,7 +58,7 @@ class Foo
     }
 }
 
-call_user_func([new Foo, 'method']);
+call_user_func([new Foo(), 'method']);
 
 ```
 
@@ -119,7 +119,7 @@ class Bar extends Foo
     }
 }
 
-call_user_func([new Bar, 'parent::method']);
+call_user_func([new Bar(), 'parent::method']);
 
 ```
 
@@ -179,7 +179,7 @@ class Foo
     }
 }
 
-call_user_func(new Foo);
+call_user_func(new Foo());
 
 ```
 

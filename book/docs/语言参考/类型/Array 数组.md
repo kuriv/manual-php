@@ -188,20 +188,20 @@ class Bar
     /**
      * Private property.
      *
-     * @var null
+     * @var string|null
      */
-    private $private;
+    private ?string $private = null;
 }
 
-var_dump((array) null);    // array(0) { }
-var_dump((array) true);    // array(1) { [0]=> bool(true) }
-var_dump((array) false);   // array(1) { [0]=> bool(false) }
-var_dump((array) 0);       // array(1) { [0]=> int(0) }
-var_dump((array) 1);       // array(1) { [0]=> int(1) }
-var_dump((array) 1.001);   // array(1) { [0]=> float(1.001) }
-var_dump((array) 'foo');   // array(1) { [0]=> string(3) "foo" }
-var_dump((array) new Foo); // array(0) { }
-var_dump((array) new Bar); // array(3) { ["public"]=> string(6) "public" ["\0*\0protected"]=> string(9) "protected" ["\0Bar\0private"]=> NULL }
+var_dump((array) null);      // array(0) { }
+var_dump((array) true);      // array(1) { [0]=> bool(true) }
+var_dump((array) false);     // array(1) { [0]=> bool(false) }
+var_dump((array) 0);         // array(1) { [0]=> int(0) }
+var_dump((array) 1);         // array(1) { [0]=> int(1) }
+var_dump((array) 1.001);     // array(1) { [0]=> float(1.001) }
+var_dump((array) 'foo');     // array(1) { [0]=> string(3) "foo" }
+var_dump((array) new Foo()); // array(0) { }
+var_dump((array) new Bar()); // array(3) { ["public"]=> string(6) "public" ["\0*\0protected"]=> string(9) "protected" ["\0Bar\0private"]=> NULL }
 
 ```
 

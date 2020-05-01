@@ -97,7 +97,7 @@ class Foo
     public string $property = 'foo';
 }
 
-$foo = new Foo;
+$foo = new Foo();
 var_dump("foo bar $foo->property baz qux"); // string(19) "foo bar foo baz qux"
 var_dump("foo bar $foo->propertybaz qux");  // string(12) "foo bar  qux"
 
@@ -145,7 +145,7 @@ class Foo
     public string $property = 'foo';
 }
 
-$foo = new Foo;
+$foo = new Foo();
 var_dump("foo bar {$foo->property} baz qux"); // string(19) "foo bar foo baz qux"
 var_dump("foo bar {$foo->property}baz qux");  // string(18) "foo bar foobaz qux"
 

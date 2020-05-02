@@ -17,7 +17,7 @@ class Foo
 
 var_dump(Foo::$property);  // string(3) "foo"
 
-$foo = new Foo;
+$foo = new Foo();
 var_dump($foo::$property); // string(3) "foo"
 
 $foo = 'Foo';
@@ -27,7 +27,7 @@ $foo = 'Foo';
 $foo = new $foo;
 var_dump($foo::$property); // string(3) "foo"
 
-$foo = new Foo;
+$foo = new Foo();
 $foo = new $foo;
 var_dump($foo::$property); // string(3) "foo"
 
@@ -54,7 +54,7 @@ class Foo
 
 var_dump(Foo::method());  // string(3) "foo"
 
-$foo = new Foo;
+$foo = new Foo();
 var_dump($foo::method()); // string(3) "foo"
 
 $foo = 'Foo';
@@ -64,7 +64,7 @@ $foo = 'Foo';
 $foo = new $foo;
 var_dump($foo::method()); // string(3) "foo"
 
-$foo = new Foo;
+$foo = new Foo();
 $foo = new $foo;
 var_dump($foo::method()); // string(3) "foo"
 

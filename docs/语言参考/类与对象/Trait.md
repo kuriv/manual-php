@@ -29,10 +29,10 @@ class Baz
     use Foo;
 }
 
-$bar = new Bar;
+$bar = new Bar();
 var_dump($bar->method()); // string(3) "foo"
 
-$baz = new Baz;
+$baz = new Baz();
 var_dump($baz->method()); // string(3) "foo"
 
 ```
@@ -91,15 +91,15 @@ class Qux extends Foo
     }
 }
 
-$baz = new Baz;
+$baz = new Baz();
 var_dump($baz->method()); // string(3) "bar"
 
-$qux = new Qux;
+$qux = new Qux();
 var_dump($qux->method()); // string(3) "baz"
 
 ```
 
-通过逗号分隔，在 `use` 声明列出多个 Trait ，可以都插入到一个类中。
+在一个类中使用多个 Trait。
 
 ```php
 <?php
@@ -134,10 +134,11 @@ trait Bar
 
 class Baz
 {
-    use Foo, Bar;
+    use Foo;
+    use Bar;
 }
 
-$baz = new Baz;
+$baz = new Baz();
 var_dump($baz->foo()); // string(3) "foo"
 var_dump($baz->bar()); // string(3) "bar"
 
@@ -178,31 +179,29 @@ trait Bar
 
 class Baz
 {
-    use Foo, Bar
-    {
+    use Foo, Bar {
         Foo::method insteadof Bar;
     }
 }
 
 class Qux
 {
-    use Foo, Bar
-    {
+    use Foo, Bar {
         Bar::method insteadof Foo;
         Bar::method as test;
     }
 }
 
-$baz = new Baz;
+$baz = new Baz();
 var_dump($baz->method()); // string(3) "foo"
 
-$qux = new Qux;
+$qux = new Qux();
 var_dump($qux->method()); // string(3) "bar"
 var_dump($qux->test());   // string(3) "bar"
 
 ```
 
-使用 `as` 语法还可以用来调整方法的访问控制。
+使用 `as` 关键字还可以用来调整方法的访问控制。
 
 ```php
 <?php
@@ -223,24 +222,22 @@ trait Foo
 
 class Bar
 {
-    use Foo
-    {
+    use Foo {
         Foo::method as public;
     }
 }
 
 class Baz
 {
-    use Foo
-    {
+    use Foo {
         Foo::method as public test;
     }
 }
 
-$bar = new Bar;
+$bar = new Bar();
 var_dump($bar->method()); // string(3) "foo"
 
-$baz = new Baz;
+$baz = new Baz();
 var_dump($baz->method()); // PHP Fatal error:  Uncaught Error: Call to protected method Baz::method() from context ''
 var_dump($baz->test());   // string(3) "foo"
 
@@ -281,7 +278,8 @@ trait Bar
 
 trait Baz
 {
-    use Foo, Bar;
+    use Foo;
+    use Bar;
 }
 
 class Qux
@@ -289,7 +287,7 @@ class Qux
     use Baz;
 }
 
-$qux = new Qux;
+$qux = new Qux();
 var_dump($qux->foo()); // string(3) "foo"
 var_dump($qux->bar()); // string(3) "bar"
 
@@ -327,7 +325,7 @@ class Bar
     }
 }
 
-$bar = new Bar;
+$bar = new Bar();
 var_dump($bar->method()); // string(3) "bar"
 
 ```

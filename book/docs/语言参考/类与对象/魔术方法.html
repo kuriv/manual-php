@@ -3469,7 +3469,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>PHP &#x5F15;&#x5165;&#x4E86;&#x6790;&#x6784;&#x51FD;&#x6570;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x5230;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5F15;&#x7528;&#x90FD;&#x88AB;&#x5220;&#x9664;&#x6216;&#x8005;&#x5F53;&#x5BF9;&#x8C61;&#x88AB;&#x663E;&#x5F0F;&#x9500;&#x6BC1;&#x65F6;&#x6267;&#x884C;&#x3002;</p>
@@ -3489,7 +3489,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">unset</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
@@ -3511,7 +3511,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(14) &quot;method+foo+bar&quot;</span>
 </code></pre>
 <p>&#x5728;&#x9759;&#x6001;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x4E0D;&#x53EF;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C; <code>__callStatic()</code> &#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
@@ -3552,7 +3552,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
@@ -3580,7 +3580,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x5F53;&#x5BF9;&#x4E0D;&#x53EF;&#x8BBF;&#x95EE;&#x5C5E;&#x6027;&#x8C03;&#x7528; <code>isset()</code> &#x6216; <code>empty()</code> &#x65F6;&#xFF0C; <code>__isset()</code> &#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
@@ -3607,7 +3607,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <p>&#x5F53;&#x5BF9;&#x4E0D;&#x53EF;&#x8BBF;&#x95EE;&#x5C5E;&#x6027;&#x8C03;&#x7528; <code>unset()</code> &#x65F6;&#xFF0C; <code>__unset()</code> &#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
@@ -3645,7 +3645,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 <span class="token keyword">unset</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
@@ -3688,7 +3688,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">serialize</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(40) &quot;O:3:&quot;Foo&quot;:1:{s:6:&quot;public&quot;;s:6:&quot;public&quot;;}&quot;</span>
 </code></pre>
 <p>&#x4E0E;&#x4E4B;&#x76F8;&#x53CD;&#xFF0C; <code>unserialize()</code> &#x4F1A;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E00;&#x4E2A; <code>__wakeup()</code> &#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4F1A;&#x5148;&#x8C03;&#x7528; <code>__wakeup()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x9884;&#x5148;&#x51C6;&#x5907;&#x5BF9;&#x8C61;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#x3002; <code>__wakeup()</code> &#x7ECF;&#x5E38;&#x7528;&#x5728;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x64CD;&#x4F5C;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#x91CD;&#x65B0;&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#xFF0C;&#x6216;&#x6267;&#x884C;&#x5176;&#x5B83;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x3002;</p>
@@ -3749,7 +3749,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">echo</span> <span class="token variable">$foo</span> <span class="token punctuation">.</span> <span class="token double-quoted-string string">&quot;\r\n&quot;</span><span class="token punctuation">;</span>  <span class="token comment">// foo</span>
 <span class="token keyword">print</span> <span class="token variable">$foo</span> <span class="token punctuation">.</span> <span class="token double-quoted-string string">&quot;\r\n&quot;</span><span class="token punctuation">;</span> <span class="token comment">// foo</span>
 </code></pre>
@@ -3770,7 +3770,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
 </code></pre>
 <p>&#x5F53;&#x8C03;&#x7528; <code>var_export()</code> &#x51FD;&#x6570;&#x5BFC;&#x51FA;&#x7C7B;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x65F6;&#xFF0C; <code>__set_state()</code> &#x9759;&#x6001;&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x7684;&#x552F;&#x4E00;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6309;&#x6570;&#x7EC4;&#x952E;&#x503C;&#x5BF9;&#x683C;&#x5F0F;&#x6392;&#x5217;&#x7684;&#x7C7B;&#x5C5E;&#x6027;&#x3002;</p>
@@ -3799,7 +3799,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">property</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
 <span class="token function">var_export</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Foo::__set_state(array( &apos;property&apos; =&gt; &apos;foo&apos;, ))</span>
 
@@ -3867,7 +3867,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$spike</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">;</span>
+<span class="token variable">$spike</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token variable">$spike</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">name</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;Spike&apos;</span><span class="token punctuation">;</span>
 <span class="token variable">$spike</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">cat</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Tom&apos;</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token variable">$tyke</span> <span class="token operator">=</span> <span class="token keyword">clone</span> <span class="token variable">$spike</span><span class="token punctuation">;</span>
@@ -3921,7 +3921,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (3) { [&quot;public&quot;]=&gt; string(6) &quot;public&quot; [&quot;protected&quot;]=&gt; string(9) &quot;protected&quot; [&quot;private&quot;]=&gt; string(7) &quot;private&quot; }</span>
 </code></pre>
 
@@ -3967,7 +3967,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"魔术方法","level":"1.1.1.9.16","depth":4,"next":{"title":"Final 关键字","level":"1.1.1.9.17","depth":4,"path":"docs/语言参考/类与对象/Final 关键字.md","ref":"docs/语言参考/类与对象/Final 关键字.md","articles":[]},"previous":{"title":"遍历对象","level":"1.1.1.9.15","depth":4,"path":"docs/语言参考/类与对象/遍历对象.md","ref":"docs/语言参考/类与对象/遍历对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/类与对象/魔术方法.md","mtime":"2020-02-14T12:08:16.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T09:25:10.183Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"魔术方法","level":"1.1.1.9.16","depth":4,"next":{"title":"Final 关键字","level":"1.1.1.9.17","depth":4,"path":"docs/语言参考/类与对象/Final 关键字.md","ref":"docs/语言参考/类与对象/Final 关键字.md","articles":[]},"previous":{"title":"遍历对象","level":"1.1.1.9.15","depth":4,"path":"docs/语言参考/类与对象/遍历对象.md","ref":"docs/语言参考/类与对象/遍历对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/类与对象/魔术方法.md","mtime":"2020-05-02T07:36:02.353Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-02T08:04:14.089Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

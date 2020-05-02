@@ -3456,35 +3456,35 @@
      *
      * @var int
      */</span>
-    <span class="token keyword">const</span> <span class="token constant">FOO</span> <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token constant">FOO</span> <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Just a test constant.
      *
      * @var string
      */</span>
-    <span class="token keyword">const</span> <span class="token constant">BAR</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">EOT</span>
-                   bar
-                   <span class="token constant">EOT</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token constant">BAR</span> <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token constant">EOT</span>
+                          bar
+                          <span class="token constant">EOT</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Just a test constant.
      *
      * @var array
      */</span>
-    <span class="token keyword">const</span> <span class="token constant">BAZ</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean constant">true</span><span class="token punctuation">,</span> <span class="token boolean constant">false</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token constant">BAZ</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean constant">true</span><span class="token punctuation">,</span> <span class="token boolean constant">false</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Just a test constant.
      *
      * @var resource
      */</span>
-    <span class="token keyword">const</span> <span class="token constant">QUX</span> <span class="token operator">=</span> <span class="token constant">QUX</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token constant">QUX</span> <span class="token operator">=</span> <span class="token constant">QUX</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token function">var_dump</span><span class="token punctuation">(</span>Foo<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">FOO</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(5)</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">FOO</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(5)</span>
 
 <span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">;</span>
@@ -3494,7 +3494,7 @@
 <span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">BAZ</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(2) { [0]=&gt; bool(true) [1]=&gt; bool(false) }</span>
 
-<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">;</span>
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">QUX</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (stream)</span>
 </code></pre>
@@ -3508,7 +3508,7 @@
      *
      * @var string
      */</span>
-    <span class="token keyword">const</span> <span class="token constant">CONSTANT</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token constant">CONSTANT</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span>
@@ -3518,7 +3518,7 @@
      *
      * @var string
      */</span>
-    <span class="token keyword">const</span> <span class="token constant">CONSTANT</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token constant">CONSTANT</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">class</span> <span class="token class-name">Baz</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span>
@@ -3528,7 +3528,7 @@
      *
      * @var string
      */</span>
-    <span class="token keyword">const</span> <span class="token constant">CONSTANT</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;baz&apos;</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token constant">CONSTANT</span> <span class="token operator">=</span> <span class="token single-quoted-string string">&apos;baz&apos;</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token function">var_dump</span><span class="token punctuation">(</span>Foo<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">CONSTANT</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
@@ -3578,7 +3578,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"类常量","level":"1.1.1.9.3","depth":4,"next":{"title":"类的自动加载","level":"1.1.1.9.4","depth":4,"path":"docs/语言参考/类与对象/类的自动加载.md","ref":"docs/语言参考/类与对象/类的自动加载.md","articles":[]},"previous":{"title":"属性","level":"1.1.1.9.2","depth":4,"path":"docs/语言参考/类与对象/属性.md","ref":"docs/语言参考/类与对象/属性.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/类与对象/类常量.md","mtime":"2020-02-14T10:35:18.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T09:25:10.183Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"类常量","level":"1.1.1.9.3","depth":4,"next":{"title":"类的自动加载","level":"1.1.1.9.4","depth":4,"path":"docs/语言参考/类与对象/类的自动加载.md","ref":"docs/语言参考/类与对象/类的自动加载.md","articles":[]},"previous":{"title":"属性","level":"1.1.1.9.2","depth":4,"path":"docs/语言参考/类与对象/属性.md","ref":"docs/语言参考/类与对象/属性.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/语言参考/类与对象/类常量.md","mtime":"2020-05-02T06:59:27.177Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-02T08:04:14.089Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

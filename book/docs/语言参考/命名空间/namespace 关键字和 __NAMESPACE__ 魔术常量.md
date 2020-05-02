@@ -73,9 +73,9 @@ function bar(): string
 
 const BAR = __NAMESPACE__;
 
-var_dump(new namespace\Bar); // object(Foo\Bar)#1 (0) { }
-var_dump(namespace\bar());   // string(3) "Foo"
-var_dump(namespace\BAR);     // string(3) "Foo"
+var_dump(new namespace\Bar()); // object(Foo\Bar)#1 (0) { }
+var_dump(namespace\bar());     // string(3) "Foo"
+var_dump(namespace\BAR);       // string(3) "Foo"
 
 ```
 
@@ -102,9 +102,9 @@ function bar(): string
 
 const BAR = __NAMESPACE__;
 
-var_dump(new namespace\Bar); // object(Bar)#1 (0) { }
-var_dump(namespace\bar());   // string(0) ""
-var_dump(namespace\BAR);     // string(0) ""
+var_dump(new namespace\Bar()); // object(Bar)#1 (0) { }
+var_dump(namespace\bar());     // string(0) ""
+var_dump(namespace\BAR);       // string(0) ""
 
 ```
 

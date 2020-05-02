@@ -59,7 +59,7 @@ class Foo implements Serializable
     }
 }
 
-$foo = new Foo;
+$foo = new Foo();
 $data = serialize($foo);
 var_dump($data);          // string(25) "C:3:"Foo":10:{s:3:"foo";}"
 

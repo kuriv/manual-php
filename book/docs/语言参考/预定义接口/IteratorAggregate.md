@@ -47,7 +47,7 @@ class Foo implements IteratorAggregate
     }
 }
 
-$foo = new Foo;
+$foo = new Foo();
 foreach ($foo as $key => $value) {
     var_dump("$key => $value");
 }

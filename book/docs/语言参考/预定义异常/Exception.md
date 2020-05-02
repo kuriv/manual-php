@@ -58,7 +58,7 @@ try {
 <?php
 
 try {
-    throw new Exception;
+    throw new Exception();
 } catch (Exception $e) {
     var_dump($e->getFile());
 }
@@ -71,7 +71,7 @@ try {
 <?php
 
 try {
-    throw new Exception;
+    throw new Exception();
 } catch (Exception $e) {
     var_dump($e->getLine()); // int(6)
 }
@@ -91,7 +91,7 @@ try {
  */
 function foo()
 {
-    throw new Exception;
+    throw new Exception();
 }
 
 try {
@@ -115,7 +115,7 @@ try {
  */
 function foo()
 {
-    throw new Exception;
+    throw new Exception();
 }
 
 try {
@@ -139,7 +139,7 @@ try {
  */
 function foo()
 {
-    throw new Exception;
+    throw new Exception();
 }
 
 try {
@@ -155,7 +155,7 @@ try {
 ```php
 <?php
 
-$foo = new Exception;
+$foo = new Exception();
 $bar = clone $foo;
 // PHP Fatal error:  Uncaught Error: Trying to clone an uncloneable object of class Exception.
 

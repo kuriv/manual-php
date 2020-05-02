@@ -63,9 +63,9 @@ class Foo
 $foo = function (): string {
     return static::$foo;
 };
-$method = Closure::bind($foo, new Foo);
+$method = Closure::bind($foo, new Foo());
 var_dump($method());            // string(3) "foo"
-$method = $foo->bindTo(new Foo);
+$method = $foo->bindTo(new Foo());
 var_dump($method());            // string(3) "foo"
 
 /**
@@ -77,9 +77,9 @@ var_dump($method());            // string(3) "foo"
 $bar = function (): string {
     return $this->bar;
 };
-$method = Closure::bind($bar, new Foo);
+$method = Closure::bind($bar, new Foo());
 var_dump($method());            // string(3) "bar"
-$method = $bar->bindTo(new Foo);
+$method = $bar->bindTo(new Foo());
 var_dump($method());            // string(3) "bar"
 
 /**
@@ -91,9 +91,9 @@ var_dump($method());            // string(3) "bar"
 $baz = function (): string {
     return static::$baz;
 };
-$method = Closure::bind($baz, new Foo, 'Foo');
+$method = Closure::bind($baz, new Foo(), 'Foo');
 var_dump($method());            // string(3) "baz"
-$method = $baz->bindTo(new Foo, 'Foo');
+$method = $baz->bindTo(new Foo(), 'Foo');
 var_dump($method());            // string(3) "baz"
 
 /**
@@ -105,9 +105,9 @@ var_dump($method());            // string(3) "baz"
 $qux = function (): string {
     return $this->qux;
 };
-$method = Closure::bind($qux, new Foo, 'Foo');
+$method = Closure::bind($qux, new Foo(), 'Foo');
 var_dump($method());            // string(3) "qux"
-$method = $qux->bindTo(new Foo, 'Foo');
+$method = $qux->bindTo(new Foo(), 'Foo');
 var_dump($method());            // string(3) "qux"
 
 /**
@@ -119,9 +119,9 @@ var_dump($method());            // string(3) "qux"
 $quux = function (): int {
     return $this->quux += 5;
 };
-var_dump($quux->call(new Foo)); // int(6)
+var_dump($quux->call(new Foo())); // int(6)
 
-$quuz = Closure::fromCallable([new Foo, 'method']);
+$quuz = Closure::fromCallable([new Foo(), 'method']);
 var_dump($quuz());              // string(6) "method"
 
 ```

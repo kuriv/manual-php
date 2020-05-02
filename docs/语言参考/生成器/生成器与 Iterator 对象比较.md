@@ -128,7 +128,7 @@ foreach ($foo as $value) {
 }
 // PHP Fatal error:  Uncaught Exception: Cannot traverse an already closed generator.
 
-$foo = new Foo;
+$foo = new Foo();
 foreach ($foo as $value) {
     var_dump($value);
 }

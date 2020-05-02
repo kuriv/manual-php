@@ -1,10 +1,10 @@
 # php://
 
-* [php://stdin php://stdout php://stderr](#phpstdin-phpstdout-phpstderr)
+* [php://stdin 和 php://stdout 和 php://stderr](#phpstdin-和-phpstdout-和-phpstderr)
 * [php://input](#phpinput)
 * [php://output](#phpoutput)
 * [php://fd](#phpfd)
-* [php://memory php://temp](#phpmemory-phptemp)
+* [php://memory 和 php://temp](#phpmemory-和-phptemp)
 * [php://filter](#phpfilter)
 
 |           属性            |                    支持                    |
@@ -22,9 +22,9 @@
 |      支持 `rmdir()`       |                     No                     |
 |      仅仅支持 `stream_select()`      |                     `php://stdin`<br/>`php://stdout`<br/>`php://stderr`<br/>`php://fd`<br/>`php://temp`                     |
 
-## php://stdin php://stdout php://stderr
+## php://stdin 和 php://stdout 和 php://stderr
 
-`php://stdin` 、 `php://stdout` 和 `php://stderr` 允许直接访问 PHP 进程相应的输入或者输出流。数据流引用了复制的文件描述符，所以如果打开 `php://stdin` 并在之后关了它，仅是关闭了复制品，真正被引用的 STDIN 并不受影响。 `php://stdin` 是只读的， `php://stdout` 和 `php://stderr` 是只写的。
+`php://stdin` 和 `php://stdout` 和 `php://stderr` 允许直接访问 PHP 进程相应的输入或者输出流。数据流引用了复制的文件描述符，所以如果打开 `php://stdin` 并在之后关了它，仅是关闭了复制品，真正被引用的 STDIN 并不受影响。 `php://stdin` 是只读的， `php://stdout` 和 `php://stderr` 是只写的。
 
 ## php://input
 
@@ -38,7 +38,7 @@
 
 `php://fd` 允许直接访问指定的文件描述符，例如 `php://fd/3` 引用了文件描述符 3 。
 
-## php://memory php://temp
+## php://memory 和 php://temp
 
 `php://memory` 和 `php://temp` 是一个类似文件包装器的数据流，允许读写临时数据。两者的唯一区别是 `php://memory` 总是把数据储存在内存中，而 `php://temp` 会在内存量达到预定义的限制后存入临时文件中。
 

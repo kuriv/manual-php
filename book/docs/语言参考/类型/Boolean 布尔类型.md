@@ -32,22 +32,22 @@ if ($bar) {
 ```php
 <?php
 
-var_dump((bool) -10);          // bool(true)
-var_dump((bool) 0);            // bool(false)
-var_dump((bool) 0.0);          // bool(false)
-var_dump((bool) 0.0001);       // bool(true)
-var_dump((bool) 1);            // bool(true)
-var_dump((bool) '');           // bool(false)
-var_dump((bool) '0');          // bool(false)
-var_dump((bool) '0.00');       // bool(true)
-var_dump((bool) '1');          // bool(true)
-var_dump((bool) 'foo');        // bool(true)
-var_dump((bool) 'false');      // bool(true)
-var_dump((bool) false);        // bool(false)
-var_dump((bool) 2.3e5);        // bool(true)
-var_dump((bool) []);           // bool(false)
-var_dump((bool) [2, 4, 5]);    // bool(true)
-var_dump((bool) new stdClass); // bool(true)
+var_dump((bool) -10);            // bool(true)
+var_dump((bool) 0);              // bool(false)
+var_dump((bool) 0.0);            // bool(false)
+var_dump((bool) 0.0001);         // bool(true)
+var_dump((bool) 1);              // bool(true)
+var_dump((bool) '');             // bool(false)
+var_dump((bool) '0');            // bool(false)
+var_dump((bool) '0.00');         // bool(true)
+var_dump((bool) '1');            // bool(true)
+var_dump((bool) 'foo');          // bool(true)
+var_dump((bool) 'false');        // bool(true)
+var_dump((bool) false);          // bool(false)
+var_dump((bool) 2.3e5);          // bool(true)
+var_dump((bool) []);             // bool(false)
+var_dump((bool) [2, 4, 5]);      // bool(true)
+var_dump((bool) new stdClass()); // bool(true)
 
 ```
 

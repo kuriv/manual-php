@@ -463,7 +463,7 @@ var_dump($xmlIterator->valid()); // bool(false)
 ```php
 <?php
 
-$dom = new DomDocument;
+$dom = new DomDocument();
 $dom->loadXML('<document><title>XML</title><body>Here is some text.</body></document>');
 var_dump(simplexml_import_dom($dom)); // object(SimpleXMLElement)#2 (2) { ["title"]=> string(3) "XML" ["body"]=> string(18) "Here is some text." }
 

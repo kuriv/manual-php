@@ -316,7 +316,7 @@ class Foo
     //
 }
 
-var_dump(xml_set_object(xml_parser_create(), new Foo)); // bool(true)
+var_dump(xml_set_object(xml_parser_create(), new Foo())); // bool(true)
 
 ```
 

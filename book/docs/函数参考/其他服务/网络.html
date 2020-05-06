@@ -3444,6 +3444,72 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7F51;&#x7EDC;">&#x7F51;&#x7EDC;</h1>
+<ul>
+<li>[checkdnsrr - &#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x6216;&#x8005; IP &#x5730;&#x5740;&#x505A; DNS &#x901A;&#x4FE1;&#x68C0;&#x67E5;]</li>
+<li>[closelog - &#x5173;&#x95ED;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x94FE;&#x63A5;]</li>
+<li>[dns_check_record - &#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x6216;&#x8005; IP &#x5730;&#x5740;&#x505A; DNS &#x901A;&#x4FE1;&#x68C0;&#x67E5;]</li>
+<li>[dns_get_mx - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; MX &#x8BB0;&#x5F55;]</li>
+<li>[dns_get_record - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x7684; DNS &#x8BB0;&#x5F55;]</li>
+<li>[fsockopen - &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x6216;&#x8005;&#x4E00;&#x4E2A; Unix &#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;]</li>
+<li>[gethostbyaddr - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684; IP &#x5730;&#x5740;&#x5BF9;&#x5E94;&#x7684;&#x4E3B;&#x673A;&#x540D;]</li>
+<li>[gethostbyname - &#x8FD4;&#x56DE;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; IPv4 &#x5730;&#x5740;]</li>
+<li>[gethostbynamel - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; IPv4 &#x5730;&#x5740;&#x5217;&#x8868;]</li>
+<li>[gethostname - &#x83B7;&#x53D6;&#x4E3B;&#x673A;&#x540D;]</li>
+<li>[getmxrr - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; MX &#x8BB0;&#x5F55;]</li>
+</ul>
+<h2 id="checkdnsrr">checkdnsrr</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;MX&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="closelog">closelog</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">closelog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="dnscheckrecord">dns_check_record</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;MX&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="dnsgetmx">dns_get_mx</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="dnsgetrecord">dns_get_record</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="fsockopen">fsockopen</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="gethostbyaddr">gethostbyaddr</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="gethostbyname">gethostbyname</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="gethostbynamel">gethostbynamel</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="gethostname">gethostname</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="getmxrr">getmxrr</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
 
                                 
                                 </section>
@@ -3487,7 +3553,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网络","level":"1.1.2.12.2","depth":4,"next":{"title":"Sockets","level":"1.1.2.12.3","depth":4,"path":"docs/函数参考/其他服务/Sockets.md","ref":"docs/函数参考/其他服务/Sockets.md","articles":[]},"previous":{"title":"CURL","level":"1.1.2.12.1","depth":4,"path":"docs/函数参考/其他服务/CURL.md","ref":"docs/函数参考/其他服务/CURL.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他服务/网络.md","mtime":"2019-05-20T15:33:30.203Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-05T08:36:40.368Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"网络","level":"1.1.2.12.2","depth":4,"next":{"title":"Sockets","level":"1.1.2.12.3","depth":4,"path":"docs/函数参考/其他服务/Sockets.md","ref":"docs/函数参考/其他服务/Sockets.md","articles":[]},"previous":{"title":"CURL","level":"1.1.2.12.1","depth":4,"path":"docs/函数参考/其他服务/CURL.md","ref":"docs/函数参考/其他服务/CURL.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他服务/网络.md","mtime":"2020-05-06T06:49:47.652Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-06T06:51:55.444Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

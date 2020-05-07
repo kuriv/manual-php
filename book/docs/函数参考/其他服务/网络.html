@@ -77,7 +77,7 @@
     <link rel="next" href="Sockets.html" />
     
     
-    <link rel="prev" href="CURL.html" />
+    <link rel="prev" href="cURL.html" />
     
 
     
@@ -2919,12 +2919,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.2.12.1" data-path="CURL.html">
+        <li class="chapter " data-level="1.1.2.12.1" data-path="cURL.html">
             
-                <a href="CURL.html">
+                <a href="cURL.html">
             
                     
-                    CURL
+                    cURL
             
                 </a>
             
@@ -3445,25 +3445,47 @@
                                 
                                 <h1 id="&#x7F51;&#x7EDC;">&#x7F51;&#x7EDC;</h1>
 <ul>
-<li>[checkdnsrr - &#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x6216;&#x8005; IP &#x5730;&#x5740;&#x505A; DNS &#x901A;&#x4FE1;&#x68C0;&#x67E5;]</li>
-<li>[closelog - &#x5173;&#x95ED;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x94FE;&#x63A5;]</li>
-<li>[dns_check_record - &#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x6216;&#x8005; IP &#x5730;&#x5740;&#x505A; DNS &#x901A;&#x4FE1;&#x68C0;&#x67E5;]</li>
-<li>[dns_get_mx - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; MX &#x8BB0;&#x5F55;]</li>
-<li>[dns_get_record - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x7684; DNS &#x8BB0;&#x5F55;]</li>
-<li>[fsockopen - &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x6216;&#x8005;&#x4E00;&#x4E2A; Unix &#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;]</li>
-<li>[gethostbyaddr - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684; IP &#x5730;&#x5740;&#x5BF9;&#x5E94;&#x7684;&#x4E3B;&#x673A;&#x540D;]</li>
-<li>[gethostbyname - &#x8FD4;&#x56DE;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; IPv4 &#x5730;&#x5740;]</li>
-<li>[gethostbynamel - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; IPv4 &#x5730;&#x5740;&#x5217;&#x8868;]</li>
-<li>[gethostname - &#x83B7;&#x53D6;&#x4E3B;&#x673A;&#x540D;]</li>
-<li>[getmxrr - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; MX &#x8BB0;&#x5F55;]</li>
+<li><a href="#checkdnsrr">checkdnsrr - &#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x6216;&#x8005; IP &#x5730;&#x5740;&#x505A; DNS &#x901A;&#x4FE1;&#x68C0;&#x67E5;</a></li>
+<li><a href="#closelog">closelog - &#x5173;&#x95ED;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x94FE;&#x63A5;</a></li>
+<li><a href="#dnscheckrecord">dns_check_record - &#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x6216;&#x8005; IP &#x5730;&#x5740;&#x505A; DNS &#x901A;&#x4FE1;&#x68C0;&#x67E5;</a></li>
+<li><a href="#dnsgetmx">dns_get_mx - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; MX &#x8BB0;&#x5F55;</a></li>
+<li><a href="#dnsgetrecord">dns_get_record - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x7684; DNS &#x8BB0;&#x5F55;</a></li>
+<li><a href="#fsockopen">fsockopen - &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x6216;&#x8005;&#x4E00;&#x4E2A; Unix &#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#gethostbyaddr">gethostbyaddr - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684; IP &#x5730;&#x5740;&#x5BF9;&#x5E94;&#x7684;&#x4E3B;&#x673A;&#x540D;</a></li>
+<li><a href="#gethostbyname">gethostbyname - &#x8FD4;&#x56DE;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; IPv4 &#x5730;&#x5740;</a></li>
+<li><a href="#gethostbynamel">gethostbynamel - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; IPv4 &#x5730;&#x5740;&#x5217;&#x8868;</a></li>
+<li><a href="#gethostname">gethostname - &#x83B7;&#x53D6;&#x4E3B;&#x673A;&#x540D;</a></li>
+<li><a href="#getmxrr">getmxrr - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E3B;&#x673A;&#x540D;&#x5BF9;&#x5E94;&#x7684; MX &#x8BB0;&#x5F55;</a></li>
+<li><a href="#getprotobyname">getprotobyname - &#x83B7;&#x53D6;&#x4E0E;&#x534F;&#x8BAE;&#x540D;&#x79F0;&#x5173;&#x8054;&#x7684;&#x534F;&#x8BAE;&#x7F16;&#x53F7;</a></li>
+<li><a href="#getprotobynumber">getprotobynumber - &#x83B7;&#x53D6;&#x4E0E;&#x534F;&#x8BAE;&#x7F16;&#x53F7;&#x5173;&#x8054;&#x7684;&#x534F;&#x8BAE;&#x540D;&#x79F0;</a></li>
+<li><a href="#getservbyname">getservbyname - &#x83B7;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x670D;&#x52A1;&#x534F;&#x8BAE;&#x5BF9;&#x5E94;&#x7684;&#x7AEF;&#x53E3;</a></li>
+<li><a href="#getservbyport">getservbyport - &#x83B7;&#x53D6;&#x4E0E;&#x7AEF;&#x53E3;&#x548C;&#x534F;&#x8BAE;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x4E92;&#x8054;&#x7F51;&#x670D;&#x52A1;</a></li>
+<li><a href="#headerregistercallback">header_register_callback - &#x8C03;&#x7528;&#x4E00;&#x4E2A; header &#x51FD;&#x6570;</a></li>
+<li><a href="#headerremove">header_remove - &#x5220;&#x9664;&#x4E4B;&#x524D;&#x8BBE;&#x7F6E;&#x7684; HTTP &#x5934;</a></li>
+<li><a href="#header">header - &#x53D1;&#x9001;&#x539F;&#x751F; HTTP &#x5934;</a></li>
+<li><a href="#headerslist">headers_list - &#x8FD4;&#x56DE;&#x5DF2;&#x53D1;&#x9001;&#x7684; HTTP &#x54CD;&#x5E94;&#x5934;&#xFF08;&#x6216;&#x51C6;&#x5907;&#x53D1;&#x9001;&#x7684;&#xFF09;</a></li>
+<li><a href="#headerssent">headers_sent - &#x68C0;&#x6D4B; HTTP &#x5934;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x53D1;&#x9001;</a></li>
+<li><a href="#httpresponsecode">http_response_code - &#x83B7;&#x53D6; / &#x8BBE;&#x7F6E;&#x54CD;&#x5E94;&#x7684; HTTP &#x72B6;&#x6001;&#x7801;</a></li>
+<li><a href="#inetntop">inet_ntop - &#x5C06;&#x538B;&#x7F29;&#x7684; IP &#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x4EBA;&#x7C7B;&#x53EF;&#x8BFB;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;</a></li>
+<li><a href="#inetpton">inet_pton - &#x5C06;&#x4EBA;&#x7C7B;&#x53EF;&#x8BFB;&#x7684; IP &#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x538B;&#x7F29;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;</a></li>
+<li><a href="#ip2long">ip2long - &#x5C06; IPV4 &#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E92;&#x8054;&#x7F51;&#x534F;&#x8BAE;&#x8F6C;&#x6362;&#x6210;&#x957F;&#x6574;&#x578B;&#x6570;&#x5B57;</a></li>
+<li><a href="#long2ip">long2ip - &#x5C06;&#x957F;&#x6574;&#x578B;&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x5E26;&#x70B9;&#x7684;&#x4E92;&#x8054;&#x7F51;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x5730;&#x5740;&#xFF08;IPV4&#xFF09;</a></li>
+<li><a href="#openlog">openlog - &#x6253;&#x5F00;&#x4E0E;&#x7CFB;&#x7EDF;&#x8BB0;&#x5F55;&#x5668;&#x7684;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#pfsockopen">pfsockopen - &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6301;&#x4E45;&#x7684;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x6216;&#x8005; Unix &#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#setcookie">setcookie - &#x53D1;&#x9001; Cookie</a></li>
+<li><a href="#setrawcookie">setrawcookie - &#x53D1;&#x9001;&#x672A;&#x7ECF; URL &#x7F16;&#x7801;&#x7684; cookie</a></li>
+<li><a href="#socketgetstatus">socket_get_status - &#x4ECE;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x4E2D;&#x53D6;&#x5F97;&#x62A5;&#x5934;&#xFF0F;&#x5143;&#x6570;&#x636E;</a></li>
+<li><a href="#socketsetblocking">socket_set_blocking - &#x4E3A;&#x8D44;&#x6E90;&#x6D41;&#x8BBE;&#x7F6E;&#x963B;&#x585E;&#x6216;&#x8005;&#x963B;&#x585E;&#x6A21;&#x5F0F;</a></li>
+<li><a href="#socketsettimeout">socket_set_timeout - &#x5728;&#x8D44;&#x6E90;&#x6D41;&#x4E0A;&#x8BBE;&#x7F6E;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</a></li>
+<li><a href="#syslog">syslog - &#x751F;&#x6210;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x6D88;&#x606F;</a></li>
 </ul>
 <h2 id="checkdnsrr">checkdnsrr</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(true)</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;MX&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">checkdnsrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="closelog">closelog</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3475,40 +3497,219 @@
 
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(true)</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;MX&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_check_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="dnsgetmx">dns_get_mx</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_get_mx</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token variable">$mxhosts</span><span class="token punctuation">,</span> <span class="token variable">$weight</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$mxhosts</span><span class="token punctuation">,</span> <span class="token variable">$weight</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="dnsgetrecord">dns_get_record</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_get_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_get_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token constant">DNS_ANY</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_get_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token constant">DNS_MX</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_get_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token constant">DNS_A</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">dns_get_record</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token constant">DNS_ANY</span><span class="token punctuation">,</span> <span class="token variable">$authns</span><span class="token punctuation">,</span> <span class="token variable">$addtl</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$authns</span><span class="token punctuation">,</span> <span class="token variable">$addtl</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="fsockopen">fsockopen</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fsockopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// resource(4) of type (stream)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fsockopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token variable">$errno</span><span class="token punctuation">,</span> <span class="token variable">$errstr</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (stream)</span>
 </code></pre>
 <h2 id="gethostbyaddr">gethostbyaddr</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gethostbyaddr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gethostbyaddr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;192.30.255.112&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gethostbyaddr</span><span class="token punctuation">(</span><span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;REMOTE_ADDR&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="gethostbyname">gethostbyname</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gethostbyname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gethostbyname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="gethostbynamel">gethostbynamel</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gethostbynamel</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gethostbynamel</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="gethostname">gethostname</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">gethostname</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="getmxrr">getmxrr</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getmxrr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;github.com&apos;</span><span class="token punctuation">,</span> <span class="token variable">$mxhosts</span><span class="token punctuation">,</span> <span class="token variable">$weight</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$mxhosts</span><span class="token punctuation">,</span> <span class="token variable">$weight</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="getprotobyname">getprotobyname</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getprotobyname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(6)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getprotobyname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;udp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(17)</span>
+</code></pre>
+<h2 id="getprotobynumber">getprotobynumber</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getprotobynumber</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string(3) &quot;tcp&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getprotobynumber</span><span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;udp&quot;</span>
+</code></pre>
+<h2 id="getservbyname">getservbyname</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getservbyname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;tcp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(80)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getservbyname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;tcp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(80)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getservbyname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;ftp&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;tcp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(21)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getservbyname</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;ssh&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;tcp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(22)</span>
+</code></pre>
+<h2 id="getservbyport">getservbyport</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getservbyport</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;tcp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(4) &quot;http&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getservbyport</span><span class="token punctuation">(</span><span class="token number">21</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;tcp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;ftp&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">getservbyport</span><span class="token punctuation">(</span><span class="token number">22</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;tcp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;ssh&quot;</span>
+</code></pre>
+<h2 id="headerregistercallback">header_register_callback</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/**
+ * Just a test function.
+ *
+ * @param  void
+ * @return void
+ */</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">header_register_callback</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="headerremove">header_remove</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Location: http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">header_remove</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Location&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Foo: foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Bar: bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">header_remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="header">header</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Location: http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;HTTP/1.1 404 Not Found&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="headerslist">headers_list</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">headers_list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="headerssent">headers_sent</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">headers_sent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">headers_sent</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token punctuation">,</span> <span class="token variable">$line</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="httpresponsecode">http_response_code</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_response_code</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_response_code</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_response_code</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(200)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">http_response_code</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// int(404)</span>
+</code></pre>
+<h2 id="inetntop">inet_ntop</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">inet_ntop</span><span class="token punctuation">(</span><span class="token function">chr</span><span class="token punctuation">(</span><span class="token number">127</span><span class="token punctuation">)</span> <span class="token punctuation">.</span> <span class="token function">chr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">.</span> <span class="token function">chr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">.</span> <span class="token function">chr</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// string(9) &quot;127.0.0.1&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">inet_ntop</span><span class="token punctuation">(</span><span class="token function">chr</span><span class="token punctuation">(</span><span class="token number">192</span><span class="token punctuation">)</span> <span class="token punctuation">.</span> <span class="token function">chr</span><span class="token punctuation">(</span><span class="token number">168</span><span class="token punctuation">)</span> <span class="token punctuation">.</span> <span class="token function">chr</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">.</span> <span class="token function">chr</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(11) &quot;192.168.1.1&quot;</span>
+</code></pre>
+<h2 id="inetpton">inet_pton</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">inet_pton</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">inet_pton</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;192.168.1.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="ip2long">ip2long</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ip2long</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ip2long</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ip2long</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// int(2130706433)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ip2long</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;192.168.1.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// int(3232235777)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">ip2long</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;192.168.1.256&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+</code></pre>
+<h2 id="long2ip">long2ip</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">long2ip</span><span class="token punctuation">(</span><span class="token number">2130706433</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(9) &quot;127.0.0.1&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">long2ip</span><span class="token punctuation">(</span><span class="token number">3232235777</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(11) &quot;192.168.1.1&quot;</span>
+</code></pre>
+<h2 id="openlog">openlog</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">openlog</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;log&apos;</span><span class="token punctuation">,</span> <span class="token constant">LOG_PID</span> <span class="token operator">|</span> <span class="token constant">LOG_PERROR</span><span class="token punctuation">,</span> <span class="token constant">LOG_USER</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="pfsockopen">pfsockopen</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">pfsockopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// resource(4) of type (persistent stream)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">pfsockopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token variable">$errno</span><span class="token punctuation">,</span> <span class="token variable">$errstr</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (persistent stream)</span>
+</code></pre>
+<h2 id="setcookie">setcookie</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="setrawcookie">setrawcookie</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setrawcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setrawcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setrawcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setrawcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setrawcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">setrawcookie</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3600</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example.com&apos;</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="socketgetstatus">socket_get_status</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_get_status</span><span class="token punctuation">(</span><span class="token function">fsockopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="socketsetblocking">socket_set_blocking</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_set_blocking</span><span class="token punctuation">(</span><span class="token function">fsockopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_set_blocking</span><span class="token punctuation">(</span><span class="token function">fsockopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="socketsettimeout">socket_set_timeout</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_set_timeout</span><span class="token punctuation">(</span><span class="token function">fsockopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="syslog">syslog</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">syslog</span><span class="token punctuation">(</span><span class="token constant">LOG_ERR</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;PHP Fatal error:  Error!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">syslog</span><span class="token punctuation">(</span><span class="token constant">LOG_WARNING</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;PHP Warning: Warning!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">syslog</span><span class="token punctuation">(</span><span class="token constant">LOG_NOTICE</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;PHP Notice: Notice!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
                                 
@@ -3537,7 +3738,7 @@
 
             
                 
-                <a href="CURL.html" class="navigation navigation-prev " aria-label="Previous page: CURL">
+                <a href="cURL.html" class="navigation navigation-prev " aria-label="Previous page: cURL">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -3553,7 +3754,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网络","level":"1.1.2.12.2","depth":4,"next":{"title":"Sockets","level":"1.1.2.12.3","depth":4,"path":"docs/函数参考/其他服务/Sockets.md","ref":"docs/函数参考/其他服务/Sockets.md","articles":[]},"previous":{"title":"CURL","level":"1.1.2.12.1","depth":4,"path":"docs/函数参考/其他服务/CURL.md","ref":"docs/函数参考/其他服务/CURL.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他服务/网络.md","mtime":"2020-05-06T06:49:47.652Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-06T06:51:55.444Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"网络","level":"1.1.2.12.2","depth":4,"next":{"title":"Sockets","level":"1.1.2.12.3","depth":4,"path":"docs/函数参考/其他服务/Sockets.md","ref":"docs/函数参考/其他服务/Sockets.md","articles":[]},"previous":{"title":"cURL","level":"1.1.2.12.1","depth":4,"path":"docs/函数参考/其他服务/cURL.md","ref":"docs/函数参考/其他服务/cURL.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他服务/网络.md","mtime":"2020-05-07T07:04:59.988Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T10:57:12.598Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

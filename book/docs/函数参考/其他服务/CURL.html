@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>CURL · PHP</title>
+        <title>cURL · PHP</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -2919,12 +2919,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.1.2.12.1" data-path="CURL.html">
+        <li class="chapter active" data-level="1.1.2.12.1" data-path="cURL.html">
             
-                <a href="CURL.html">
+                <a href="cURL.html">
             
                     
-                    CURL
+                    cURL
             
                 </a>
             
@@ -3428,7 +3428,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >CURL</a>
+        <a href="../../.." >cURL</a>
     </h1>
 </div>
 
@@ -3443,7 +3443,321 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="curl">CURL</h1>
+                                <h1 id="curl">cURL</h1>
+<ul>
+<li><a href="#curl">cURL</a><ul>
+<li><a href="#curlclose">curl_close - &#x5173;&#x95ED; cURL &#x4F1A;&#x8BDD;</a></li>
+<li><a href="#curlcopyhandle">curl_copy_handle - &#x590D;&#x5236;&#x4E00;&#x4E2A; cURL &#x53E5;&#x67C4;&#x548C;&#x5B83;&#x7684;&#x6240;&#x6709;&#x9009;&#x9879;</a></li>
+<li><a href="#curlerrno">curl_errno - &#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x7684;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</a></li>
+<li><a href="#curlerror">curl_error - &#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x9519;&#x8BEF;&#x7684;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#curlescape">curl_escape - &#x4F7F;&#x7528; URL &#x7F16;&#x7801;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#curlexec">curl_exec - &#x6267;&#x884C; cURL &#x4F1A;&#x8BDD;</a></li>
+<li><a href="#curlfilecreate">curl_file_create - &#x521B;&#x5EFA;&#x4E00;&#x4E2A; CURLFile &#x5BF9;&#x8C61;</a></li>
+<li><a href="#curlgetinfo">curl_getinfo - &#x83B7;&#x53D6;&#x4E00;&#x4E2A; cURL &#x8FDE;&#x63A5;&#x8D44;&#x6E90;&#x53E5;&#x67C4;&#x7684;&#x4FE1;&#x606F;</a></li>
+<li><a href="#curlinit">curl_init - &#x521D;&#x59CB;&#x5316; cURL &#x4F1A;&#x8BDD;</a></li>
+<li><a href="#curlmultiaddhandle">curl_multi_add_handle - &#x5411; cURL &#x6279;&#x5904;&#x7406;&#x4F1A;&#x8BDD;&#x4E2D;&#x6DFB;&#x52A0;&#x5355;&#x72EC;&#x7684; cURL &#x53E5;&#x67C4;</a></li>
+<li><a href="#curlmulticlose">curl_multi_close - &#x5173;&#x95ED;&#x4E00;&#x7EC4; cURL &#x53E5;&#x67C4;</a></li>
+<li><a href="#curlmultierrno">curl_multi_errno - &#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x6B21; cURL &#x6279;&#x5904;&#x7406;&#x7684;&#x9519;&#x8BEF;&#x7801;</a></li>
+<li><a href="#curlmultiexec">curl_multi_exec - &#x8FD0;&#x884C;&#x5F53;&#x524D; cURL &#x53E5;&#x67C4;&#x7684;&#x5B50;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#curlmultigetcontent">curl_multi_getcontent - &#x8FD4;&#x56DE;&#x83B7;&#x53D6;&#x7684;&#x8F93;&#x51FA;&#x7684;&#x6587;&#x672C;&#x6D41;</a></li>
+<li><a href="#curlmultiinforead">curl_multi_info_read - &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x89E3;&#x6790;&#x7684; cURL &#x7684;&#x76F8;&#x5173;&#x4F20;&#x8F93;&#x4FE1;&#x606F;</a></li>
+<li><a href="#curlmultiinit">curl_multi_init - &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0; cURL &#x6279;&#x5904;&#x7406;&#x53E5;&#x67C4;</a></li>
+<li><a href="#curlmultiremovehandle">curl_multi_remove_handle - &#x79FB;&#x9664; cURL &#x6279;&#x5904;&#x7406;&#x53E5;&#x67C4;&#x8D44;&#x6E90;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x53E5;&#x67C4;&#x8D44;&#x6E90;</a></li>
+<li><a href="#curlmultiselect">curl_multi_select - &#x7B49;&#x5F85;&#x6240;&#x6709; cURL &#x6279;&#x5904;&#x7406;&#x4E2D;&#x7684;&#x6D3B;&#x52A8;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#curlmultisetopt">curl_multi_setopt - &#x4E3A; cURL &#x5E76;&#x884C;&#x5904;&#x7406;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x9009;&#x9879;</a></li>
+<li><a href="#curlmultistrerror">curl_multi_strerror - &#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x63CF;&#x8FF0;&#x7684;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</a></li>
+<li><a href="#curlpause">curl_pause - &#x6682;&#x505C;&#x548C;&#x53D6;&#x6D88;&#x6682;&#x505C;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#curlreset">curl_reset - &#x91CD;&#x7F6E;&#x4E00;&#x4E2A; libcurl &#x4F1A;&#x8BDD;&#x53E5;&#x67C4;&#x7684;&#x6240;&#x6709;&#x7684;&#x9009;&#x9879;</a></li>
+<li><a href="#curlsetoptarray">curl_setopt_array - &#x4E3A; cURL &#x4F20;&#x8F93;&#x4F1A;&#x8BDD;&#x6279;&#x91CF;&#x8BBE;&#x7F6E;&#x9009;&#x9879;</a></li>
+<li><a href="#curlsetopt">curl_setopt - &#x8BBE;&#x7F6E; cURL &#x4F20;&#x8F93;&#x9009;&#x9879;</a></li>
+<li><a href="#curlshareclose">curl_share_close - &#x5173;&#x95ED; cURL &#x5171;&#x4EAB;&#x53E5;&#x67C4;</a></li>
+<li><a href="#curlshareerrno">curl_share_errno - &#x8FD4;&#x56DE;&#x5171;&#x4EAB; curl &#x53E5;&#x67C4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x9519;&#x8BEF;&#x53F7;</a></li>
+<li><a href="#curlshareinit">curl_share_init - &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A; cURL &#x5171;&#x4EAB;&#x53E5;&#x67C4;</a></li>
+<li><a href="#curlsharesetopt">curl_share_setopt - &#x4E3A; cURL &#x5171;&#x4EAB;&#x53E5;&#x67C4;&#x8BBE;&#x7F6E;&#x9009;&#x9879;</a></li>
+<li><a href="#curlsharestrerror">curl_share_strerror - &#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x53F7;&#x5BF9;&#x5E94;&#x7684;&#x9519;&#x8BEF;&#x6D88;&#x606F;</a></li>
+<li><a href="#curlstrerror">curl_strerror - &#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x63CF;&#x8FF0;</a></li>
+<li><a href="#curlunescape">curl_unescape - &#x89E3;&#x7801;&#x7ED9;&#x5B9A;&#x7684; URL &#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#curlversion">curl_version - &#x83B7;&#x53D6; cURL &#x7248;&#x672C;&#x4FE1;&#x606F;</a></li>
+</ul>
+</li>
+<li><a href="#curlfile">CURLFile</a><ul>
+<li><a href="#curlfileconstruct">CURLFile::__construct - &#x521B;&#x5EFA; CURLFile &#x5BF9;&#x8C61;</a></li>
+<li><a href="#curlfilegetfilename">CURLFile::getFilename - &#x83B7;&#x53D6;&#x88AB;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;</a></li>
+<li><a href="#curlfilegetmimetype">CURLFile::getMimeType - &#x83B7;&#x53D6;&#x88AB;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684; MIME &#x7C7B;&#x578B;</a></li>
+<li><a href="#curlfilegetpostfilename">CURLFile::getPostFilename - &#x83B7;&#x53D6; POST &#x8BF7;&#x6C42;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x540D;</a></li>
+<li><a href="#curlfilesetmimetype">CURLFile::setMimeType - &#x8BBE;&#x7F6E;&#x88AB;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684; MIME &#x7C7B;&#x578B;</a></li>
+<li><a href="#curlfilesetpostfilename">CURLFile::setPostFilename - &#x8BBE;&#x7F6E; POST &#x8BF7;&#x6C42;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x540D;</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="curl">cURL</h2>
+<h3 id="curlclose">curl_close</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">curl_close</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlcopyhandle">curl_copy_handle</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_copy_handle</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (curl)</span>
+</code></pre>
+<h3 id="curlerrno">curl_errno</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_errno</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+</code></pre>
+<h3 id="curlerror">curl_error</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_error</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(0) &quot;&quot;</span>
+</code></pre>
+<h3 id="curlescape">curl_escape</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_escape</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo=foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(9) &quot;foo%3Dfoo&quot;</span>
+</code></pre>
+<h3 id="curlexec">curl_exec</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_exec</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+
+<span class="token variable">$ch</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_exec</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// bool(true)</span>
+</code></pre>
+<h3 id="curlfilecreate">curl_file_create</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_file_create</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlgetinfo">curl_getinfo</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_getinfo</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_getinfo</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">CURLINFO_CONNECT_TIME</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlinit">curl_init</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                         <span class="token comment">// resource(4) of type (curl)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (curl)</span>
+</code></pre>
+<h3 id="curlmultiaddhandle">curl_multi_add_handle</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$mh</span> <span class="token operator">=</span> <span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch1</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch2</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+</code></pre>
+<h3 id="curlmulticlose">curl_multi_close</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">curl_multi_close</span><span class="token punctuation">(</span><span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlmultierrno">curl_multi_errno</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_errno</span><span class="token punctuation">(</span><span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+</code></pre>
+<h3 id="curlmultiexec">curl_multi_exec</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$mh</span> <span class="token operator">=</span> <span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch1</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch1</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch2</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch2</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token variable">$status</span> <span class="token operator">=</span> <span class="token function">curl_multi_exec</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$still_running</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token variable">$status</span> <span class="token operator">===</span> <span class="token constant">CURLM_CALL_MULTI_PERFORM</span> <span class="token operator">||</span> <span class="token variable">$still_running</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlmultigetcontent">curl_multi_getcontent</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$mh</span> <span class="token operator">=</span> <span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch1</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch1</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch1</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_RETURNTRANSFER</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch2</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch2</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch2</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_RETURNTRANSFER</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token variable">$status</span> <span class="token operator">=</span> <span class="token function">curl_multi_exec</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$still_running</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$info</span> <span class="token operator">=</span> <span class="token function">curl_multi_info_read</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$info</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_getcontent</span><span class="token punctuation">(</span><span class="token variable">$info</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;handle&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token variable">$status</span> <span class="token operator">===</span> <span class="token constant">CURLM_CALL_MULTI_PERFORM</span> <span class="token operator">||</span> <span class="token variable">$still_running</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlmultiinforead">curl_multi_info_read</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$mh</span> <span class="token operator">=</span> <span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch1</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch1</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch2</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch2</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token variable">$status</span> <span class="token operator">=</span> <span class="token function">curl_multi_exec</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$still_running</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$info</span> <span class="token operator">=</span> <span class="token function">curl_multi_info_read</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$info</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$info</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token variable">$status</span> <span class="token operator">===</span> <span class="token constant">CURLM_CALL_MULTI_PERFORM</span> <span class="token operator">||</span> <span class="token variable">$still_running</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// array(3) { [&quot;msg&quot;]=&gt; int(1) [&quot;result&quot;]=&gt; int(0) [&quot;handle&quot;]=&gt; resource(4) of type (curl) }</span>
+<span class="token comment">// array(3) { [&quot;msg&quot;]=&gt; int(1) [&quot;result&quot;]=&gt; int(0) [&quot;handle&quot;]=&gt; resource(3) of type (curl) }</span>
+</code></pre>
+<h3 id="curlmultiinit">curl_multi_init</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (curl_multi)</span>
+</code></pre>
+<h3 id="curlmultiremovehandle">curl_multi_remove_handle</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$mh</span> <span class="token operator">=</span> <span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch1</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$ch2</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_multi_add_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_remove_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_remove_handle</span><span class="token punctuation">(</span><span class="token variable">$mh</span><span class="token punctuation">,</span> <span class="token variable">$ch2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+</code></pre>
+<h3 id="curlmultiselect">curl_multi_select</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_select</span><span class="token punctuation">(</span><span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+</code></pre>
+<h3 id="curlmultisetopt">curl_multi_setopt</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_setopt</span><span class="token punctuation">(</span><span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">CURLMOPT_MAXCONNECTS</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h3 id="curlmultistrerror">curl_multi_strerror</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_multi_strerror</span><span class="token punctuation">(</span><span class="token function">curl_multi_errno</span><span class="token punctuation">(</span><span class="token function">curl_multi_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(8) &quot;No error&quot;</span>
+</code></pre>
+<h3 id="curlpause">curl_pause</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_pause</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">CURLPAUSE_ALL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+</code></pre>
+<h3 id="curlreset">curl_reset</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$ch</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_reset</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlsetoptarray">curl_setopt_array</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$options</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token constant">CURLOPT_URL</span>            <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span>
+    <span class="token constant">CURLOPT_RETURNTRANSFER</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token boolean constant">true</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_setopt_array</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token variable">$options</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h3 id="curlsetopt">curl_setopt</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$ch</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_RETURNTRANSFER</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// bool(true)</span>
+</code></pre>
+<h3 id="curlshareclose">curl_share_close</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">curl_share_close</span><span class="token punctuation">(</span><span class="token function">curl_share_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlshareerrno">curl_share_errno</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_share_errno</span><span class="token punctuation">(</span><span class="token function">curl_share_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+</code></pre>
+<h3 id="curlshareinit">curl_share_init</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_share_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (curl_share)</span>
+</code></pre>
+<h3 id="curlsharesetopt">curl_share_setopt</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$ch</span> <span class="token operator">=</span> <span class="token function">curl_share_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_share_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLSHOPT_SHARE</span><span class="token punctuation">,</span> <span class="token constant">CURL_LOCK_DATA_COOKIE</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h3 id="curlsharestrerror">curl_share_strerror</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_share_strerror</span><span class="token punctuation">(</span><span class="token function">curl_share_errno</span><span class="token punctuation">(</span><span class="token function">curl_share_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(8) &quot;No error&quot;</span>
+</code></pre>
+<h3 id="curlstrerror">curl_strerror</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_strerror</span><span class="token punctuation">(</span><span class="token function">curl_errno</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(8) &quot;No error&quot;</span>
+</code></pre>
+<h3 id="curlunescape">curl_unescape</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_unescape</span><span class="token punctuation">(</span><span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo%3Dfoo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(7) &quot;foo=foo&quot;</span>
+</code></pre>
+<h3 id="curlversion">curl_version</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">curl_version</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="curlfile">CURLFile</h2>
+<h3 id="curlfileconstruct">CURLFile::__construct</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">CURLFile</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                          <span class="token comment">// object(CURLFile)#1 (3) { [&quot;name&quot;]=&gt; string(40) &quot;C:\Project\nginx-1.15.8\html/example.txt&quot; [&quot;mime&quot;]=&gt; string(0) &quot;&quot; [&quot;postname&quot;]=&gt; string(0) &quot;&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">CURLFile</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;text/plain&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(CURLFile)#1 (3) { [&quot;name&quot;]=&gt; string(40) &quot;C:\Project\nginx-1.15.8\html/example.txt&quot; [&quot;mime&quot;]=&gt; string(10) &quot;text/plain&quot; [&quot;postname&quot;]=&gt; string(7) &quot;example&quot; }</span>
+</code></pre>
+<h3 id="curlfilegetfilename">CURLFile::getFilename</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$file</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CURLFile</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;text/plain&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="curlfilegetmimetype">CURLFile::getMimeType</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$file</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CURLFile</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;text/plain&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getMimeType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(10) &quot;text/plain&quot;</span>
+</code></pre>
+<h3 id="curlfilegetpostfilename">CURLFile::getPostFilename</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$file</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CURLFile</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;text/plain&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getPostFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(7) &quot;example&quot;</span>
+</code></pre>
+<h3 id="curlfilesetmimetype">CURLFile::setMimeType</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$file</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CURLFile</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;text/plain&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$file</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">setMimeType</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;image/jpeg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getMimeType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(10) &quot;image/jpeg&quot;</span>
+</code></pre>
+<h3 id="curlfilesetpostfilename">CURLFile::setPostFilename</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$file</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CURLFile</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;text/plain&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;example&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$file</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">setPostFilename</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;index&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getPostFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(5) &quot;index&quot;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3487,7 +3801,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CURL","level":"1.1.2.12.1","depth":4,"next":{"title":"网络","level":"1.1.2.12.2","depth":4,"path":"docs/函数参考/其他服务/网络.md","ref":"docs/函数参考/其他服务/网络.md","articles":[]},"previous":{"title":"其他服务","level":"1.1.2.12","depth":3,"path":"docs/函数参考/其他服务.md","ref":"docs/函数参考/其他服务.md","articles":[{"title":"CURL","level":"1.1.2.12.1","depth":4,"path":"docs/函数参考/其他服务/CURL.md","ref":"docs/函数参考/其他服务/CURL.md","articles":[]},{"title":"网络","level":"1.1.2.12.2","depth":4,"path":"docs/函数参考/其他服务/网络.md","ref":"docs/函数参考/其他服务/网络.md","articles":[]},{"title":"Sockets","level":"1.1.2.12.3","depth":4,"path":"docs/函数参考/其他服务/Sockets.md","ref":"docs/函数参考/其他服务/Sockets.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他服务/CURL.md","mtime":"2019-05-20T15:33:30.202Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-06T06:51:55.444Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"cURL","level":"1.1.2.12.1","depth":4,"next":{"title":"网络","level":"1.1.2.12.2","depth":4,"path":"docs/函数参考/其他服务/网络.md","ref":"docs/函数参考/其他服务/网络.md","articles":[]},"previous":{"title":"其他服务","level":"1.1.2.12","depth":3,"path":"docs/函数参考/其他服务.md","ref":"docs/函数参考/其他服务.md","articles":[{"title":"cURL","level":"1.1.2.12.1","depth":4,"path":"docs/函数参考/其他服务/cURL.md","ref":"docs/函数参考/其他服务/cURL.md","articles":[]},{"title":"网络","level":"1.1.2.12.2","depth":4,"path":"docs/函数参考/其他服务/网络.md","ref":"docs/函数参考/其他服务/网络.md","articles":[]},{"title":"Sockets","level":"1.1.2.12.3","depth":4,"path":"docs/函数参考/其他服务/Sockets.md","ref":"docs/函数参考/其他服务/Sockets.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他服务/cURL.md","mtime":"2020-05-07T10:57:05.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T10:57:12.598Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

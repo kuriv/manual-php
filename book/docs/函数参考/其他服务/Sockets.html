@@ -3444,31 +3444,79 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="sockets">Sockets</h1>
+<ul>
+<li><a href="#socketaccept">socket_accept - &#x63A5;&#x53D7;&#x5957;&#x63A5;&#x5B57;&#x4E0A;&#x7684;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#socketaddrinfobind">socket_addrinfo_bind - &#x4ECE;&#x7ED9;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x521B;&#x5EFA;&#x5E76;&#x7ED1;&#x5B9A;&#x5230;&#x5957;&#x63A5;&#x5B57;</a></li>
+<li><a href="#socketaddrinfoconnect">socket_addrinfo_connect - &#x4ECE;&#x7ED9;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x521B;&#x5EFA;&#x5E76;&#x8FDE;&#x63A5;&#x5230;&#x5957;&#x63A5;&#x5B57;</a></li>
+<li><a href="#socketaddrinfoexplain">socket_addrinfo_explain - &#x83B7;&#x53D6;&#x6709;&#x5173;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x7684;&#x4FE1;&#x606F;</a></li>
+<li><a href="#socketaddrinfolookup">socket_addrinfo_lookup - &#x83B7;&#x53D6;&#x5305;&#x542B;&#x6709;&#x5173;&#x7ED9;&#x5B9A;&#x4E3B;&#x673A;&#x540D;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x6570;&#x7EC4;</a></li>
+<li><a href="#socketbind">socket_bind - &#x7ED9;&#x5957;&#x63A5;&#x5B57;&#x7ED1;&#x5B9A;&#x540D;&#x5B57;</a></li>
+<li><a href="#socketclearerror">socket_clear_error - &#x6E05;&#x9664;&#x5957;&#x63A5;&#x5B57;&#x6216;&#x8005;&#x6700;&#x540E;&#x7684;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#x4E0A;&#x7684;&#x9519;&#x8BEF;</a></li>
+<li><a href="#socketclose">socket_close - &#x5173;&#x95ED;&#x5957;&#x63A5;&#x5B57;&#x8D44;&#x6E90;</a></li>
+<li><a href="#socketconnect">socket_connect - &#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#socketcreatelisten">socket_create_listen - &#x6253;&#x5F00;&#x7AEF;&#x53E3;&#x4E0A;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x4EE5;&#x63A5;&#x53D7;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#socketcreatepair">socket_create_pair - &#x521B;&#x5EFA;&#x4E00;&#x5BF9;&#x4E0D;&#x53EF;&#x533A;&#x5206;&#x7684;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x4EEC;&#x5B58;&#x50A8;&#x5728;&#x6570;&#x7EC4;&#x4E2D;</a></li>
+<li><a href="#socketcreate">socket_create - &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5957;&#x63A5;&#x5B57;&#xFF08;&#x901A;&#x8BAF;&#x8282;&#x70B9;&#xFF09;</a></li>
+<li><a href="#socketexportstream">socket_export_stream - &#x5C06;&#x5957;&#x63A5;&#x5B57;&#x6269;&#x5C55;&#x8D44;&#x6E90;&#x5BFC;&#x51FA;&#x5230;&#x5C01;&#x88C5;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x6D41;&#x4E2D;</a></li>
+<li><a href="#socketgetoption">socket_get_option - &#x83B7;&#x53D6;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x9009;&#x9879;</a></li>
+<li><a href="#socketgetopt">socket_getopt - &#x83B7;&#x53D6;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x9009;&#x9879;</a></li>
+<li><a href="#socketgetpeername">socket_getpeername - &#x67E5;&#x8BE2;&#x7ED9;&#x5B9A;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x8FDC;&#x7A0B;&#x7AEF;</a></li>
+<li><a href="#socketgetsockname">socket_getsockname - &#x67E5;&#x8BE2;&#x7ED9;&#x5B9A;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x672C;&#x5730;&#x7AEF;</a></li>
+<li><a href="#socketimportstream">socket_import_stream - &#x5BFC;&#x5165;&#x6D41;</a></li>
+<li><a href="#socketlasterror">socket_last_error - &#x8FD4;&#x56DE;&#x5957;&#x63A5;&#x5B57;&#x4E0A;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;</a></li>
+<li><a href="#socketlisten">socket_listen - &#x4FA6;&#x542C;&#x5957;&#x63A5;&#x5B57;&#x4E0A;&#x7684;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#socketread">socket_read - &#x4ECE;&#x5957;&#x63A5;&#x5B57;&#x8BFB;&#x53D6;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x8282;</a></li>
+<li><a href="#socketrecv">socket_recv - &#x4ECE;&#x5DF2;&#x8FDE;&#x63A5;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x63A5;&#x6536;&#x6570;&#x636E;</a></li>
+<li><a href="#socketrecvfrom">socket_recvfrom - &#x4ECE;&#x5957;&#x63A5;&#x5B57;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x65E0;&#x8BBA;&#x5B83;&#x662F;&#x5426;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#socketselect">socket_select - &#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x6570;&#x7EC4;&#x4E0A;&#x4EE5;&#x6307;&#x5B9A;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x8FD0;&#x884C; select &#x7CFB;&#x7EDF;&#x8C03;&#x7528;</a></li>
+<li><a href="#socketsend">socket_send - &#x5C06;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230;&#x8FDE;&#x63A5;&#x7684;&#x5957;&#x63A5;&#x5B57;</a></li>
+<li><a href="#socketsendto">socket_sendto - &#x5411;&#x5957;&#x63A5;&#x5B57;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x5DF2;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#socketsetblock">socket_set_block - &#x5728;&#x5957;&#x63A5;&#x5B57;&#x8D44;&#x6E90;&#x4E0A;&#x8BBE;&#x7F6E;&#x963B;&#x585E;&#x6A21;&#x5F0F;</a></li>
+<li><a href="#socketsetnonblock">socket_set_nonblock - &#x5728;&#x5957;&#x63A5;&#x5B57;&#x8D44;&#x6E90;&#x4E0A;&#x8BBE;&#x7F6E;&#x975E;&#x963B;&#x585E;&#x6A21;&#x5F0F;</a></li>
+<li><a href="#socketsetoption">socket_set_option - &#x8BBE;&#x7F6E;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x9009;&#x9879;</a></li>
+<li><a href="#socketsetopt">socket_setopt - &#x8BBE;&#x7F6E;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x9009;&#x9879;</a></li>
+<li><a href="#socketshutdown">socket_shutdown - &#x5173;&#x95ED;&#x7528;&#x4E8E;&#x63A5;&#x6536;&#xFF0C;&#x53D1;&#x9001;&#x6216;&#x540C;&#x65F6;&#x63A5;&#x6536;&#x548C;&#x63A5;&#x6536;&#x7684;&#x5957;&#x63A5;&#x5B57;</a></li>
+<li><a href="#socketstrerror">socket_strerror - &#x8FD4;&#x56DE;&#x63CF;&#x8FF0;&#x5957;&#x63A5;&#x5B57;&#x9519;&#x8BEF;&#x7684;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#socketwrite">socket_write - &#x5199;&#x5165;&#x5957;&#x63A5;&#x5B57;</a></li>
+<li><a href="#socketwsaprotocolinfoexport">socket_wsaprotocol_info_export - &#x5BFC;&#x51FA; WSAPROTOCOL_INFO &#x7ED3;&#x6784;</a></li>
+<li><a href="#socketwsaprotocolinfoimport">socket_wsaprotocol_info_import - &#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x5BFC;&#x5165;&#x5957;&#x63A5;&#x5B57;</a></li>
+<li><a href="#socketwsaprotocolinforelease">socket_wsaprotocol_info_release - &#x91CA;&#x653E;&#x5BFC;&#x51FA;&#x7684; WSAPROTOCOL_INFO &#x7ED3;&#x6784;</a></li>
+</ul>
 <h2 id="socketaccept">socket_accept</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_listen</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_accept</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="socketaddrinfobind">socket_addrinfo_bind</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_addrinfo_bind</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">socket_addrinfo_lookup</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (Socket)</span>
 </code></pre>
 <h2 id="socketaddrinfoconnect">socket_addrinfo_connect</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_addrinfo_connect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">socket_addrinfo_lookup</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="socketaddrinfoexplain">socket_addrinfo_explain</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_addrinfo_explain</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">socket_addrinfo_lookup</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="socketaddrinfolookup">socket_addrinfo_lookup</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_addrinfo_lookup</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(1) { [0]=&gt; resource(1) of type (AddressInfo) }</span>
 </code></pre>
 <h2 id="socketbind">socket_bind</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="socketclearerror">socket_clear_error</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3485,16 +3533,18 @@
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="socketcreatelisten">socket_create_listen</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_create_listen</span><span class="token punctuation">(</span><span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (Socket)</span>
 </code></pre>
 <h2 id="socketcreatepair">socket_create_pair</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_create_pair</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">,</span> <span class="token variable">$fd</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$fd</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                                    <span class="token comment">// array(2) { [0]=&gt; resource(1) of type (Socket) [1]=&gt; resource(2) of type (Socket) }</span>
 </code></pre>
 <h2 id="socketcreate">socket_create</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3504,8 +3554,9 @@
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_UNIX</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// resource(6) of type (Socket)</span>
 </code></pre>
 <h2 id="socketexportstream">socket_export_stream</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_export_stream</span><span class="token punctuation">(</span><span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (stream)</span>
 </code></pre>
 <h2 id="socketgetoption">socket_get_option</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3524,16 +3575,25 @@
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_getopt</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token constant">SOL_SOCKET</span><span class="token punctuation">,</span> <span class="token constant">SO_LINGER</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="socketgetpeername">socket_getpeername</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_getpeername</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token variable">$address</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$address</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                              <span class="token comment">// string(9) &quot;127.0.0.1&quot;</span>
 </code></pre>
 <h2 id="socketgetsockname">socket_getsockname</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_getsockname</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token variable">$address</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$address</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                              <span class="token comment">// string(9) &quot;127.0.0.1&quot;</span>
 </code></pre>
 <h2 id="socketimportstream">socket_import_stream</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_import_stream</span><span class="token punctuation">(</span><span class="token function">stream_socket_server</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:8080&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(6) of type (Socket)</span>
 </code></pre>
 <h2 id="socketlasterror">socket_last_error</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3542,48 +3602,80 @@
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_last_error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
 </code></pre>
 <h2 id="socketlisten">socket_listen</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_listen</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="socketread">socket_read</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_listen</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$resource</span> <span class="token operator">=</span> <span class="token function">socket_accept</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_read</span><span class="token punctuation">(</span><span class="token variable">$resource</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="socketrecv">socket_recv</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_listen</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$resource</span> <span class="token operator">=</span> <span class="token function">socket_accept</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_recv</span><span class="token punctuation">(</span><span class="token variable">$resource</span><span class="token punctuation">,</span> <span class="token variable">$buf</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">,</span> <span class="token constant">MSG_OOB</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$buf</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="socketrecvfrom">socket_recvfrom</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-</code></pre>
-<h2 id="socketrecvmsg">socket_recvmsg</h2>
-<pre class="language-"><code class="lang-php">
-
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_listen</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$resource</span> <span class="token operator">=</span> <span class="token function">socket_accept</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_recvfrom</span><span class="token punctuation">(</span><span class="token variable">$resource</span><span class="token punctuation">,</span> <span class="token variable">$buf</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">,</span> <span class="token constant">MSG_OOB</span><span class="token punctuation">,</span> <span class="token variable">$name</span><span class="token punctuation">,</span> <span class="token variable">$port</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$buf</span><span class="token punctuation">,</span> <span class="token variable">$name</span><span class="token punctuation">,</span> <span class="token variable">$port</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="socketselect">socket_select</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_select</span><span class="token punctuation">(</span><span class="token variable">$read</span><span class="token punctuation">,</span> <span class="token variable">$write</span><span class="token punctuation">,</span> <span class="token variable">$except</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="socketsend">socket_send</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
-</code></pre>
-<h2 id="socketsendmsg">socket_sendmsg</h2>
-<pre class="language-"><code class="lang-php">
-
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_send</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token constant">MSG_OOB</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(3)</span>
 </code></pre>
 <h2 id="socketsendto">socket_sendto</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_sendto</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token constant">MSG_OOB</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(3)</span>
 </code></pre>
 <h2 id="socketsetblock">socket_set_block</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_set_block</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="socketsetnonblock">socket_set_nonblock</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_set_nonblock</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="socketsetoption">socket_set_option</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3605,8 +3697,7 @@
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_shutdown</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_shutdown</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_shutdown</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
@@ -3622,9 +3713,8 @@
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">socket_create</span><span class="token punctuation">(</span><span class="token constant">AF_INET</span><span class="token punctuation">,</span> <span class="token constant">SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">SOL_TCP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">socket_bind</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_write</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;GET / HTTP/1.1&apos;</span> <span class="token punctuation">.</span> <span class="token double-quoted-string string">&quot;\r\n&quot;</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;Host: www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(37)</span>
+<span class="token function">socket_connect</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">socket_write</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(3)</span>
 </code></pre>
 <h2 id="socketwsaprotocolinfoexport">socket_wsaprotocol_info_export</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3687,7 +3777,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Sockets","level":"1.1.2.12.3","depth":4,"next":{"title":"Session 扩展","level":"1.1.2.13","depth":3,"path":"docs/函数参考/Session 扩展.md","ref":"docs/函数参考/Session 扩展.md","articles":[{"title":"Session","level":"1.1.2.13.1","depth":4,"path":"docs/函数参考/Session 扩展/Session.md","ref":"docs/函数参考/Session 扩展/Session.md","articles":[]}]},"previous":{"title":"网络","level":"1.1.2.12.2","depth":4,"path":"docs/函数参考/其他服务/网络.md","ref":"docs/函数参考/其他服务/网络.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他服务/Sockets.md","mtime":"2020-05-21T08:18:55.635Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-21T08:19:26.794Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Sockets","level":"1.1.2.12.3","depth":4,"next":{"title":"Session 扩展","level":"1.1.2.13","depth":3,"path":"docs/函数参考/Session 扩展.md","ref":"docs/函数参考/Session 扩展.md","articles":[{"title":"Session","level":"1.1.2.13.1","depth":4,"path":"docs/函数参考/Session 扩展/Session.md","ref":"docs/函数参考/Session 扩展/Session.md","articles":[]}]},"previous":{"title":"网络","level":"1.1.2.12.2","depth":4,"path":"docs/函数参考/其他服务/网络.md","ref":"docs/函数参考/其他服务/网络.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他服务/Sockets.md","mtime":"2020-05-22T08:17:52.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T08:18:24.843Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

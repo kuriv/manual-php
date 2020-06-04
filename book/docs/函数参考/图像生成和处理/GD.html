@@ -3445,11 +3445,11 @@
                                 
                                 <h1 id="gd">GD</h1>
 <ul>
-<li>[gd_info - &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5B89;&#x88C5;&#x7684; GD &#x5E93;&#x7684;&#x4FE1;&#x606F;]</li>
-<li>[getimagesize - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x5927;&#x5C0F;]</li>
-<li>[getimagesizefromstring - &#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x83B7;&#x53D6;&#x56FE;&#x50CF;&#x7684;&#x5927;&#x5C0F;&#x4FE1;&#x606F;]</li>
-<li>[image_type_to_extension - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x540E;&#x7F00;]</li>
-<li>[image_type_to_mime_type - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x7C7B;&#x578B;&#x7684; MIME &#x7C7B;&#x578B;]</li>
+<li><a href="#gdinfo">gd_info - &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5B89;&#x88C5;&#x7684; GD &#x5E93;&#x7684;&#x4FE1;&#x606F;</a></li>
+<li><a href="#getimagesize">getimagesize - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x5927;&#x5C0F;</a></li>
+<li><a href="#getimagesizefromstring">getimagesizefromstring - &#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x83B7;&#x53D6;&#x56FE;&#x50CF;&#x7684;&#x5927;&#x5C0F;&#x4FE1;&#x606F;</a></li>
+<li><a href="#imagetypetoextension">image_type_to_extension - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x540E;&#x7F00;</a></li>
+<li><a href="#imagetypetomimetype">image_type_to_mime_type - &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x7C7B;&#x578B;&#x7684; MIME &#x7C7B;&#x578B;</a></li>
 </ul>
 <h2 id="gdinfo">gd_info</h2>
 <pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
@@ -3512,24 +3512,36 @@
 
 </code></pre>
 <h2 id="imagechar">imagechar</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$image</span> <span class="token operator">=</span> <span class="token function">imagecreate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">imagecolorallocate</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagechar</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;A&apos;</span><span class="token punctuation">,</span> <span class="token function">imagecolorallocate</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="imagecharup">imagecharup</h2>
 <pre class="language-"><code class="lang-php">
 
 </code></pre>
 <h2 id="imagecolorallocate">imagecolorallocate</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$image</span> <span class="token operator">=</span> <span class="token function">imagecreate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecolorallocate</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecolorallocate</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecolorallocate</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// int(2)</span>
 </code></pre>
 <h2 id="imagecolorallocatealpha">imagecolorallocatealpha</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$image</span> <span class="token operator">=</span> <span class="token function">imagecreate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecolorallocatealpha</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">127</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecolorallocatealpha</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// int(1)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecolorallocatealpha</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// int(2)</span>
 </code></pre>
 <h2 id="imagecolorat">imagecolorat</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecolorat</span><span class="token punctuation">(</span><span class="token function">imagecreatefromjpeg</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecolorclosest">imagecolorclosest</h2>
 <pre class="language-"><code class="lang-php">
@@ -3572,8 +3584,10 @@
 
 </code></pre>
 <h2 id="imagecolorsforindex">imagecolorsforindex</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$image</span> <span class="token operator">=</span> <span class="token function">imagecreatefromjpeg</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecolorsforindex</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token function">imagecolorat</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecolorstotal">imagecolorstotal</h2>
 <pre class="language-"><code class="lang-php">
@@ -3608,76 +3622,94 @@
 
 </code></pre>
 <h2 id="imagecreate">imagecreate</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (gd)</span>
 </code></pre>
 <h2 id="imagecreatefrombmp">imagecreatefrombmp</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefrombmp</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.bmp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecreatefromgd2">imagecreatefromgd2</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromgd2</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.gd2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecreatefromgd2part">imagecreatefromgd2part</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromgd2part</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.gd2&apos;</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecreatefromgd">imagecreatefromgd</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromgd</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.gd&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecreatefromgif">imagecreatefromgif</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromgif</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.gif&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (gd)</span>
 </code></pre>
 <h2 id="imagecreatefromjpeg">imagecreatefromjpeg</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromjpeg</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (gd)</span>
 </code></pre>
 <h2 id="imagecreatefrompng">imagecreatefrompng</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefrompng</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.png&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (gd)</span>
 </code></pre>
 <h2 id="imagecreatefromstring">imagecreatefromstring</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromstring</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// resource(6) of type (gd)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromstring</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;https://github.com/fluidicon.png&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(8) of type (gd)</span>
 </code></pre>
 <h2 id="imagecreatefromwbmp">imagecreatefromwbmp</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromwbmp</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.wbmp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecreatefromwebp">imagecreatefromwebp</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromwebp</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.webp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecreatefromxbm">imagecreatefromxbm</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromxbm</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.xbm&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecreatefromxpm">imagecreatefromxpm</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatefromxpm</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.xpm&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagecreatetruecolor">imagecreatetruecolor</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecreatetruecolor</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (gd)</span>
 </code></pre>
 <h2 id="imagecrop">imagecrop</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecrop</span><span class="token punctuation">(</span><span class="token function">imagecreatefromjpeg</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;x&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;y&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;width&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;height&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(6) of type (gd)</span>
 </code></pre>
 <h2 id="imagecropauto">imagecropauto</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagecropauto</span><span class="token punctuation">(</span><span class="token function">imagecreatefromjpeg</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">IMG_CROP_DEFAULT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(6) of type (gd)</span>
 </code></pre>
 <h2 id="imagedashedline">imagedashedline</h2>
 <pre class="language-"><code class="lang-php">
 
 </code></pre>
 <h2 id="imagedestroy">imagedestroy</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagedestroy</span><span class="token punctuation">(</span><span class="token function">imagecreate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="imageellipse">imageellipse</h2>
 <pre class="language-"><code class="lang-php">
@@ -3712,16 +3744,26 @@
 
 </code></pre>
 <h2 id="imageflip">imageflip</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token variable">$image</span> <span class="token operator">=</span> <span class="token function">imagecreatefromjpeg</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.jpg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imageflip</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token constant">IMG_FLIP_HORIZONTAL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imageflip</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token constant">IMG_FLIP_VERTICAL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imageflip</span><span class="token punctuation">(</span><span class="token variable">$image</span><span class="token punctuation">,</span> <span class="token constant">IMG_FLIP_BOTH</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// bool(true)</span>
 </code></pre>
 <h2 id="imagefontheight">imagefontheight</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagefontheight</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(8)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagefontheight</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(13)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagefontheight</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(13)</span>
 </code></pre>
 <h2 id="imagefontwidth">imagefontwidth</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagefontwidth</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(5)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagefontwidth</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(6)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagefontwidth</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(7)</span>
 </code></pre>
 <h2 id="imageftbbox">imageftbbox</h2>
 <pre class="language-"><code class="lang-php">
@@ -3888,12 +3930,14 @@
 
 </code></pre>
 <h2 id="imagesx">imagesx</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagesx</span><span class="token punctuation">(</span><span class="token function">imagecreate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(100)</span>
 </code></pre>
 <h2 id="imagesy">imagesy</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagesy</span><span class="token punctuation">(</span><span class="token function">imagecreate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(100)</span>
 </code></pre>
 <h2 id="imagetruecolortopalette">imagetruecolortopalette</h2>
 <pre class="language-"><code class="lang-php">
@@ -3908,8 +3952,9 @@
 
 </code></pre>
 <h2 id="imagetypes">imagetypes</h2>
-<pre class="language-"><code class="lang-php">
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">imagetypes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="imagewbmp">imagewbmp</h2>
 <pre class="language-"><code class="lang-php">
@@ -3928,14 +3973,6 @@
 
 </code></pre>
 <h2 id="iptcparse">iptcparse</h2>
-<pre class="language-"><code class="lang-php">
-
-</code></pre>
-<h2 id="jpeg2wbmp">jpeg2wbmp</h2>
-<pre class="language-"><code class="lang-php">
-
-</code></pre>
-<h2 id="png2wbmp">png2wbmp</h2>
 <pre class="language-"><code class="lang-php">
 
 </code></pre>
@@ -3982,7 +4019,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GD","level":"1.1.2.7.1","depth":4,"next":{"title":"邮件相关扩展","level":"1.1.2.8","depth":3,"path":"docs/函数参考/邮件相关扩展.md","ref":"docs/函数参考/邮件相关扩展.md","articles":[{"title":"邮件","level":"1.1.2.8.1","depth":4,"path":"docs/函数参考/邮件相关扩展/邮件.md","ref":"docs/函数参考/邮件相关扩展/邮件.md","articles":[]}]},"previous":{"title":"图像生成和处理","level":"1.1.2.7","depth":3,"path":"docs/函数参考/图像生成和处理.md","ref":"docs/函数参考/图像生成和处理.md","articles":[{"title":"GD","level":"1.1.2.7.1","depth":4,"path":"docs/函数参考/图像生成和处理/GD.md","ref":"docs/函数参考/图像生成和处理/GD.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/图像生成和处理/GD.md","mtime":"2020-05-23T06:58:15.959Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T06:58:27.324Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GD","level":"1.1.2.7.1","depth":4,"next":{"title":"邮件相关扩展","level":"1.1.2.8","depth":3,"path":"docs/函数参考/邮件相关扩展.md","ref":"docs/函数参考/邮件相关扩展.md","articles":[{"title":"邮件","level":"1.1.2.8.1","depth":4,"path":"docs/函数参考/邮件相关扩展/邮件.md","ref":"docs/函数参考/邮件相关扩展/邮件.md","articles":[]}]},"previous":{"title":"图像生成和处理","level":"1.1.2.7","depth":3,"path":"docs/函数参考/图像生成和处理.md","ref":"docs/函数参考/图像生成和处理.md","articles":[{"title":"GD","level":"1.1.2.7.1","depth":4,"path":"docs/函数参考/图像生成和处理/GD.md","ref":"docs/函数参考/图像生成和处理/GD.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/图像生成和处理/GD.md","mtime":"2020-06-04T09:10:53.417Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-04T09:34:13.693Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

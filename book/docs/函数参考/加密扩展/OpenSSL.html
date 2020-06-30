@@ -77,7 +77,7 @@
     <link rel="next" href="密码散列算法.html" />
     
     
-    <link rel="prev" href="Mcrypt.html" />
+    <link rel="prev" href="Hash.html" />
     
 
     
@@ -2450,20 +2450,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.2.2" data-path="Mcrypt.html">
-            
-                <a href="Mcrypt.html">
-            
-                    
-                    Mcrypt
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.1.2.2.3" data-path="OpenSSL.html">
+        <li class="chapter active" data-level="1.1.2.2.2" data-path="OpenSSL.html">
             
                 <a href="OpenSSL.html">
             
@@ -2476,7 +2463,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.2.4" data-path="密码散列算法.html">
+        <li class="chapter " data-level="1.1.2.2.3" data-path="密码散列算法.html">
             
                 <a href="密码散列算法.html">
             
@@ -3444,6 +3431,340 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="openssl">OpenSSL</h1>
+<ul>
+<li><a href="#opensslcipherivlength">openssl_cipher_iv_length - &#x83B7;&#x53D6;&#x5BC6;&#x7801; iv &#x957F;&#x5EA6;</a></li>
+<li><a href="#opensslcsrexporttofile">openssl_csr_export_to_file - &#x5C06; CSR &#x5BFC;&#x51FA;&#x5230;&#x6587;&#x4EF6;</a></li>
+<li><a href="#opensslcsrexport">openssl_csr_export - &#x5C06; CSR &#x4F5C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5BFC;&#x51FA;</a></li>
+<li><a href="#opensslcsrgetpublickey">openssl_csr_get_public_key - &#x8FD4;&#x56DE; CSR &#x7684;&#x516C;&#x94A5;</a></li>
+<li><a href="#opensslcsrgetsubject">openssl_csr_get_subject - &#x8FD4;&#x56DE; CSR &#x7684;&#x4E3B;&#x9898;</a></li>
+<li><a href="#opensslcsrnew">openssl_csr_new - &#x751F;&#x6210;&#x4E00;&#x4E2A; CSR</a></li>
+<li>openssl_csr_sign - &#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x8BC1;&#x4E66;&#x7B7E;&#x7F72; CSR&#xFF08;&#x6216;&#x8005;&#x672C;&#x8EAB;&#xFF09;&#x5E76;&#x4E14;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x8BC1;&#x4E66;</li>
+<li><a href="#openssldecrypt">openssl_decrypt - &#x89E3;&#x5BC6;&#x6570;&#x636E;</a></li>
+<li>openssl_dh_compute_key - &#x8BA1;&#x7B97;&#x8FDC;&#x7A0B; DH &#x5BC6;&#x94A5;&#xFF08;&#x516C;&#x94A5;&#xFF09;&#x548C;&#x672C;&#x5730; DH &#x5BC6;&#x94A5;&#x7684;&#x5171;&#x4EAB;&#x5BC6;&#x94A5;</li>
+<li><a href="#openssldigest">openssl_digest - &#x8BA1;&#x7B97;&#x6458;&#x8981;</a></li>
+<li><a href="#opensslencrypt">openssl_encrypt - &#x52A0;&#x5BC6;&#x6570;&#x636E;</a></li>
+<li><a href="#opensslerrorstring">openssl_error_string - &#x8FD4;&#x56DE; openSSL &#x9519;&#x8BEF;&#x6D88;&#x606F;</a></li>
+<li><a href="#opensslfreekey">openssl_free_key - &#x91CA;&#x653E;&#x5BC6;&#x94A5;&#x8D44;&#x6E90;</a></li>
+<li><a href="#opensslgetcertlocations">openssl_get_cert_locations - &#x68C0;&#x7D22;&#x53EF;&#x7528;&#x7684;&#x8BC1;&#x4E66;&#x4F4D;&#x7F6E;</a></li>
+<li><a href="#opensslgetciphermethods">openssl_get_cipher_methods - &#x83B7;&#x53D6;&#x53EF;&#x7528;&#x7684;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;</a></li>
+<li><a href="#opensslgetcurvenames">openssl_get_curve_names - &#x83B7;&#x5F97; ECC &#x7684;&#x53EF;&#x7528;&#x66F2;&#x7EBF;&#x540D;&#x79F0;&#x5217;&#x8868;</a></li>
+<li><a href="#opensslgetmdmethods">openssl_get_md_methods - &#x83B7;&#x53D6;&#x53EF;&#x7528;&#x7684;&#x6458;&#x8981;&#x7B97;&#x6CD5;</a></li>
+<li><a href="#opensslgetprivatekey">openssl_get_privatekey - &#x83B7;&#x53D6;&#x79C1;&#x94A5;</a></li>
+<li>openssl_get_publickey - &#x4ECE;&#x8BC1;&#x4E66;&#x4E2D;&#x89E3;&#x6790;&#x516C;&#x94A5;&#xFF0C;&#x4EE5;&#x4F9B;&#x4F7F;&#x7528;</li>
+<li>openssl_open - &#x6253;&#x5F00;&#x5BC6;&#x5C01;&#x7684;&#x6570;&#x636E;</li>
+<li><a href="#opensslpbkdf2">openssl_pbkdf2 - &#x751F;&#x6210;&#x4E00;&#x4E2A; PKCS5 v2 PBKDF2 &#x5B57;&#x7B26;&#x4E32;</a></li>
+<li>openssl_pkcs12_export_to_file - &#x8F93;&#x51FA;&#x4E00;&#x4E2A; PKCS#12 &#x517C;&#x5BB9;&#x7684;&#x8BC1;&#x4E66;&#x5B58;&#x50A8;&#x6587;&#x4EF6;</li>
+<li>openssl_pkcs12_export - &#x5C06; PKCS#12 &#x517C;&#x5BB9;&#x8BC1;&#x4E66;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x5BFC;&#x51FA;&#x5230;&#x53D8;&#x91CF;</li>
+<li>openssl_pkcs12_read - &#x5C06; PKCS#12 &#x8BC1;&#x4E66;&#x5B58;&#x50A8;&#x533A;&#x89E3;&#x6790;&#x5230;&#x6570;&#x7EC4;&#x4E2D;</li>
+<li>openssl_pkcs7_decrypt - &#x89E3;&#x5BC6;&#x4E00;&#x4E2A; S/MIME &#x52A0;&#x5BC6;&#x7684;&#x6D88;&#x606F;</li>
+<li>openssl_pkcs7_encrypt - &#x52A0;&#x5BC6;&#x4E00;&#x4E2A; S/MIME &#x6D88;&#x606F;</li>
+<li>openssl_pkcs7_read - &#x5C06; PKCS7 &#x6587;&#x4EF6;&#x5BFC;&#x51FA;&#x4E3A; PEM &#x683C;&#x5F0F;&#x8BC1;&#x4E66;&#x7684;&#x6570;&#x7EC4;</li>
+<li>openssl_pkcs7_sign - &#x5BF9;&#x4E00;&#x4E2A; S/MIME &#x6D88;&#x606F;&#x8FDB;&#x884C;&#x7B7E;&#x540D;</li>
+<li>openssl_pkcs7_verify - &#x6821;&#x9A8C;&#x4E00;&#x4E2A;&#x5DF2;&#x7B7E;&#x540D;&#x7684; S/MIME &#x6D88;&#x606F;&#x7684;&#x7B7E;&#x540D;</li>
+<li><a href="#opensslpkeyexporttofile">openssl_pkey_export_to_file - &#x5C06;&#x5BC6;&#x94A5;&#x5BFC;&#x51FA;&#x5230;&#x6587;&#x4EF6;&#x4E2D;</a></li>
+<li><a href="#opensslpkeyexport">openssl_pkey_export - &#x5C06;&#x4E00;&#x4E2A;&#x5BC6;&#x94A5;&#x7684;&#x53EF;&#x8F93;&#x51FA;&#x8868;&#x793A;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#opensslpkeyfree">openssl_pkey_free - &#x91CA;&#x653E;&#x4E00;&#x4E2A;&#x79C1;&#x94A5;</a></li>
+<li><a href="#opensslpkeygetdetails">openssl_pkey_get_details - &#x8FD4;&#x56DE;&#x5305;&#x542B;&#x5BC6;&#x94A5;&#x8BE6;&#x60C5;&#x7684;&#x6570;&#x7EC4;</a></li>
+<li><a href="#opensslpkeygetprivate">openssl_pkey_get_private - &#x83B7;&#x53D6;&#x79C1;&#x94A5;</a></li>
+<li>openssl_pkey_get_public - &#x4ECE;&#x8BC1;&#x4E66;&#x4E2D;&#x89E3;&#x6790;&#x516C;&#x94A5;&#xFF0C;&#x4EE5;&#x4F9B;&#x4F7F;&#x7528;</li>
+<li><a href="#opensslpkeynew">openssl_pkey_new - &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x79C1;&#x94A5;</a></li>
+<li>openssl_private_decrypt - &#x4F7F;&#x7528;&#x79C1;&#x94A5;&#x89E3;&#x5BC6;&#x6570;&#x636E;</li>
+<li>openssl_private_encrypt - &#x4F7F;&#x7528;&#x79C1;&#x94A5;&#x52A0;&#x5BC6;&#x6570;&#x636E;</li>
+<li>openssl_public_decrypt - &#x4F7F;&#x7528;&#x516C;&#x94A5;&#x89E3;&#x5BC6;&#x6570;&#x636E;</li>
+<li>openssl_public_encrypt - &#x4F7F;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x6570;&#x636E;</li>
+<li><a href="#opensslrandompseudobytes">openssl_random_pseudo_bytes - &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4F2A;&#x968F;&#x673A;&#x5B57;&#x8282;&#x4E32;</a></li>
+<li>openssl_seal - &#x52A0;&#x5BC6;&#x6570;&#x636E;</li>
+<li>openssl_sign - &#x751F;&#x6210;&#x7B7E;&#x540D;</li>
+<li>openssl_spki_export_challenge - &#x5BFC;&#x51FA;&#x4E0E;&#x7B7E;&#x540D;&#x516C;&#x94A5;&#x548C;&#x6311;&#x6218;&#x76F8;&#x5173;&#x7684;&#x6311;&#x6218;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>openssl_spki_export - &#x901A;&#x8FC7;&#x7B7E;&#x540D;&#x516C;&#x94A5;&#x548C;&#x6311;&#x6218;&#x5BFC;&#x51FA;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684; PEM &#x683C;&#x5F0F;&#x7684;&#x516C;&#x94A5;</li>
+<li><a href="#opensslspkinew">openssl_spki_new - &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7B7E;&#x540D;&#x516C;&#x94A5;&#x548C;&#x6311;&#x6218;</a></li>
+<li>openssl_spki_verify - &#x9A8C;&#x8BC1;&#x7B7E;&#x540D;&#x516C;&#x94A5;&#x548C;&#x6311;&#x6218;</li>
+<li>openssl_verify - &#x9A8C;&#x8BC1;&#x7B7E;&#x540D;</li>
+<li>openssl_x509_check_private_key - &#x68C0;&#x67E5;&#x79C1;&#x94A5;&#x662F;&#x5426;&#x5BF9;&#x5E94;&#x4E8E;&#x8BC1;&#x4E66;</li>
+<li>openssl_x509_checkpurpose - &#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4E3A;&#x7279;&#x5B9A;&#x76EE;&#x7684;&#x4F7F;&#x7528;&#x8BC1;&#x4E66;</li>
+<li>openssl_x509_export_to_file - &#x5BFC;&#x51FA;&#x8BC1;&#x4E66;&#x81F3;&#x6587;&#x4EF6;</li>
+<li>openssl_x509_export - &#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x5BFC;&#x51FA;&#x8BC1;&#x4E66;</li>
+<li>openssl_x509_fingerprint - &#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684; x.509 &#x8BC1;&#x4E66;&#x7684;&#x6307;&#x7EB9;&#x6216;&#x6458;&#x8981;</li>
+<li>openssl_x509_free - &#x91CA;&#x653E;&#x8BC1;&#x4E66;&#x8D44;&#x6E90;</li>
+<li>openssl_x509_parse - &#x89E3;&#x6790;&#x4E00;&#x4E2A; x.509 &#x8BC1;&#x4E66;&#x5E76;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;</li>
+<li>openssl_x509_read - &#x89E3;&#x6790;&#x4E00;&#x4E2A; x.509 &#x8BC1;&#x4E66;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x6807;&#x8BC6;&#x7B26;</li>
+<li>openssl_x509_verify - &#x6839;&#x636E;&#x516C;&#x94A5;&#x9A8C;&#x8BC1; x.509 &#x8BC1;&#x4E66;&#x7684;&#x6570;&#x5B57;&#x7B7E;&#x540D;</li>
+</ul>
+<h2 id="opensslcipherivlength">openssl_cipher_iv_length</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_cipher_iv_length</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;AES-128-CBC&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(16)</span>
+</code></pre>
+<h2 id="opensslcsrexporttofile">openssl_csr_export_to_file</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$dn</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;countryName&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GB&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$privkey</span> <span class="token operator">=</span> <span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_csr_export_to_file</span><span class="token punctuation">(</span><span class="token function">openssl_csr_new</span><span class="token punctuation">(</span><span class="token variable">$dn</span><span class="token punctuation">,</span> <span class="token variable">$privkey</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.pem&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="opensslcsrexport">openssl_csr_export</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$dn</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;countryName&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GB&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$privkey</span> <span class="token operator">=</span> <span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_csr_export</span><span class="token punctuation">(</span><span class="token function">openssl_csr_new</span><span class="token punctuation">(</span><span class="token variable">$dn</span><span class="token punctuation">,</span> <span class="token variable">$privkey</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token variable">$out</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token variable">$out</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslcsrgetpublickey">openssl_csr_get_public_key</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$dn</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;countryName&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GB&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$privkey</span> <span class="token operator">=</span> <span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_csr_get_public_key</span><span class="token punctuation">(</span><span class="token function">openssl_csr_new</span><span class="token punctuation">(</span><span class="token variable">$dn</span><span class="token punctuation">,</span> <span class="token variable">$privkey</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(6) of type (OpenSSL key)</span>
+</code></pre>
+<h2 id="opensslcsrgetsubject">openssl_csr_get_subject</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$dn</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;countryName&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GB&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$privkey</span> <span class="token operator">=</span> <span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_csr_get_subject</span><span class="token punctuation">(</span><span class="token function">openssl_csr_new</span><span class="token punctuation">(</span><span class="token variable">$dn</span><span class="token punctuation">,</span> <span class="token variable">$privkey</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(3) { [&quot;C&quot;]=&gt; string(2) &quot;GB&quot; [&quot;ST&quot;]=&gt; string(10) &quot;Some-State&quot; [&quot;O&quot;]=&gt; string(24) &quot;Internet Widgits Pty Ltd&quot; }</span>
+</code></pre>
+<h2 id="opensslcsrnew">openssl_csr_new</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$dn</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;countryName&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GB&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$privkey</span> <span class="token operator">=</span> <span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_csr_new</span><span class="token punctuation">(</span><span class="token variable">$dn</span><span class="token punctuation">,</span> <span class="token variable">$privkey</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (OpenSSL X.509 CSR)</span>
+</code></pre>
+<h2 id="opensslcsrsign">openssl_csr_sign</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="openssldecrypt">openssl_decrypt</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$key</span> <span class="token operator">=</span> <span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$iv</span> <span class="token operator">=</span> <span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$data</span> <span class="token operator">=</span> <span class="token function">openssl_encrypt</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;AES-128-CBC&apos;</span><span class="token punctuation">,</span> <span class="token variable">$key</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token variable">$iv</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_decrypt</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;AES-128-CBC&apos;</span><span class="token punctuation">,</span> <span class="token variable">$key</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token variable">$iv</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(3) &quot;foo&quot;</span>
+</code></pre>
+<h2 id="openssldhcomputekey">openssl_dh_compute_key</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="openssldigest">openssl_digest</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_digest</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;md5&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// string(32) &quot;acbd18db4cc2f85cedef654fccc4a4d8&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_digest</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;sha256&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(64) &quot;2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae&quot;</span>
+</code></pre>
+<h2 id="opensslencrypt">openssl_encrypt</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$key</span> <span class="token operator">=</span> <span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$iv</span> <span class="token operator">=</span> <span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_encrypt</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;AES-128-CBC&apos;</span><span class="token punctuation">,</span> <span class="token variable">$key</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token variable">$iv</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslerrorstring">openssl_error_string</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_error_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+</code></pre>
+<h2 id="opensslfreekey">openssl_free_key</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">openssl_free_key</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslgetcertlocations">openssl_get_cert_locations</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_get_cert_locations</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslgetciphermethods">openssl_get_cipher_methods</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_get_cipher_methods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_get_cipher_methods</span><span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslgetcurvenames">openssl_get_curve_names</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_get_curve_names</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslgetmdmethods">openssl_get_md_methods</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_get_md_methods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_get_md_methods</span><span class="token punctuation">(</span><span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslgetprivatekey">openssl_get_privatekey</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_get_privatekey</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (OpenSSL key)</span>
+</code></pre>
+<h2 id="opensslgetpublickey">openssl_get_publickey</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslopen">openssl_open</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpbkdf2">openssl_pbkdf2</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_pbkdf2</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslpkcs12exporttofile">openssl_pkcs12_export_to_file</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkcs12export">openssl_pkcs12_export</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkcs12read">openssl_pkcs12_read</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkcs7decrypt">openssl_pkcs7_decrypt</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkcs7encrypt">openssl_pkcs7_encrypt</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkcs7read">openssl_pkcs7_read</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkcs7sign">openssl_pkcs7_sign</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkcs7verify">openssl_pkcs7_verify</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkeyexporttofile">openssl_pkey_export_to_file</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_export_to_file</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.key&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="opensslpkeyexport">openssl_pkey_export</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_export</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token variable">$out</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token variable">$out</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslpkeyfree">openssl_pkey_free</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">openssl_pkey_free</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslpkeygetdetails">openssl_pkey_get_details</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_get_details</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslpkeygetprivate">openssl_pkey_get_private</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_get_private</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (OpenSSL key)</span>
+</code></pre>
+<h2 id="opensslpkeygetpublic">openssl_pkey_get_public</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpkeynew">openssl_pkey_new</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (OpenSSL key)</span>
+</code></pre>
+<h2 id="opensslprivatedecrypt">openssl_private_decrypt</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslprivateencrypt">openssl_private_encrypt</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpublicdecrypt">openssl_public_decrypt</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslpublicencrypt">openssl_public_encrypt</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslrandompseudobytes">openssl_random_pseudo_bytes</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_random_pseudo_bytes</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token variable">$crypto_strong</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token variable">$crypto_strong</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslseal">openssl_seal</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslsign">openssl_sign</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslspkiexportchallenge">openssl_spki_export_challenge</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslspkiexport">openssl_spki_export</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslspkinew">openssl_spki_new</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">openssl_spki_new</span><span class="token punctuation">(</span><span class="token function">openssl_pkey_new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="opensslspkiverify">openssl_spki_verify</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslverify">openssl_verify</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509checkprivatekey">openssl_x509_check_private_key</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509checkpurpose">openssl_x509_checkpurpose</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509exporttofile">openssl_x509_export_to_file</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509export">openssl_x509_export</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509fingerprint">openssl_x509_fingerprint</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509free">openssl_x509_free</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509parse">openssl_x509_parse</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509read">openssl_x509_read</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
+<h2 id="opensslx509verify">openssl_x509_verify</h2>
+<pre class="language-"><code class="lang-php">
+
+</code></pre>
 
                                 
                                 </section>
@@ -3471,7 +3792,7 @@
 
             
                 
-                <a href="Mcrypt.html" class="navigation navigation-prev " aria-label="Previous page: Mcrypt">
+                <a href="Hash.html" class="navigation navigation-prev " aria-label="Previous page: Hash">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -3487,7 +3808,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"OpenSSL","level":"1.1.2.2.3","depth":4,"next":{"title":"密码散列算法","level":"1.1.2.2.4","depth":4,"path":"docs/函数参考/加密扩展/密码散列算法.md","ref":"docs/函数参考/加密扩展/密码散列算法.md","articles":[]},"previous":{"title":"Mcrypt","level":"1.1.2.2.2","depth":4,"path":"docs/函数参考/加密扩展/Mcrypt.md","ref":"docs/函数参考/加密扩展/Mcrypt.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/加密扩展/OpenSSL.md","mtime":"2019-05-20T15:20:18.040Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-24T08:24:38.741Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OpenSSL","level":"1.1.2.2.2","depth":4,"next":{"title":"密码散列算法","level":"1.1.2.2.3","depth":4,"path":"docs/函数参考/加密扩展/密码散列算法.md","ref":"docs/函数参考/加密扩展/密码散列算法.md","articles":[]},"previous":{"title":"Hash","level":"1.1.2.2.1","depth":4,"path":"docs/函数参考/加密扩展/Hash.md","ref":"docs/函数参考/加密扩展/Hash.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/加密扩展/OpenSSL.md","mtime":"2020-06-30T06:03:37.830Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T06:03:57.495Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

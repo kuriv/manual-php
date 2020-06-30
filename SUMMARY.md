@@ -170,7 +170,6 @@
             * [PHP 选项和信息](docs/函数参考/影响 PHP 行为的扩展/PHP 选项和信息.md)
         * [加密扩展](docs/函数参考/加密扩展.md)
             * [Hash](docs/函数参考/加密扩展/Hash.md)
-            * [Mcrypt](docs/函数参考/加密扩展/Mcrypt.md)
             * [OpenSSL](docs/函数参考/加密扩展/OpenSSL.md)
             * [密码散列算法](docs/函数参考/加密扩展/密码散列算法.md)
         * [数据库扩展](docs/函数参考/数据库扩展.md)

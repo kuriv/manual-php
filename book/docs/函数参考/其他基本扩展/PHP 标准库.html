@@ -3431,6 +3431,320 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="php-&#x6807;&#x51C6;&#x5E93;">PHP &#x6807;&#x51C6;&#x5E93;</h1>
+<ul>
+<li>&#x6570;&#x636E;&#x7ED3;&#x6784;<ul>
+<li>SplDoublyLinkedList</li>
+<li>SplStack</li>
+<li>SplQueue</li>
+<li>SplHeap</li>
+<li>SplMaxHeap</li>
+<li>SplMinHeap</li>
+<li>SplPriorityQueue</li>
+<li>SplFixedArray</li>
+<li>SplObjectStorage</li>
+</ul>
+</li>
+<li>&#x8FED;&#x4EE3;&#x5668;<ul>
+<li>AppendIterator</li>
+<li>ArrayIterator</li>
+<li>CachingIterator</li>
+<li>CallbackFilterIterator</li>
+<li>DirectoryIterator</li>
+<li>EmptyIterator</li>
+<li>FilesystemIterator</li>
+<li>FilterIterator</li>
+<li>GlobIterator</li>
+<li>InfiniteIterator</li>
+<li>IteratorIterator</li>
+<li>LimitIterator</li>
+<li>MultipleIterator</li>
+<li>NoRewindIterator</li>
+<li>ParentIterator</li>
+<li>RecursiveArrayIterator</li>
+<li>RecursiveCachingIterator</li>
+<li>RecursiveCallbackFilterIterator</li>
+<li>RecursiveDirectoryIterator</li>
+<li>RecursiveFilterIterator</li>
+<li>RecursiveIteratorIterator</li>
+<li>RecursiveRegexIterator</li>
+<li>RecursiveTreeIterator</li>
+<li>RegexIterator</li>
+</ul>
+</li>
+<li>&#x63A5;&#x53E3;<ul>
+<li>Countable</li>
+<li>OuterIterator</li>
+<li>RecursiveIterator</li>
+<li>SeekableIterator</li>
+</ul>
+</li>
+<li>&#x5F02;&#x5E38;<ul>
+<li>BadFunctionCallException</li>
+<li>BadMethodCallException</li>
+<li>DomainException</li>
+<li>InvalidArgumentException</li>
+<li>LengthException</li>
+<li>LogicException</li>
+<li>OutOfBoundsException</li>
+<li>OutOfRangeException</li>
+<li>OverflowException</li>
+<li>RangeException</li>
+<li>RuntimeException</li>
+<li>UnderflowException</li>
+<li>UnexpectedValueException</li>
+</ul>
+</li>
+<li>&#x6587;&#x4EF6;&#x5904;&#x7406;<ul>
+<li>SplFileInfo</li>
+<li>SplFileObject</li>
+<li>SplTempFileObject</li>
+</ul>
+</li>
+<li>&#x5404;&#x79CD;&#x7C7B;&#x53CA;&#x63A5;&#x53E3;<ul>
+<li>ArrayObject</li>
+<li>SplObserver</li>
+<li>SplSubject</li>
+</ul>
+</li>
+<li><a href="#spl">SPL</a><ul>
+<li><a href="#classimplements">class_implements - &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x5B9E;&#x73B0;&#x7684;&#x6240;&#x6709;&#x63A5;&#x53E3;</a></li>
+<li><a href="#classparents">class_parents - &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7C7B;&#x7684;&#x7236;&#x7C7B;</a></li>
+<li><a href="#classuses">class_uses - &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7C7B;&#x4F7F;&#x7528;&#x7684; Trait</a></li>
+<li><a href="#iteratorapply">iterator_apply - &#x4E3A;&#x8FED;&#x4EE3;&#x5668;&#x4E2D;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;</a></li>
+<li><a href="#iteratorcount">iterator_count - &#x8BA1;&#x7B97;&#x8FED;&#x4EE3;&#x5668;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;</a></li>
+<li><a href="#iteratortoarray">iterator_to_array - &#x5C06;&#x8FED;&#x4EE3;&#x5668;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x62F7;&#x8D1D;&#x5230;&#x6570;&#x7EC4;</a></li>
+<li><a href="#splautoloadcall">spl_autoload_call - &#x5C1D;&#x8BD5;&#x8C03;&#x7528;&#x6240;&#x6709;&#x5DF2;&#x6CE8;&#x518C;&#x7684; __autoload() &#x51FD;&#x6570;&#x6765;&#x88C5;&#x8F7D;&#x8BF7;&#x6C42;&#x7C7B;</a></li>
+<li><a href="#splautoloadextensions">spl_autoload_extensions - &#x6CE8;&#x518C;&#x5E76;&#x8FD4;&#x56DE; spl_autoload &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x7684;&#x9ED8;&#x8BA4;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;</a></li>
+<li><a href="#splautoloadfunctions">spl_autoload_functions - &#x8FD4;&#x56DE;&#x6240;&#x6709;&#x5DF2;&#x6CE8;&#x518C;&#x7684; __autoload() &#x51FD;&#x6570;</a></li>
+<li><a href="#splautoloadregister">spl_autoload_register - &#x6CE8;&#x518C;&#x7ED9;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x4F5C;&#x4E3A; __autoload &#x7684;&#x5B9E;&#x73B0;</a></li>
+<li><a href="#splautoloadunregister">spl_autoload_unregister - &#x6CE8;&#x9500;&#x5DF2;&#x6CE8;&#x518C;&#x7684; __autoload() &#x51FD;&#x6570;</a></li>
+<li><a href="#splautoload">spl_autoload - __autoload() &#x51FD;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;</a></li>
+<li><a href="#splclasses">spl_classes - &#x8FD4;&#x56DE;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684; SPL &#x7C7B;</a></li>
+<li><a href="#splobjecthash">spl_object_hash - &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#x7684; Hash ID</a></li>
+<li><a href="#splobjectid">spl_object_id - &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#x7684;&#x6574;&#x6570;&#x5BF9;&#x8C61;&#x53E5;&#x67C4;</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="spl">SPL</h2>
+<h3 id="classimplements">class_implements</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">implements</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_implements</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// array(0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_implements</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// array(1) { [&quot;Foo&quot;]=&gt; string(3) &quot;Foo&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_implements</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(1) { [&quot;Foo&quot;]=&gt; string(3) &quot;Foo&quot; }</span>
+</code></pre>
+<h3 id="classparents">class_parents</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_parents</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// array(0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_parents</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// array(1) { [&quot;Foo&quot;]=&gt; string(3) &quot;Foo&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_parents</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(1) { [&quot;Foo&quot;]=&gt; string(3) &quot;Foo&quot; }</span>
+</code></pre>
+<h3 id="classuses">class_uses</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">trait</span> Foo
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Bar</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">use</span> <span class="token package">Foo</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_uses</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// array(0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_uses</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// array(1) { [&quot;Foo&quot;]=&gt; string(3) &quot;Foo&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">class_uses</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(1) { [&quot;Foo&quot;]=&gt; string(3) &quot;Foo&quot; }</span>
+</code></pre>
+<h3 id="iteratorapply">iterator_apply</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/**
+ * Just a test function.
+ *
+ * @param  Iterator $iterator
+ * @return bool
+ */</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>Iterator <span class="token variable">$iterator</span><span class="token punctuation">)</span><span class="token punctuation">:</span> bool
+<span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$iterator</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">current</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean constant">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token variable">$iterator</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIterator</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">iterator_apply</span><span class="token punctuation">(</span><span class="token variable">$iterator</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token variable">$iterator</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// int(2)</span>
+<span class="token comment">// int(3)</span>
+<span class="token comment">// int(5)</span>
+</code></pre>
+<h3 id="iteratorcount">iterator_count</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$iterator</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">iterator_count</span><span class="token punctuation">(</span><span class="token variable">$iterator</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+
+<span class="token variable">$iterator</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIterator</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">iterator_count</span><span class="token punctuation">(</span><span class="token variable">$iterator</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(5)</span>
+</code></pre>
+<h3 id="iteratortoarray">iterator_to_array</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$iterator</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIterator</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;foo&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;bar&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">iterator_to_array</span><span class="token punctuation">(</span><span class="token variable">$iterator</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// array(2) { [&quot;foo&quot;]=&gt; string(3) &quot;foo&quot; [&quot;bar&quot;]=&gt; string(3) &quot;bar&quot; }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">iterator_to_array</span><span class="token punctuation">(</span><span class="token variable">$iterator</span><span class="token punctuation">,</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(2) { [0]=&gt; string(3) &quot;foo&quot; [1]=&gt; string(3) &quot;bar&quot; }</span>
+</code></pre>
+<h3 id="splautoloadcall">spl_autoload_call</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">spl_autoload_call</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
+
+<span class="token function">spl_autoload_call</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;Bar&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Bar)#1 (0) { }</span>
+</code></pre>
+<h3 id="splautoloadextensions">spl_autoload_extensions</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">spl_autoload_extensions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// string(9) &quot;.inc,.php&quot;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">spl_autoload_extensions</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;.inc,.php&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(9) &quot;.inc,.php&quot;</span>
+</code></pre>
+<h3 id="splautoloadfunctions">spl_autoload_functions</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">spl_autoload_functions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="splautoloadregister">spl_autoload_register</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/**
+ * Include the specified file.
+ *
+ * @param  string $class
+ * @return void
+ */</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>string <span class="token variable">$class</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">include</span> <span class="token variable">$class</span> <span class="token class-name"><span class="token punctuation">.</span></span> <span class="token single-quoted-string string">&apos;.php&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token function">spl_autoload_register</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token function">spl_autoload_register</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>string <span class="token variable">$class</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">include</span> <span class="token variable">$class</span> <span class="token class-name"><span class="token punctuation">.</span></span> <span class="token single-quoted-string string">&apos;.php&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#2 (0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Bar)#2 (0) { }</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>Foo.php</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>Bar.php</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Bar</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="splautoloadunregister">spl_autoload_unregister</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/**
+ * Include the specified file.
+ *
+ * @param  string $class
+ * @return void
+ */</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>string <span class="token variable">$class</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">include</span> <span class="token variable">$class</span> <span class="token class-name"><span class="token punctuation">.</span></span> <span class="token single-quoted-string string">&apos;.php&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token function">spl_autoload_register</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token function">spl_autoload_register</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>string <span class="token variable">$class</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">include</span> <span class="token variable">$class</span> <span class="token class-name"><span class="token punctuation">.</span></span> <span class="token single-quoted-string string">&apos;.php&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token variable">$functions</span> <span class="token operator">=</span> <span class="token function">spl_autoload_functions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$functions</span> <span class="token keyword">as</span> <span class="token variable">$function</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">spl_autoload_unregister</span><span class="token punctuation">(</span><span class="token variable">$function</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// bool(true)</span>
+<span class="token comment">// bool(true)</span>
+</code></pre>
+<h3 id="splautoload">spl_autoload</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">spl_autoload_register</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Foo)#1 (0) { }</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// object(Bar)#1 (0) { }</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>Foo.php</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684; <code>Bar.php</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Bar</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="splclasses">spl_classes</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">spl_classes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="splobjecthash">spl_object_hash</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">spl_object_hash</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="splobjectid">spl_object_id</h3>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">spl_object_id</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3474,7 +3788,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PHP 标准库","level":"1.1.2.11.3","depth":4,"next":{"title":"Streams","level":"1.1.2.11.4","depth":4,"path":"docs/函数参考/其他基本扩展/Streams.md","ref":"docs/函数参考/其他基本扩展/Streams.md","articles":[]},"previous":{"title":"杂项","level":"1.1.2.11.2","depth":4,"path":"docs/函数参考/其他基本扩展/杂项.md","ref":"docs/函数参考/其他基本扩展/杂项.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他基本扩展/PHP 标准库.md","mtime":"2019-05-20T15:32:34.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T06:03:57.495Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PHP 标准库","level":"1.1.2.11.3","depth":4,"next":{"title":"Streams","level":"1.1.2.11.4","depth":4,"path":"docs/函数参考/其他基本扩展/Streams.md","ref":"docs/函数参考/其他基本扩展/Streams.md","articles":[]},"previous":{"title":"杂项","level":"1.1.2.11.2","depth":4,"path":"docs/函数参考/其他基本扩展/杂项.md","ref":"docs/函数参考/其他基本扩展/杂项.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他基本扩展/PHP 标准库.md","mtime":"2020-06-30T11:50:11.014Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T11:50:18.001Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

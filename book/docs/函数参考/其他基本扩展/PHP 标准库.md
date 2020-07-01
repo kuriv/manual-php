@@ -206,6 +206,30 @@ var_dump(new Bar); // object(Bar)#1 (0) { }
 
 ```
 
+上例中的 `Foo.php` 文件内容：
+
+```php
+<?php
+
+class Foo
+{
+    //
+}
+
+```
+
+上例中的 `Bar.php` 文件内容：
+
+```php
+<?php
+
+class Bar
+{
+    //
+}
+
+```
+
 ### spl_autoload_extensions
 
 ```php

@@ -5,9 +5,9 @@
 * [getimagesizefromstring - 从指定的字符串中获取图像的大小信息](#getimagesizefromstring)
 * [image_type_to_extension - 获取指定的图像类型的文件后缀](#imagetypetoextension)
 * [image_type_to_mime_type - 获取指定的图像类型的 MIME 类型](#imagetypetomimetype)
-* imageaffine - 返回经过仿射变换后的图像，剪切区域可选
-* imageaffinematrixconcat - Concatenate two affine transformation matrices
-* imageaffinematrixget - Get an affine transformation matrix
+* [imageaffine - 返回经过仿射变换后的图像，剪切区域可选](#imageaffine)
+* [imageaffinematrixconcat - 连接两个仿射变换矩阵](#imageaffinematrixconcat)
+* [imageaffinematrixget - 获取仿射变换矩阵](#imageaffinematrixget)
 * [imagealphablending - 设定图像的混色模式](#imagealphablending)
 * [imageantialias - 是否使用抗锯齿功能](#imageantialias)
 * [imagearc - 画椭圆弧](#imagearc)
@@ -23,14 +23,14 @@
 * [imagecolordeallocate - 取消图像颜色的分配](#imagecolordeallocate)
 * [imagecolorexact - 取得指定颜色的索引值](#imagecolorexact)
 * [imagecolorexactalpha - 取得指定的颜色加透明度的索引值](#imagecolorexactalpha)
-* imagecolormatch - 使一个图像中调色板版本的颜色与真彩色版本更能匹配
+* [imagecolormatch - 使一个图像中调色板版本的颜色与真彩色版本更能匹配](#imagecolormatch)
 * [imagecolorresolve - 取得指定颜色的索引值或有可能得到的最接近的替代值](#imagecolorresolve)
 * [imagecolorresolvealpha - 取得指定颜色加透明度的索引值或有可能得到的最接近的替代值](#imagecolorresolvealpha)
 * [imagecolorset - 给指定调色板索引设定颜色](#imagecolorset)
 * [imagecolorsforindex - 取得某索引的颜色](#imagecolorsforindex)
 * [imagecolorstotal - 取得一幅图像的调色板中颜色的数目](#imagecolorstotal)
 * [imagecolortransparent - 将某个颜色定义为透明色](#imagecolortransparent)
-* imageconvolution - 申请一个 3x3 的卷积矩阵
+* [imageconvolution - 申请一个 3x3 的卷积矩阵](#imageconvolution)
 * [imagecopy - 拷贝图像的一部分](#imagecopy)
 * [imagecopymerge - 拷贝并合并图像的一部分](#imagecopymerge)
 * [imagecopymergegray - 用灰度拷贝并合并图像的一部分](#imagecopymergegray)
@@ -60,14 +60,14 @@
 * [imagefilledellipse - 画一椭圆并填充](#imagefilledellipse)
 * [imagefilledpolygon - 画一多边形并填充](#imagefilledpolygon)
 * [imagefilledrectangle - 画一矩形并填充](#imagefilledrectangle)
-* imagefilltoborder - 区域填充到指定颜色的边界为止
-* imagefilter - 对图像使用过滤器
+* [imagefilltoborder - 区域填充到指定颜色的边界为止](#imagefilltoborder)
+* [imagefilter - 对图像使用过滤器](#imagefilter)
 * [imageflip - 使用给定模式翻转图像](#imageflip)
 * [imagefontheight - 取得字体高度](#imagefontheight)
 * [imagefontwidth - 取得字体宽度](#imagefontwidth)
-* imageftbbox - 给出一个使用 FreeType 2 字体的文本框
-* imagefttext - 使用 FreeType 2 字体将文本写入图像
-* imagegammacorrect - 对 GD 图像应用伽马修正
+* [imageftbbox - 给出一个使用 FreeType 2 字体的文本框](#imageftbbox)
+* [imagefttext - 使用 FreeType 2 字体将文本写入图像](#imagefttext)
+* [imagegammacorrect - 对 GD 图像应用 gamma 修正](#imagegammacorrect)
 * [imagegd2 - 将 GD2 图像输出到浏览器或文件](#imagegd2)
 * [imagegd - 将 GD 图像输出到浏览器或文件](#imagegd)
 * [imagegetclip - 获取裁剪矩形](#imagegetclip)
@@ -76,46 +76,37 @@
 * [imageinterlace - 激活或禁止隔行扫描](#imageinterlace)
 * [imageistruecolor - 检查图像是否为真彩色图像](#imageistruecolor)
 * [imagejpeg - 输出图像到浏览器或文件](#imagejpeg)
-* imagelayereffect - 设定 alpha 混色标志以使用绑定的 libgd 分层效果
+* [imagelayereffect - 设定 alpha 混色标志以使用绑定的 libgd 分层效果](#imagelayereffect)
 * [imageline - 画一条线段](#imageline)
-* imageloadfont - 载入新字体
-* imageopenpolygon - Draws an open polygon
-* imagepalettecopy - 将调色板从一幅图像拷贝到另一幅
-* imagepalettetotruecolor - Converts a palette based image to true color
+* [imageloadfont - 载入新字体](#imageloadfont)
+* [imageopenpolygon - 绘制一个开放的多边形](#imageopenpolygon)
+* [imagepalettecopy - 将调色板从一幅图像拷贝到另一幅](#imagepalettecopy)
+* [imagepalettetotruecolor - 将基于调色板的图像转换为真彩色](#imagepalettetotruecolor)
 * [imagepng - 以 PNG 格式将图像输出到浏览器或文件](#imagepng)
 * [imagepolygon - 画一个多边形](#imagepolygon)
-* imagepsbbox - 给出一个使用 PostScript Type1 字体的文本方框
-* imagepsencodefont - 改变字体中的字符编码矢量
-* imagepsextendfont - 扩充或精简字体
-* imagepsfreefont - 释放一个 PostScript Type 1 字体所占用的内存
-* imagepsloadfont - 从文件中加载一个 PostScript Type 1 字体
-* imagepsslantfont - 倾斜某字体
-* imagepstext - 用 PostScript Type1 字体把文本字符串画在图像上
 * [imagerectangle - 画一个矩形](#imagerectangle)
 * [imageresolution - 获取或设置图像的分辨率](#imageresolution)
 * [imagerotate - 用给定角度旋转图像](#imagerotate)
-* imagesavealpha - 设置标记以在保存 PNG 图像时保存完整的 alpha 通道信息（与单一透明色相反）
+* [imagesavealpha - 设置标记以在保存 PNG 图像时保存完整的 alpha 通道信息（与单一透明色相反）](#imagesavealpha)
 * [imagescale - 使用给定的新宽度和高度缩放图像](#imagescale)
-* imagesetbrush - 设定画线用的画笔图像
+* [imagesetbrush - 设定画线用的画笔图像](#imagesetbrush)
 * [imagesetclip - 设置裁剪矩形](#imagesetclip)
 * [imagesetinterpolation - 设置插值方法](#imagesetinterpolation)
 * [imagesetpixel - 画一个单一像素](#imagesetpixel)
 * [imagesetstyle - 设定画线的风格](#imagesetstyle)
 * [imagesetthickness - 设定画线的宽度](#imagesetthickness)
-* imagesettile - 设定用于填充的贴图
+* [imagesettile - 设定用于填充的贴图](#imagesettile)
 * [imagestring - 水平地画一行字符串](#imagestring)
 * [imagestringup - 垂直地画一行字符串](#imagestringup)
 * [imagesx - 取得图像宽度](#imagesx)
 * [imagesy - 取得图像高度](#imagesy)
 * [imagetruecolortopalette - 将真彩色图像转换为调色板图像](#imagetruecolortopalette)
-* imagettfbbox - 取得使用 TrueType 字体的文本的范围
-* imagettftext - 用 TrueType 字体向图像写入文本
+* [imagettfbbox - 取得使用 TrueType 字体的文本的范围](#imagettfbbox)
+* [imagettftext - 用 TrueType 字体向图像写入文本](#imagettftext)
 * [imagetypes - 返回当前 PHP 版本所支持的图像类型](#imagetypes)
 * [imagewbmp - 以 WBMP 格式将图像输出到浏览器或文件](#imagewbmp)
 * [imagewebp - 将 WebP 格式的图像输出到浏览器或文件](#imagewebp)
 * [imagexbm - 将 XBM 图像输出到浏览器或文件](#imagexbm)
-* iptcembed - 将二进制 IPTC 数据嵌入到一幅 JPEG 图像中
-* iptcparse - 将二进制 IPTC 块解析为单个标记
 
 ## gd_info
 
@@ -172,18 +163,31 @@ var_dump(image_type_to_mime_type(IMAGETYPE_PNG));  // string(9) "image/png"
 ## imageaffine
 
 ```php
+<?php
+
+$image = imagecreate(100, 100);
+var_dump(imageaffine($image, [1, 0, 0, 1, 0, 0])); // resource(5) of type (gd)
 
 ```
 
 ## imageaffinematrixconcat
 
 ```php
+<?php
+
+$foo = imageaffinematrixget(IMG_AFFINE_TRANSLATE, ['x' => 2, 'y' => 3]);
+$bar = imageaffinematrixget(IMG_AFFINE_SCALE, ['x' => 4, 'y' => 5]);
+var_dump(imageaffinematrixconcat($foo, $bar));
 
 ```
 
 ## imageaffinematrixget
 
 ```php
+<?php
+
+var_dump(imageaffinematrixget(IMG_AFFINE_TRANSLATE, ['x' => 2, 'y' => 3]));
+var_dump(imageaffinematrixget(IMG_AFFINE_SCALE, ['x' => 4, 'y' => 5]));
 
 ```
 
@@ -371,6 +375,12 @@ var_dump(imagecolorexactalpha($image, 255, 255, 255, 50));
 ## imagecolormatch
 
 ```php
+<?php
+
+$foo = imagecreatetruecolor(100, 100);
+$bar = imagecreate(100, 100);
+imagecolorallocate($bar, 255, 255, 255);
+var_dump(imagecolormatch($foo, $bar)); // bool(true)
 
 ```
 
@@ -437,6 +447,12 @@ var_dump(imagecolortransparent($image));
 ## imageconvolution
 
 ```php
+<?php
+
+$image = imagecreatefromjpeg(__DIR__ . '/example.jpg');
+imageconvolution($image, [[2, 0, 0], [0, -1, 0], [0, 0, -1]], 1, 127);
+header('Content-Type: image/jpg');
+imagejpeg($image);
 
 ```
 
@@ -763,12 +779,27 @@ imagepng($image);
 ## imagefilltoborder
 
 ```php
+<?php
+
+$image = imagecreate(100, 100);
+imagecolorallocate($image, 255, 255, 255);
+$black = imagecolorallocate($image, 0, 0, 0);
+imageline($image, 80, 0, 80, 100, $black);
+imagefilltoborder($image, 0, 0, $black, imagecolorallocate($image, 255, 0, 0));
+header('Content-Type: image/png');
+imagepng($image);
 
 ```
 
 ## imagefilter
 
 ```php
+<?php
+
+$image = imagecreatefromjpeg(__DIR__ . '/example.jpg');
+imagefilter($image, IMG_FILTER_NEGATE);
+header('Content-Type: image/jpg');
+imagejpeg($image);
 
 ```
 
@@ -809,18 +840,34 @@ var_dump(imagefontwidth(3)); // int(7)
 ## imageftbbox
 
 ```php
+<?php
+
+var_dump(imageftbbox(20, 0, 'Arial.ttf', 'foo'));
 
 ```
 
 ## imagefttext
 
 ```php
+<?php
+
+$image = imagecreate(100, 100);
+imagecolorallocate($image, 255, 255, 255);
+imagefttext($image, 20, 0, 20, 50, imagecolorallocate($image, 0, 0, 0), 'Arial.ttf', 'foo');
+header('Content-Type: image/png');
+imagepng($image);
 
 ```
 
 ## imagegammacorrect
 
 ```php
+<?php
+
+$image = imagecreatefromjpeg(__DIR__ . '/example.jpg');
+imagegammacorrect($image, 1, 2);
+header('Content-Type: image/jpg');
+imagejpeg($image);
 
 ```
 
@@ -924,6 +971,12 @@ imagejpeg($image, __DIR__ . '/example.jpg');
 ## imagelayereffect
 
 ```php
+<?php
+
+$image = imagecreatefromjpeg(__DIR__ . '/example.jpg');
+imagelayereffect($image, IMG_EFFECT_REPLACE);
+header('Content-Type: image/jpg');
+imagejpeg($image);
 
 ```
 
@@ -943,24 +996,47 @@ imagepng($image);
 ## imageloadfont
 
 ```php
+<?php
+
+var_dump(imageloadfont('04b.gdf'));
 
 ```
 
 ## imageopenpolygon
 
 ```php
+<?php
+
+$image = imagecreate(100, 100);
+imagecolorallocate($image, 255, 255, 255);
+imageopenpolygon($image, [0, 0, 20, 30, 40, 50], 3, imagecolorallocate($image, 0, 0, 0));
+header('Content-Type: image/png');
+imagepng($image);
 
 ```
 
 ## imagepalettecopy
 
 ```php
+<?php
+
+$foo = imagecreate(100, 100);
+imagecolorallocate($foo, 255, 255, 255);
+$red = imagecolorallocate($foo, 255, 0, 0);
+$bar = imagecreate(100, 100);
+imagepalettecopy($bar, $foo);
 
 ```
 
 ## imagepalettetotruecolor
 
 ```php
+<?php
+
+$image = imagecreate(100, 100);
+imagecolorallocate($image, 255, 255, 255);
+$red = imagecolorallocate($image, 255, 0, 0);
+var_dump(imagepalettetotruecolor($image)); // bool(true)
 
 ```
 
@@ -987,48 +1063,6 @@ imagecolorallocate($image, 255, 255, 255);
 imagepolygon($image, [20, 30, 50, 10, 80, 30, 70, 85, 30, 85], 5, imagecolorallocate($image, 0, 0, 0));
 header('Content-Type: image/png');
 imagepng($image);
-
-```
-
-## imagepsbbox
-
-```php
-
-```
-
-## imagepsencodefont
-
-```php
-
-```
-
-## imagepsextendfont
-
-```php
-
-```
-
-## imagepsfreefont
-
-```php
-
-```
-
-## imagepsloadfont
-
-```php
-
-```
-
-## imagepsslantfont
-
-```php
-
-```
-
-## imagepstext
-
-```php
 
 ```
 
@@ -1076,6 +1110,11 @@ imagejpeg($image);
 ## imagesavealpha
 
 ```php
+<?php
+
+$image = imagecreatefrompng(__DIR__ . '/example.png');
+var_dump(imagesavealpha($image, false)); // bool(true)
+var_dump(imagesavealpha($image, true));  // bool(true)
 
 ```
 
@@ -1094,6 +1133,12 @@ imagejpeg($image);
 ## imagesetbrush
 
 ```php
+<?php
+
+$foo = imagecreate(100, 100);
+$bar = imagecreatetruecolor(100, 100);
+imagefill($bar, 0, 0, imagecolorallocate($bar, 255, 0, 0));
+var_dump(imagesetbrush($foo, $bar)); // bool(true)
 
 ```
 
@@ -1167,6 +1212,11 @@ imagepng($image);
 ## imagesettile
 
 ```php
+<?php
+
+$foo = imagecreate(100, 100);
+$bar = imagecreate(100, 100);
+var_dump(imagesettile($foo, $bar)); // bool(true)
 
 ```
 
@@ -1230,12 +1280,22 @@ imagepng($image);
 ## imagettfbbox
 
 ```php
+<?php
+
+var_dump(imagettfbbox(20, 0, 'Arial.ttf', 'foo'));
 
 ```
 
 ## imagettftext
 
 ```php
+<?php
+
+$image = imagecreatetruecolor(100, 100);
+imagefilledrectangle($image, 0, 0, 100, 100, imagecolorallocate($image, 255, 255, 255));
+imagettftext($image, 20, 0, 20, 50, imagecolorallocate($image, 0, 0, 0), 'Arial.ttf', 'foo');
+header('Content-Type: image/png');
+imagepng($image);
 
 ```
 
@@ -1280,18 +1340,6 @@ imagewebp($image, __DIR__ . '/example.webp');
 $image = imagecreate(100, 100);
 imagecolorallocate($image, 255, 255, 255);
 imagexbm($image, __DIR__ . '/example.xbm');
-
-```
-
-## iptcembed
-
-```php
-
-```
-
-## iptcparse
-
-```php
 
 ```
 

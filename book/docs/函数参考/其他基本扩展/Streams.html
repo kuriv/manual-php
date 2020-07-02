@@ -3431,6 +3431,295 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="streams">Streams</h1>
+<ul>
+<li><a href="#streamcontextcreate">stream_context_create - &#x521B;&#x5EFA;&#x8D44;&#x6E90;&#x6D41;&#x4E0A;&#x4E0B;&#x6587;</a></li>
+<li><a href="#streamcontextgetdefault">stream_context_get_default - &#x68C0;&#x7D22;&#x9ED8;&#x8BA4;&#x8D44;&#x6E90;&#x6D41;&#x4E0A;&#x4E0B;&#x6587;</a></li>
+<li><a href="#streamcontextgetoptions">stream_context_get_options - &#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x6D41;&#x7684;&#x53C2;&#x6570;</a></li>
+<li><a href="#streamcontextgetparams">stream_context_get_params - &#x4ECE;&#x8D44;&#x6E90;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x68C0;&#x7D22;&#x53C2;&#x6570;</a></li>
+<li><a href="#streamcontextsetdefault">stream_context_set_default - &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x8D44;&#x6E90;&#x6D41;&#x4E0A;&#x4E0B;&#x6587;</a></li>
+<li><a href="#streamcontextsetoption">stream_context_set_option - &#x5BF9;&#x8D44;&#x6E90;&#x6D41;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</a></li>
+<li><a href="#streamcontextsetparams">stream_context_set_params - &#x8BBE;&#x7F6E;&#x8D44;&#x6E90;&#x6D41;&#x7684;&#x53C2;&#x6570;</a></li>
+<li><a href="#streamcopytostream">stream_copy_to_stream - &#x5C06;&#x6570;&#x636E;&#x4ECE;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x6D41;&#x590D;&#x5236;&#x5230;&#x53E6;&#x4E00;&#x4E2A;</a></li>
+<li><a href="#streamfilterappend">stream_filter_append - &#x5C06;&#x8FC7;&#x6EE4;&#x5668;&#x9644;&#x52A0;&#x5230;&#x8D44;&#x6E90;&#x6D41;</a></li>
+<li><a href="#streamfilterprepend">stream_filter_prepend - &#x5C06;&#x8FC7;&#x6EE4;&#x5668;&#x9644;&#x52A0;&#x5230;&#x8D44;&#x6E90;&#x6D41;</a></li>
+<li><a href="#streamfilterregister">stream_filter_register - &#x6CE8;&#x518C;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x8D44;&#x6E90;&#x6D41;&#x8FC7;&#x6EE4;&#x5668;</a></li>
+<li><a href="#streamfilterremove">stream_filter_remove - &#x4ECE;&#x8D44;&#x6E90;&#x6D41;&#x91CC;&#x79FB;&#x9664;&#x67D0;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668;</a></li>
+<li><a href="#streamgetcontents">stream_get_contents - &#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x6D41;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</a></li>
+<li><a href="#streamgetfilters">stream_get_filters - &#x83B7;&#x53D6;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x6570;&#x636E;&#x6D41;&#x8FC7;&#x6EE4;&#x5668;&#x5217;&#x8868;</a></li>
+<li><a href="#streamgetline">stream_get_line - &#x4ECE;&#x8D44;&#x6E90;&#x6D41;&#x91CC;&#x8BFB;&#x53D6;&#x4E00;&#x884C;&#x76F4;&#x5230;&#x7ED9;&#x5B9A;&#x7684;&#x5B9A;&#x754C;&#x7B26;</a></li>
+<li><a href="#streamgetmetadata">stream_get_meta_data - &#x4ECE;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x4E2D;&#x53D6;&#x5F97;&#x5143;&#x6570;&#x636E;</a></li>
+<li><a href="#streamgettransports">stream_get_transports - &#x83B7;&#x53D6;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5217;&#x8868;</a></li>
+<li><a href="#streamgetwrappers">stream_get_wrappers - &#x83B7;&#x53D6;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x6D41;&#x7C7B;&#x578B;</a></li>
+<li><a href="#streamislocal">stream_is_local - &#x68C0;&#x67E5;&#x6D41;&#x662F;&#x5426;&#x662F;&#x672C;&#x5730;&#x6D41;</a></li>
+<li><a href="#streamisatty">stream_isatty - &#x68C0;&#x67E5;&#x6D41;&#x662F;&#x5426;&#x4E3A; TTY</a></li>
+<li><a href="#streamregisterwrapper">stream_register_wrapper - &#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x7528; PHP &#x7C7B;&#x5B9E;&#x73B0;&#x7684; URL &#x5C01;&#x88C5;&#x534F;&#x8BAE;</a></li>
+<li><a href="#streamresolveincludepath">stream_resolve_include_path - &#x6839;&#x636E;&#x5305;&#x542B;&#x8DEF;&#x5F84;&#x89E3;&#x6790;&#x6587;&#x4EF6;&#x540D;</a></li>
+<li><a href="#streamsetblocking">stream_set_blocking - &#x4E3A;&#x8D44;&#x6E90;&#x6D41;&#x8BBE;&#x7F6E;&#x963B;&#x585E;&#x6216;&#x8005;&#x963B;&#x585E;&#x6A21;&#x5F0F;</a></li>
+<li><a href="#streamsetchunksize">stream_set_chunk_size - &#x8BBE;&#x7F6E;&#x8D44;&#x6E90;&#x6D41;&#x533A;&#x5757;&#x5927;&#x5C0F;</a></li>
+<li><a href="#streamsetreadbuffer">stream_set_read_buffer - &#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x8D44;&#x6E90;&#x6D41;&#x4E0A;&#x8BBE;&#x7F6E;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7F13;&#x51B2;</a></li>
+<li><a href="#streamsettimeout">stream_set_timeout - &#x5728;&#x8D44;&#x6E90;&#x6D41;&#x4E0A;&#x8BBE;&#x7F6E;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</a></li>
+<li><a href="#streamsetwritebuffer">stream_set_write_buffer - &#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x8D44;&#x6E90;&#x6D41;&#x4E0A;&#x8BBE;&#x7F6E;&#x5199;&#x6587;&#x4EF6;&#x7F13;&#x51B2;</a></li>
+<li><a href="#streamsocketaccept">stream_socket_accept - &#x63A5;&#x53D7;&#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#streamsocketclient">stream_socket_client - &#x6253;&#x5F00; Internet &#x6216; Unix &#x57DF;&#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#streamsocketenablecrypto">stream_socket_enable_crypto - &#x5728;&#x5DF2;&#x8FDE;&#x63A5;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x4E0A;&#x6253;&#x5F00; / &#x5173;&#x95ED;&#x52A0;&#x5BC6;</a></li>
+<li><a href="#streamsocketgetname">stream_socket_get_name - &#x83B7;&#x53D6;&#x672C;&#x5730;&#x6216;&#x8005;&#x8FDC;&#x7A0B;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x540D;&#x79F0;</a></li>
+<li><a href="#streamsocketpair">stream_socket_pair - &#x521B;&#x5EFA;&#x4E00;&#x5BF9;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x7684;&#x7F51;&#x7EDC;&#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;&#x6D41;</a></li>
+<li><a href="#streamsocketrecvfrom">stream_socket_recvfrom - &#x4ECE;&#x5957;&#x63A5;&#x5B57;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x5DF2;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#streamsocketsendto">stream_socket_sendto - &#x5C06;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x5230;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x5DF2;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#streamsocketserver">stream_socket_server - &#x521B;&#x5EFA;&#x4E00;&#x4E2A; Internet &#x6216; Unix &#x57DF;&#x670D;&#x52A1;&#x5668;&#x5957;&#x63A5;&#x5B57;</a></li>
+<li><a href="#streamsocketshutdown">stream_socket_shutdown - &#x5173;&#x95ED;&#x5168;&#x53CC;&#x5DE5;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#streamsupportslock">stream_supports_lock - &#x544A;&#x8BC9;&#x8D44;&#x6E90;&#x6D41;&#x662F;&#x5426;&#x652F;&#x6301;&#x9501;&#x5B9A;</a></li>
+<li><a href="#streamwrapperregister">stream_wrapper_register - &#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x7528; PHP &#x7C7B;&#x5B9E;&#x73B0;&#x7684; URL &#x5C01;&#x88C5;&#x534F;&#x8BAE;</a></li>
+<li><a href="#streamwrapperrestore">stream_wrapper_restore - &#x6062;&#x590D;&#x4E4B;&#x524D;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;</a></li>
+<li><a href="#streamwrapperunregister">stream_wrapper_unregister - &#x53D6;&#x6D88;&#x6CE8;&#x518C; URL &#x5C01;&#x88C5;&#x534F;&#x8BAE;</a></li>
+</ul>
+<h2 id="streamcontextcreate">stream_context_create</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_context_create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                                                 <span class="token comment">// resource(4) of type (stream-context)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_context_create</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;http&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;method&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GET&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;header&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;Accept: text/html&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (stream-context)</span>
+</code></pre>
+<h2 id="streamcontextgetdefault">stream_context_get_default</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_context_get_default</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;http&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;method&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GET&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;header&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;Accept: text/html&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (stream-context)</span>
+</code></pre>
+<h2 id="streamcontextgetoptions">stream_context_get_options</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_context_get_options</span><span class="token punctuation">(</span><span class="token function">stream_context_get_default</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;http&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;method&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GET&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;header&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;Accept: text/html&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(1) { [&quot;http&quot;]=&gt; array(2) { [&quot;method&quot;]=&gt; string(3) &quot;GET&quot; [&quot;header&quot;]=&gt; string(17) &quot;Accept: text/html&quot; } }</span>
+</code></pre>
+<h2 id="streamcontextgetparams">stream_context_get_params</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_context_get_params</span><span class="token punctuation">(</span><span class="token function">stream_context_create</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;http&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;method&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GET&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;header&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;Accept: text/html&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// array(1) { [&quot;options&quot;]=&gt; array(1) { [&quot;http&quot;]=&gt; array(2) { [&quot;method&quot;]=&gt; string(3) &quot;GET&quot; [&quot;header&quot;]=&gt; string(17) &quot;Accept: text/html&quot; } } }</span>
+</code></pre>
+<h2 id="streamcontextsetdefault">stream_context_set_default</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_context_set_default</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;http&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;method&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GET&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;header&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;Accept: text/html&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(4) of type (stream-context)</span>
+</code></pre>
+<h2 id="streamcontextsetoption">stream_context_set_option</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_context_set_option</span><span class="token punctuation">(</span><span class="token function">stream_context_create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;http&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;method&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GET&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;header&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;Accept: text/html&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamcontextsetparams">stream_context_set_params</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_context_set_params</span><span class="token punctuation">(</span><span class="token function">stream_context_create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;http&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">&apos;method&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;GET&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;header&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;Accept: text/html&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamcopytostream">stream_copy_to_stream</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_copy_to_stream</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;w+&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamfilterappend">stream_filter_append</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;w+&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_filter_append</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;string.rot13&apos;</span><span class="token punctuation">,</span> <span class="token constant">STREAM_FILTER_WRITE</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(6) of type (stream filter)</span>
+<span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">rewind</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fgets</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                                     <span class="token comment">// string(3) &quot;sbb&quot;</span>
+</code></pre>
+<h2 id="streamfilterprepend">stream_filter_prepend</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;w+&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_filter_prepend</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;string.rot13&apos;</span><span class="token punctuation">,</span> <span class="token constant">STREAM_FILTER_WRITE</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(6) of type (stream filter)</span>
+<span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">rewind</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fgets</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                                     <span class="token comment">// string(3) &quot;sbb&quot;</span>
+</code></pre>
+<h2 id="streamfilterregister">stream_filter_register</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_filter_register</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamfilterremove">stream_filter_remove</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;w+&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$filter</span> <span class="token operator">=</span> <span class="token function">stream_filter_append</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;string.rot13&apos;</span><span class="token punctuation">,</span> <span class="token constant">STREAM_FILTER_WRITE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">stream_filter_remove</span><span class="token punctuation">(</span><span class="token variable">$filter</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">rewind</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">fgets</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string(6) &quot;sbbfoo&quot;</span>
+</code></pre>
+<h2 id="streamgetcontents">stream_get_contents</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_get_contents</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_get_contents</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamgetfilters">stream_get_filters</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_get_filters</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamgetline">stream_get_line</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_get_line</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_get_line</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamgetmetadata">stream_get_meta_data</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_get_meta_data</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamgettransports">stream_get_transports</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_get_transports</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamgetwrappers">stream_get_wrappers</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_get_wrappers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamislocal">stream_is_local</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_is_local</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                             <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_is_local</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// bool(false)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_is_local</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(false)</span>
+</code></pre>
+<h2 id="streamisatty">stream_isatty</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_isatty</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamregisterwrapper">stream_register_wrapper</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_register_wrapper</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamresolveincludepath">stream_resolve_include_path</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_resolve_include_path</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;index.php&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamsetblocking">stream_set_blocking</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_set_blocking</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_set_blocking</span><span class="token punctuation">(</span><span class="token variable">$handle</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamsetchunksize">stream_set_chunk_size</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_set_chunk_size</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamsetreadbuffer">stream_set_read_buffer</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_set_read_buffer</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(0)</span>
+</code></pre>
+<h2 id="streamsettimeout">stream_set_timeout</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_set_timeout</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http://www.example.com&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;r&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamsetwritebuffer">stream_set_write_buffer</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_set_write_buffer</span><span class="token punctuation">(</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token constant">__DIR__</span> <span class="token punctuation">.</span> <span class="token single-quoted-string string">&apos;/example.txt&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;w+&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamsocketaccept">stream_socket_accept</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_accept</span><span class="token punctuation">(</span><span class="token function">stream_socket_server</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:80&apos;</span><span class="token punctuation">,</span> <span class="token variable">$errno</span><span class="token punctuation">,</span> <span class="token variable">$errstr</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamsocketclient">stream_socket_client</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_client</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:80&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (stream)</span>
+</code></pre>
+<h2 id="streamsocketenablecrypto">stream_socket_enable_crypto</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_enable_crypto</span><span class="token punctuation">(</span><span class="token function">stream_socket_client</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:80&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamsocketgetname">stream_socket_get_name</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_get_name</span><span class="token punctuation">(</span><span class="token function">stream_socket_client</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://www.example.com:80&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_get_name</span><span class="token punctuation">(</span><span class="token function">stream_socket_client</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://www.example.com:80&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean constant">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamsocketpair">stream_socket_pair</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_pair</span><span class="token punctuation">(</span><span class="token constant">STREAM_PF_UNIX</span><span class="token punctuation">,</span> <span class="token constant">STREAM_SOCK_STREAM</span><span class="token punctuation">,</span> <span class="token constant">STREAM_IPPROTO_IP</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamsocketrecvfrom">stream_socket_recvfrom</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$server</span> <span class="token operator">=</span> <span class="token function">stream_socket_server</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:80&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">stream_socket_accept</span><span class="token punctuation">(</span><span class="token variable">$server</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_recvfrom</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamsocketsendto">stream_socket_sendto</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$socket</span> <span class="token operator">=</span> <span class="token function">stream_socket_client</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:80&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_sendto</span><span class="token punctuation">(</span><span class="token variable">$socket</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token constant">STREAM_OOB</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// int(3)</span>
+</code></pre>
+<h2 id="streamsocketserver">stream_socket_server</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_server</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:80&apos;</span><span class="token punctuation">,</span> <span class="token variable">$errno</span><span class="token punctuation">,</span> <span class="token variable">$errstr</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// resource(5) of type (stream)</span>
+</code></pre>
+<h2 id="streamsocketshutdown">stream_socket_shutdown</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_socket_shutdown</span><span class="token punctuation">(</span><span class="token function">stream_socket_client</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:80&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">STREAM_SHUT_WR</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamsupportslock">stream_supports_lock</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_supports_lock</span><span class="token punctuation">(</span><span class="token function">stream_socket_client</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;tcp://127.0.0.1:80&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="streamwrapperregister">stream_wrapper_register</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_wrapper_register</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamwrapperrestore">stream_wrapper_restore</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token function">stream_wrapper_unregister</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_wrapper_restore</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;http&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
+<h2 id="streamwrapperunregister">stream_wrapper_unregister</h2>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">stream_wrapper_register</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">&apos;Foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token function">stream_wrapper_unregister</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bool(true)</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3474,7 +3763,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Streams","level":"1.1.2.11.4","depth":4,"next":{"title":"Tokenizer","level":"1.1.2.11.5","depth":4,"path":"docs/函数参考/其他基本扩展/Tokenizer.md","ref":"docs/函数参考/其他基本扩展/Tokenizer.md","articles":[]},"previous":{"title":"PHP 标准库","level":"1.1.2.11.3","depth":4,"path":"docs/函数参考/其他基本扩展/PHP 标准库.md","ref":"docs/函数参考/其他基本扩展/PHP 标准库.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他基本扩展/Streams.md","mtime":"2019-05-20T15:32:34.358Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T08:00:52.076Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Streams","level":"1.1.2.11.4","depth":4,"next":{"title":"Tokenizer","level":"1.1.2.11.5","depth":4,"path":"docs/函数参考/其他基本扩展/Tokenizer.md","ref":"docs/函数参考/其他基本扩展/Tokenizer.md","articles":[]},"previous":{"title":"PHP 标准库","level":"1.1.2.11.3","depth":4,"path":"docs/函数参考/其他基本扩展/PHP 标准库.md","ref":"docs/函数参考/其他基本扩展/PHP 标准库.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/函数参考/其他基本扩展/Streams.md","mtime":"2020-07-02T12:45:16.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T13:00:07.660Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

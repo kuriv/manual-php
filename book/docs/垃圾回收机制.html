@@ -74,7 +74,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="垃圾回收机制/引用计数.html" />
+    <link rel="next" href="PHP 类型比较表.html" />
     
     
     <link rel="prev" href="PHP 的命令行模式/和命令行模式相关的配置项.html" />
@@ -3288,25 +3288,6 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.1.5.1" data-path="垃圾回收机制/引用计数.html">
-            
-                <a href="垃圾回收机制/引用计数.html">
-            
-                    
-                    引用计数
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
         </li>
     
         <li class="chapter " data-level="1.1.6" data-path="PHP 类型比较表.html">
@@ -3431,9 +3412,50 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x5783;&#x573E;&#x56DE;&#x6536;&#x673A;&#x5236;">&#x5783;&#x573E;&#x56DE;&#x6536;&#x673A;&#x5236;</h1>
+<blockquote>
+<p>&#x5783;&#x573E;&#x56DE;&#x6536;&#x673A;&#x5236;&#x662F;&#x4E00;&#x79CD;&#x52A8;&#x6001;&#x5B58;&#x50A8;&#x5206;&#x914D;&#x65B9;&#x6848;&#xFF0C;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x7A0B;&#x5E8F;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x7684;&#x5DF2;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x5757;&#x3002;&#x5783;&#x573E;&#x56DE;&#x6536;&#x673A;&#x5236;&#x53EF;&#x4EE5;&#x8BA9;&#x7A0B;&#x5E8F;&#x5458;&#x4E0D;&#x5FC5;&#x8FC7;&#x5206;&#x5173;&#x5FC3;&#x7A0B;&#x5E8F;&#x5185;&#x5B58;&#x5206;&#x914D;&#xFF0C;&#x4ECE;&#x800C;&#x5C06;&#x66F4;&#x591A;&#x7684;&#x7CBE;&#x529B;&#x6295;&#x5165;&#x5230;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;&#x5728;&#x73B0;&#x5728;&#x6D41;&#x884C;&#x7684;&#x5404;&#x79CD;&#x8BED;&#x8A00;&#x5F53;&#x4E2D;&#xFF0C;&#x5783;&#x573E;&#x56DE;&#x6536;&#x673A;&#x5236;&#x662F;&#x65B0;&#x4E00;&#x4EE3;&#x8BED;&#x8A00;&#x6240;&#x5171;&#x6709;&#x7684;&#x7279;&#x5F81;&#x3002;</p>
+</blockquote>
 <ul>
-<li><a href="&#x5783;&#x573E;&#x56DE;&#x6536;&#x673A;&#x5236;/&#x5F15;&#x7528;&#x8BA1;&#x6570;.html">&#x5F15;&#x7528;&#x8BA1;&#x6570;</a></li>
+<li><a href="#&#x5F15;&#x7528;&#x8BA1;&#x6570;">&#x5F15;&#x7528;&#x8BA1;&#x6570;</a></li>
+<li><a href="#&#x5199;&#x65F6;&#x590D;&#x5236;">&#x5199;&#x65F6;&#x590D;&#x5236;</a></li>
 </ul>
+<h2 id="&#x5F15;&#x7528;&#x8BA1;&#x6570;">&#x5F15;&#x7528;&#x8BA1;&#x6570;</h2>
+<p>&#x5728; PHP &#x4E2D;&#xFF0C;&#x53D8;&#x91CF;&#x7684;&#x56DE;&#x6536;&#x548C;&#x8BE5;&#x53D8;&#x91CF;&#x7684;&#x5F15;&#x7528;&#x6B21;&#x6570;&#x6709;&#x5173;&#x3002;</p>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xdebug_debug_zval</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// foo: (refcount=1, is_ref=0)=class Foo {  }</span>
+</code></pre>
+<p>&#x5F53; <code>unset()</code> &#x8BE5;&#x53D8;&#x91CF;&#x540E;&#xFF0C;&#x8BE5;&#x53D8;&#x91CF;&#x7684;&#x5F15;&#x7528;&#x6B21;&#x6570;&#x5C06;&#x4F1A;&#x51CF; 1 &#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x53D8;&#x91CF;&#x7684;&#x5F15;&#x7528;&#x6B21;&#x6570;&#x4E3A; 0 &#xFF0C;&#x5219; PHP &#x4F1A;&#x91CA;&#x653E;&#x8BE5;&#x53D8;&#x91CF;&#x6240;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x3002;</p>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
+
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xdebug_debug_zval</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// foo: (refcount=1, is_ref=0)=class Foo {  }</span>
+<span class="token keyword">unset</span><span class="token punctuation">(</span><span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xdebug_debug_zval</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// foo: no such symbol</span>
+</code></pre>
+<h2 id="&#x5199;&#x65F6;&#x590D;&#x5236;">&#x5199;&#x65F6;&#x590D;&#x5236;</h2>
+<p>&#x5728; PHP &#x4E2D;&#xFF0C;&#x5F53;&#x53D8;&#x91CF; A &#x8D4B;&#x503C;&#x7ED9;&#x53E6;&#x4E00;&#x4E2A;&#x53D8;&#x91CF; B &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x7ACB;&#x523B;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x53D8;&#x91CF;&#x5BB9;&#x5668;&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x53D8;&#x91CF; B &#x6307;&#x5411;&#x4E86;&#x53D8;&#x91CF; A &#x6307;&#x5411;&#x7684;&#x53D8;&#x91CF;&#x5BB9;&#x5668;&#xFF0C;&#x5373;&#x5185;&#x5B58;&#x5171;&#x4EAB;&#x3002;&#x800C;&#x5F53;&#x53D8;&#x91CF; B &#x5176;&#x4E2D;&#x5143;&#x7D20;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x771F;&#x6B63;&#x53D1;&#x751F;&#x53D8;&#x91CF;&#x5BB9;&#x5668;&#x590D;&#x5236;&#x3002;</p>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$bar</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token variable">$baz</span> <span class="token operator">=</span> <span class="token variable">$bar</span><span class="token punctuation">;</span>
+<span class="token function">xdebug_debug_zval</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// foo: (refcount=4, is_ref=0)=array (0 =&gt; (refcount=0, is_ref=0)=2)</span>
+
+<span class="token variable">$baz</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">xdebug_debug_zval</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// foo: (refcount=3, is_ref=0)=array (0 =&gt; (refcount=0, is_ref=0)=2)</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3466,7 +3488,7 @@
                 </a>
                 
                 
-                <a href="垃圾回收机制/引用计数.html" class="navigation navigation-next " aria-label="Next page: 引用计数">
+                <a href="PHP 类型比较表.html" class="navigation navigation-next " aria-label="Next page: PHP 类型比较表">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -3477,7 +3499,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"垃圾回收机制","level":"1.1.5","depth":2,"next":{"title":"引用计数","level":"1.1.5.1","depth":3,"path":"docs/垃圾回收机制/引用计数.md","ref":"docs/垃圾回收机制/引用计数.md","articles":[]},"previous":{"title":"和命令行模式相关的配置项","level":"1.1.4.2","depth":3,"path":"docs/PHP 的命令行模式/和命令行模式相关的配置项.md","ref":"docs/PHP 的命令行模式/和命令行模式相关的配置项.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/垃圾回收机制.md","mtime":"2020-03-04T12:26:31.841Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T13:00:07.660Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"垃圾回收机制","level":"1.1.5","depth":2,"next":{"title":"PHP 类型比较表","level":"1.1.6","depth":2,"path":"docs/PHP 类型比较表.md","ref":"docs/PHP 类型比较表.md","articles":[]},"previous":{"title":"和命令行模式相关的配置项","level":"1.1.4.2","depth":3,"path":"docs/PHP 的命令行模式/和命令行模式相关的配置项.md","ref":"docs/PHP 的命令行模式/和命令行模式相关的配置项.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"PHP","language":"zh-hans","gitbook":">=3.0.0","description":"PHP 手册","direction":"ltr"},"file":{"path":"docs/垃圾回收机制.md","mtime":"2020-07-13T03:43:14.793Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-13T03:43:41.544Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

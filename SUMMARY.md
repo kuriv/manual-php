@@ -226,7 +226,6 @@
         * [内置的 Web 服务器](docs/PHP 的命令行模式/内置的 Web 服务器.md)
         * [和命令行模式相关的配置项](docs/PHP 的命令行模式/和命令行模式相关的配置项.md)
     * [垃圾回收机制](docs/垃圾回收机制.md)
-        * [引用计数](docs/垃圾回收机制/引用计数.md)
     * [PHP 类型比较表](docs/PHP 类型比较表.md)
     * [PSR](docs/PSR.md)
         * [PSR-1 基础编码规范](docs/PSR/PSR-1 基础编码规范.md)

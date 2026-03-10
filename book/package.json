@@ -1,13 +1,14 @@
 {
   "name": "manual-php",
-  "version": "1.0.2",
-  "description": "PHP 手册",
+  "version": "1.0.3",
+  "description": "PHP 全称 PHP: Hypertext Preprocessor ，超文本预处理器。",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gitbook serve ./ ./book"
   },
   "repository": {
     "type": "git",
